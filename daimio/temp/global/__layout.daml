@@ -1,0 +1,41 @@
+{%header}
+<body id="bit-bazaar-winter-market-2013" class="bit-bazaar">
+  <div class="wrapper">
+    <!-- Masthead
+      ================================================== -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+            <div class="page-header" id="intro-header">
+
+              <div class="row">
+                <div class="col-md-8">
+              <h1>Bit Bazaar</h1>
+                  <p class="lead">Bit Bazaar is a video game craft fair and marketplace, held twice a year in the spring (alongside <a href="http://torontocomics.com/">Toronto Comic Arts Festival</a>) and winter. It is planned, organized, and hosted by <a href="https://bentomiso.com">Bento Miso Collaborative Workspace</a>, a coworking space and event venue for game and Web developers and other creative people, in Toronto's Queen West neighborhood.</p>
+                </div>
+                <div class="col-md-4">
+                  <h3>More Info</h3>
+
+                  <p><a href="http://www.flickr.com/groups/bitbazaar/">Photo Pool on Flickr</a></p>
+                  <p><a href="https://bentomiso.com/blog/bit-bazaar-wrap">Bit Bazaar Winter Market Wrap-Up</a></p>
+                  <p class="lead">Questions? Contact event director <a href="mailto:jennie@bentomiso.com">Jennie Faber</a>.</p>
+
+                </div>
+              </div>
+              {%content}
+              {content get_value handle {"page/bitbazaar/assets/past_game_vendors"}}
+              {content get_value handle {"page/bitbazaar/assets/past_coverage"}}
+            </div>
+          </div>
+        </div>
+        <div class="center-block text-center">
+        {%global/snippets/footer_info}
+        </div>
+      </div>
+    </div>
+    {%global/js}
+    {%bonus_js}
+  </div>
+</body>
+</html>
