@@ -1,0 +1,140 @@
+
+{begin step2}  
+<p class='text-success lead'><b>Thanks!</b> We've received your application. Applications close November 12, and selected vendors will be notified and announced November 14.</p>
+
+	{begin application | merge with (@bbwm14.#1.depot)}
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Name: <b>{name}</b> ({application_type})
+			</div>
+			<div class="panel-body">
+        <p><b>Title</b></p>
+        <p>{product}</p>
+        <p><b>Description</b></p>
+				{description | string textile}
+        <p><b>Web site</b></p>
+         <p><a href="{link}">{link}</a></p>
+				{begin goods | if merch}
+				<p><b>Merchandise</b></p>
+					{merch | string textile}
+				{end goods}
+				<p><b>Submitted</b> {submitted | time represent as "M d, Y g:ia"}</p>				
+				<p><b>Application</b> #{@bbwm14.#1._id}</p>
+{/				<p><b>Fee Paid</b> {paid | then "<span class='text-success'>Yes</span>" else "<span class='text-danger'>No</span>"}</p>
+				{begin paid | if {paid | not}}
+					{%payment}
+				{end paid}
+}			</div>
+			</div>
+
+		{end application}
+  
+	{end step2}
+
+	{begin step1}
+
+		<h2>Apply</h2>
+
+		{begin create_account | if {@MY.id | not}}
+
+			<p class="lead">To apply, first create an account or log in.</p>
+			<form class="form-horizontal" method="post" accept-charset="utf-8" id="create-account">  
+				<fieldset>
+					<legend>Create a Miso account <span class="pull-right text-muted">Or <a href="#log-in" data-toggle="modal" class="">log in</a></span></legend>
+        
+      
+					<div class="form-group">
+						<label class="control-label required col-md-4" for="username">Username</label>
+						<div class="col-md-8">
+							<input type="text" class="form-control" id="username" name="username" value="{#username}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label required col-md-4" for="password">Password</label>
+						<div class="col-md-8">
+							<input type="password" class="form-control" id="password" name="password">
+						</div>
+					</div>
+				</fieldset>
+				<hr>
+				<fieldset>
+    
+					<div class="form-group">
+						<label class="control-label required col-md-4" for="firstname">First name</label>
+						<div class="col-md-8">
+							<input type="text" class="form-control" id="firstname" name="firstname" value="{#firstname}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label required col-md-4" for="lastname">Last name</label>
+						<div class="col-md-8">
+							<input type="text" class="form-control" id="lastname" name="lastname" value="{#lastname}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-md-4 required" for="lastname">E-mail</label>
+						<div class="col-md-8">
+							<input type="text" class="form-control" id="email" name="email" value="{#email}">
+							<hr />
+							<button type="submit" class="btn btn-default">Register</button>
+						</div>
+          
+          
+					</div>
+				</fieldset>
+				<input type="hidden" name="registered" value="{time represent as "M d, Y"}">
+				<textarea name="commands" style="display:none">
+					{begin verbatim | process escape}
+						{// check data first, to ensure we have all required fields before adding user //}
+						{and (#email #firstname #lastname) | > :good_data}
+						{// register user if all required fields are filled out }
+						{begin kosher | if @good_data}
+							{member register username #username password #password | > :good_user}
+						{end kosher}
+						{begin success | if @good_user}
+							{myself authenticate username #username password #password | > :good_login}
+							{begin loggeduserin | if @good_login}
+								{/ Basic profile stuff}
+								
+								
+								{my set for @user_id in :profiles path :firstname value #firstname}
+								{my set for @user_id in :profiles path :lastname value #lastname}
+								{my set for @user_id in :profiles path :activity.registered value #registered}
+								{my set for @user_id in :profiles path :signup.intent value :bit-bazaar-2013-table-application}
+								
+								{exec set_email to #email}
+              
+								{/ Send email}
+								{exec send_member_email subject {"[Miso] Account Created"} body {%template/email/account_created | process consume}}
+
+
+							{end loggeduserin}
+						{end success}
+						{begin derp}
+							<strong>Oops!</strong> Please fill out the required fields.
+						{end derp}
+						{begin whoops}
+							<strong>Whoops!</strong> Your username and password must each be at least <strong>4 characters long</strong>, and usernames must be <strong>unique</strong>.
+						{end whoops}
+						{ifelse (
+							{@good_data | not} "{notice set value {* ( :message $derp :type :error)}}"
+							{@good_user | not} "{notice set value {* ( :message $whoops :type :error)}}"
+						)}
+					{end verbatim}
+				</textarea>
+			</form>
+		{end create_account}
+    
+		{begin has_account | if @MY.id}
+
+	
+  {content get_value handle {"page/bit-bazaar-winter-market-2014/application/assets/form/food"}}
+  
+   
+		{end has_account}
+	{end step1}
+
+	{ifelse (
+		{@bbwm14} "{$step2}"
+		:default  "{$step1}"
+	)}

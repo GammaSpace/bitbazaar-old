@@ -1,0 +1,90 @@
+    <form class="form-horizontal" method="post" accept-charset="utf-8" id="game-exhibitor">  
+      <fieldset>
+      
+
+      
+      
+        <legend>About You</legend>
+        <div class="form-group">
+          <label class="form-label col-md-4" for="collective">Group Name</label>
+          <div class="col-md-8">
+            <input type="text" value="{ifelse ({@profile.my.professional.company} "{@profile.my.professional.company}" {@POST} "{@POST.collective}" :default "")}" name="collective" class="form-control" id="collective">
+            <p class="help-block">If submitting as a collective</p>
+          </div>
+        </div>
+      
+        <div class="form-group">
+          <label class="form-label col-md-4" for="comicname">Name of Comic(s)</label>
+          <div class="col-md-8">
+            <input type="text" value="{ifelse ({@POST} "{@POST.comicname}" :default "")}" name="comicname" class="form-control required" id="comicname">
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label class="form-label col-md-4" for="link">Web site</label>
+          <div class="col-md-8">
+            <div class="input-group">
+              <span class="input-group-addon">http://</span>
+              <input type="text" class="form-control" name="link">
+            </div>
+          </div>
+        </div>        
+        <div class="form-group">
+          <label class="form-label col-md-4" for="shortdescription">Short description</label>
+          <div class="col-md-8">
+            <textarea type="text" value="{@POST.shortdescription}" name="shortdescription" class="form-control" rows="4" id="shortdescription"></textarea>
+            <p class="help-block">Tell us a bit about you and/or your group, and the subject matter of your work. </p>
+          </div>
+        </div>
+
+        
+        <div class="form-group">
+          <label class="form-label col-md-4" for="merch">What you plan to sell</label>
+          <div class="col-md-8">
+            <textarea type="text" value="{@POST.merch}" name="merch" class="form-control" rows="4" id="merch"></textarea>
+              <hr />
+              <button type="submit" class="btn btn-default">Submit &rarr;</button>
+          </div>
+        </div>
+      </fieldset>
+    
+      <input type="hidden" name="registered" value="{time represent as "M d, Y"}">
+      <input type="hidden" value="{@profile.my.firstname}" name="firstname">
+      <input type="hidden" value="{@profile.my.lastname}" name="lastname">
+      <input type="hidden" value="{@member.depot.email}" name="email">
+      <input type="hidden" name="submitted" value="{time represent as :c}">
+      <input type="hidden" name="exhibitor_type" value="comics">
+  
+    
+      <textarea name="commands" style="display:none">
+        {begin verbatim | process escape}
+              
+          {/ Application stuff}
+          {stuff add type :bit_bazaar_wm_application_comics | > :ex_id}
+          {begin added | if @ex_id}
+            {exec depot_set for @ex_id in :stuff path :application_type value #type}
+            {exec depot_set for @ex_id in :stuff path :collective value #collective}
+            {exec depot_set for @ex_id in :stuff path :comic value #comicname}
+            {exec depot_set for @ex_id in :stuff path :link value #link}
+            {exec depot_set for @ex_id in :stuff path :merch value #merch}
+            {exec depot_set for @ex_id in :stuff path :description value #shortdescription}
+            {exec depot_set for @ex_id in :stuff path :submitted value #submitted}
+
+            {/ Send email}
+            {exec send_member_email
+              subject {"[Bit Bazaar] Comic Exhibitor Application Received"}
+              body {%template/email/bitbazaar/applicant_notification | process consume}
+            }
+
+            {exec admin_send_email
+              subject {"[Bit Bazaar] Comic Exhibitor Application Received"}
+              body {%template/email/bitbazaar/admin_notification | process consume}
+            }
+              
+              
+              
+          {end added}
+        {end verbatim}
+      </textarea>
+    </div>
+  </form>

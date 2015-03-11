@@ -1,0 +1,5 @@
+<script src="//use.typekit.net/doe6obv.js"></script>
+
+{begin js | process escape}
+<script>try{Typekit.load();}catch(e){}</script>
+{end js}

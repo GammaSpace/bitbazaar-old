@@ -1,0 +1,619 @@
+@import "bitbazaar";
+
+@baby-blue: #c2ebf1;
+@baby-orange: #f26648;
+@baby-blue-highlight: #fff;
+@primary: #000;
+@secondary: #000;
+
+@font-family-base: "franklin-gothic-urw",sans-serif;
+@headings-font-family: "franklin-gothic-urw-comp",sans-serif;
+
+
+body {
+	color: @primary;
+
+
+
+
+
+	a {
+		color: #00ab6f;
+		text-decoration: underline;
+		&:hover {
+			color: darken(#00ab6f,10%);
+		}
+	}
+
+	#intro-header, #footer {
+ 		     background-color: #f0f2f4;
+	}
+	&#bit-bazaar-winter-market-2014 {
+
+		&.inner-page {
+			#info {
+				background-image: url(../images/bitbazaar/springfair2014/mail-order.gif);
+			p,a {
+				 color: @gray-lighter;
+			}
+			.alert-success {
+				a {
+					color: inherit;
+					font-weight: 900;
+					border: none;
+					text-decoration: underline;
+				}
+			}
+			#bbsp14-logo {
+				margin-top: 80px;
+			}
+		}
+		#socmed {
+			display: none;
+		}
+		.wrapper {
+			display:table;
+			width:100%;
+			height:100%;
+			margin:auto;
+		}
+		.cell {
+			display:table-cell;
+			vertical-align:middle;
+			position:relative;
+		}
+		#shopping {
+			h2 {
+				color: #000;
+				font-size: 46px;
+				padding: 20px 0;
+				margin-bottom: 30px;
+
+			}
+		}
+	}
+	.psst {
+		text-decoration: underline
+	}
+	.footer {
+		padding: 10px 0;
+
+
+	}
+	#cvg-bug {
+		position: absolute;
+		top: 60px;
+		left: 10px;
+		z-index: 1021;
+	}
+
+	margin-top: 0;
+	font-family: "franklin-gothic-urw",sans-serif;
+	font-size: 16px;
+	strong, dt {
+        font-family: @headings-font-family;
+        text-transform: none;
+        font-weight: 900;
+
+    }
+ 	.mid-headline {
+		  font-family: "franklin-gothic-urw-comp",sans-serif;
+		  letter-spacing: 2px;
+		  font-size: 32px;
+  		  font-style: italic;
+  		  font-weight: 100;
+	}
+
+
+
+	#bbsp14-logo {
+		height: 250px;
+
+		@media (min-width: @screen-sm-min) { height: 500px; }
+		}
+
+
+
+
+	    h2 {
+        .mid-headline;
+        font-size: 42px
+        text-center();
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+
+.wrapper {
+	display:table;
+	width:100%;
+	height:100%;
+	margin:auto;
+	}
+.cell {
+	display:table-cell;
+	vertical-align:middle;
+	position:relative;
+	}
+
+
+
+ #header {
+	 .cell {
+	 	width:100%;
+
+ }
+	padding: 0;
+/* 	padding-top: 60px; */
+	height: 100%;
+	min-height: 700px;
+	@media (min-width: @screen-sm-min) {
+
+	}
+	@media (min-width: @screen-md-min) {
+
+	}
+	@media (min-width: @screen-lg-min) {
+
+	}
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	background-size: cover;
+	background-color: #000;
+	background-image: url(../images/bitbazaar/springfair2014/bg-main.gif);
+	img {
+		float: none;
+		display: block;
+		margin: 0 auto;
+		}
+	#socmed {
+			margin-top: 10px;
+		img {
+			display: inline;
+			padding: 0 10px;
+		}
+	}
+
+	#feature {
+		p {
+			text-align: center;
+			color: #fff;
+		}
+		position:absolute;
+		z-index:1;
+		width:100%;
+		left: 0;
+		bottom: 0;
+		background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.75) 100%); /* FF3.6+ */background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(1%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.75))); /* Chrome,Safari4+ */background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.75) 100%); /* Chrome10+,Safari5.1+ */background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.75) 100%); /* Opera 11.10+ */background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.75) 100%); /* IE10+ */background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.75) 100%); /* W3C */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+	}
+
+}
+
+
+	padding-bottom: 0;
+		 #overview {
+			 padding-bottom: 60px;
+			 padding-top: 60px;
+		 }
+
+
+	h1,h2 {
+		font-size: 18px
+		}
+
+	div.page-header {
+		margin-bottom: 0;
+		.lead {
+			margin-bottom: 0;
+		}
+	}
+
+	/* Small devices (tablets, 768px and up) */
+	@media (min-width: @screen-sm-min) {
+		h1,h2 { font-size: 28px}
+	}
+
+	/* Medium devices (desktops, 992px and up) */
+	@media (min-width: @screen-md-min) {
+		h1,h2 { font-size: 36px}
+	}
+
+	/* Large devices (large desktops, 1200px and up) */
+	@media (min-width: @screen-lg-min) {  }
+
+
+        .caption {
+	        margin-top: 10px;
+        }
+
+
+     &.application {
+	     background: #fff;
+	     margin-top: 0;
+	     padding-top: 0;
+	     .logo {
+		     padding: 20px 20px 20px 0;
+	     }
+	     #footer {
+		     margin-bottom: 30px
+	     }
+	     .content {
+
+	     h2,h3,h4 {
+			 .mid-headline;
+			 margin: 0;
+			 color: #000;
+			 margin-bottom: 10px;
+			 margin-top: 10px;
+			 border-bottom: solid 2px;
+
+	     }
+
+	     }
+	     #intro-header {
+
+		     margin-bottom: 30px;
+		     h2,p,li {
+				 padding-bottom: 20px;
+				 color: #444;
+  			 small {
+
+  				 }
+		     }
+	     }
+     }
+     #venue {
+			padding-top: 50px;
+			}
+
+	 section {
+		 padding-top: 20px;
+		 padding-bottom: 20px;
+		 &#masthead {
+		     background: @baby-blue;
+			 h1, h3, h4, h5, li, p, blockquote, dt, dd {
+			 	color: @primary;
+			 	}
+
+		 }
+		 &#background {
+			 background: #fff;
+			 img {
+				 width: 100%;
+			 }
+			 h1, h2, h3, h4, h5, li, p, blockquote, dt, dd {
+			 color: #000;
+			 }
+			 h3 {
+			 	font-size: 24px;
+			 	line-height: normal;
+			 	color: @primary;
+
+				@media (min-width: @screen-md-min) { font-size: 26px; }
+				@media (min-width: @screen-lg-min) { font-size: 32px; }
+
+			 }
+			 img {margin-bottom: 10px;}
+		 }
+
+		 &#directions {
+			 padding: 0;
+			 overflow: hidden;
+			 background: @primary;
+			 color: @gray-darker;
+			.directions {
+				padding: 30px 0;
+			}
+			.map {
+			    height: 200px;
+			    width: 100%;
+			    @media (min-width:@screen-sm-min) {
+			        height: 300px;
+			    }
+			    @media (min-width:@screen-md-min) {
+			        height: 600px;
+			    }
+			}
+			#map, #map > iframe {
+			    .map();
+			}
+
+			 h3 {
+				 color: lighten(@primary,40%);
+				 line-height: 1em;
+
+				 @media (min-width: @screen-sm-min) { line-height: normal; }
+				 @media (min-width: @screen-md-min) { }
+				 @media (min-width: @screen-lg-min) {  }
+			 }
+			 p {
+				 .lead();
+				 color: lighten(@primary,25%);
+				 a {
+						 text-decoration: none;
+						 border-bottom: solid 2px #fff;
+						 color: #fff;
+				 }
+				 strong {
+					 color: #fff;
+				 }
+				 &.links {
+					 color: #fff;
+					 a {
+						 text-decoration: none;
+						 border-bottom: solid 2px #fff;
+						 color: #fff;
+					 }
+				 }
+			 }
+
+
+		.map-box {
+			padding-left: 15px;
+			&.col-md-6 {
+				padding-left: 0;
+				margin-left: -15px;
+			}
+		}
+		 }
+		 &#info {
+			background-size: cover;
+			padding-top: 80px;
+			background-color: #000;
+			background-image: url(../images/bitbazaar/springfair2014/bg-footer.gif);
+			.wrapper {
+				width: auto;
+				margin: 0;
+				padding-top: 10px;
+				.cell {
+					width: auto;
+					padding-right: 10px;
+				}
+			}
+			h2 {
+	    	    .mid-headline;
+				.text-center();
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				font-style: normal;
+				font-size: 30px;
+				@media (min-width: @screen-md-min) { font-size: 42px }
+			}
+			h3 {
+				font-size: 24px;
+				@media (min-width: @screen-md-min) { font-size: 32px;  }
+				small {
+					font-family: "franklin-gothic-urw",sans-serif;
+					letter-spacing: 0;
+					text-transform: none;
+
+				}
+			}
+			 h2,h4,h5 {
+				 color: #fff;
+			 }
+			 h3 {
+				 color: @primary;
+			 }
+			 h4 {
+				 .mid-headline;
+				 font-size: 26px;
+				 letter-spacing: 1px;
+
+			 }
+			 h5 {
+				 .mid-headline;
+				 font-size: 24px;
+				 letter-spacing: 1px;
+				 line-height: 1.4em;
+				 margin-bottom: 0;
+				 font-style: normal;
+				 font-weight: 100;
+			 }
+			 p,a {
+				 color: @gray-light;
+			 }
+			 p {
+				 .lead()
+			 }
+			 a {border-bottom: solid 2px @gray-light;
+				 &:hover {
+					 text-decoration: none;
+				 }
+			 }
+		 }
+
+
+		&#shopping {
+			h3 {
+				color: @primary;
+				font-size: 24px;
+				margin-top: 0;
+			}
+		}
+		 &#vendors {
+		 padding-bottom: 60px;
+		 @vendorbg: #000;
+		 @vendorCol: #fde2dc;
+			 background: @vendorbg;
+
+			 .food {
+				 color: @vendorCol;
+			 }
+			 .game {
+				 color: @vendorCol;
+			 }
+
+
+			 h1,h2,h3,h4 {
+				 color: @primary;
+			 }
+			 p {
+				 color: @primary
+			 }
+			 #exhibitor-lists {
+				 text-align: center;
+			 }
+			 ul.confirmed {
+			 	li {
+
+			 		display: inline;
+
+			 		h3 {
+				 		display: inline;
+				 		font-size: 22px;
+				 		letter-spacing: 1px;
+				 		font-style: normal;
+				 		font-weight: 100;
+				 		 small {
+					 		 display:block;
+							 letter-spacing: 1px;
+							 color: #b4867d;
+							 padding-bottom: 20px;
+						 }
+
+						/* Small devices (tablets, 768px and up) */
+						@media (min-width: @screen-sm-min) {
+					 		white-space: nowrap;
+					 		font-size: 32px;
+					 		small {
+						 		display: inline;
+						 		text-align: right;
+						 		padding-right: 20px;
+						 		padding-bottom: 0;
+
+					 		}
+						 }
+
+						/* Medium devices (desktops, 992px and up) */
+						@media (min-width: @screen-md-min) {  }
+
+						/* Large devices (large desktops, 1200px and up) */
+						@media (min-width: @screen-lg-min) {  }
+						 &.food {
+							 .food()
+						 }
+						 &.game {
+							 .game()
+						 }
+
+
+			 		}
+				}
+			 }
+		 }
+
+
+		 &#footer {
+
+			 h3 {
+				 color: #000;
+			 }
+
+		     margin-top: 30px;
+
+		     h2,p,li {
+			     color: @primary;
+			 a {
+			     color: darken(@primary,10%);
+			     text-decoration: underline;
+				 }
+		     }
+	     }
+
+
+
+
+	 }
+    .thumb {
+       border-bottom: solid 1px lighten(@baby-blue,40%);
+    }
+    a {
+
+    }
+
+    label,strong {
+	    font-weight: 700
+    }
+
+    div.page-header {
+        border-bottom-color: lighten(@baby-blue,40%);
+    }
+	h1,h2,h3 {padding: 0;
+		  font-style: normal;
+	}
+
+	h3  {
+		.mid-headline;
+	}
+ }
+
+
+
+@bgDefault      : @primary; //@primary;
+@colDefault     : @secondary;
+
+@bgHighlight    : @secondary; // lighten(@primary,10%);
+@colHighlight   : lighten(@primary,10%); // lighten(@primary,10%);
+
+.navbar-default {
+	background-color: @bgDefault;
+    // background: url(../images/bitbazaar/springfair2014/pixellogs.gif);
+
+	border: none;
+	//border-color: @bgHighlight;
+	.navbar-brand {
+		color: @colDefault;
+		&:hover, &:focus {
+			color: @colHighlight; }}
+	.navbar-text {
+		color: @colDefault; }
+	.navbar-nav {
+		> li {
+			> a {
+				color: @colDefault;
+				font-size: 24px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				font-family: "franklin-gothic-urw-comp",sans-serif;
+				font-style: italic;
+				font-weight: 100;
+				&.exhibitors {
+				}
+				&:hover,  &:focus {
+					color: #fff; }}}
+		> .active {
+			> a, > a:hover, > a:focus {
+				color: @colHighlight;
+				background-color: @bgHighlight; }}
+		> .open {
+			> a, > a:hover, > a:focus {
+				color: @colHighlight;
+				background-color: @bgHighlight; }}}
+	.navbar-toggle {
+		border-color: @bgHighlight;
+		&:hover, &:focus {
+			background-color: @bgHighlight; }
+		.icon-bar {
+			background-color: @colDefault; }}
+	.navbar-collapse,
+	.navbar-form {
+		border-color: @colDefault; }
+	.navbar-link {
+		color: @colDefault;
+		&:hover {
+			color: @colHighlight; }}}
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu {
+		> li > a {
+			color: @colDefault;
+			&:hover, &:focus {
+				color: @colHighlight; }}
+		> .active {
+			> a, > a:hover, > a:focus, {
+				color: @colHighlight;
+				background-color: @bgHighlight; }}}
+}
+}

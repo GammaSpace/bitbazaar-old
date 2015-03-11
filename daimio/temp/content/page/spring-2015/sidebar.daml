@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-sm-6 col-md-12">
+    <img src="{@SITE.path}/images/bitbazaar/bit_bazaar_winter_market_logo.gif" alt="Bit Bazaar" class="center img-responsive">
+  </div>
+  <div class="col-sm-6 col-md-12">
+    <p id="attribution">Presented by:</p>
+    <a href="{@SITE.path}">
+      <img src="{@SITE.path}/images/bitbazaar/miso_wordmark_black.png" alt="Bento Miso Logo" class="center img-responsive">
+    </a>
+  </div>
+</div>
+<img src="{@SITE.path}/images/bitbazaar/arrow_red.gif" alt="Arrow image" id="arrow" class="center">
+<div class="row">
+  <div class="hidden-xs col-sm-4 col-md-12">
+    <p id="attribution">Community Supporter</p>
+    <a href="http://torontocomics.com">
+      <img src="{@SITE.path}/images/bitbazaar/tcaf_logo.gif" alt="Toronto Comic Arts Festival" class="center img-responsive">
+    </a>
+  </div>
+  <div class="hidden-xs col-sm-4 col-md-12">
+    <p id="attribution">Partner</p>
+    <a href="http://attractmo.de">
+      <img src="{@SITE.path}/images/bitbazaar/attract_mode_logo.png" alt="Attract Mode logo" class="center img-responsive">
+    </a>
+  </div>
+  <div class="hidden-xs col-sm-4 col-md-12">
+    <p id="attribution">Sponsor</p>
+    <a href="http://indiegameaudio.com" target="_blank">
+      <img src="{@SITE.path}/images/bitbazaar/sp_logo_indie_game_audio.png" alt="Indie Game Audio Logo"  class="center img-responsive" />
+    </a>    
+  </div>
+</div>

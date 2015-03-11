@@ -1,0 +1,29 @@
+{begin js | process escape}
+  <script>
+  $(document).ready(function(){
+    var amount =  $("input[name='amount_input']:checked").val();
+
+    
+    $("span#amount").text("Pay Now");          
+    $("input[name='amount']").val(amount);      
+          
+    $("input[name='amount_input']").change(function () {
+      var amount =  $("input[name='amount_input']:checked").val();
+      $("input[name='amount']").val(amount);      
+      if ($("input[name='amount']").val() === "0") {
+        $("#card-info-block").hide()
+        $("span#amount").text("Finalize Application");        
+      }
+      else {
+          $("#card-info-block").show()
+          $("span#amount").text("Pay Now");          
+      }
+
+    });
+  });
+  </script>
+  
+  
+  
+{end js}
+

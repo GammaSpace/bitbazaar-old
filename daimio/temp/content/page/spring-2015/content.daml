@@ -1,0 +1,123 @@
+{%header}
+<body id="bit-bazaar-winter-market-2014" class="bit-bazaar" data-spy="scroll" data-target="#primary-nav-2" data-offset="50">
+  {%nav}
+
+
+
+  <section id="header">
+
+    <div class="wrapper">
+      <div class="cell">
+        <img src="{@SITE.path}/images/bitbazaar/bit-bazaar-winter-market-2014/logo-header.png" alt="" id="bbwm-logo">
+      </div>
+    </div>
+    <div id="feature">
+
+      <p>A unique celebration of the art & craft of indie games, comics and good food.</p>
+
+      <div class="center-block text-center" id="socmed">
+        <a href="https://twitter.com/TheBitBazaar"><img src="{@SITE.path}/images/bitbazaar/springfair2014/Twitter_logo_white.png" alt="Twitter" height="20"/></a>
+        <a href="https://www.facebook.com/events/972095349473030/"><img src="{@SITE.path}/images/bitbazaar/springfair2014/FB-f-Logo__white_100.png" alt="Facebook" height="20"/></a>
+        <a href="https://www.flickr.com/groups/bitbazaar/">
+          <img src="{@SITE.path}/images/bitbazaar/springfair2014/flickr.png"  alt="Flickr">
+        </a>
+      </div>
+
+
+      <p class="lead">Saturday, December 6, 2014 &bull; 11 a.m. to 7 p.m. &bull; Music @ 8<br><a href="#map">Bento Miso (862 Richmond St. W., Toronto)</a></p>
+    </div>
+  </section>
+
+
+<section id="about">
+<div class="container">
+  <div class="col-md-6">
+    <p class="lead">Buy one-of-a-kind, limited-edition and handmade/DIY items—pins, zines, boxed video games, card decks, art prints, comics, t-shirts, game soundtracks on vinyl, mixtapes, papercraft and toys—direct from your favorite independent game makers!</p></div>
+  <div class="col-md-6">
+    <p><b>Come hungry!</b> Food vendors will be on site serving up hot chocolate, spiked cider and local craft beer, deep-fried maple churros, jackfruit tacos, buttermilk chicken bao, chocolate dipped caramels, caramel popcorn, English toffee, and more. </p></div>
+</div>
+
+
+
+
+
+</section>
+
+
+
+  <section id="vendors">
+    <div class="container">
+      {%vendors}
+    </div>
+  </section>
+
+  <section id="music">
+
+    <div class="container">
+      <div id="exhibitor-lists">
+        <a name="music"></a>
+        <h2>Music + Visuals <small>8 p.m. // $10</small></h2>
+        <h4>DODECAE ◉ presented by XXIIVV featuring</h4>
+
+        <ul class="list-unstyled confirmed">
+          <li><h3 class="music">Dualryan <small class="">Toronto</small></h3></li>
+          <li><h3 class="music">Ilkae <small class="">Montreal</small></h3></li>
+          <li><h3 class="music">Ad·ver·sary <small class="">Toronto</small></h3></li>
+          <li><h3 class="music">Aliceffekt <small class="">Montreal</small></h3></li>
+          <li><h3 class="music">Nonante <small class="">Toronto, visualist</small></h3></li>
+          <li><h3 class="music">Melesul3 <small class="">Montreal, visualist</small></h3></li>
+          <li><h3 class="music">netgrind <small class="">Toronto, visualist</small></h3></li>
+        </ul>
+      </div>
+    </div>
+
+
+  </section>
+  <section id="directions" class="clearfix">
+    <div class="container">
+    </div>
+    <div class="map-box">
+
+      <div id="map">
+        <iframe width='100%' frameBorder='0' src='https://a.tiles.mapbox.com/v3/jenniebox.hn3a9o54/attribution.html?secure'></iframe>
+      </div>
+    </div>
+    <div class="container">
+      <h3>How to Find Bit Bazaar</h3>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Bento Miso <small><span class="glyphicon glyphicon-map-marker" style="color: #f1df48"></span></small></h4>
+          <p>The venue is a coworking space located at <a href="http://goo.gl/maps/jTmW8">862 Richmond Street West</a>, in Toronto's Queen West neighborhood. We're just south of the gates of Trinity-Bellwoods Park, near Strachan and Richmond.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Public Transit <small><span class="glyphicon glyphicon-map-marker" style="color: #000"></span></small></h4>
+          <p>Take the 501 Queen or 504 King streetcar to Strachan. We're one block south of Queen and two north of King on Richmond.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Parking <small><span class="glyphicon glyphicon-map-marker" style="color: #46ce8f"></span></small></h4>
+          <p>There are paid <a href="http://parking.greenp.com/find-parking/?a=862+Richmond+Street+West&x=0&y=0" target="_blank">Green P parking lots</a> at Walnut/Richmond (2-minute walk), Queen/Ossington and King/Tecumseth (10-minute walk). They range from $2 to $3.50/hour. Street parking is $1.50 to $2.25/hour.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+<section id="about-footer">
+  <div class="container">
+    <h3>About</h3>
+        <p>Bit Bazaar is a video game craft fair and marketplace, held twice a year in the spring (alongside Toronto Comic Arts Festival) and winter. It is planned, organized, and hosted by Bento Miso Collaborative Workspace, a coworking space and event venue for game and Web developers and other creative people, in Toronto's Queen West neighborhood.</p>
+
+  </div>
+</section>
+  <div class="container">
+    <div class="footer clearfix">
+
+        {%global/snippets/footer_info}
+    </div>
+  </div>
+  {/%global/js}
+  {/%global/metrics | process escape}
+  {%bonus_js}
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  {%global/metadata | process consume | ""}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="google-site-verification" content="1bB_5GjLUwtRRL3piTDtyvszq3lMSHuCmga7ChQhpNM" />
+  <meta name="description" content="{@metadata.page.description | else @metadata.site.description}">
+  <meta name="keywords" content="{@metadata.page.keywords | else @metadata.site.keywords}">
+  <meta name="author" content="{@metadata.site.author}">
+  <title>{@metadata.page.title}</title>
+  <link rel="stylesheet" href="{@SITE.path}/css/bitbazaarwm_marketing.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  {begin cute | process escape}
+    <!--                  _                _  _    _       __ ____  -->
+    <!--  _ __   __ _  __| | ___  __ __ __(_)| |_ | |_    / /|__ /  -->
+    <!-- | '  \ / _` |/ _` |/ -_) \ V  V /| ||  _|| ' \  < <  |_ \  -->
+    <!-- |_|_|_|\__,_|\__,_|\___|  \_/\_/ |_| \__||_||_|  \_\|___/  -->
+    <!--  _              _                   _                      -->
+    <!-- | |__  _  _    (_) ___  _ _   _ _  (_) ___                 -->
+    <!-- | '_ \| || |   | |/ -_)| ' \ | ' \ | |/ -_)                -->
+    <!-- |_.__/ \_, |  _/ |\___||_||_||_||_||_|\___|                -->
+    <!--        |__/  |__/                                          -->
+  {end cute}
+</head>
