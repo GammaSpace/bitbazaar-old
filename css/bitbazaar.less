@@ -1,24 +1,85 @@
-@import "../../bootstrap/less/bootstrap.less";
+@import "bootstrap.less";
 @bit-bazaar-blue:               #0027ff;
 @bit-bazaar-blue-highlight:     #f7ccd4;
 @bit-bazaar-red:                #ff0037;
 @bit-bazaar-red-highlight:      #abf5b4;
 
+//== Typography
+@apercu-bold-italic:    "Apercu Bold Italic", sans-serif;
+//
+//## Font, line-height, and color for body text, headings, and more.
+@apercu-mono:           "Apercu Mono Regular", sans-serif;
+@apercu-regular:        "Apercu Regular", sans-serif;
+@apercu-bold:           "Apercu Bold", sans-serif;
+
+
+.apercu-mono {
+  font-family: @apercu-mono;
+  font-size-adjust:0.5;
+  font-weight:normal;
+  font-style:normal;
+}
+.apercu-bold {
+  font-family: @apercu-bold;
+  font-size-adjust:0.508;
+  font-weight:bold;
+  font-style: normal;
+
+}
+.apercu-bold-italic {
+  font-family: @apercu-bold-italic;
+  font-size-adjust:0.508;
+  font-weight:bold;
+  font-style:italic;
+
+}
+.apercu-regular{
+    font-family: @apercu-regular;
+    font-size-adjust:0.508;
+    font-weight:normal;
+    font-style:normal;
+}
 
 
 html {
 	height: 100%;
 }
 
+@media (min-width: 500px) {
+  body {
+    padding: 1em;
+  }
+  h1 {
+    font-size: 3.2em;
+  }
+  .logo {
+    padding: 2em 25%;
+  }
+  .bs-docs-section {
+    margin-bottom: 1em;
+  }
+  .location h1:first-child {
+    padding-right: .5em;
+  }
+  .location h1 {
+    display: inline;
+  }
+  #cfp button[type="submit"] {
+    width: initial;
+  }
+}
+
+
+
 
 
 body  {
 		margin: 0;
 		height: 100%;
-		
+
  &.bit-bazaar {
 	 margin-top: 30px;
-	 .modal-backdrop { background-color: fadeout(@watermelon,60%)}
+	 .modal-backdrop { background-color: fadeout(#444,60%)}
 
 	 .content { margin: 0; }
 

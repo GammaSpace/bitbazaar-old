@@ -1060,7 +1060,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "letter-gothic-std", sans-serif;
+  font-family: "aktiv-grotesk-std", sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -1159,7 +1159,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "azo-sans-uber", sans-serif;
+  font-family: "larabiefont", monospace;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -5792,7 +5792,7 @@ button.close {
   z-index: 1070;
   display: block;
   visibility: visible;
-  font-family: "letter-gothic-std", sans-serif;
+  font-family: "aktiv-grotesk-std", sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -5899,7 +5899,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "letter-gothic-std", sans-serif;
+  font-family: "aktiv-grotesk-std", sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.428571429;
@@ -6529,26 +6529,8 @@ button.close {
     display: none !important;
   }
 }
-.apercu-mono {
-  font-family: "Apercu Mono Regular", sans-serif;
-  font-size-adjust: 0.5;
-  font-weight: normal;
-  font-style: normal;
-}
-.apercu-bold {
-  font-family: "Apercu Bold", sans-serif;
-  font-size-adjust: 0.508;
-  font-weight: bold;
-  font-style: normal;
-}
-.apercu-bold-italic {
-  font-family: "Apercu Bold Italic", sans-serif;
-  font-size-adjust: 0.508;
-  font-weight: bold;
-  font-style: italic;
-}
-.apercu-regular {
-  font-family: "Apercu Regular", sans-serif;
+.tk-aktiv-grotesk-std {
+  font-family: "aktiv-grotesk-std", sans-serif;
   font-size-adjust: 0.508;
   font-weight: normal;
   font-style: normal;
@@ -6641,71 +6623,71 @@ body a {
 body a:hover {
   color: #00784e;
 }
-body#bit-bazaar-winter-market-2014 {
+body#bit-bazaar-spring-fair-2015 {
   padding-bottom: 0;
   /* Small devices (tablets, 768px and up) */
   /* Medium devices (desktops, 992px and up) */
   /* Large devices (large desktops, 1200px and up) */
 }
-body#bit-bazaar-winter-market-2014 section#directions {
+body#bit-bazaar-spring-fair-2015 section#directions {
   margin: 0;
   padding: 0 !important;
 }
-body#bit-bazaar-winter-market-2014 section#directions iframe {
+body#bit-bazaar-spring-fair-2015 section#directions iframe {
   height: 300px;
 }
-body#bit-bazaar-winter-market-2014 section#directions p {
+body#bit-bazaar-spring-fair-2015 section#directions p {
   font-size: 16px;
   line-height: 1.6em;
 }
-body#bit-bazaar-winter-market-2014 section#directions p a {
+body#bit-bazaar-spring-fair-2015 section#directions p a {
   color: #444;
   font-weight: 900;
   text-decoration: underline;
 }
-body#bit-bazaar-winter-market-2014 section#directions h4 {
+body#bit-bazaar-spring-fair-2015 section#directions h4 {
   font-family: "letter-gothic-std";
   line-height: 2em;
   text-transform: uppercase;
   font-wieght: 800;
   font-weight: bold;
 }
-body#bit-bazaar-winter-market-2014 section#about {
+body#bit-bazaar-spring-fair-2015 section#about {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-body#bit-bazaar-winter-market-2014 .wrapper {
+body#bit-bazaar-spring-fair-2015 .wrapper {
   display: table;
   width: 100%;
   height: 100%;
   margin: auto;
 }
-body#bit-bazaar-winter-market-2014 .cell {
+body#bit-bazaar-spring-fair-2015 .cell {
   display: table-cell;
   vertical-align: middle;
   position: relative;
 }
-body#bit-bazaar-winter-market-2014 .footer {
+body#bit-bazaar-spring-fair-2015 .footer {
   padding: 10px 0;
 }
-body#bit-bazaar-winter-market-2014 .footer p,
-body#bit-bazaar-winter-market-2014 .footer p.text-center {
+body#bit-bazaar-spring-fair-2015 .footer p,
+body#bit-bazaar-spring-fair-2015 .footer p.text-center {
   text-align: left !important;
 }
-body#bit-bazaar-winter-market-2014 .mid-headline {
+body#bit-bazaar-spring-fair-2015 .mid-headline {
   letter-spacing: 2px;
   font-size: 32px;
   font-weight: 100;
 }
-body#bit-bazaar-winter-market-2014 h2 {
+body#bit-bazaar-spring-fair-2015 h2 {
   font-size: 32px;
   font-weight: 100;
   font-size: 42px text-center();
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-body#bit-bazaar-winter-market-2014 #header {
-  background: #777777 url("../images/bitbazaar/bit-bazaar-winter-market-2014/site-header.png");
+body#bit-bazaar-spring-fair-2015 #header {
+  background: #C6BBD1;
   padding: 0;
   /* 	padding-top: 60px; */
   height: 80%;
@@ -6715,36 +6697,35 @@ body#bit-bazaar-winter-market-2014 #header {
   left: 0;
   z-index: 0;
   background-size: cover;
-  background-color: #000;
 }
-body#bit-bazaar-winter-market-2014 #header p {
+body#bit-bazaar-spring-fair-2015 #header p {
   color: #fff;
 }
-body#bit-bazaar-winter-market-2014 #header #bbwm-logo {
+body#bit-bazaar-spring-fair-2015 #header #bbwm-logo {
   margin-top: -60%;
   max-width: 80%;
 }
 @media (min-width: 992px) {
-  body#bit-bazaar-winter-market-2014 #header #bbwm-logo {
+  body#bit-bazaar-spring-fair-2015 #header #bbwm-logo {
     margin-top: -10%;
   }
 }
-body#bit-bazaar-winter-market-2014 #header .cell {
+body#bit-bazaar-spring-fair-2015 #header .cell {
   width: 100%;
 }
-body#bit-bazaar-winter-market-2014 #header img {
+body#bit-bazaar-spring-fair-2015 #header img {
   float: none;
   display: block;
   margin: 0 auto;
 }
-body#bit-bazaar-winter-market-2014 #header #socmed {
+body#bit-bazaar-spring-fair-2015 #header #socmed {
   margin: 10px auto;
 }
-body#bit-bazaar-winter-market-2014 #header #socmed img {
+body#bit-bazaar-spring-fair-2015 #header #socmed img {
   display: inline;
   padding: 0 10px;
 }
-body#bit-bazaar-winter-market-2014 #header #feature {
+body#bit-bazaar-spring-fair-2015 #header #feature {
   position: absolute;
   z-index: 1;
   width: 100%;
@@ -6764,116 +6745,115 @@ body#bit-bazaar-winter-market-2014 #header #feature {
   /* W3C */
   /* IE6-9 */
 }
-body#bit-bazaar-winter-market-2014 #header #feature p {
+body#bit-bazaar-spring-fair-2015 #header #feature p {
   text-align: center;
   color: #fff;
 }
-body#bit-bazaar-winter-market-2014 #header #feature p:first-child {
+body#bit-bazaar-spring-fair-2015 #header #feature p:first-child {
   margin: 0;
 }
-body#bit-bazaar-winter-market-2014 #overview {
+body#bit-bazaar-spring-fair-2015 #overview {
   padding-bottom: 60px;
   padding-top: 60px;
 }
-body#bit-bazaar-winter-market-2014 h1,
-body#bit-bazaar-winter-market-2014 h2 {
+body#bit-bazaar-spring-fair-2015 h1,
+body#bit-bazaar-spring-fair-2015 h2 {
   font-size: 18px;
 }
-body#bit-bazaar-winter-market-2014 div.page-header {
+body#bit-bazaar-spring-fair-2015 div.page-header {
   margin-bottom: 0;
 }
-body#bit-bazaar-winter-market-2014 div.page-header .lead {
+body#bit-bazaar-spring-fair-2015 div.page-header .lead {
   margin-bottom: 0;
 }
 @media (min-width: 768px) {
-  body#bit-bazaar-winter-market-2014 h1,
-  body#bit-bazaar-winter-market-2014 h2 {
+  body#bit-bazaar-spring-fair-2015 h1,
+  body#bit-bazaar-spring-fair-2015 h2 {
     font-size: 28px;
   }
 }
 @media (min-width: 992px) {
-  body#bit-bazaar-winter-market-2014 h1,
-  body#bit-bazaar-winter-market-2014 h2 {
+  body#bit-bazaar-spring-fair-2015 h1,
+  body#bit-bazaar-spring-fair-2015 h2 {
     font-size: 36px;
   }
 }
-body#bit-bazaar-winter-market-2014 .caption {
+body#bit-bazaar-spring-fair-2015 .caption {
   margin-top: 10px;
 }
-body#bit-bazaar-winter-market-2014 #venue {
+body#bit-bazaar-spring-fair-2015 #venue {
   padding-top: 50px;
 }
-body#bit-bazaar-winter-market-2014 section {
+body#bit-bazaar-spring-fair-2015 section {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-body#bit-bazaar-winter-market-2014 section h3 {
-  font-family: "azo-sans-uber";
+body#bit-bazaar-spring-fair-2015 section h3 {
   line-height: 1em;
   padding: 0;
 }
 @media (min-width: 768px) {
-  body#bit-bazaar-winter-market-2014 section h3 {
+  body#bit-bazaar-spring-fair-2015 section h3 {
     line-height: normal;
   }
 }
-body#bit-bazaar-winter-market-2014 section p {
+body#bit-bazaar-spring-fair-2015 section p {
   margin-bottom: 20px;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
-  body#bit-bazaar-winter-market-2014 section p {
+  body#bit-bazaar-spring-fair-2015 section p {
     font-size: 21px;
   }
 }
-body#bit-bazaar-winter-market-2014 section p a {
+body#bit-bazaar-spring-fair-2015 section p a {
   text-decoration: none;
   border-bottom: solid 2px #fff;
   color: #fff;
 }
-body#bit-bazaar-winter-market-2014 section p strong {
+body#bit-bazaar-spring-fair-2015 section p strong {
   color: #fff;
 }
-body#bit-bazaar-winter-market-2014 section p.links {
+body#bit-bazaar-spring-fair-2015 section p.links {
   color: #fff;
 }
-body#bit-bazaar-winter-market-2014 section p.links a {
+body#bit-bazaar-spring-fair-2015 section p.links a {
   text-decoration: none;
   border-bottom: solid 2px #fff;
   color: #fff;
 }
-body#bit-bazaar-winter-market-2014 section#vendors,
-body#bit-bazaar-winter-market-2014 section#music {
+body#bit-bazaar-spring-fair-2015 section#vendors,
+body#bit-bazaar-spring-fair-2015 section#music {
   padding-bottom: 60px;
 }
-body#bit-bazaar-winter-market-2014 section#vendors p,
-body#bit-bazaar-winter-market-2014 section#music p {
+body#bit-bazaar-spring-fair-2015 section#vendors p,
+body#bit-bazaar-spring-fair-2015 section#music p {
   background: #a5fc32;
   display: inline;
   padding: 3px 5px;
 }
-body#bit-bazaar-winter-market-2014 section#vendors h3,
-body#bit-bazaar-winter-market-2014 section#music h3 {
+body#bit-bazaar-spring-fair-2015 section#vendors h3,
+body#bit-bazaar-spring-fair-2015 section#music h3 {
   font-weight: 100;
 }
-body#bit-bazaar-winter-market-2014 section#vendors h2 small,
-body#bit-bazaar-winter-market-2014 section#music h2 small,
-body#bit-bazaar-winter-market-2014 section#vendors h4,
-body#bit-bazaar-winter-market-2014 section#music h4 {
+body#bit-bazaar-spring-fair-2015 section#vendors h2 small,
+body#bit-bazaar-spring-fair-2015 section#music h2 small,
+body#bit-bazaar-spring-fair-2015 section#vendors h4,
+body#bit-bazaar-spring-fair-2015 section#music h4 {
   font-family: "letter-gothic-std";
 }
-body#bit-bazaar-winter-market-2014 section#vendors #exhibitor-lists > div,
-body#bit-bazaar-winter-market-2014 section#music #exhibitor-lists > div {
+body#bit-bazaar-spring-fair-2015 section#vendors #exhibitor-lists > div,
+body#bit-bazaar-spring-fair-2015 section#music #exhibitor-lists > div {
   padding-top: 60px;
 }
-body#bit-bazaar-winter-market-2014 section#vendors #exhibitor-lists ul.confirmed li,
-body#bit-bazaar-winter-market-2014 section#music #exhibitor-lists ul.confirmed li {
+body#bit-bazaar-spring-fair-2015 section#vendors #exhibitor-lists ul.confirmed li,
+body#bit-bazaar-spring-fair-2015 section#music #exhibitor-lists ul.confirmed li {
   display: inline;
 }
-body#bit-bazaar-winter-market-2014 section#vendors #exhibitor-lists ul.confirmed li h3,
-body#bit-bazaar-winter-market-2014 section#music #exhibitor-lists ul.confirmed li h3 {
+body#bit-bazaar-spring-fair-2015 section#vendors #exhibitor-lists ul.confirmed li h3,
+body#bit-bazaar-spring-fair-2015 section#music #exhibitor-lists ul.confirmed li h3 {
   display: inline;
   font-size: 24px;
   letter-spacing: 1px;
@@ -6883,27 +6863,27 @@ body#bit-bazaar-winter-market-2014 section#music #exhibitor-lists ul.confirmed l
   line-height: 2em;
   text-transform: uppercase;
 }
-body#bit-bazaar-winter-market-2014 section#vendors #exhibitor-lists ul.confirmed li h3 small,
-body#bit-bazaar-winter-market-2014 section#music #exhibitor-lists ul.confirmed li h3 small {
+body#bit-bazaar-spring-fair-2015 section#vendors #exhibitor-lists ul.confirmed li h3 small,
+body#bit-bazaar-spring-fair-2015 section#music #exhibitor-lists ul.confirmed li h3 small {
   display: block;
   letter-spacing: 1px;
   padding-bottom: 20px;
 }
 @media (min-width: 768px) {
-  body#bit-bazaar-winter-market-2014 section#vendors #exhibitor-lists ul.confirmed li h3,
-  body#bit-bazaar-winter-market-2014 section#music #exhibitor-lists ul.confirmed li h3 {
+  body#bit-bazaar-spring-fair-2015 section#vendors #exhibitor-lists ul.confirmed li h3,
+  body#bit-bazaar-spring-fair-2015 section#music #exhibitor-lists ul.confirmed li h3 {
     white-space: nowrap;
     font-size: 24px;
   }
-  body#bit-bazaar-winter-market-2014 section#vendors #exhibitor-lists ul.confirmed li h3 small,
-  body#bit-bazaar-winter-market-2014 section#music #exhibitor-lists ul.confirmed li h3 small {
+  body#bit-bazaar-spring-fair-2015 section#vendors #exhibitor-lists ul.confirmed li h3 small,
+  body#bit-bazaar-spring-fair-2015 section#music #exhibitor-lists ul.confirmed li h3 small {
     display: inline;
     text-align: right;
     padding-right: 20px;
     padding-bottom: 0;
   }
 }
-body#bit-bazaar-winter-market-2014 h3 {
+body#bit-bazaar-spring-fair-2015 h3 {
   letter-spacing: 2px;
   font-size: 32px;
   font-weight: 100;

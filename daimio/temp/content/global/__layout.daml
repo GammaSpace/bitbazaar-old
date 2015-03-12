@@ -10,7 +10,7 @@
   <meta name="keywords" content="{@metadata.page.keywords | else @metadata.site.keywords}">
   <meta name="author" content="{@metadata.site.author}">
   <title>{@metadata.page.title}</title>
-  <link rel="stylesheet" href="{@SITE.path}/css/styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="{@metadata.page.css_path | else "{@SITE.path}/css/styles.css"}" type="text/css" media="screen" title="no title" charset="utf-8">
   {begin cute | process escape}
     <!--                  _                _  _    _       __ ____  -->
     <!--  _ __   __ _  __| | ___  __ __ __(_)| |_ | |_    / /|__ /  -->
@@ -22,14 +22,13 @@
     <!-- |_.__/ \_, |  _/ |\___||_||_||_||_||_|\___|                -->
     <!--        |__/  |__/                                          -->
   {end cute}
-  <script src="//use.typekit.net/smn2drw.js"></script>
+  <script src="//use.typekit.net/{@metadata.page.typekit | else :smn2drw}.js"></script>
 
 {begin js | process escape}
 <script>try{Typekit.load();}catch(e){}</script>
 {end js}
 </head>
 
-<body id="">
-  {%content}
-</body>
+  {%body}
+
 </html>

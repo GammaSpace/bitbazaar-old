@@ -1,14 +1,8 @@
-{%header}
-<body id="bit-bazaar-winter-market-2014" class="bit-bazaar" data-spy="scroll" data-target="#primary-nav-2" data-offset="50">
-  {%nav}
-
-
-
   <section id="header">
 
     <div class="wrapper">
       <div class="cell">
-        <img src="{@SITE.path}/images/bitbazaar/bit-bazaar-winter-market-2014/logo-header.png" alt="" id="bbwm-logo">
+        <img src="{@SITE.path}/images/bit_bazaar_grad.png" id="bbwm-logo">
       </div>
     </div>
     <div id="feature">
@@ -16,15 +10,15 @@
       <p>A unique celebration of the art & craft of indie games, comics and good food.</p>
 
       <div class="center-block text-center" id="socmed">
-        <a href="https://twitter.com/TheBitBazaar"><img src="{@SITE.path}/images/bitbazaar/springfair2014/Twitter_logo_white.png" alt="Twitter" height="20"/></a>
-        <a href="https://www.facebook.com/events/972095349473030/"><img src="{@SITE.path}/images/bitbazaar/springfair2014/FB-f-Logo__white_100.png" alt="Facebook" height="20"/></a>
+        <a href="https://twitter.com/TheBitBazaar"><img src="{@SITE.path}/images/socmed/Twitter_logo_white.png" alt="Twitter" height="20"/></a>
+        <a href="https://www.facebook.com/events/972095349473030/"><img src="{@SITE.path}/images/socmed/FB-f-Logo__white_100.png" alt="Facebook" height="20"/></a>
         <a href="https://www.flickr.com/groups/bitbazaar/">
-          <img src="{@SITE.path}/images/bitbazaar/springfair2014/flickr.png"  alt="Flickr">
+          <img src="{@SITE.path}/images/socmed/flickr.png"  alt="Flickr">
         </a>
       </div>
 
 
-      <p class="lead">Saturday, December 6, 2014 &bull; 11 a.m. to 7 p.m. &bull; Music @ 8<br><a href="#map">Bento Miso (862 Richmond St. W., Toronto)</a></p>
+      <p class="lead">Saturday, May 9, 2015 &bull; 11 a.m. to 7 p.m. &bull; Music @ 8<br><a href="#map">Bento Miso (862 Richmond St. W., Toronto)</a></p>
     </div>
   </section>
 
@@ -34,7 +28,7 @@
   <div class="col-md-6">
     <p class="lead">Buy one-of-a-kind, limited-edition and handmade/DIY items—pins, zines, boxed video games, card decks, art prints, comics, t-shirts, game soundtracks on vinyl, mixtapes, papercraft and toys—direct from your favorite independent game makers!</p></div>
   <div class="col-md-6">
-    <p><b>Come hungry!</b> Food vendors will be on site serving up hot chocolate, spiked cider and local craft beer, deep-fried maple churros, jackfruit tacos, buttermilk chicken bao, chocolate dipped caramels, caramel popcorn, English toffee, and more. </p></div>
+    <p><b>Come hungry!</b> Food vendors will be on site serving up tasty food and adult beverages!</p></div>
 </div>
 
 
@@ -110,14 +104,3 @@
 
   </div>
 </section>
-  <div class="container">
-    <div class="footer clearfix">
-
-        {%global/snippets/footer_info}
-    </div>
-  </div>
-  {/%global/js}
-  {/%global/metrics | process escape}
-  {%bonus_js}
-</body>
-</html>

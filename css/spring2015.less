@@ -1,12 +1,54 @@
-@import "../../bootstrap/less/bootstrap.less";
+@import "bootstrap.less";
+@bit-bazaar-blue:               #0027ff;
+@bit-bazaar-blue-highlight:     #f7ccd4;
+@bit-bazaar-red:                #ff0037;
+@bit-bazaar-red-highlight:      #abf5b4;
 
-@primary: #fff;
-@secondary: #000;
+@tk-aktiv-grotesk-std:  "aktiv-grotesk-std",sans-serif;
+@larabiefont: "larabiefont",monospace;
 
-@font-family-base: "letter-gothic-std",sans-serif !important;
-//"franklin-gothic-urw",sans-serif;
-@headings-font-family: "azo-sans-uber",sans-serif !important;
-//"franklin-gothic-urw-comp",sans-serif;
+@font-family-base: @tk-aktiv-grotesk-std;
+@headings-font-family: @larabiefont;
+
+
+.tk-aktiv-grotesk-std {
+    font-family: @tk-aktiv-grotesk-std;
+    font-size-adjust:0.508;
+    font-weight:normal;
+    font-style:normal;
+}
+
+
+html {
+	height: 100%;
+}
+
+@media (min-width: 500px) {
+  body {
+    padding: 1em;
+  }
+  h1 {
+    font-size: 3.2em;
+  }
+  .logo {
+    padding: 2em 25%;
+  }
+  .bs-docs-section {
+    margin-bottom: 1em;
+  }
+  .location h1:first-child {
+    padding-right: .5em;
+  }
+  .location h1 {
+    display: inline;
+  }
+  #cfp button[type="submit"] {
+    width: initial;
+  }
+}
+
+
+
 
 html {
   height: 100%;
@@ -62,7 +104,7 @@ body {
     }
 
   }
-  &#bit-bazaar-winter-market-2014 {
+  &#bit-bazaar-spring-fair-2015 {
 
 
     section#directions {
@@ -129,6 +171,7 @@ body {
 
     }
     #header {
+      background: #C6BBD1;
       p {
         color: #fff;
 
@@ -141,7 +184,6 @@ body {
           margin-top: -10%;
         }
       }
-      background: #777 url("../images/bitbazaar/bit-bazaar-winter-market-2014/site-header.png");
 
       .cell {
         width: 100%;
@@ -168,7 +210,6 @@ body {
       left: 0;
       z-index: 0;
       background-size: cover;
-      background-color: #000;
 
       img {
         float: none;
@@ -263,7 +304,6 @@ body {
       padding-top: 20px;
       padding-bottom: 20px;
       h3 {
-        font-family: "azo-sans-uber";
         line-height: 1em;
         padding: 0;
         @media (min-width: @screen-sm-min) {
@@ -357,14 +397,14 @@ body {
     }
 
   }
-  @bgDefault: @primary;
-  //@primary;
-  @colDefault: @secondary;
+  @bgDefault: #fff;
+  //#fff;
+  @colDefault: #000;
 
-  @bgHighlight: @secondary;
-  // lighten(@primary,10%);
-  @colHighlight: lighten(@primary,10%);
-  // lighten(@primary,10%);
+  @bgHighlight: #000;
+
+  @colHighlight: lighten(#fff,10%);
+
   .navbar-default {
     background-color: @bgDefault;
     border: none;

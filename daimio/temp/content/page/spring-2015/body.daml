@@ -1,0 +1,13 @@
+<body id="bit-bazaar-spring-fair-2015" class="bit-bazaar" data-spy="scroll" data-target="#primary-nav-2" data-offset="50">
+  {%nav}
+  {%content}
+
+  <div class="container">
+    <div class="footer clearfix">
+
+        {%global/snippets/footer_info}
+    </div>
+  </div>
+
+  {%bonus_js}
+</body>

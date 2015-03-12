@@ -1,0 +1,13 @@
+{* (
+  :site {* (
+    :name "Dames Making Games"
+    :description "Dames Making Games (DMG) is a not-for-profit feminist organization dedicated to supporting dames interested in making, playing, and changing games."
+    :keywords "women in games, indie games, game development, game incubator, game dev community"
+    :tagline "DMG is a not-for-profit feminist organization dedicated to supporting dames interested in making, playing, and changing games."
+  )}
+  :mtag {* (
+    :name :damesmakinggames
+  )}
+  :phone ""
+) | > :metadata | ""}
+{%metadata | is like "/some weird string/" | not | then "{%metadata}" | proc | ""}
