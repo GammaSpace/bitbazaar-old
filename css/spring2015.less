@@ -1,8 +1,4 @@
 @import "bootstrap.less";
-@bit-bazaar-blue:               #0027ff;
-@bit-bazaar-blue-highlight:     #f7ccd4;
-@bit-bazaar-red:                #ff0037;
-@bit-bazaar-red-highlight:      #abf5b4;
 
 @tk-aktiv-grotesk-std:  "aktiv-grotesk-std",sans-serif;
 @larabiefont: "larabiefont",monospace;
@@ -10,7 +6,8 @@
 @font-family-base: @tk-aktiv-grotesk-std;
 @headings-font-family: @larabiefont;
 
-
+@primary: #C6BBD1;
+@secondary: #0D00E3;
 .tk-aktiv-grotesk-std {
     font-family: @tk-aktiv-grotesk-std;
     font-size-adjust:0.508;
@@ -46,10 +43,9 @@ html {
     width: initial;
   }
 }
-
-
-
-
+.inliner {
+  .clearfix;
+}
 html {
   height: 100%;
 
@@ -57,6 +53,8 @@ html {
 body {
   margin: 0;
   height: 100%;
+  background-color: desaturate(lighten(@primary,10%),5%);
+  background: @primary;
 
   &.bit-bazaar {
     .modal-backdrop {
@@ -81,21 +79,33 @@ body {
 
 }
 
-#about {
-  .mixin(#eee;#1f1f1f);
-
-}
-
 #music {
   .mixin(#7d5f2f;#eeeeee);
 
 }
 #vendors {
-  .mixin(#29416d;#b3b3b3);
-
+  .mixin(@secondary,#fff);
+  background-image: url(../images/spring-2015/promo_food2.gif);
+  background-position: right 20%;
+  min-height: 300px;
+  background-repeat: no-repeat;
 }
+
+#panelscapes {
+  .mixin(@secondary,#fff);
+  background-image: url(../images/spring-2015/promo_panelscapes2.gif);
+  background-position: right 20%;
+  background-position: cover;
+  min-height: 400px;
+  background-repeat: no-repeat;
+  p {
+    background: #c6bbd1;
+    display: inline;
+
+  }
+}
+
 body {
-  padding-top: 50px;
   a {
     color: #000;
     text-decoration: underline;
@@ -107,36 +117,41 @@ body {
   &#bit-bazaar-spring-fair-2015 {
 
 
-    section#directions {
-      margin: 0;
-      padding: 0 !important;
+    section#venue {
+      .mixin(#fff,@secondary);
+      background-image: url(../images/spring-2015/promo_venue.gif);
+      background-position: left 20%;
+      background-repeat: no-repeat;
+
       iframe {
         height: 300px;
       }
 
-      p {
-        font-size: 16px;
-        line-height: 1.6em;
-        a {
-          color: #444;
-          font-weight: 900;
-          text-decoration: underline;
-        }
-      }
-      h4 {
-        font-family: "letter-gothic-std";
-        line-height: 2em;
-        text-transform: uppercase;
-        font-wieght: 800;
-        font-weight: bold;
-      }
+
+
 
     }
 
     section#about {
+      .mixin(@secondary;#fff);
+      background-image: url(../images/spring-2015/promo_booth.gif);
+      background-position: right 20%;
+      background-repeat: no-repeat;
+      p {
+        background: #fff;
+        display: inline;
 
-      padding-top: 60px;
-      padding-bottom: 60px;
+      }
+      strong {
+        color: @secondary;
+        font-weight: 900;
+      }
+    }
+    section#about-footer {
+      p,a {
+        color: lighten(desaturate(@secondary,50%),20%);
+        border-bottom: none;
+      }
     }
 
     .wrapper {
@@ -159,52 +174,36 @@ body {
     }
     .mid-headline {
       letter-spacing: 2px;
-      font-size: 32px;
-      font-weight: 100;
+      text-transform: uppercase;
+
+      font-size: 42px;
+      font-weight:100;
 
     }
     h2 {
       .mid-headline;
-      font-size: 42px text-center();
+
+      font-size: 42px;
       text-transform: uppercase;
       letter-spacing: 2px;
 
     }
     #header {
-      background: #C6BBD1;
+      padding: 2em;
       p {
-        color: #fff;
+        color: lighten(@primary,20%);
+        font-size: 32px;
 
       }
       #bbwm-logo {
-        margin-top: -60%;
-        max-width: 80%;
 
-        @media (min-width: @screen-md-min) {
-          margin-top: -10%;
-        }
       }
 
       .cell {
         width: 100%;
 
       }
-      padding: 0;
-      /* 	padding-top: 60px; */
-      height: 80%;
-      min-height: 400px;
-      @media (min-width: @screen-sm-min) {
 
-
-      }
-      @media (min-width: @screen-md-min) {
-
-
-      }
-      @media (min-width: @screen-lg-min) {
-
-
-      }
       position: relative;
       top: 0;
       left: 0;
@@ -238,20 +237,7 @@ body {
         width: 100%;
         left: 0;
         bottom: 0;
-        background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.75) 100%);
-        /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(1%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.75)));
-        /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.75) 100%);
-        /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.75) 100%);
-        /* Opera 11.10+ */
-        background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.75) 100%);
-        /* IE10+ */
-        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.75) 100%);
-        /* W3C */
 
-        /* IE6-9 */
       }
 
     }
@@ -296,36 +282,28 @@ body {
       margin-top: 10px;
 
     }
-    #venue {
-      padding-top: 50px;
 
-    }
     section {
       padding-top: 20px;
       padding-bottom: 20px;
+      margin-bottom: 1em;
       h3 {
         line-height: 1em;
         padding: 0;
+        margin: 0;
         @media (min-width: @screen-sm-min) {
           line-height: normal;
         }
 
       }
       p {
-        .lead();
-        span,
-        a {
-
-
-        }
+        font-size: 24px;
+        line-height: 1.5em;
         a {
           text-decoration: none;
           border-bottom: solid 2px #fff;
           color: #fff;
 
-        }
-        strong {
-          color: #fff;
         }
         &.links {
           color: #fff;
@@ -341,7 +319,7 @@ body {
       &#music {
         padding-bottom: 60px;
         p {
-          background: #a5fc32;
+
           display: inline;
           padding: 3px 5px;
 

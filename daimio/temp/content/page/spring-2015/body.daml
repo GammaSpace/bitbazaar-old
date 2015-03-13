@@ -1,5 +1,5 @@
 <body id="bit-bazaar-spring-fair-2015" class="bit-bazaar" data-spy="scroll" data-target="#primary-nav-2" data-offset="50">
-  {%nav}
+  {/%nav}
   {%content}
 
   <div class="container">
