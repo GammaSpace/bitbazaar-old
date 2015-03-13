@@ -7,7 +7,7 @@
     </a>    
     <div class="wrapper">
       <div class="cell">
-        <img src="{@SITE.path}/images/bitbazaar/springfair2014/bit_bazaar_masthead.png" alt="" id="bbwm14-logo">
+        <img src="{@SITE.path}/images/bitbazaar/springfair2014/bit_bazaar_masthead.png" alt="" id="bbapplication-logo">
         <div class="center-block text-center" id="socmed">
           <a href="https://twitter.com/TheBitBazaar"><img src="{@SITE.path}/images/bitbazaar/springfair2014/Twitter_logo_white.png" alt="Twitter" height="20"/></a>
           <a href="https://www.facebook.com/events/574366659326801/"><img src="{@SITE.path}/images/bitbazaar/springfair2014/FB-f-Logo__white_100.png"  alt="Facebook" height="20"/></a>    

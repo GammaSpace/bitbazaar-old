@@ -1,13 +1,13 @@
 <p>Hi, {@profile.my.firstname} {@profile.my.lastname}! You are logged in with your account <b>{@MY.username}</b>. The email we have on file for you is <b>{@member.depot.email}</b>.</p>
-<form class="form-vertical" method="post" accept-charset="utf-8" id="game-exhibitor">  
+<form class="form-vertical" method="post" accept-charset="utf-8" id="game-exhibitor">
   <fieldset>
-    
+
     <div class="row">
       <div class="col-md-8">
         <div class="form-group">
           <label class="form-label" for="developer">Name</label>
 
-          <input type="text" value="{ifelse ({@profile.my.professional.company} "{@profile.my.professional.company}" {@POST} "{@POST.developer}" {@profile.my.firstname} "{@profile.my.firstname} {@profile.my.lastname}" :default "")}" name="name" class="form-control" id="developer">
+          <input type="text" value="{ifelse ({@profile.my.professional.company} "{@profile.my.professional.company}" {@POST} "{@POST.developer}" {@profile.my.firstname} "{@profile.my.firstname} {@profile.my.lastname}" :default "")}" name="depot[name]" class="form-control" id="developer">
           <p class="help-block">If exhibiting as a collective, studio, or other group, use that name here.</p>
 
         </div>
@@ -17,91 +17,77 @@
           <label class="form-label" for="type">Type</label>
           <div class="radio">
             <label class="">
-              <input type="radio" name="type" id="type-games" value="games" checked> Games
+              <input type="radio" name="depot[application_type]" id="type-games" value="games" checked> Games
             </label>
           </div>
           <div class="">
-    
+
             <label class="radio">
-              <input type="radio" name="type" id="type-comics" value="comics"> Comics
+              <input type="radio" name="depot[application_type]" id="type-comics" value="comics"> Comics
             </label>
           </div>
-        </div>    
+        </div>
       </div>
     </div>
-      
+
     <div class="form-group">
       <label class="form-label" for="gamename">Title</label>
 
-      <input type="text" value="{ifelse ({@POST} "{@POST.gamename}" :default "")}" name="product" class="form-control required" id="gamename">
+      <input type="text" value="{ifelse ({@POST} "{@POST.gamename}" :default "")}" name="depot[product]" class="form-control required" id="gamename">
       <p class="help-block">The title of the game or comic you're showing. If showing more than one, please list the primary one here and add others in the <b>short description</b> field below.</p>
     </div>
-  
-  
-    
+
+
+
     <div class="form-group">
       <label class="form-label" for="shortdescription">Short description</label>
-      <textarea type="text" value="{@POST.shortdescription}" name="shortdescription" class="form-control" rows="4" id="shortdescription"></textarea>
+      <textarea type="text" value="{@POST.shortdescription}" name="depot[description]" class="form-control" rows="4" id="shortdescription"></textarea>
     </div>
-    
-  
     <hr />
     <div class="form-group">
       <label class="form-label" for="link">Web site</label>
-
       <div class="input-group">
         <span class="input-group-addon">http://</span>
-        <input type="text" class="form-control" name="link">
-
+        <input type="text" class="form-control" name="depot[link]">
       </div>
-    </div>        
-
-        
+    </div>
     <div class="form-group">
       <label class="form-label" for="merch">Merchandise</label>
-
-      <textarea type="text" value="{@POST.merch}" name="merch" class="form-control" rows="6" id="merch"></textarea>
+      <textarea type="text" value="{@POST.merch}" name="depot[merch]" class="form-control" rows="6" id="merch"></textarea>
       <p class="help-block">Please describe the goods you plan to have for sale and in what format (e.g., download code, prints, boxed editions).<br><i>psst... this is the most important part of the application.</i></p>
       <hr />
       <button type="submit" class="btn btn-default">Submit &rarr;</button>
       <p class="help-block">All exhibitors are expected to comply with our <a href="https://bentomiso.zendesk.com/hc/en-us/articles/201812303-Code-of-Conduct">Code of Coduct</a>.</p>
-
-
     </div>
   </fieldset>
-    
+
   <input type="hidden" name="registered" value="{time represent as "M d, Y"}">
-  <input type="hidden" value="{@profile.my.firstname}" name="firstname">
-  <input type="hidden" value="{@profile.my.lastname}" name="lastname">
-  <input type="hidden" value="{@member.depot.email}" name="email">
-  <input type="hidden" name="submitted" value="{time represent as :c}">
+  <input type="hidden" name="firstname" value="{@profile.my.firstname}">
+  <input type="hidden" name="lastname" value="{@profile.my.lastname}">
+  <input type="hidden" name="email" value="{@member.depot.email}">
+  <input type="hidden" name="depot[submitted]" value="{time represent as :c}">
   <input type="hidden" name="exhibitor_type" value="comics">
-    
+
   <textarea name="commands" style="display:none">
     {begin verbatim | process escape}
-              
-      {/ Application stuff}
-      {stuff add type :bbwm14 | > :ex_id}
-      {begin added | if @ex_id}
-        {exec depot_set for @ex_id in :stuff path :application_type value #type}
-        {exec depot_set for @ex_id in :stuff path :name value #name}
-        {exec depot_set for @ex_id in :stuff path :product value #product}
-        {exec depot_set for @ex_id in :stuff path :link value #link}
-        {exec depot_set for @ex_id in :stuff path :merch value #merch}
-        {exec depot_set for @ex_id in :stuff path :description value #shortdescription}
-        {exec depot_set for @ex_id in :stuff path :submitted value #submitted}
 
-        {/ Send email}
+      {stuff add type :bbapplication | > :ex_id}
+      {begin added | if @ex_id}
+
+        {begin depotize | foreach with #depot}
+          {my set for @ex_id in :stuff path key value value}
+        {end depotize}
+
         {exec send_member_email
           subject {"Bit Bazaar Exhibitor Application Received"}
           body {%template/email/bitbazaar/applicant_notification | process consume}
         }
 
         {exec admin_send_email
-          subject {"Bit Bazaar Wm 2014 Exhibitor Application Received"}
+          subject {"Bit Bazaar SP 2015 Exhibitor Application Received"}
           body {%template/email/bitbazaar/admin_notification | process consume}
         }
-              
+
       {end added}
     {end verbatim}
   </textarea>

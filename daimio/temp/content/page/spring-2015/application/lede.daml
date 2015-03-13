@@ -1,24 +1,21 @@
-<div class="row">
-  <div class="col-md-2">
-    
-    <img src="{@SITE.path}/images/bitbazaar/bit_bazaar_logo_290x334.png" alt="" class="img-responsive logo">
-  </div>
-
-  <div class="col-md-8">
-    <h2>Winter Market <small>Saturday, December 6, 2014</small></h2>
-    <div class="alert alert-warning">
-      <b>Game and comics</b> applications are now closed. Selected vendors will be notified November 10.<br>
-      <b>Food vendor</b> applications are open through November 12. Selected vendors will be notified by November 14.
+  <div class="row">
+    <div class="col-md-2">
+      <img src="{@SITE.path}/images/bit_bazaar_logo_290x334.png" alt="" class="img-responsive logo">
     </div>
-    
-  </div>              
-  <div class="col-md-2 hidden-sm hidden-xs hidden-sm">
-    <div class="pull-right">
-      <p style="padding: 0; margin: 10px auto;" class="text-center">Presented by:</p>
-      <a href="{@SITE.path}">
-        <img src="{@SITE.path}/images/bitbazaar/miso_bw.png" alt="" class="pull-right img-responsive" style="padding: 0 20px;">
-      </a>
+    <div class="col-md-8">
+      <h2>Vol. 5 <small>Saturday, May 9, 2015</small></h2>
+      {/<div class="alert alert-warning">
+        <b>Game and comics</b> applications are now closed. Selected vendors will be notified April 10.<br>
+        <b>Food vendor</b> applications are open through April 3. Selected vendors will be notified by April 10.
+      </div>}
+    </div>
+    <div class="col-md-2 hidden-sm hidden-xs hidden-sm">
+      <div class="pull-right">
+        <p style="padding: 0; margin: 10px auto;" class="text-center">Presented by:</p>
+        <a href="{@SITE.path}">
+          <img src="{@SITE.path}/images/miso_bw.png" alt="" class="pull-right img-responsive" style="padding: 0 20px;">
+        </a>
+      </div>
     </div>
   </div>
-
 </div>

@@ -17,7 +17,7 @@
 	<input type="hidden" name="item" value="Bit Bazaar Application Fee">
 	<input type="hidden" name="stripe_price" value="1000">		
 	<input type="hidden" name="email" value="{@member.depot.email}">           
-	<input type="hidden" name="application_id" value="{@bbwm14.#1._id}">        
+	<input type="hidden" name="application_id" value="{@bbapplication.#1._id}">        
 	<input type="hidden" name="amount" value="">
 	<input type="hidden" name="pretty_total" value="$10.00">
 
@@ -44,7 +44,7 @@
 	</textarea>
 </form>
 
-<div class="help-block">Don't have a credit card? <a href="mailto:info@bentomiso.com?subject=Payment options for Bit Bazaar application {@bbwm14.#1._id}">Contact us</a> for other payment options.<br>Reference application <b>#{@bbwm14.#1._id}</b></div>
+<div class="help-block">Don't have a credit card? <a href="mailto:info@bentomiso.com?subject=Payment options for Bit Bazaar application {@bbapplication.#1._id}">Contact us</a> for other payment options.<br>Reference application <b>#{@bbapplication.#1._id}</b></div>
 
 
 <p class="">&#8212; or &#8212;</p>
@@ -57,7 +57,7 @@
           <p class="help-block">We won't see this information during the selection process.</p>
 
 
-  <input type="hidden" name="application_id" value="{@bbwm14.#1._id}">        
+  <input type="hidden" name="application_id" value="{@bbapplication.#1._id}">        
   
   <textarea name="commands" style="display:none">
     {begin verbatim | process escape}

@@ -4,13 +4,35 @@
 <h2>What We're Looking For</h2>
 
 <div class="row">
-  <div class="col-md-6">
-    <p><b>Games:</b> One-of-a-kind, handmade/DIY items such as boxed special editions, zines/printed player manuals, patches, screenprints/art prints, papercraft, collectible cards, toys/figures, soundtrack on tape or vinyl, custom controllers/hardware, physical/card games, mixtapes, and t-shirts.</p>
-    
+  <div class="col-md-3">
+    <h3>Games</h3>
   </div>
-  <div class="col-md-6">
-    <p><b>Comics:</b> Books, collections, printed editions of webcomics, zines, posters/prints or mini-prints, sketches, t-shirts, subscriptions/preorder cards for future print copies, postcards, holiday cards, buttons.</p>
-    
+  <div class="col-md-9">
+    <p>A complete version or playable demo of your video game, board game, card game or tabletop game <b>–plus–</b> one-of-a-kind, handmade/DIY items such as:</p>
+      <ul class="">
+        <li>boxed special editions</li>
+        <li>zines/printed player manuals</li>
+        <li>patches</li>
+        <li>screenprints/art prints</li>
+        <li>papercraft</li>
+        <li>collectible cards</li>
+        <li>toys/figures</li>
+        <li>soundtrack on tape or vinyl</li>
+        <li>custom controllers/hardware</li>
+        <li>physical/card games</li>
+        <li>mixtapes</li>
+        <li>t-shirts</li>
+      </ul>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <h3>Comics + Zines</h3>
+  </div>
+
+  <div class="col-md-9">
+  Books, collections, printed editions of webcomics, zines, posters/prints or mini-prints, sketches, t-shirts, subscriptions/preorder cards for future print copies, postcards, holiday cards, buttons.</p>
+
   </div>
 </div>
     <p><b>Need ideas?</b> Watch this video with Skot Deeming (aka mrghosty) - <a href="https://www.youtube.com/watch?v=atdBruXI9wU" target="_blank">Bit Bazaar Exhibitors&#8217; Workshop (Fall 2013)</a> - and check out <a href="https://bentomiso.com/blog/bit-bazaar-goods-preview" target="_blank">some goods from the 2013 Winter Market</a>.</p>
@@ -19,20 +41,4 @@
 
 
 <h2>Fees</h2>
-<p>Application fee is due upon submission; table fees payable by November 22 if selected as a vendor.</p>
-<div class="row">
-  <div class="col-md-4"><b class="">Application fee</b></div>
-  <div class="col-md-8">$10</div>
-</div>
-
-<div class="row">
-  <div class="col-md-4"><b class="">Half table (3')</b></div>
-  <div class="col-md-6">$40</div>
-</div>
-
-<div class="row">
-  <div class="col-md-4"><b class="">Full table (6')</b></div>
-  <div class="col-md-6">$80</div>
-</div>
-
-<p>If you are a student, unwaged, retired, low-income, or for any other reason unable to easily afford the application or table fee, it is waived.</p>
+<p>There are no application or table fees.</p>

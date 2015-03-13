@@ -1,1 +1,1 @@
-{content get_value handle {"page/bit-bazaar-winter-market-2014/application/assets/food"}}
+{content get_value handle {"page/spring-2015/application/assets/{#type | else :all}"}}

@@ -10,7 +10,7 @@
     {begin available | if @bbpl1slots | else $soldout}
       <p class="lead" style="margin-bottom:0;"><strong>{price | *: ".01" | math format places 0 symbol "$"}</strong></p>
       <div class="center-block">
-        {%page/bit-bazaar-winter-market-2014/buy/buy_form}
+        {%page/spring-2015/buy/buy_form}
       </div>                  
   </div>
 </div>

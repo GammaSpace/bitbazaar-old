@@ -16,7 +16,7 @@
     <div class="container">
       <div class="collapse navbar-collapse" id="bit-bazaar-wm-nav">
         <ul class="nav navbar-nav">
-          {begin all | foreach with @bbwm14_categories}
+          {begin all | foreach with @bbapplication_categories}
             <li><a href="{@SITE.path}/bit-bazaar-winter-market-2014#{key}">{value.name}</a></li>
           {end all}
           <li><a href="{@SITE.path}/bit-bazaar-winter-market-2014#music">Music + Visuals</a></li>

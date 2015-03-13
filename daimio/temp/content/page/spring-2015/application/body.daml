@@ -1,0 +1,43 @@
+<body id="" class="bit-bazaar application">
+	<!-- Masthead
+	================================================== -->
+	<div id="intro-header">
+		<div class="container">
+			{%lede}
+		</div>
+	</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-6 content">
+				{%information}
+			</div>
+			<div class="col-md-6 content">
+				{%application_form}
+			</div>
+		</div>
+	</div>
+	<section id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					{content get_value handle {"page/bitbazaar/assets/past_{#type}_vendors"}}
+					<h3>More Info</h3>
+					<p><a href="http://www.flickr.com/groups/bitbazaar/">Photo Pool on Flickr</a></p>
+					<p><a href="https://bentomiso.com/blog/bit-bazaar-wrap">Bit Bazaar Winter Market Wrap-Up</a></p>
+					<p class="lead">Questions? Contact event director <a href="mailto:info@bentomiso.com">Jennie Faber</a>.</p>
+				</div>
+				<div class="col-md-6">
+					{%page/bitbazaar/assets/past_coverage}
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="center-block text-center">
+		{%global/snippets/footer_info}
+	</div>
+	{%global/js}
+	{%page//bonus_js}
+	{%global/stripe_js_test}
+	{%global/metrics | process escape}
+	{%global/login_modal}
+</body>
