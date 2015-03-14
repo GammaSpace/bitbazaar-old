@@ -6569,7 +6569,7 @@ body .content h4 {
   margin-top: 0;
 }
 body .content .info h3 {
-  margin: 0;
+  margin: 20px 0 0 0;
 }
 body .content .list-unstyled li {
   background: #eee;

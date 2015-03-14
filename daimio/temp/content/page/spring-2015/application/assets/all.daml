@@ -1,16 +1,21 @@
 <div class="info">
+  <h3>Apply to exhibit:</h3>
+  <h2>Games</h2>
+  <p class="lead">Video games, board games, card games and tabletop games</p>
 
-<h2>What We're Looking For</h2>
+  <div class="row">
+    <div class="col-md-4">
 
-<div class="row">
-  <div class="col-md-3">
-    <h3>Games</h3>
 
-  </div>
-  <div class="col-md-9">
-    <p class="lead">Video games, board games, card games and tabletop games</p>
-    <h4>Marketplace</h4>
-    <p>A complete version or playable demo of your game plus one-of-a-kind, handmade/DIY items such as:</p>
+      <h4>Marketplace</h4>
+      <p>A complete version or playable demo of your game plus one-of-a-kind, handmade/DIY items.</p>
+      <p><em>We are especially interested in games being released during 2015, and welcome all creators however small or weird your work is!</em></p>
+
+
+    </div>
+    <div class="col-md-5">
+
+
       <ul class="list-inline list-unstyled">
         <li>boxed special editions</li>
         <li>zines</li>
@@ -31,19 +36,36 @@
         <li>mixtapes</li>
         <li>t-shirts</li>
       </ul>
-      <p><em>We are especially interested in games being released during 2015, and welcome all creators however small or weird your work is!</em></p>
+    </div>
+    <div class="col-md-3">
+
+      <img src="{@SITE.path}/images/spring-2015/mrgs_booth.jpg" class="img-responsive">
+
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-9">
       <h4>Tournament Arcade</h4>
       <p>Would your game work great in a tournament? We're looking for short games featuring multiplayer, team co-op, and last-player-standing/timed rounds to be featured in the Bit Bazaar Tournament Arcade! You bring the game, we'll manage the competition and prizes. </p>
-</div>
-</div>
-<hr>
-<div class="row">
-  <div class="col-md-3">
-    <h3>Comics</h3>
-  </div>
+    </div>
+    <div class="col-md-3">
 
-  <div class="col-md-9">
-    <p class="lead">Self-published, webcomics, small press and collectives</p>
+      <img src="{@SITE.path}/images/spring-2015/14175220102_f123c4bbdb_z.jpg" class="img-responsive">
+
+    </div>
+
+  </div>
+</div>
+<h2>Comics</h2>
+
+<p class="lead">Self-published, webcomics, small press and collectives</p>
+<div class="row">
+  <div class="col-md-4">
+    <p>We are especially interested in comics and zines by black, indigenous and women artists of colour.</p>
+
+  </div>
+  <div class="col-md-5">
     <ul class="list-inline list-unstyled">
       <li>books</li>
       <li>collections</li>
@@ -59,16 +81,11 @@
       <li>greeting cards</li>
       <li>buttons</li>
     </ul>
-    <p>We are especially interested in comics and zines by black, indigenous and women artists of colour.</p>
-</p>
-
+  </div>
+  <div class="col-md-3">
+    <img src="{@SITE.path}/images/spring-2015/13991563497_caf617a61b_k.jpg" class="img-responsive">
   </div>
 </div>
-  {/  <p><b>Need ideas?</b> Watch this video with Skot Deeming (aka mrghosty) - <a href="https://www.youtube.com/watch?v=atdBruXI9wU" target="_blank">Bit Bazaar Exhibitors&#8217; Workshop (Fall 2013)</a> - and check out <a href="https://bentomiso.com/blog/bit-bazaar-goods-preview" target="_blank">some goods from the 2013 Winter Market</a>.</p>}
 
 
-
-
-<h2>Fees</h2>
-<p>There are no application or table fees.</p>
-</div>
+{/  <p><b>Need ideas?</b> Watch this video with Skot Deeming (aka mrghosty) - <a href="https://www.youtube.com/watch?v=atdBruXI9wU" target="_blank">Bit Bazaar Exhibitors&#8217; Workshop (Fall 2013)</a> - and check out <a href="https://bentomiso.com/blog/bit-bazaar-goods-preview" target="_blank">some goods from the 2013 Winter Market</a>.</p>}
