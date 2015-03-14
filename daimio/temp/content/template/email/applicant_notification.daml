@@ -3,7 +3,7 @@ Hey, {#firstname}!
 Thanks for submitting a Bit Bazaar Spring 2015 application.
 Selected exhibitors will be notified by April 10.
 
-{#firstname} {#lastname} ({#email})
+{#firstname} {#lastname}
 
 {#depot.name} - {#depot.product}
 
@@ -15,7 +15,7 @@ Description:
 
 {#depot.merch | then "
 Merchandise:
-{#merch}"}
+{#depot.merch}"}
 
 {#depot.gameplay | then "
 Download or gameplay video:

@@ -1,26 +1,19 @@
-A new Bit Bazaar application has been received from:
+A new Bit Bazaar Spring 2015 application has been received:
 
-{#firstname} {#lastname} ({#email})
+Date: {#depot.submitted | time represent as "M d, Y"}
+Type: {depot.application_type}
+Applicant name: {#firstname} {#lastname}
 
-Type:
-{#type}
+{#depot.name} - {#depot.product}
 
-Vendor Name:
-{#name}
+Web site: {#depot.link}
 
-Product:
-{#product}
+{#depot.gameplay | then "
+Download or gameplay video: {#depot.gameplay}"}
 
-Link:
-{#link}
+Description:
+{#depot.description}
 
-Short description:
-{#shortdescription}
-
-{#merch | then "
-What they're selling:
-{#merch}"}
-
-###
-Your friend,
-the Misobot
+{#depot.merch | then "
+Merchandise:
+{#depot.merch}"}
