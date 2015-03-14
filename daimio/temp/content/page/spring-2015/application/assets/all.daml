@@ -1,14 +1,14 @@
 <div class="info">
 
-  <h2>Games</h2>
-  <p class="lead">Video games, board games, card games and tabletop games</p>
+  <h2>What we're looking for</h2>
+  <p class="lead"><strong>Games.</strong> Video games, board games, card games, tabletop games, game dev collectives, game-like rad things.</p>
 
   <div class="row">
     <div class="col-md-4">
 
 
       <h4>Marketplace</h4>
-      <p>A complete version or playable demo of your game plus one-of-a-kind, handmade/DIY items.</p>
+      <p>A complete version or playable demo of your game(s) plus one-of-a-kind, handmade/DIY items.</p>
       <p><em>We are especially interested in games being released during 2015, and welcome all creators however small or weird your work is!</em></p>
 
 
@@ -26,15 +26,14 @@
         <li>buttons</li>
         <li>papercraft</li>
         <li>collectible cards</li>
+        <li>t-shirts</li>
         <li>stationery</li>
         <li>toys/figures</li>
         <li>soundtrack on tape or vinyl</li>
         <li>jewelry</li>
-        <li>natural products</li>
         <li>custom controllers/hardware</li>
         <li>physical/card games</li>
         <li>mixtapes</li>
-        <li>t-shirts</li>
       </ul>
     </div>
     <div class="col-md-3">
@@ -58,9 +57,8 @@
 
   </div>
 </div>
-<h2>Comics</h2>
 
-<p class="lead">Self-published, webcomics, small press and collectives</p>
+<p class="lead"><strong>Comics + zines.</strong> Self-published books and comics, webcomics, small press, collectives, original art work, fanart</p>
 <div class="row">
   <div class="col-md-4">
     <p>We are especially interested in comics and zines by black, indigenous and women artists of colour.</p>
@@ -87,7 +85,4 @@
     <img src="{@SITE.path}/images/spring-2015/13991563497_caf617a61b_k.jpg" class="img-responsive">
   </div>
 </div>
-<h2>Fee</h2>
-<p>There is no fee to apply or table.</p>
-
 {/  <p><b>Need ideas?</b> Watch this video with Skot Deeming (aka mrghosty) - <a href="https://www.youtube.com/watch?v=atdBruXI9wU" target="_blank">Bit Bazaar Exhibitors&#8217; Workshop (Fall 2013)</a> - and check out <a href="https://bentomiso.com/blog/bit-bazaar-goods-preview" target="_blank">some goods from the 2013 Winter Market</a>.</p>}

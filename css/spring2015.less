@@ -189,10 +189,20 @@ body {
     }
     #header {
       padding: 2em;
+      a.btn {
+        text-decoration: none;
+      }
       p {
         color: lighten(@primary,20%);
         font-size: 32px;
+        text-shadow: 1px 1px 0px darken(@primary,20%);
+        &.lead {
+          color: #fff;
 
+        }
+        &.cta {
+          font-size: 24px;
+        }
       }
       #bbwm-logo {
 

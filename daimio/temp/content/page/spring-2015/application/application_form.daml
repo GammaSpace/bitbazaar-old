@@ -35,8 +35,8 @@
 
 	{begin step1}
 
-		<h2>Apply</h2>
-
+		<h2>Apply </h2>
+		<p>There are no application or table fees.</p>
 		{begin create_account | if {@MY.id | not}}
 
 

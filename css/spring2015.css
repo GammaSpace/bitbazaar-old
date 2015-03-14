@@ -6743,9 +6743,19 @@ body#bit-bazaar-spring-fair-2015 #header {
   z-index: 0;
   background-size: cover;
 }
+body#bit-bazaar-spring-fair-2015 #header a.btn {
+  text-decoration: none;
+}
 body#bit-bazaar-spring-fair-2015 #header p {
   color: #f9f8fa;
   font-size: 32px;
+  text-shadow: 1px 1px 0px #937ea8;
+}
+body#bit-bazaar-spring-fair-2015 #header p.lead {
+  color: #fff;
+}
+body#bit-bazaar-spring-fair-2015 #header p.cta {
+  font-size: 24px;
 }
 body#bit-bazaar-spring-fair-2015 #header .cell {
   width: 100%;
