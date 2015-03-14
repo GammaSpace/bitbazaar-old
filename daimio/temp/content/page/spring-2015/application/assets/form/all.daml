@@ -1,4 +1,4 @@
-<p>Hi, {@profile.my.firstname} {@profile.my.lastname}! You are logged in with your account <b>{@MY.username}</b>. The email we have on file for you is <b>{@member.depot.email}</b>.</p>
+<p>Hi, {@profile.my.firstname} {@profile.my.lastname}! You are logged in with your account <b>{@MY.username}</b>. The email we have on file for you is <b>{@member.my.email}</b>.</p>
 <form class="form-vertical" method="post" accept-charset="utf-8" id="game-exhibitor">
   <fieldset>
 
