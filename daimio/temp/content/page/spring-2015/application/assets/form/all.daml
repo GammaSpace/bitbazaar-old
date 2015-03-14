@@ -69,7 +69,7 @@
     <div class="form-group" id="merch">
       <label class="form-label" for="merch">Merchandise</label>
       <textarea type="text" value="{@POST.merch}" name="depot[merch]" class="form-control" rows="6" id="merch"></textarea>
-      <p class="help-block">Please describe the goods you plan to have for sale and in what format (e.g., download code, prints, boxed editions).</p>
+      <p class="help-block">Please describe what you plan to have for sale and in what format (e.g., download code, prints, boxed editions).</p>
     </div>
       <hr />
       <button type="submit" class="btn btn-default">Submit &rarr;</button>
@@ -81,7 +81,7 @@
   <input type="hidden" name="lastname" value="{@profile.my.lastname}">
   <input type="hidden" name="email" value="{@member.depot.email}">
   <input type="hidden" name="depot[submitted]" value="{time represent as :c}">
-  <input type="hidden" name="exhibitor_type" value="comics">
+  <input type="hidden" name="exhibitor_type" value="{#depot.application_type}">
 
   <textarea name="commands" style="display:none">
     {begin verbatim | process escape}
@@ -95,12 +95,12 @@
 
         {exec send_member_email
           subject {"Bit Bazaar Exhibitor Application Received"}
-          body {%template/email/bitbazaar/applicant_notification | process consume}
+          body {%template/email/applicant_notification | process consume}
         }
 
         {exec admin_send_email
           subject {"Bit Bazaar SP 2015 Exhibitor Application Received"}
-          body {%template/email/bitbazaar/admin_notification | process consume}
+          body {%template/email/admin_notification | process consume}
         }
 
       {end added}
