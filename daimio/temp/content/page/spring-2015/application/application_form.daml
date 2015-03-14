@@ -39,7 +39,7 @@
 
 		{begin create_account | if {@MY.id | not}}
 
-			<p class="lead">To apply, first create an account or log in.</p>
+			
 			<form class="form-horizontal" method="post" accept-charset="utf-8" id="create-account">
 				<fieldset>
 					<legend>Create a Bit Bazaar account <span class="pull-right text-muted">Or <a href="#log-in" data-toggle="modal" class="">log in</a></span></legend>
