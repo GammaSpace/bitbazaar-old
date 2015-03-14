@@ -18,13 +18,11 @@ Web site
 Description
 ==================
 {#depot.description}
-
 {#depot.merch | then "
 ==================
 Merchandise
 ==================
 {#depot.merch}"}
-
 {#depot.gameplay | then "
 ==================
 Download or gameplay video:
