@@ -71,9 +71,9 @@
       <textarea type="text" value="{@POST.merch}" name="depot[merch]" class="form-control" rows="6" id="merch"></textarea>
       <p class="help-block">Please describe what you plan to have for sale and in what format (e.g., download code, prints, boxed editions).</p>
     </div>
-      <hr />
-      <button type="submit" class="btn btn-default">Submit &rarr;</button>
-      <p class="help-block">All exhibitors are expected to comply with our <a href="https://bentomiso.zendesk.com/hc/en-us/articles/201812303-Code-of-Conduct">Code of Coduct</a>.</p>
+    <hr />
+    <button type="submit" class="btn btn-default">Submit &rarr;</button>
+    <p class="help-block">All exhibitors are expected to comply with our <a href="https://bentomiso.zendesk.com/hc/en-us/articles/201812303-Code-of-Conduct">Code of Coduct</a>.</p>
   </fieldset>
 
   <input type="hidden" name="registered" value="{time represent as "M d, Y"}">
@@ -105,5 +105,5 @@
       {end added}
     {end verbatim}
   </textarea>
-</div>
+
 </form>
