@@ -1,0 +1,26 @@
+A new Bit Bazaar application has been received from:
+
+{#firstname} {#lastname} ({#email})
+
+Type:
+{#type}
+
+Vendor Name:
+{#name}
+
+Product:
+{#product}
+
+Link:
+{#link}
+
+Short description:
+{#shortdescription}
+
+{#merch | then "
+What they're selling:
+{#merch}"}
+
+###
+Your friend,
+the Misobot

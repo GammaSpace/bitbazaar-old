@@ -1,2 +1,4 @@
 {%global/__data}
+{profile find by_ids @MY.id | __.#1 | > :profile}
+{member find by_ids @MY.id | __.#1 | > :member}
 {stuff find by_type :bbapplication options {* (:i_can :edit)} | > :bbapplication}

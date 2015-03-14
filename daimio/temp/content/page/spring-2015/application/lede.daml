@@ -4,6 +4,10 @@
     </div>
     <div class="col-md-8">
       <h2>Vol. 5 <small>Saturday, May 9, 2015</small></h2>
+      <p class="lead">Hey, <b>game developers</b> and <b>comic artists</b>! Show and sell your stuff at our 5<sup>th</sup> fair, a unique celebration of the art and craft of independent games, comics and good food!</p>
+      <p><b>Games and comics exhibitor applications are open from March 14–April 3. Vendors selected to exhibit will be contacted by April 10.</b> <small>Food vendor applications open April 3.</small></p>
+
+
       {/<div class="alert alert-warning">
         <b>Game and comics</b> applications are now closed. Selected vendors will be notified April 10.<br>
         <b>Food vendor</b> applications are open through April 3. Selected vendors will be notified by April 10.

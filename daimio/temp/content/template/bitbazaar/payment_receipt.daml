@@ -1,0 +1,7 @@
+Hello, {#firstname}!
+
+This confirms we have received your Bit Bazaar application fee.
+
+Amount paid: {#pretty_total}
+
+{%global/snippets/signature}

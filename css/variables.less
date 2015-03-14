@@ -15,7 +15,7 @@
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
 @brand-primary:         #1427E9;
-@brand-success:         #5cb85c;
+@brand-success:         #5fc487;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
@@ -486,9 +486,9 @@
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-@state-success-text:             #3c763d;
-@state-success-bg:               #dff0d8;
-@state-success-border:           darken(spin(@state-success-bg, -10), 5%);
+@state-success-text:             lighten(#5fc487,40%);
+@state-success-bg:               #5fc487;
+@state-success-border:           @state-success-bg;
 
 @state-info-text:                #31708f;
 @state-info-bg:                  #d9edf7;

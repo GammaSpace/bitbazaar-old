@@ -3,7 +3,7 @@
   <fieldset>
 
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-6">
         <div class="form-group">
           <label class="form-label" for="developer">Name</label>
 
@@ -12,15 +12,20 @@
 
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="form-group">
-          <label class="form-label" for="type">Type</label>
+      <div class="col-md-6">
+        <div class="form-group" id="application-type">
+          <label class="form-label" for="type">Category</label>
           <div class="radio">
             <label class="">
-              <input type="radio" name="depot[application_type]" id="type-games" value="games" checked> Games
+              <input type="radio" name="depot[application_type]" id="type-games" value="games_marketplace" checked> Games - Marketplace
             </label>
           </div>
-          <div class="">
+          <div class="radio">
+            <label class="">
+              <input type="radio" name="depot[application_type]" id="type-games-arcade" value="games_arcade"> Games - Tournament Arcade
+            </label>
+          </div>
+          <div class="radio">
 
             <label class="radio">
               <input type="radio" name="depot[application_type]" id="type-comics" value="comics"> Comics
@@ -51,14 +56,24 @@
         <input type="text" class="form-control" name="depot[link]">
       </div>
     </div>
-    <div class="form-group">
+
+    <div class="form-group" id="gameplay">
+      <label class="form-label" for="link">Link to gameplay video or download</label>
+      <div class="input-group">
+        <span class="input-group-addon">http://</span>
+        <input type="text" class="form-control" name="depot[gameplay]">
+      </div>
+    </div>
+
+
+    <div class="form-group" id="merch">
       <label class="form-label" for="merch">Merchandise</label>
       <textarea type="text" value="{@POST.merch}" name="depot[merch]" class="form-control" rows="6" id="merch"></textarea>
-      <p class="help-block">Please describe the goods you plan to have for sale and in what format (e.g., download code, prints, boxed editions).<br><i>psst... this is the most important part of the application.</i></p>
+      <p class="help-block">Please describe the goods you plan to have for sale and in what format (e.g., download code, prints, boxed editions).</p>
+    </div>
       <hr />
       <button type="submit" class="btn btn-default">Submit &rarr;</button>
       <p class="help-block">All exhibitors are expected to comply with our <a href="https://bentomiso.zendesk.com/hc/en-us/articles/201812303-Code-of-Conduct">Code of Coduct</a>.</p>
-    </div>
   </fieldset>
 
   <input type="hidden" name="registered" value="{time represent as "M d, Y"}">

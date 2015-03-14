@@ -1,29 +1,24 @@
 {begin js | process escape}
-  <script>
-  $(document).ready(function(){
-    var amount =  $("input[name='amount_input']:checked").val();
+<script>
+$(document).ready(function(){
 
-    
-    $("span#amount").text("Pay Now");          
-    $("input[name='amount']").val(amount);      
-          
-    $("input[name='amount_input']").change(function () {
-      var amount =  $("input[name='amount_input']:checked").val();
-      $("input[name='amount']").val(amount);      
-      if ($("input[name='amount']").val() === "0") {
-        $("#card-info-block").hide()
-        $("span#amount").text("Finalize Application");        
-      }
-      else {
-          $("#card-info-block").show()
-          $("span#amount").text("Pay Now");          
-      }
-
-    });
+  $("input[name='depot[application_type]']").change(function() {
+    if ($("#type-games-arcade").is(':checked')) {
+      $("#merch").hide()
+    }
+    else {
+      $("#merch").show()
+    }
+    if ($("#type-comics").is(':checked')) {
+      $("#gameplay").hide()
+    }
+    else {
+      $("#gameplay").show()
+    }
   });
-  </script>
-  
-  
-  
-{end js}
+});
+</script>
 
+
+
+{end js}
