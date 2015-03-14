@@ -3,24 +3,37 @@ Hey, {#firstname}!
 Thanks for submitting a Bit Bazaar Spring 2015 application.
 Selected exhibitors will be notified by April 10.
 
+==================
+Applicant
+==================
 {#firstname} {#lastname}
-
 {#depot.name} - {#depot.product}
 
-Web site:
+==================
+Web site
+==================
 {#depot.link}
 
-Description:
+==================
+Description
+==================
 {#depot.description}
 
 {#depot.merch | then "
-Merchandise:
+==================
+Merchandise
+==================
 {#depot.merch}"}
 
 {#depot.gameplay | then "
+==================
 Download or gameplay video:
+==================
 {#depot.gameplay}"}
 
-Submitted on: {#depot.submitted | time represent as "M d, Y"}
+==================
+Submission date
+==================
+{#depot.submitted | time represent as "M d, Y"}
 
 {%global/snippets/signature}

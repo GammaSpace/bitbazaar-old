@@ -219,7 +219,7 @@ If you didn't request a password reset, you can ignore this message and your pas
 
     $subject = "Reset password on DMG.to";
 
-    mail($member['my']['email'], $subject, $message, 'From:info@dmg.to');
+    mail($member['my']['email'], $subject, $message, 'From:hello@thebitbazaar.com');
 
     History::add('members', $user['id'], array('action' => 'request_reset'));
 
