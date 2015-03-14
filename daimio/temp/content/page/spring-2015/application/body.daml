@@ -1,6 +1,4 @@
 <body id="" class="bit-bazaar application">
-	<!-- Masthead
-	================================================== -->
 	<div id="intro-header">
 		<div class="container">
 			{%lede}
