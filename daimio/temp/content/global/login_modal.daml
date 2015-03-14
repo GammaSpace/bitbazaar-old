@@ -1,0 +1,51 @@
+<form method="post" class="form-horizontal" accept-charset="utf-8" enctype="multipart/form-data">
+  <div class="modal fade" id="log-in">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Log in to your Bit Bazaar account</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <div class="col-md-6 {@ERRORS.myself.authenticate | then "error"}">
+              <input type="text" class="form-control" name="username" placeholder="Username">
+            </div>
+
+            <div class="col-md-6" {@ERRORS.myself.authenticate | then "error"}>
+              <input type="password" class="form-control" name="password" placeholder="Password">
+              {/<p class="help-block"><a href="{@SITE.path}/yari/member/account/change-password">Forgot your password?</a></p>}
+
+            </div>
+          </div>
+
+
+          <div class="checkbox">
+
+            <label>
+              <input type="checkbox" name="days" value="30"> Keep me logged in for 30 days.
+            </label>
+          </div>
+
+
+        </div>
+        <div class="modal-footer">
+
+
+
+          <button type="submit" class="btn btn-primary">Log in</button>
+
+          <textarea name="commands" style="display:none">
+            {begin verbatim | process escape}
+            {begin success | if {myself authenticate username #username password #password days #days} else "{notice set value {* ( :message "<strong>oops!</strong> You mistyped your username or password! Please try again." :type :error)}}"}
+
+            {end success}
+            {end verbatim}
+          </textarea>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</form>

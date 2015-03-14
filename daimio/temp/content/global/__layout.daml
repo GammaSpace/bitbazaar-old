@@ -23,7 +23,6 @@
     <!--        |__/  |__/                                          -->
   {end cute}
   <script src="//use.typekit.net/{@metadata.page.typekit | else :smn2drw}.js"></script>
-  <script src="{@SITE.path}/js/jquery.min.js"></script>
 
 {begin js | process escape}
 <script>try{Typekit.load();}catch(e){}</script>
@@ -31,6 +30,9 @@
 </head>
 
   {%body}
+  <script src="{@SITE.path}/js/jquery.min.js"></script>
+  <script src="{@SITE.path}/js/bootstrap.min.js"></script>
   {%bonus_js}
+  {%login_modal}
 
 </html>
