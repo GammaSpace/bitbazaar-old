@@ -79,9 +79,8 @@
   <input type="hidden" name="registered" value="{time represent as "M d, Y"}">
   <input type="hidden" name="firstname" value="{@profile.my.firstname}">
   <input type="hidden" name="lastname" value="{@profile.my.lastname}">
-  <input type="hidden" name="email" value="{@member.depot.email}">
+  <input type="hidden" name="email" value="{@member.my.email}">
   <input type="hidden" name="depot[submitted]" value="{time represent as :c}">
-  <input type="hidden" name="exhibitor_type" value="{#depot.application_type}">
 
   <textarea name="commands" style="display:none">
     {begin verbatim | process escape}

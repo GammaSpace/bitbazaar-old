@@ -1,21 +1,26 @@
 Hey, {#firstname}!
 
-Thanks for submitting a Bit Bazaar food vendor application. Selected food vendors will be notified by November 14.
+Thanks for submitting a Bit Bazaar Spring 2015 application.
+Selected exhibitors will be notified by April 10.
 
 {#firstname} {#lastname} ({#email})
 
-{#name} - {#product}
+{#depot.name} - {#depot.product}
 
 Web site:
-{#link}
+{#depot.link}
 
 Description:
-{#shortdescription}
+{#depot.description}
 
-{#merch | then "
+{#depot.merch | then "
 Merchandise:
 {#merch}"}
 
-Submitted on: {#submitted | time represent as "M d, Y"}
+{#depot.gameplay | then "
+Download or gameplay video:
+{#depot.gameplay}"}
+
+Submitted on: {#depot.submitted | time represent as "M d, Y"}
 
 {%global/snippets/signature}
