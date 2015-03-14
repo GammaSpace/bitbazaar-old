@@ -1,5 +1,5 @@
 <div class="info">
-  <h3>Apply to exhibit:</h3>
+  <h3>Apply to exhibit at Bit Bazaar! We're looking for:</h3>
   <h2>Games</h2>
   <p class="lead">Video games, board games, card games and tabletop games</p>
 
@@ -39,7 +39,8 @@
     </div>
     <div class="col-md-3">
 
-      <img src="{@SITE.path}/images/spring-2015/mrgs_booth.jpg" class="img-responsive">
+      <img src="{@SITE.path}/images/spring-2015/mrgs_booth.jpg" class="img-responsive"><br>
+      <img src="{@SITE.path}/images/spring-2015/14178054315_3dbfbbdbfe_m.jpg" class="img-responsive">
 
     </div>
   </div>
