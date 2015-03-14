@@ -1,6 +1,6 @@
 
 {begin step2}
-<p class='alert alert-success lead'><b>Thanks!</b> We've received your information. Applications close April 3, and selected vendors will be notified and announced April 10.</p>
+<p class='alert alert-success lead'><b>Thanks!</b> We've received your information. Applications close April 3, and selected exhibitors will be notified and announced April 10.</p>
 	{begin application | merge with (@bbapplication.#1.my)}
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -39,7 +39,7 @@
 
 		{begin create_account | if {@MY.id | not}}
 
-			
+
 			<form class="form-horizontal" method="post" accept-charset="utf-8" id="create-account">
 				<fieldset>
 					<legend>Create a Bit Bazaar account <span class="pull-right text-muted">Or <a href="#log-in" data-toggle="modal" class="">log in</a></span></legend>
@@ -107,7 +107,7 @@
 
 								{exec set_email to #my.email}
 								{log @good_login}
-								{exec send_member_email subject {"[Miso] Account Created"} body {%template/email/account_created | process consume}}
+								{exec send_member_email subject {"[Bit Bazaar] Account Created"} body {%template/email/account_created | process consume}}
 
 							{end loggeduserin}
 						{end success}
