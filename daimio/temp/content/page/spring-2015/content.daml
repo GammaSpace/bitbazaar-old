@@ -5,7 +5,7 @@
         <img src="{@SITE.path}/images/spring-2015/bblogo.png" class="img-responsive" id="bbwm-logo">
         <div class="center-block text-center" id="socmed">
           <a href="https://twitter.com/TheBitBazaar"><img src="{@SITE.path}/images/socmed/Twitter_logo_white.png" alt="Twitter" height="20"/></a>
-          {/<a href="https://www.facebook.com/events/972095349473030/"><img src="{@SITE.path}/images/socmed/FB-f-Logo__white_100.png" alt="Facebook" height="20"/></a>}
+          <a href="https://www.facebook.com/events/354675598056821/"><img src="{@SITE.path}/images/socmed/FB-f-Logo__white_100.png" alt="Facebook" height="20"/></a>
           <a href="https://www.flickr.com/groups/bitbazaar/"><img src="{@SITE.path}/images/socmed/flickr.png"  alt="Flickr"></a>
         </div>
       </div>
