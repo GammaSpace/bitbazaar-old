@@ -6,5 +6,4 @@
         {%global/snippets/footer_info}
     </div>
   </div>
-  {%bonus_js}
 </body>

@@ -33,9 +33,6 @@
 	<div class="center-block text-center">
 		{%global/snippets/footer_info}
 	</div>
-	{%global/js}
-	{%page//bonus_js}
-	{%global/stripe_js_test}
 	{%global/metrics | process escape}
 	{%global/login_modal}
 </body>

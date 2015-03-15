@@ -2,8 +2,10 @@
 
 @tk-aktiv-grotesk-std:  "aktiv-grotesk-std",sans-serif;
 @larabiefont: "larabiefont",monospace;
+@kepler-std: "kepler-std",serif;
+@proxima-nova: "proxima-nova",sans-serif;
 
-@font-family-base: @tk-aktiv-grotesk-std;
+@font-family-base: @proxima-nova;
 @headings-font-family: @larabiefont;
 
 @primary: #C6BBD1;
@@ -53,7 +55,7 @@ body {
   margin: 0;
   height: 100%;
   background-color: desaturate(lighten(@primary,10%),5%);
-  background: @primary;
+  background: #b9acc7;
 
   &.bit-bazaar {
     .modal-backdrop {
@@ -67,9 +69,7 @@ body {
 }
 .mixin(@color; @background) {
   background: @background;
-  h2,
-  h3,
-  p {
+  h2, h3, h4, p {
     color: @color;
     small {
       color: lighten(@color,10%);
@@ -95,7 +95,7 @@ body {
   background-image: url(../images/spring-2015/promo_panelscapes2.gif);
   background-position: right 20%;
   background-position: cover;
-  min-height: 400px;
+  min-height: 200px;
   background-repeat: no-repeat;
   p {
     background: #c6bbd1;
@@ -118,7 +118,7 @@ body {
 
     section#venue {
       .mixin(#fff,@secondary);
-      background-image: url(../images/spring-2015/promo_venue.gif);
+      background-image: url(../images/spring-2015/14174630001_a382e2dd6e_k.gif);
       background-position: left 20%;
       background-repeat: no-repeat;
 
@@ -188,7 +188,13 @@ body {
 
     }
     #header {
+      h1,h2,p {
+        font-family: @kepler-std;
+      }
       padding: 2em;
+      background-image: url(../images/spring-2015/header.png);
+      background-size: cover;
+
       a.btn {
         text-decoration: none;
       }
@@ -196,13 +202,26 @@ body {
         color: lighten(@primary,20%);
         font-size: 32px;
         text-shadow: 1px 1px 0px darken(@primary,20%);
-        &.lead {
+        &.tagline {
+          line-height: 1.1em;
+          font-size: 56px;
           color: #fff;
+        }
+        &.lead {
 
+          background-color: lighten(#d6f723,10%);
+          color: @secondary;
+          padding: 4px 9px;
+          text-shadow: none;
+          display: inline;
+          float: left;
+          margin-bottom: 1.7em;
         }
-        &.cta {
+        &.cta, &.partners {
+          font-family: @proxima-nova;
           font-size: 24px;
-        }
+          line-height: 1.2em;
+          }
       }
       #bbwm-logo {
 
@@ -219,11 +238,7 @@ body {
       z-index: 0;
       background-size: cover;
 
-      img {
-        float: none;
-        display: block;
-        margin: 0 auto;
-      }
+
       #socmed {
         margin: 10px auto;
         img {
@@ -324,22 +339,11 @@ body {
         }
 
       }
-      &#vendors,
-      &#music {
+      &#vendors, &#music {
         padding-bottom: 60px;
-        p {
-
-          display: inline;
-          padding: 3px 5px;
-
-        }
-        h3 {
-          font-weight: 100;
-        }
-        h2 small,
         h4 {
-          font-family: "letter-gothic-std";
-
+          margin-top: 30px;
+          font-size: 32px;
         }
         #exhibitor-lists {
           > div {
@@ -354,7 +358,6 @@ body {
                 letter-spacing: 1px;
                 font-style: normal;
                 font-weight: 100;
-                font-family: "letter-gothic-std";
                 line-height: 2em;
                 text-transform: uppercase;
                 small {
@@ -502,4 +505,28 @@ body {
       }
     }
   }
+}
+
+
+
+#partners {
+	.wrapper {
+		display: table;
+		width: 100%;
+		height: 100%;
+		margin: auto;
+
+	}
+	.partner {
+		display: table-cell;
+		vertical-align: middle;
+		position: relative;
+		img {
+			margin: 0 auto;
+			text-align: center;
+			float: none;
+			display: block;
+		}
+	}
+
 }

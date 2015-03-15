@@ -1,5 +1,9 @@
-<script src="//use.typekit.net/doe6obv.js"></script>
+<script src="{@SITE.path}/js/jquery.matchHeight-min.js"></script>
 
 {begin js | process escape}
-<script>try{Typekit.load();}catch(e){}</script>
+<script>
+   $(document).ready(function(){
+     $('.partner').matchHeight();
+ });
+ </script>
 {end js}

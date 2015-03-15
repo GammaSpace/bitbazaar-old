@@ -1060,7 +1060,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "aktiv-grotesk-std", sans-serif;
+  font-family: "proxima-nova", sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -5792,7 +5792,7 @@ button.close {
   z-index: 1070;
   display: block;
   visibility: visible;
-  font-family: "aktiv-grotesk-std", sans-serif;
+  font-family: "proxima-nova", sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -5899,7 +5899,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "aktiv-grotesk-std", sans-serif;
+  font-family: "proxima-nova", sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.428571429;
@@ -6584,7 +6584,7 @@ body {
   margin: 0;
   height: 100%;
   background-color: #dfdbe4;
-  background: #c6bbd1;
+  background: #b9acc7;
 }
 body.bit-bazaar .modal-backdrop {
   background-color: rgba(68, 68, 68, 0.4);
@@ -6597,11 +6597,13 @@ body.bit-bazaar .content {
 }
 #music h2,
 #music h3,
+#music h4,
 #music p {
   color: #7d5f2f;
 }
 #music h2 small,
 #music h3 small,
+#music h4 small,
 #music p small {
   color: #a27b3d;
 }
@@ -6614,11 +6616,13 @@ body.bit-bazaar .content {
 }
 #vendors h2,
 #vendors h3,
+#vendors h4,
 #vendors p {
   color: #0d00e3;
 }
 #vendors h2 small,
 #vendors h3 small,
+#vendors h4 small,
 #vendors p small {
   color: #2417ff;
 }
@@ -6627,16 +6631,18 @@ body.bit-bazaar .content {
   background-image: url(../images/spring-2015/promo_panelscapes2.gif);
   background-position: right 20%;
   background-position: cover;
-  min-height: 400px;
+  min-height: 200px;
   background-repeat: no-repeat;
 }
 #panelscapes h2,
 #panelscapes h3,
+#panelscapes h4,
 #panelscapes p {
   color: #0d00e3;
 }
 #panelscapes h2 small,
 #panelscapes h3 small,
+#panelscapes h4 small,
 #panelscapes p small {
   color: #2417ff;
 }
@@ -6659,17 +6665,19 @@ body#bit-bazaar-spring-fair-2015 {
 }
 body#bit-bazaar-spring-fair-2015 section#venue {
   background: #0d00e3;
-  background-image: url(../images/spring-2015/promo_venue.gif);
+  background-image: url(../images/spring-2015/14174630001_a382e2dd6e_k.gif);
   background-position: left 20%;
   background-repeat: no-repeat;
 }
 body#bit-bazaar-spring-fair-2015 section#venue h2,
 body#bit-bazaar-spring-fair-2015 section#venue h3,
+body#bit-bazaar-spring-fair-2015 section#venue h4,
 body#bit-bazaar-spring-fair-2015 section#venue p {
   color: #ffffff;
 }
 body#bit-bazaar-spring-fair-2015 section#venue h2 small,
 body#bit-bazaar-spring-fair-2015 section#venue h3 small,
+body#bit-bazaar-spring-fair-2015 section#venue h4 small,
 body#bit-bazaar-spring-fair-2015 section#venue p small {
   color: #ffffff;
 }
@@ -6684,11 +6692,13 @@ body#bit-bazaar-spring-fair-2015 section#about {
 }
 body#bit-bazaar-spring-fair-2015 section#about h2,
 body#bit-bazaar-spring-fair-2015 section#about h3,
+body#bit-bazaar-spring-fair-2015 section#about h4,
 body#bit-bazaar-spring-fair-2015 section#about p {
   color: #0d00e3;
 }
 body#bit-bazaar-spring-fair-2015 section#about h2 small,
 body#bit-bazaar-spring-fair-2015 section#about h3 small,
+body#bit-bazaar-spring-fair-2015 section#about h4 small,
 body#bit-bazaar-spring-fair-2015 section#about p small {
   color: #2417ff;
 }
@@ -6737,11 +6747,17 @@ body#bit-bazaar-spring-fair-2015 h2 {
 }
 body#bit-bazaar-spring-fair-2015 #header {
   padding: 2em;
+  background-image: url(../images/spring-2015/header.png);
   position: relative;
   top: 0;
   left: 0;
   z-index: 0;
   background-size: cover;
+}
+body#bit-bazaar-spring-fair-2015 #header h1,
+body#bit-bazaar-spring-fair-2015 #header h2,
+body#bit-bazaar-spring-fair-2015 #header p {
+  font-family: "kepler-std", serif;
 }
 body#bit-bazaar-spring-fair-2015 #header a.btn {
   text-decoration: none;
@@ -6751,19 +6767,28 @@ body#bit-bazaar-spring-fair-2015 #header p {
   font-size: 32px;
   text-shadow: 1px 1px 0px #937ea8;
 }
-body#bit-bazaar-spring-fair-2015 #header p.lead {
+body#bit-bazaar-spring-fair-2015 #header p.tagline {
+  line-height: 1.1em;
+  font-size: 56px;
   color: #fff;
 }
-body#bit-bazaar-spring-fair-2015 #header p.cta {
+body#bit-bazaar-spring-fair-2015 #header p.lead {
+  background-color: #dff954;
+  color: #0d00e3;
+  padding: 4px 9px;
+  text-shadow: none;
+  display: inline;
+  float: left;
+  margin-bottom: 1.7em;
+}
+body#bit-bazaar-spring-fair-2015 #header p.cta,
+body#bit-bazaar-spring-fair-2015 #header p.partners {
+  font-family: "proxima-nova", sans-serif;
   font-size: 24px;
+  line-height: 1.2em;
 }
 body#bit-bazaar-spring-fair-2015 #header .cell {
   width: 100%;
-}
-body#bit-bazaar-spring-fair-2015 #header img {
-  float: none;
-  display: block;
-  margin: 0 auto;
 }
 body#bit-bazaar-spring-fair-2015 #header #socmed {
   margin: 10px auto;
@@ -6851,20 +6876,10 @@ body#bit-bazaar-spring-fair-2015 section#vendors,
 body#bit-bazaar-spring-fair-2015 section#music {
   padding-bottom: 60px;
 }
-body#bit-bazaar-spring-fair-2015 section#vendors p,
-body#bit-bazaar-spring-fair-2015 section#music p {
-  display: inline;
-  padding: 3px 5px;
-}
-body#bit-bazaar-spring-fair-2015 section#vendors h3,
-body#bit-bazaar-spring-fair-2015 section#music h3 {
-  font-weight: 100;
-}
-body#bit-bazaar-spring-fair-2015 section#vendors h2 small,
-body#bit-bazaar-spring-fair-2015 section#music h2 small,
 body#bit-bazaar-spring-fair-2015 section#vendors h4,
 body#bit-bazaar-spring-fair-2015 section#music h4 {
-  font-family: "letter-gothic-std";
+  margin-top: 30px;
+  font-size: 32px;
 }
 body#bit-bazaar-spring-fair-2015 section#vendors #exhibitor-lists > div,
 body#bit-bazaar-spring-fair-2015 section#music #exhibitor-lists > div {
@@ -6881,7 +6896,6 @@ body#bit-bazaar-spring-fair-2015 section#music #exhibitor-lists ul.confirmed li 
   letter-spacing: 1px;
   font-style: normal;
   font-weight: 100;
-  font-family: "letter-gothic-std";
   line-height: 2em;
   text-transform: uppercase;
 }
@@ -6995,4 +7009,21 @@ body .navbar-default .navbar-link:hover {
     color: #ffffff;
     background-color: #000000;
   }
+}
+#partners .wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+#partners .partner {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+}
+#partners .partner img {
+  margin: 0 auto;
+  text-align: center;
+  float: none;
+  display: block;
 }
