@@ -21,8 +21,8 @@
 					{content get_value handle {"page/bitbazaar/assets/past_{#type}_vendors"}}
 					<h3>Need inspiration?</h3>
 
-					<p>Check out the Bit Bazaar <a href="http://www.flickr.com/groups/bitbazaar/">photo pool on Flickr</a>, mrghosty's <a href="https://www.youtube.com/watch?v=atdBruXI9wU" target="_blank">Bit Bazaar Exhibitors&#8217; Workshop (Fall 2013)</a>, and the <a href="https://bentomiso.com/blog/bit-bazaar-wrap">2013 Bit Bazaar Winter Market Wrap-Up</a>.</p>					
-					<p class="lead">Questions? Contact event director <a href="mailto:info@bentomiso.com">Jennie Faber</a>.</p>
+					<p>Check out the Bit Bazaar <a href="http://www.flickr.com/groups/bitbazaar/">photo pool on Flickr</a>, mrghosty's <a href="https://www.youtube.com/watch?v=atdBruXI9wU" target="_blank">Bit Bazaar Exhibitors&#8217; Workshop (Fall 2013)</a>, and the <a href="https://bentomiso.com/blog/bit-bazaar-wrap">2013 Bit Bazaar Winter Market Wrap-Up</a>.</p>
+					<p class="lead">Questions? Contact event director <a href="mailto:hello@thebitbazaar.com">Jennie Faber</a>.</p>
 				</div>
 				<div class="col-md-6">
 					{%page/bitbazaar/assets/past_coverage}
