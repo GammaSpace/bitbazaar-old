@@ -1,9 +1,10 @@
+      <p class="text-center"><a href="{@SITE.path}/spring-2015">&larr; Home</a></p>
   <div class="row">
     <div class="col-md-2">
-      <img src="{@SITE.path}/images/bit_bazaar_logo_290x334.png" alt="" class="img-responsive logo">
+      <a href="{@SITE.path}/spring-2015"><img src="{@SITE.path}/images/bit_bazaar_logo_290x334.png" alt="" class="img-responsive logo"></a>
     </div>
     <div class="col-md-8">
-      <h2>Vol. 5 <small>Saturday, May 9, 2015</small></h2>
+      <h2>Bit Bazaar 5 <small>Saturday, May 9, 2015</small></h2>
       <p class="lead">Hey, <b>game developers</b> and <b>comic artists</b>! Show and sell your stuff at our 5<sup>th</sup> fair, a unique celebration of the art and craft of independent games, comics and good food!</p>
       <p><b>Games and comics exhibitor applications are open from March 14–April 3. Vendors selected to exhibit will be contacted by April 10.</b> <small>Food vendor applications open April 3.</small></p>
 
