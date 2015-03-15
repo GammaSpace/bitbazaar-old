@@ -7027,3 +7027,6 @@ body .navbar-default .navbar-link:hover {
   float: none;
   display: block;
 }
+.smallcaps {
+  text-transform: uppercase;
+}
