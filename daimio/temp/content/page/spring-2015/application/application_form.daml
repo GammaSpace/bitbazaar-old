@@ -1,10 +1,10 @@
-
 {begin step2}
 <p class='alert alert-success lead'><b>Thanks!</b> We've received your information. Applications close April 3, and selected exhibitors will be notified and announced April 10.</p>
 	{begin application | merge with (@bbapplication.#1.my)}
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				Name: <b>{name}</b>
+				<small class="pull-right"><a href="{@SITE.path}/spring-2015/application?editing=true">Edit</a></small>
 			</div>
 			<div class="panel-body">
         <p><b>Title</b></p>
@@ -35,8 +35,7 @@
 
 	{begin step1}
 
-		<h2>Apply </h2>
-		<p>There are no application or table fees.</p>
+		<h2>{#editing | is like :true | then "Editing Application <small class='pull-right'><a href='{@SITE.path}/spring-2015/application'>Cancel</a></small>" else "Apply"}</h2>
 		{begin create_account | if {@MY.id | not}}
 
 
@@ -136,6 +135,7 @@
 	{end step1}
 
 	{ifelse (
+		{and (@bbapplication {#editing | is like :true})} "{$step1}"
 		{@bbapplication} "{$step2}"
 		:default  "{$step1}"
 	)}

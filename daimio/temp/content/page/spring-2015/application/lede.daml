@@ -1,12 +1,38 @@
-      <p class="text-center"><a href="{@SITE.path}/spring-2015">&larr; Home</a></p>
-  <div class="row">
-    <div class="col-md-2">
+<div class="row">
+  <div class="col-sm-2">
+
+    <div class="center-block">
       <a href="{@SITE.path}/spring-2015"><img src="{@SITE.path}/images/bit_bazaar_logo_290x334.png" alt="" class="img-responsive logo"></a>
+
     </div>
-    <div class="col-md-8">
-      <h2>Bit Bazaar 5 <small>Saturday, May 9, 2015</small></h2>
-      <p class="lead">Hey, <b>game developers</b> and <b>comic artists</b>! Show and sell your stuff at our 5<sup>th</sup> fair, a unique celebration of the art and craft of independent games, comics and good food!</p>
-      <p><b>Games and comics exhibitor applications are open from March 14–April 3. Vendors selected to exhibit will be contacted by April 10.</b> <small>Food vendor applications open April 3.</small></p>
+  </div>
+  <div class="col-sm-10">
+    <h2>Apply to exhibit at Bit Bazaar 5 <small>Saturday, May 9, 2015</small></h2>
+
+    <div class="row">
+      <div class="col-md-4"><p class="lead">Hey, <b>game developers</b> and <b>comic artists</b>! Show and sell your stuff at our 5<sup>th</sup> fair, a unique celebration of the art and craft of independent games, comics and good food!</p></div>
+      <div class="col-md-4"><p class="lead"><b>Games and comics exhibitor applications are open from March 14–April 3.</b> Vendors selected to exhibit will be contacted by April 10. <small>Food vendor applications open April 3.</small></p></div>
+      <div class="col-md-4">
+        <div id="partners">
+          <p class="text-center">Presented by:</p>
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="wrapper">
+                <div class="partner">
+                  <a href="{@SITE.path}"><img src="{@SITE.path}/images/miso_bw.png" alt="" class="img-responsive"> </a></div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="wrapper">
+                  <div class="partner"><a href="http://attractmo.de"><img src="{@SITE.path}/images/spring-2015/partner-logos/attract_mode_logo.png" alt="" class="img-responsive"> </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
 
 
       {/<div class="alert alert-warning">
@@ -14,13 +40,9 @@
         <b>Food vendor</b> applications are open through April 3. Selected vendors will be notified by April 10.
       </div>}
     </div>
-    <div class="col-md-2 hidden-sm hidden-xs hidden-sm">
-      <div class="pull-right">
-        <p style="padding: 0; margin: 10px auto;" class="text-center">Presented by:</p>
-        <a href="{@SITE.path}">
-          <img src="{@SITE.path}/images/miso_bw.png" alt="" class="pull-right img-responsive" style="padding: 0 20px;">
-        </a>
-      </div>
+    <div class="col-sm-2 hidden-sm hidden-xs hidden-sm">
+
     </div>
   </div>
 </div>
+{/<p class="text-center"><a href="{@SITE.path}/spring-2015">&larr; Home</a></p>}

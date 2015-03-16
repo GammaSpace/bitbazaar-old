@@ -1,4 +1,10 @@
-<p>Hi, {@profile.my.firstname} {@profile.my.lastname}! You are logged in with your account <b>{@MY.username}</b>. The email we have on file for you is <b>{@member.my.email}</b>.</p>
+<p>Hi, {@profile.my.firstname}! {/You are logged in with your account <b>{@MY.username}</b>. The email we have on file for you is <b>{@member.my.email}</b>.}</p>
+
+{begin editing | if {#editing | is like :true}}
+  <div class="alert alert-info">All applications will be reviewed after April 3, so you can edit your submission as much as you wish until then.</div>
+{end editing}
+
+
 <form class="form-vertical" method="post" accept-charset="utf-8" id="game-exhibitor">
   <fieldset>
 
@@ -7,7 +13,7 @@
         <div class="form-group">
           <label class="form-label" for="developer">Name</label>
 
-          <input type="text" value="{ifelse ({@profile.my.professional.company} "{@profile.my.professional.company}" {@POST} "{@POST.developer}" {@profile.my.firstname} "{@profile.my.firstname} {@profile.my.lastname}" :default "")}" name="depot[name]" class="form-control" id="developer">
+          <input type="text" value="{ifelse ({@bbapplication.#1.my.name} {@bbapplication.#1.my.name} {@profile.my.professional.company} "{@profile.my.professional.company}" {@POST} "{@POST.developer}" {@profile.my.firstname} "{@profile.my.firstname} {@profile.my.lastname}" :default "")}" name="depot[name]" class="form-control" id="developer">
           <p class="help-block">If exhibiting as a collective, studio, or other group, use that name here.</p>
 
         </div>
@@ -17,18 +23,22 @@
           <label class="form-label" for="type">Category</label>
           <div class="radio">
             <label class="">
-              <input type="radio" name="depot[application_type]" id="type-games" value="games_marketplace" checked> Games - Marketplace
+
+
+
+
+              <input type="radio" name="depot[application_type]" id="type-games" value="games_marketplace" {or ({@bbapplication.#1.my.application_type | is like :games_marketplace} {@bbapplication.#1.my.application_type | not}) | then :checked}> Games - Marketplace
             </label>
           </div>
           <div class="radio">
             <label class="">
-              <input type="radio" name="depot[application_type]" id="type-games-arcade" value="games_arcade"> Games - Tournament Arcade
+              <input type="radio" name="depot[application_type]" id="type-games-arcade" value="games_arcade" {@bbapplication.#1.my.application_type | is like :games_arcade | then :checked}> Games - Tournament Arcade
             </label>
           </div>
           <div class="radio">
 
             <label class="radio">
-              <input type="radio" name="depot[application_type]" id="type-comics" value="comics"> Comics
+              <input type="radio" name="depot[application_type]" id="type-comics" value="comics" {@bbapplication.#1.my.application_type | is like :comics | then :checked}> Comics
             </label>
           </div>
         </div>
@@ -38,7 +48,7 @@
     <div class="form-group">
       <label class="form-label" for="gamename">Title</label>
 
-      <input type="text" value="{ifelse ({@POST} "{@POST.gamename}" :default "")}" name="depot[product]" class="form-control required" id="gamename">
+      <input type="text" value="{ifelse ({@bbapplication.#1.my.product} {@bbapplication.#1.my.product} {@POST} "{@POST.gamename}" :default "")}" name="depot[product]" class="form-control required" id="gamename">
       <p class="help-block">The title of the game or comic you're showing. If showing more than one, please list the primary one here and add others in the <b>short description</b> field below.</p>
     </div>
 
@@ -46,14 +56,14 @@
 
     <div class="form-group">
       <label class="form-label" for="shortdescription">Short description</label>
-      <textarea type="text" value="{@POST.shortdescription}" name="depot[description]" class="form-control" rows="4" id="shortdescription"></textarea>
+      <textarea type="text" name="depot[description]" class="form-control" rows="4" id="shortdescription">{@bbapplication.#1.my.description | then "{@bbapplication.#1.my.description}" else ""}</textarea>
     </div>
     <hr />
     <div class="form-group">
       <label class="form-label" for="link">Web site</label>
       <div class="input-group">
         <span class="input-group-addon">http://</span>
-        <input type="text" class="form-control" name="depot[link]">
+        <input type="text" class="form-control" name="depot[link]" value="{@bbapplication.#1.my.link | then "{@bbapplication.#1.my.link}" else ""}">
       </div>
     </div>
 
@@ -61,21 +71,22 @@
       <label class="form-label" for="link">Link to gameplay video or download</label>
       <div class="input-group">
         <span class="input-group-addon">http://</span>
-        <input type="text" class="form-control" name="depot[gameplay]">
+        <input type="text" class="form-control" name="depot[gameplay]" value="{@bbapplication.#1.my.gameplay | then "{@bbapplication.#1.my.gameplay}" else ""}">
       </div>
     </div>
 
 
     <div class="form-group" id="merch">
       <label class="form-label" for="merch">Merchandise</label>
-      <textarea type="text" value="{@POST.merch}" name="depot[merch]" class="form-control" rows="6" id="merch"></textarea>
+      <textarea type="text" value="{@POST.merch}" name="depot[merch]" class="form-control" rows="6" id="merch">{@bbapplication.#1.my.merch | then "{@bbapplication.#1.my.merch}" else ""}</textarea>
       <p class="help-block">Please describe what you plan to have for sale and in what format (e.g., download code, prints, boxed editions).</p>
     </div>
     <hr />
-    <button type="submit" class="btn btn-default">Submit &rarr;</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
     <p class="help-block">All exhibitors are expected to comply with our <a href="https://bentomiso.zendesk.com/hc/en-us/articles/201812303-Code-of-Conduct" target="_blank">Code of Coduct</a>.</p>
   </fieldset>
 
+  <input type="hidden" name="application_id" value="{@bbapplication.#1._id | else ""}">
   <input type="hidden" name="registered" value="{time represent as "M d, Y"}">
   <input type="hidden" name="firstname" value="{@profile.my.firstname}">
   <input type="hidden" name="lastname" value="{@profile.my.lastname}">
@@ -85,23 +96,26 @@
   <textarea name="commands" style="display:none">
     {begin verbatim | process escape}
 
-      {stuff add type :bbapplication | > :ex_id}
-      {begin added | if @ex_id}
+      {begin editing}
+        {#application_id | > :ex_id}
+      {end editing}
 
+      {begin new}
+        {stuff add type :bbapplication | > :ex_id}
+        {exec send_member_email subject {"Bit Bazaar Exhibitor Application Received"} body {%template/email/applicant_notification | process consume}}
+        {exec admin_send_email subject {"Bit Bazaar SP 2015 Exhibitor Application Received"} body {%template/email/admin_notification | process consume}}
+      {end new}
+
+      {ifelse (
+        {#application_id} $editing
+        :default $new
+      )}
+
+      {begin added | if @ex_id}
         {begin depotize | foreach with #depot}
           {my set for @ex_id in :stuff path key value value}
         {end depotize}
-
-        {exec send_member_email
-          subject {"Bit Bazaar Exhibitor Application Received"}
-          body {%template/email/applicant_notification | process consume}
-        }
-
-        {exec admin_send_email
-          subject {"Bit Bazaar SP 2015 Exhibitor Application Received"}
-          body {%template/email/admin_notification | process consume}
-        }
-
+        {page redirect to :spring-2015/application}
       {end added}
     {end verbatim}
   </textarea>

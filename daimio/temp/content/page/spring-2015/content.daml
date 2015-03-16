@@ -132,10 +132,3 @@
 </div>
 </section>
 }
-<section id="about-footer">
-  <div class="container">
-    <p>
-      &copy; 2013-2015 <a href="http://bentomiso.com">Bento Miso Collaborative Workspace</a>
-    </p>
-  </div>
-</section>

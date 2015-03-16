@@ -1,0 +1,10 @@
+
+<p class="text-center" id="copyright">&copy; 2011-{time represent as :Y} <a href="{@SITE.path}">Bento Miso Collaborative Workspace</a></p>
+<p>
+  <a href="{@SITE.path}/terms">Terms of Service</a>
+  &#8226; <a href="https://bentomiso.zendesk.com/hc/en-us/articles/201812303-Code-of-Conduct">Code of Conduct</a>
+  &#8226; <a href="https://bentomiso.zendesk.com/hc/en-us/articles/201628406-Diversity-and-Inclusiveness-Statement">Diversity and Inclusiveness Statement</a>
+  &#8226; <a href="https://bentomiso.zendesk.com/hc/en-us/articles/201818783-Accessibility">Accessibility</a>
+</a>
+</p>
+<p>We are a registered Canadian NFP: #839164-5.</p>
