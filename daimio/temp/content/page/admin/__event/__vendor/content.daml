@@ -1,0 +1,142 @@
+<div class="page-header">
+  <a href="{@SITE.path}/yari/admin/bbwm14" class="pull-right">Exhibitor List</a>
+  <h2>Bit Bazaar Sp 2014 <small>Vendor Profile</small></h2>
+</div>
+
+{%global/notices}
+{#vendor | stuff find by_ids | > :vendor | ""}
+
+{begin vendor | merge with @vendor}
+  <form class="form-vertical" method="post" accept-charset="utf-8" id="game-exhibitor">  
+  
+    <div class="clearfix">
+      <div class="pull-left">
+        <p class="lead"><strong>Category:</strong> {depot.application_type} </p>
+        
+      </div>
+      <div class="pull-right">
+        {begin approved | if {depot.invite | is like :yes}}
+          <p style="color:#22c274">  <span class="glyphicon glyphicon-check" style="color: #22c274"></span> Approved</p>
+        {end approved}
+      </div>
+    </div>
+
+
+
+    {begin admin | if {:admin | is in @MY.keychain}}
+      <div class="form-group">
+        <label class="form-label" for="name">Change Type</label>
+
+        <select class="form-control" name="exhibitor[application_type]" class="form-control" id="vendor-type">
+          {begin categories | foreach with @categories}
+            <option {key | is in depot.application_type | then :selected} value="{key}">{key}</option>           
+          {end categories}
+        </select>
+      </div>
+			
+			
+
+      <div class="form-group">
+        <label class="form-label" for="name">Order</label>
+
+        <input type="text" value="{depot.order}" name="exhibitor[order]" class="form-control input-lg" id="order">
+
+      </div>
+			
+			
+			
+			
+    {end admin}      
+      
+      
+    <div class="row">
+      <div class="col-md-6">
+        <fieldset>      
+          <legend>Public Profile</legend>
+          <p><em>This may appear on the site and printed materials.</em></p>
+
+          <div class="form-group">
+            <label class="form-label" for="name">Your Name</label>
+
+            <input type="text" value="{depot.name}" name="exhibitor[name]" class="form-control input-lg" id="name">
+            <p class="help-block">or Group/Organization/Company/Collective Name</p>
+
+          </div>
+      
+          <div class="form-group">
+            <label class="form-label" for="product">Product</label>
+
+            <input type="text" value="{depot.product}" name="exhibitor[product]" class="form-control required" id="product">
+            <p class="help-block">The title of your game, project, or comic</p>
+        
+
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="public_description">Public description</label>
+
+            <textarea type="text" name="exhibitor[public_description]" class="form-control" rows="4" id="public_description">{depot.public_description}</textarea>
+          </div>
+
+      
+  
+  
+        </fieldset>
+      </div>
+      <div class="col-md-6">
+        <fieldset>
+    
+          <legend>More Info</legend>
+          <p><em>This is mostly for us, but may be used in promotional materials.</em></p>     
+          <div class="form-group">
+            <label class="form-label" for="description">Short description</label>
+
+            <textarea type="text" name="exhibitor[description]" class="form-control" rows="4" id="shortdescription">{depot.description}</textarea>
+
+          </div>
+        
+          <div class="form-group">
+            <label class="form-label" for="link">Link</label>
+            <div class="input-group">
+              <span class="input-group-addon">http://</span>
+              <input type="text" class="form-control" name="exhibitor[link]" value="{depot.link}">
+
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="merch">Merch/Items for Sale</label>
+
+            <textarea type="text" name="exhibitor[merch]" class="form-control" rows="4" id="merch">{depot.merch}</textarea>
+          </div>
+
+    
+        </fieldset>
+      </div>
+    </div>
+    
+  
+    <p class="text-center"><button type="submit" class="btn btn-lg btn-success">Save</button></p>
+
+    
+    <input type="hidden" name="vendor" value="{#vendor}">
+    
+    <textarea name="commands" style="display:none">
+      {begin verbatim | process escape}
+        {#vendor | > :ex_id}
+        {begin added | if @ex_id}
+          
+          {begin set | foreach with #exhibitor}
+            {exec depot_set for @ex_id in :stuff path key value value}
+          {end set}
+          
+          {notice set value {* (
+            :message "<strong>Success!</strong>  Your changes have been saved"
+            :type :success
+          )}}
+          
+        {end added}
+      {end verbatim}
+    </textarea>
+  </div>
+</form>
+
+{end vendor}

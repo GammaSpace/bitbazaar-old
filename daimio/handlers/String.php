@@ -127,17 +127,6 @@ class String
   {
     return strtolower($value);
   }
-
-/**
-* Apply textile to a string
-* @param string The string
-* @return string 
-* @key __world
-*/ 
-static function markdown($on)
-{
-  return MarkdownExtra::defaultTransform($on);
-}
   
   /** 
   * Sanitize a string for html display 
@@ -187,18 +176,6 @@ static function markdown($on)
       return preg_split($on, $value);
     else
       return explode($on, $value);
-  }
-
-  /**
-  * Apply textile to a string
-  * @param string The string
-  * @return string 
-  * @key __world
-  */ 
-  static function textile($on)
-  {
-    $textile = new TextileLib();
-    return $textile->TextileThis($on);
   }
 
   

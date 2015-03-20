@@ -1,0 +1,39 @@
+<div class="page-header">
+  <a href="{@SITE.path}/yari/admin/bbwm14" class="pull-right">Exhibitor List</a>
+  <h2>Bit Bazaar Sp 2014 <small>Mailchimp List</small></h2>
+</div>
+
+
+<table class="table table-striped table-bordered table-condensed table-data">
+
+  <thead>
+    <tr>
+      <th>Date Invited</th>
+      <th>Email</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Developer/Group Name</th>
+      <th>Product</th>
+      <th>Web site</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    {begin memberlist | merge with @ex_org}    
+      
+      {stuff find by_ids _id | __.pcache.edit | collection extract expression "{:user | is in this}" | string transform old "/user:/" new "" | member find by_ids | __.#1 | > :member | ""}
+      <tr>
+        <td>{depot.invite_date | time represent as "M d, Y g:ia"}</td>
+        <td>{@member.depot.email}</td>
+        <td>{@profiles.{@member._id}.my.firstname}</td>
+        <td>{@profiles.{@member._id}.my.lastname}</td>
+        <td>{depot.name}</td>
+        <td>{depot.product}</td>
+        <td>{depot.link}</td>
+        <td>{depot.application_type | foreach string "{value}" glue "," | else depot.application_type}</td>
+      </tr>
+    {end memberlist}
+
+  </tbody>
+  <tfoot></tfoot>
+</table>

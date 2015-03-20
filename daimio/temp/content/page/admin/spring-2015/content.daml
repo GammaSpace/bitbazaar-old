@@ -1,0 +1,91 @@
+<div class="page-header">
+  <a href="{@SITE.path}/yari/admin/{#event}/mailchimp" class="pull-right">Mailchimp data export</a>
+  <h2>Bit Bazaar {#event} <small>Exhibitors</small></h2>
+</div>
+
+
+
+<table class="table table-striped table-bordered table-condensed table-data">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Product</th>
+      <th>Email</th>
+      <th>Order</th>
+      <th>Edit</th>
+
+      <th>In?</th>
+      <th>Date Invited</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {begin game_info | merge with @exhibitors}
+      <tr>
+        <td>{depot.application_type}</td>
+        <td><a href="{@SITE.path}/yari/admin/{#event}/{_id}">{depot.name}</a></td>
+        <td>{depot.product}</td>
+        <td>
+          {pcache.edit | collection extract expression "{:user | is in this}" | string transform old "/user:/" new "" | > :member_id | ""}
+          <a href="mailto:{@member_id | member find by_ids | __.#1.depot.email}">{@member_id | member find by_ids | __.#1.depot.email}</a><br>{profile find by_ids @member_id | merge string "{my.firstname} {my.lastname}"}
+
+
+        </td>
+        <td>{depot.order}</td>
+        <td><a href="{@SITE.path}/yari/admin/{#event}/{_id}" class="btn btn-default btn-xs">Edit</a></td>
+        <td style="width:120px;">
+
+          <form class="form-horizontal check-out" id="check-out-form_{_id}" method="post" accept-charset="utf-8" enctype="multipart/form-data" style="display:{depot.invite | is like :yes | not | then :block else :none}">
+            <input type="hidden" id="app_id" name="app_id" value="{_id}">
+            <input type="hidden" name="invite_date" value="{time represent as :c}">
+
+            <button class="btn btn-small btn-success" type="submit"><span class="glyphicon glyphicon-share-alt glyphicon-white"></span> Invite</button>
+            <textarea name="commands" style="display:none">
+              {begin verbatim | process escape}
+                {exec depot_set for #app_id in :stuff path :invite value :yes}
+                {exec depot_set for #app_id in :stuff path :invite_date value #invite_date}
+
+              {end verbatim}
+            </textarea>
+          </form>
+
+          <form class="form-horizontal check-in" id="check-in-form_{_id}" method="post" accept-charset="utf-8" enctype="multipart/form-data" style="display:{depot.invite | is like :yes | then :block else :none}">
+
+            <input type="hidden" id="app_id" name="app_id" value="{_id}">
+
+            <button class="btn btn-small btn-danger" type="submit"><span class="glyphicon glyphicon-map-marker glyphicon-white"></span> Uninvite</button>
+            <textarea name="commands" style="display:none">
+              {begin verbatim | process escape}
+                {exec depot_set for #app_id in :stuff path :invite value :no}
+              {end verbatim}
+            </textarea>
+          </form>
+        </td>
+        <td>{depot.invite_date | time represent as "M d, Y g:ia"}</td>
+
+      </tr>
+    {end game_info}
+  </tbody>
+  <tfoot></tfoot>
+</table>
+<div class="row">
+
+
+  {@categories}
+  {begin all | foreach with @categories}
+    <div class="col-md-4">
+
+      {@ex_org | extract "{key | is in this.depot.application_type}" | collection sort by {* (:depot.name :asc)} | > :cat_vendors | ""}
+      <h3>{key} <small>{@cat_vendors | collection count}</small></h3>
+      <ul class="list-unstyled">
+        {begin cat_vendors | merge with @cat_vendors}
+
+          <li><p class="lead"><strong>{depot.name}</strong> <small>{depot.product}</small></p></li>
+
+        {end cat_vendors}
+
+      </ul>
+    </div>
+  {end all}
+</div>

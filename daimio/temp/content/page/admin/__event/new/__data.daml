@@ -1,0 +1,5 @@
+{permit superdo command "{profile find}" | > :profiles}
+{permit superdo command "{member find by_status :paid}" | > :members}
+{lens view_bbwm14_exhibitors | extract "{this.depot.invite | is like :yes}" | > :ex_org}
+
+{%global/snippets/categories}

@@ -397,6 +397,37 @@ class Lens
   
   // THIS COMMENT MARKS THE DELETION DEMARKATION LINE
 
+
+  /**
+  * 
+  * 
+  * 
+  * 
+  * @param string pending, approved, or rejected
+  * @param string An ID or list
+  * @param string Event name
+  * 
+  * @return array
+  * @key __world
+  */
+  static function application_find($by_status='', $by_ids='', $by_event='')
+  {
+    // load params into local variables
+    $params['by_status'] = $by_status;
+    $params['by_ids'] = $by_ids;
+    $params['by_event'] = $by_event;
+
+
+    // process conditions
+    $conditions = ContentLib::get_value_from_type_and_path(self::$type, "application_find/conditions");
+    if($error = trim(Processor::process_with_enhancements($conditions, '__' . self::$type, $params)))
+      return ErrorLib::set_error($error);
+    
+    // process actions
+    $actions = ContentLib::get_value_from_type_and_path(self::$type, "application_find/actions");
+    return Processor::process_with_enhancements($actions, '__' . self::$type, $params, 'arrayable');
+  }
+
 }
 
 //EOT

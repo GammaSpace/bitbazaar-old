@@ -1,0 +1,128 @@
+<div class="page-header">
+  <a href="{@SITE.path}/yari/admin/bbwm14" class="pull-right">Exhibitor List</a>
+  <h2>Bit Bazaar Sp 2014 <small>Vendor Profile</small></h2>
+</div>
+<h3>Add Exhibitor</h3>
+{%global/notices}
+
+  <form class="form-vertical" method="post" accept-charset="utf-8" id="game-exhibitor">  
+  
+
+
+
+    {begin admin | if {:admin | is in @MY.keychain}}
+      <div class="form-group">
+        <label class="form-label" for="name">Vendor Type</label>
+
+        <select multiple class="form-control" name="exhibitor[application_type][]" id="vendor-type">
+          {begin categories | foreach with @categories}
+            {value}{key}
+            <option {value | is in depot.application_type | then :selected} value="{value}">{value}</option>            
+          {end categories}
+        </select>
+      </div>
+    {end admin}      
+    <p class="lead"><strong>Category:</strong> {{depot.application_type} | foreach string "{value}" glue " + "}</p>
+      
+      
+    <div class="row">
+      <div class="col-md-6">
+        <fieldset>      
+          <legend>Public Profile</legend>
+          <p><em>This may appear on the site and printed materials.</em></p>
+
+          <div class="form-group">
+            <label class="form-label" for="name">Your Name</label>
+
+            <input type="text" value="{depot.name}" name="exhibitor[name]" class="form-control input-lg" id="name">
+            <p class="help-block">or Group/Organization/Company/Collective Name</p>
+
+          </div>
+      
+          <div class="form-group">
+            <label class="form-label" for="product">Product</label>
+
+            <input type="text" value="{depot.product}" name="exhibitor[product]" class="form-control required" id="product">
+            <p class="help-block">The title of your game, project, or comic</p>
+        
+
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="public_description">Public description</label>
+
+            <textarea type="text" name="exhibitor[public_description]" class="form-control" rows="4" id="public_description">{depot.public_description}</textarea>
+          </div>
+
+      
+  
+  
+        </fieldset>
+      </div>
+      <div class="col-md-6">
+        <fieldset>
+    
+          <legend>More Info</legend>
+          <p><em>This is mostly for us, but may be used in promotional materials.</em></p>     
+          <div class="form-group">
+            <label class="form-label" for="description">Short description</label>
+
+            <textarea type="text" name="exhibitor[description]" class="form-control" rows="4" id="shortdescription">{depot.description}</textarea>
+
+          </div>
+        
+          <div class="form-group">
+            <label class="form-label" for="link">Link</label>
+            <div class="input-group">
+              <span class="input-group-addon">http://</span>
+              <input type="text" class="form-control" name="exhibitor[link]" value="{depot.link}">
+
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="merch">Merch/Items for Sale</label>
+
+            <textarea type="text" name="exhibitor[merch]" class="form-control" rows="4" id="merch">{depot.merch}</textarea>
+          </div>
+
+    
+        </fieldset>
+      </div>
+    </div>
+    
+  
+    <p class="text-center"><button type="submit" class="btn btn-lg btn-success">Save</button></p>
+
+        
+
+    <input type="text" name="submitted" value="{time represent as :c}">
+    <input type="text" name="application_type" value="comics">
+
+    
+    
+    
+    
+    <textarea name="commands" style="display:none">
+      {begin verbatim | process escape}
+
+
+        {stuff add type :bbwm14_comics | > :ex_id}
+        {begin added | if @ex_id}
+          
+          {begin set | foreach with #exhibitor}
+            {exec depot_set for @ex_id in :stuff path key value value}
+          {end set}
+          
+          {notice set value {* (
+            :message "<strong>Success!</strong>  Your changes have been saved"
+            :type :success
+          )}}
+          
+          
+        {end added}
+        {page redirect to {"yari/admin/bbwm14/{@ex_id}"}}
+      {end verbatim}
+    </textarea>
+    
+    
+  </div>
+</form>

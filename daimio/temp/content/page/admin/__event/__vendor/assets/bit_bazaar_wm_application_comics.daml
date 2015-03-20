@@ -1,0 +1,94 @@
+    <form class="form-horizontal" method="post" accept-charset="utf-8" id="comic-exhibitor">  
+      <fieldset>
+  
+      
+        <legend>About You</legend>
+        <div class="form-group">
+          <label class="form-label col-md-4" for="collective">Group Name</label>
+          <div class="col-md-8">
+            <input type="text" value="{depot.name}" name="collective" class="form-control" id="collective">
+            <p class="help-block">If submitting as a collective</p>
+          </div>
+        </div>
+      
+        <div class="form-group">
+          <label class="form-label col-md-4" for="comicname">Name of Comic(s)</label>
+          <div class="col-md-8">
+            <input type="text" value="{depot.product}" name="comicname" class="form-control required" id="comicname">
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label class="form-label col-md-4" for="link">Link to Comic</label>
+          <div class="col-md-8">
+            <div class="input-group">
+              <span class="input-group-addon">http://</span>
+              <input type="text" class="form-control" name="link" value="{depot.link}">
+            </div>
+          </div>
+        </div>       
+         
+        <div class="form-group">
+          <label class="form-label col-md-4" for="shortdescription">Short description</label>
+          <div class="col-md-8">
+            <textarea type="text" name="shortdescription" class="form-control" rows="4" id="shortdescription">{depot.description}</textarea>
+            <p class="help-block">Tell us a bit about you and/or your group, and the subject matter of your work. </p>
+          </div>
+        </div>
+         
+        <div class="form-group">
+          <label class="form-label col-md-4" for="publicdescription">Public Description</label>
+          <div class="col-md-8">
+            <textarea type="text" name="publicdescription" class="form-control" rows="4" id="publicdescription">{depot.pub_description}</textarea>
+          </div>
+        </div>
+        
+        
+        <div class="form-group">
+          <label class="form-label col-md-4" for="merch">Merch/Items for Sale</label>
+          <div class="col-md-8">
+            <textarea type="text" name="merch" class="form-control" rows="4" id="merch">{depot.merch}</textarea>
+
+              <hr />
+              <button type="submit" class="btn btn-default">Submit &rarr;</button>
+          </div>
+        </div>
+        
+        
+        <div class="form-group">
+          <label class="control-label" for="gamename">Game(s)</label>
+          <div class="controls">
+            <input type="text" value="{ifelse ({@POST} "{@POST.gamename}" :default "")}" name="gamename" class="input-xlarge required" id="gamename">
+            <label for="avatar" class="control-label">Image</label>
+            <input type="file" class="file" name="image" id="">
+          </div>
+        </div>
+      
+        
+        
+  
+      </fieldset>
+
+  
+    
+      <textarea name="commands" style="display:none">
+        {begin verbatim | process escape}
+              
+          {/ Application stuff}
+              {#vendor | > :ex_id}
+          {begin added | if @ex_id}
+            
+            {exec depot_set for @ex_id in :stuff path :collective value #collective}
+            {exec depot_set for @ex_id in :stuff path :comic value #comicname}
+            {exec depot_set for @ex_id in :stuff path :link value #link}
+            {exec depot_set for @ex_id in :stuff path :merch value #merch}
+            {exec depot_set for @ex_id in :stuff path :description value #shortdescription}
+            {exec depot_set for @ex_id in :stuff path :public_description value #public_description}
+
+              
+          {end added}
+        {end verbatim}
+      </textarea>
+    </div>
+  </form>
+  

@@ -1,0 +1,6 @@
+{* (
+  :games_marketplace {* (:name "Video Games")}
+  :games_arcade {* (:name "Arcade")}
+  :comics {* (:name "Comics + Zines")}
+  :food {* (:name "Food + Beverage")}
+) | > :categories}

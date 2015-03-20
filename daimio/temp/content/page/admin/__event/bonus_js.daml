@@ -1,0 +1,24 @@
+<script src="{@SITE.path}/js/jDaimio.js"></script>
+
+{begin js | process escape}
+  <script>
+  $(document).ready(function(){
+    $('[rel="popover"]').popover({
+      trigger: 'hover'
+    });
+    
+    $('body').on('submit','form.check-out,form.check-in',function(e) {
+      e.preventDefault();
+      $(this).hide().siblings('form').show();
+      $(this).daimioSubmit();
+    });
+    return false;
+  });
+  </script>
+{end js}
+
+
+
+
+
+

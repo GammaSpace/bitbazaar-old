@@ -403,82 +403,30 @@ class Exec
   * 
   * 
   * 
-  * @param string Subject line
-  * @param string Body of email
+  * @param string ID of the thing
+  * @param string Collection name
+  * @param string Path of the thing
+  * @param string Value to set
   * 
   * @return array
   * @key __world
   */
-  static function admin_send_email($subject='', $body='')
+  static function depot_set($for, $in, $path, $value)
   {
     // load params into local variables
-    $params['subject'] = $subject;
-    $params['body'] = $body;
+    $params['for'] = $for;
+    $params['in'] = $in;
+    $params['path'] = $path;
+    $params['value'] = $value;
 
 
     // process conditions
-    $conditions = ContentLib::get_value_from_type_and_path(self::$type, "admin_send_email/conditions");
+    $conditions = ContentLib::get_value_from_type_and_path(self::$type, "depot_set/conditions");
     if($error = trim(Processor::process_with_enhancements($conditions, '__' . self::$type, $params)))
       return ErrorLib::set_error($error);
     
     // process actions
-    $actions = ContentLib::get_value_from_type_and_path(self::$type, "admin_send_email/actions");
-    return Processor::process_with_enhancements($actions, '__' . self::$type, $params, 'arrayable');
-  }
-
-
-  /**
-  * 
-  * 
-  * 
-  * 
-  * @param string Subject line of the email
-  * @param string Body of the email
-  * 
-  * @return array
-  * @key __world
-  */
-  static function send_member_email($subject, $body)
-  {
-    // load params into local variables
-    $params['subject'] = $subject;
-    $params['body'] = $body;
-
-
-    // process conditions
-    $conditions = ContentLib::get_value_from_type_and_path(self::$type, "send_member_email/conditions");
-    if($error = trim(Processor::process_with_enhancements($conditions, '__' . self::$type, $params)))
-      return ErrorLib::set_error($error);
-    
-    // process actions
-    $actions = ContentLib::get_value_from_type_and_path(self::$type, "send_member_email/actions");
-    return Processor::process_with_enhancements($actions, '__' . self::$type, $params, 'arrayable');
-  }
-
-
-  /**
-  * Set your email address
-  * 
-  * 
-  * 
-  * @param string 
-  * 
-  * @return array
-  * @key __world
-  */
-  static function set_email($to)
-  {
-    // load params into local variables
-    $params['to'] = $to;
-
-
-    // process conditions
-    $conditions = ContentLib::get_value_from_type_and_path(self::$type, "set_email/conditions");
-    if($error = trim(Processor::process_with_enhancements($conditions, '__' . self::$type, $params)))
-      return ErrorLib::set_error($error);
-    
-    // process actions
-    $actions = ContentLib::get_value_from_type_and_path(self::$type, "set_email/actions");
+    $actions = ContentLib::get_value_from_type_and_path(self::$type, "depot_set/actions");
     return Processor::process_with_enhancements($actions, '__' . self::$type, $params, 'arrayable');
   }
 

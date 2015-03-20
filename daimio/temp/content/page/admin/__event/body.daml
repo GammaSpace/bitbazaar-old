@@ -1,0 +1,15 @@
+<body id="" class="bit-bazaar application">
+	<div id="intro-header">
+		<div class="container">
+			{%lede}
+		</div>
+	</div>
+	<div class="container content">
+		{%content}
+	</div>
+
+	<div class="center-block text-center">
+		{%global/snippets/footer_info}
+	</div>
+	
+</body>

@@ -1,0 +1,61 @@
+<p>Application type: <strong>{depot.application_type}</strong></p>
+<form class="form-horizontal" method="post" accept-charset="utf-8" id="game-exhibitor">  
+  <fieldset>      
+    <div class="form-group">
+      <label class="form-label col-md-4" for="developer">Developer</label>
+      <div class="col-md-8">
+        <input type="text" value="{depot.name}" name="developer" class="form-control" id="developer">
+      </div>
+    </div>
+      
+    <div class="form-group">
+      <label class="form-label col-md-4" for="gamename">Name of Game(s)</label>
+      <div class="col-md-8">
+        <input type="text" value="{depot.product}" name="gamename" class="form-control required" id="gamename">
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label class="form-label col-md-4" for="link">Link to game or video</label>
+      <div class="col-md-8">
+        <div class="input-group">
+          <span class="input-group-addon">http://</span>
+          <input type="text" class="form-control" name="link" value="{depot.link}">
+        </div>
+      </div>
+    </div>        
+    <div class="form-group">
+      <label class="form-label col-md-4" for="shortdescription">Short game description</label>
+      <div class="col-md-8">
+        <textarea type="text" name="shortdescription" class="form-control" rows="4" id="shortdescription">{depot.description}</textarea>
+      </div>
+    </div>
+        
+    <div class="form-group">
+      <label class="form-label col-md-4" for="public_description">Public description</label>
+      <div class="col-md-8">
+        <textarea type="text" name="public_description" class="form-control" rows="4" id="public_description">{depot.public_description}</textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label col-md-4" for="merch">Merch/Items for Sale</label>
+      <div class="col-md-8">
+        <textarea type="text" name="merch" class="form-control" rows="4" id="merch">{depot.merch}</textarea>
+      </div>
+    </div>
+    <textarea name="commands" style="display:none">
+      {begin verbatim | process escape}
+        {#vendor | > :ex_id}
+        {begin added | if @ex_id}
+          {exec depot_set for @ex_id in :stuff path :application_type value #type}
+          {exec depot_set for @ex_id in :stuff path :developer value #developer}
+          {exec depot_set for @ex_id in :stuff path :game value #gamename}
+          {exec depot_set for @ex_id in :stuff path :link value #link}
+          {exec depot_set for @ex_id in :stuff path :merch value #merch}
+          {exec depot_set for @ex_id in :stuff path :description value #shortdescription}
+          {exec depot_set for @ex_id in :stuff path :public_description value #public_description}
+        {end added}
+      {end verbatim}
+    </textarea>
+  </div>
+</form>
