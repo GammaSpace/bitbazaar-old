@@ -6779,7 +6779,11 @@ body#bit-bazaar-spring-fair-2015 #header p.lead {
   text-shadow: none;
   display: inline;
   float: left;
-  margin-bottom: 1.7em;
+  margin-bottom: 1em;
+}
+body#bit-bazaar-spring-fair-2015 #header p.lead.small {
+  padding: 2px 4px;
+  font-size: 22px;
 }
 body#bit-bazaar-spring-fair-2015 #header p.cta,
 body#bit-bazaar-spring-fair-2015 #header p.partners {
