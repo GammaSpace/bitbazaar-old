@@ -5,6 +5,7 @@
     <div class="container">
       <div class="footer clearfix" id="about-footer">
         {%global/snippets/footer_info}
+        <p>&copy; 2013-2015 Bit Bazaar Games</p>
       </div>
     </div>
   </section>

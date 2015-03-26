@@ -35,7 +35,7 @@
 
 	{begin step1}
 
-		<h2>{#editing | is like :true | then "Editing Application <small class='pull-right'><a href='{@SITE.path}/spring-2015/application'>Cancel</a></small>" else "Apply"}</h2>
+		<h2>{#editing | is like :true | then "Editing Application <small class='pull-right'><a href='{@SITE.path}/spring-2015/application'>Cancel editing</a></small>" else "Apply"}</h2>
 		{begin create_account | if {@MY.id | not}}
 
 

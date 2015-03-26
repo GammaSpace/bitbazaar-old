@@ -6706,6 +6706,11 @@ body#bit-bazaar-spring-fair-2015 section#about p {
   background: #fff;
   display: inline;
 }
+body#bit-bazaar-spring-fair-2015 section#about p a,
+body#bit-bazaar-spring-fair-2015 section#about p a:hover {
+  color: #0d00e3;
+  text-decoration: underline;
+}
 body#bit-bazaar-spring-fair-2015 section#about strong {
   color: #0d00e3;
   font-weight: 900;
