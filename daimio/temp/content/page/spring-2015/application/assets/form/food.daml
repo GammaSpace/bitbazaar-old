@@ -65,7 +65,7 @@
 
       {begin new}
         {stuff add type :bbapplication | > :ex_id}
-        {exec send_member_email subject {"Bit Bazaar Exhibitor Application Received"} body {%template/email/applicant_notification | process consume}}
+        {exec send_member_email subject {"Bit Bazaar Exhibitor Application Received"} body {%template/email/applicant_notification_food | process consume}}
         {exec admin_send_email subject {"Bit Bazaar SP 2015 Exhibitor Application Received"} body {%template/email/admin_notification | process consume}}
       {end new}
 
