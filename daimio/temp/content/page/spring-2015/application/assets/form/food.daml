@@ -36,14 +36,6 @@
       </div>
     </div>
 
-
-
-
-    <div class="form-group" id="merch">
-      <label class="form-label" for="merch">Merchandise</label>
-      <textarea type="text" value="{@POST.merch}" name="depot[merch]" class="form-control" rows="6" id="merch">{@bbapplication.#1.my.merch | then "{@bbapplication.#1.my.merch}" else ""}</textarea>
-      <p class="help-block">Please describe what you plan to have for sale and in what format (e.g., download code, prints, boxed editions).</p>
-    </div>
     <hr />
     <button type="submit" class="btn btn-primary">Submit</button>
     <p class="help-block">All exhibitors are expected to comply with our <a href="https://bentomiso.zendesk.com/hc/en-us/articles/201812303-Code-of-Conduct" target="_blank">Code of Coduct</a>.</p>

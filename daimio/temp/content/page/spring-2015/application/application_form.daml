@@ -10,7 +10,7 @@
         <p><b>Title</b></p>
         <p>{product}</p>
         <p><b>Description</b></p>
-				{description | string textile}
+				{description}
         <p><b>Web site</b> {link}</p>
         {begin gameplay | if gameplay}
 				<p><b>Video or download</b> {gameplay}</p>
@@ -104,9 +104,9 @@
 								{my set for @user_id in :profiles path :activity.registered value #registered}
 								{my set for @user_id in :profiles path :signup.intent value :bit-bazaar-spring-2015}
 
-								{exec set_email to #my.email}
-								{log @good_login}
-								{exec send_member_email subject {"[Bit Bazaar] Account Created"} body {%template/email/account_created | process consume}}
+								{begin set_email | if {exec set_email to #my.email}}
+									{exec send_member_email subject {"[Bit Bazaar] Account Created"} body {%template/email/account_created | process consume}}
+								{end set_email}
 
 							{end loggeduserin}
 						{end success}
