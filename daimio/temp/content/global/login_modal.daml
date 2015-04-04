@@ -7,6 +7,8 @@
           <h4 class="modal-title">Log in to your Bit Bazaar account</h4>
         </div>
         <div class="modal-body">
+
+          <div class="alert alert-warning">Note: We recently migrated our site, so if you created Bit Bazaar account before March 10, 2015, your old login won't work and you'll need to create a new one now.</div>
           <div class="form-group">
             <div class="col-md-6 {@ERRORS.myself.authenticate | then "error"}">
               <input type="text" class="form-control" name="username" placeholder="Username">
