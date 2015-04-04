@@ -42,7 +42,7 @@
 			<form class="form-horizontal" method="post" accept-charset="utf-8" id="create-account">
 				<fieldset>
 					<legend>Create a Bit Bazaar account <span class="pull-right text-muted">Or <a href="#log-in" data-toggle="modal" class="">log in</a></span></legend>
-
+<p class="help-block">Note: We recently migrated our site, so if you created Bit Bazaar account, before March 10, 2015, your old login won't work and you'll need to create a new one now.</p>
 
 					<div class="form-group">
 						<label class="control-label required col-md-4" for="username">Username</label>
