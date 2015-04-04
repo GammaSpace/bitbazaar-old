@@ -1,5 +1,5 @@
 {begin step2}
-<p class='alert alert-success lead'><b>Thanks!</b> We've received your information. Applications close April 10, and selected vendors will be notified and announced April 12.</p>
+<p class='alert alert-success lead'><b>Thanks!</b> We've received your information. Applications close April 10, and selected vendors will be notified and announced April 13.</p>
 	{begin application | merge with (@bbapplication.#1.my)}
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -10,7 +10,7 @@
         <p><b>Title</b></p>
         <p>{product}</p>
         <p><b>Description</b></p>
-				{description}
+				{description | string textile}
         <p><b>Web site</b> {link}</p>
         {begin gameplay | if gameplay}
 				<p><b>Video or download</b> {gameplay}</p>
