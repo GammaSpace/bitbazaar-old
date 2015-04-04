@@ -1,27 +1,32 @@
 <h2>Application to Exhibit</h2>
 
-
-<p class="lead">Bit Bazaar is looking for <b>small Toronto food producers</b> who sell:
-  <ul>
-    <li>Packaged, prepared take-home (giftable) foods (chocolates, popcorn, caramels, pastries, pickles, etc.)</li>
-    <li>Hot or cold eat-on-the-spot handheld treats (street food, pies, tacos, etc.)</li>
-  </ul>
-</p>
-<p>…for our fourth fair &amp; market December 6!</p>
-
-<h2>Important Notes</h2>
-
-<p>Bit Bazaar is a small community event. We expect 500-750 attendees throughout the day.</p>
-<p>The event is held at <a href="http://goo.gl/maps/jTmW8">Bento Miso</a>, in Toronto's Queen West neighborhood.</p>
-<p>We do not have any refrigerator space available during the event, but you will have access to a sink and one power outlet.</p>
-<p>To adhere to local bylaws, selected food vendors must be able to provide proof of:</p>
-<ul class="">
-  <li>Municipal Food Handler certification</li>
-  <li>Use of licensed commercial kitchen (your own or a rented facility) to prepare the food</li>
-  <li>Insurance on your products</li>
-</ul>
+    <p class="lead">Bit Bazaar is looking for <b>small Toronto food producers</b> who sell:</p>
+      <p>Hot or cold eat-on-the-spot handheld treats (street food, pies, tacos, etc.)</p>
+      <p>Packaged, prepared take-home foods (chocolates, popcorn, caramels, pastries, pickles, etc.)</p>
+      <h2>Important Notes</h2>
+<div class="row">
+  <div class="col-md-7">
 
 
 
+      <ul class="">
+
+      <li>Bit Bazaar is a small community event. We expect 500-750 attendees throughout the day.</li>
+      <li>There is no fee to apply. Table fee is PWYC/by donation.</li>
+      <li>The event is held at <a href="http://goo.gl/maps/jTmW8">Bento Miso</a>, in Toronto's Queen West neighborhood.</li>
+      <li>We do not have any refrigerator space available during the event, but you will have access to a sink and one power outlet.</li>
+      <li><p>To adhere to local bylaws, selected food vendors must be able to provide proof of:</p>
+      <ul class="">
+        <li>Municipal Food Handler certification</li>
+        <li>Use of licensed commercial kitchen (your own or a rented facility) to prepare the food</li>
+        <li>Insurance on your products</li>
+      </ul></li>
+      </ul>
+      <p>Selected vendors will be required to complete the <a href="http://www.toronto.ca/health/dinesafe/pdf/vendor_package.pdf">Toronto Public Health Temporary Food Establishment Application</a> (there's no fee).</p>
 
 
+</div>
+  <div class="col-md-5">
+  <img src="{@SITE.path}/images/spring-2015/13991208329_8cfa2d2959_z.jpg" class="img-responsive">
+  </div>
+</div>

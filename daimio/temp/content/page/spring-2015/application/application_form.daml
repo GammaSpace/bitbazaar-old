@@ -1,5 +1,5 @@
 {begin step2}
-<p class='alert alert-success lead'><b>Thanks!</b> We've received your information. Applications close April 3, and selected exhibitors will be notified and announced April 10.</p>
+<p class='alert alert-success lead'><b>Thanks!</b> We've received your information. Applications close April 10, and selected vendors will be notified and announced April 12.</p>
 	{begin application | merge with (@bbapplication.#1.my)}
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -128,7 +128,7 @@
 		{begin has_account | if @MY.id}
 
 
-  {content get_value handle {"page/spring-2015/application/assets/form/{#type | else :all}"}}
+  {content get_value handle {"page/spring-2015/application/assets/form/{:food | else #type}"}}
 
 
 		{end has_account}

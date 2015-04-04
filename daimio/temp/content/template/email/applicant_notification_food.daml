@@ -1,0 +1,29 @@
+Hey, {#firstname}!
+
+Thanks for submitting a Bit Bazaar Spring 2015 application.
+Selected exhibitors will be notified by April 13.
+
+Notice something amiss? You can edit your application until April 10 at http://thebitbazaar.com/spring-2015/application?editing=true
+
+==================
+Applicant
+==================
+{#firstname} {#lastname}
+{#depot.name} - {#depot.product}
+
+==================
+Web site
+==================
+{#depot.link}
+
+==================
+Description
+==================
+{#depot.description}
+
+==================
+Submission date
+==================
+{#depot.submitted | time represent as "M d, Y"}
+
+{%global/snippets/signature}
