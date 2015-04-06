@@ -1,16 +1,19 @@
-<script type="text/javascript" charset="utf-8" language="javascript" src="{@SITE.path}/js/jquery.dataTables.js"></script>
-<script type="text/javascript" charset="utf-8" language="javascript" src="{@SITE.path}/js/DT_bootstrap.js"></script>
+<script type="text/javascript" charset="utf-8" language="javascript" src="{@SITE.path}/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf-8" language="javascript" src="{@SITE.path}/js/dataTables.bootstrap.js"></script>
 
 {begin js | process escape}
   <script>
   $(document).ready(function(){
-    $('.member-list').dataTable( {
-      "sDom": "<'row'<'col-md-8'l><'col-md-8'f>r>t<'row'<'col-md-8'i><'col-md-8'p>>",
-      "sPaginationType": "bootstrap"
+
+    $('.table-data').dataTable( {
+      "order": [[ 1, "desc" ]]
     } );
     $.extend( $.fn.dataTableExt.oStdClasses, {
-      "sWrapper": "dataTables_wrapper form-inline"
+      "sWrapper": "dataTables_wrapper form-inline",
     });
-  });    
-  </script>
+    $('input,select','.dataTables_filter,.dataTables_length').addClass('form-control');
+    $('.dataTables_filter').addClass('pull-right');
+  });
+
+</script>
 {end js}

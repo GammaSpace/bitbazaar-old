@@ -1,24 +1,35 @@
+<link rel="stylesheet" href="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<script type="text/javascript" charset="utf-8" language="javascript" src="{@SITE.path}/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf-8" language="javascript" src="{@SITE.path}/js/dataTables.bootstrap.js"></script>
+
 <script src="{@SITE.path}/js/jDaimio.js"></script>
 
 {begin js | process escape}
-  <script>
-  $(document).ready(function(){
-    $('[rel="popover"]').popover({
-      trigger: 'hover'
-    });
-    
-    $('body').on('submit','form.check-out,form.check-in',function(e) {
-      e.preventDefault();
-      $(this).hide().siblings('form').show();
-      $(this).daimioSubmit();
-    });
-    return false;
+<script>
+
+
+$(document).ready(function(){
+
+  $('.table-data').dataTable( {
+    "order": [[ 1, "desc" ]]
+  } );
+  $.extend( $.fn.dataTableExt.oStdClasses, {
+    "sWrapper": "dataTables_wrapper form-inline",
   });
-  </script>
+  $('input,select','.dataTables_filter,.dataTables_length').addClass('form-control');
+  $('.dataTables_filter').addClass('pull-right');
+
+
+  $('[rel="popover"]').popover({
+    trigger: 'hover'
+  });
+
+  $('body').on('submit','form.check-out,form.check-in',function(e) {
+    e.preventDefault();
+    $(this).hide().siblings('form').show();
+    $(this).daimioSubmit();
+  });
+  return false;
+});
+</script>
 {end js}
-
-
-
-
-
-
