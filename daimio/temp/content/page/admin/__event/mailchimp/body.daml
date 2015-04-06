@@ -20,13 +20,13 @@
     <tbody>
       {begin memberlist | merge with @ex_org}
 
-        {stuff find by_ids _id | __.pcache.edit | collection extract expression "{:user | is in this}" | string transform old "/user:/" new "" | member find by_ids | __.#1 | > :member | ""}
+        {stuff find by_ids _id | __.pcache.edit | collection extract expression "{:user | is in this}" | string transform old "/user:/" new "" | member find by_ids | __.#1 | > :member}
         <tr>
           <td>{depot.invite_date | time represent as "M d, Y g:ia"}</td>
           <td>{@member.my.email}</td>
           <td>{@profiles.{@member._id}.my.firstname}</td>
           <td>{@profiles.{@member._id}.my.lastname}</td>
-          <td>{depot.name}</td>
+          <td>{my.name}</td>
           <td>{my.product}</td>
           <td>{my.link}</td>
           <td>{my.application_type}</td>
