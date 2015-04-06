@@ -6619,6 +6619,10 @@ body.bit-bazaar .content {
 #vendors h4 {
   text-align: center;
 }
+#vendors h4 {
+  font-weight: 900;
+  text-transform: uppercase;
+}
 #vendors #coming p {
   font-size: 18px;
 }
