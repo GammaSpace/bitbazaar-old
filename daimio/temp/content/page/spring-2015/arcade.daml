@@ -1,0 +1,8 @@
+{lens get_confirmed_exhibitors | extract "{this.depot.invite | is like :yes}" | extract "{this.my.application_type | is like :games_arcade}" | > :ex_org | ""}
+{/@exhibitors | extract "{this.depot.invite | is like :yes}" | collection sort by {* (:depot.order :ASC)} | > :ex_org | ""}
+
+<ul class="list-unstyled confirmed">
+  {begin cat_vendors | merge with @ex_org}
+    <li><h4 class="{depot.application_type}">{my.product} <small class="">{my.name}</small></h4></li>
+  {end cat_vendors}
+</ul>

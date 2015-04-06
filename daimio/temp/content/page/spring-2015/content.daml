@@ -99,13 +99,11 @@
     <h3>Spring 2015 Vendors</h3>
     <p>30+ games! Tasty grab-and-play food! Beer and other tasty beverages!</p>
 
-
-
-
     <p>To be announced April 15!</p>
+
     <h4>Tournament Arcade</h4>
-    <p>Games &amp; prizes TBA April 15!</p>
     {%arcade}
+
     {/%vendors}
   </div>
 </section>
