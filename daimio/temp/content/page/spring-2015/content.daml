@@ -105,6 +105,7 @@
     <p>To be announced April 15!</p>
     <h4>Tournament Arcade</h4>
     <p>Games &amp; prizes TBA April 15!</p>
+    {%arcade}
     {/%vendors}
   </div>
 </section>
@@ -112,8 +113,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-4">
-        <h3>New Original Art Works</h3>
-        <p>Gallery exhibit details to be announced soon.</p>
+        <h3>PanelScapes: New Original Art Works</h3>
+        <p>Exhibit details to be announced!</p>
       </div>
     </div>
   </div>

@@ -1,0 +1,3 @@
+{begin nullblock | process consume | @return}
+  {permit superdo command "{stuff find by_type :bbapplication | extract "{this.depot.invite | is like :yes}" | > :return}"}
+{end nullblock}
