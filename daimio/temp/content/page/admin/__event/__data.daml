@@ -1,4 +1,5 @@
-{stuff find by_type :bbapplication options {* (:depot.event #event)} | > :exhibitors}
+{/stuff find by_type :bbapplication options {* (:depot.event #event)} | > :exhibitors}
+{stuff find by_type :bbapplication | > :exhibitors}
 
 {@exhibitors | extract "{this.depot.invite | is like :yes}" | > :ex_org}
 
