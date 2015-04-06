@@ -11,6 +11,7 @@
   <meta name="author" content="{@metadata.site.author}">
   <title>{@metadata.page.title}</title>
   <link rel="stylesheet" href="{@SITE.path}/css/spring2015.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  
   {begin cute | process escape}
     <!--                  _                _  _    _       __ ____  -->
     <!--  _ __   __ _  __| | ___  __ __ __(_)| |_ | |_    / /|__ /  -->

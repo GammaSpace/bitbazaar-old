@@ -54,21 +54,37 @@
       </div>
     </div>
   </section>
-  <section id="about">
+
+  <section id="vendors">
     <div class="container">
-      <div class="row">
-        <div class="col-md-9">
-          <h3>About</h3>
-          <div class="inliner">
-            <p>Bit Bazaar is a <strong>video game craft fair and marketplace, featuring a local multiplayer arcade tournament</strong>! Its held twice a year in the spring and winter in Toronto.</p>
-            <p class="lead">Buy one-of-a-kind, limited-edition and handmade/DIY items—pins, zines, boxed video games, card decks, art prints, comics, t-shirts, game soundtracks on vinyl, mixtapes, papercraft and toys—direct from your favorite independent game makers!</p>
-            <p><b>…And come hungry!</b> Food vendors will be on site serving up tasty food and beverages of the soft and hard variety!</p>
-            <p><a href="https://bentomiso.com/bitbazaar">Past events &amp; more info</a></p>
-          </div>
-        </div>
-      </div>
+      <h3>Spring 2015 Exhibitors</h3>
+<div class="row">
+  <div class="col-md-6">
+    <h4>Tournament Arcade</h4>
+    {%arcade}
+    </div>
+  <div class="col-md-6" id="coming">
+
+
+      <h4>Games</h4>
+      <p>30+ video games, card games, tabletop games + one-of-a-kind goodies by your favorite indie creators!</p>
+      <h4>Food</h4>
+
+      <p>Tasty grab-and-play food! Beer and other tasty beverages!</p>
+      <h4>Comics</h4>
+      <p>Cartoonists and comic art with a strong political and social justice bent&#8212;selected by Ad Astra Comix!</p>
+
+      <p><em>All final exhibitors and vendors to be announced April 15!</em></p>
+    </div>
+    </div>
+
+
+      {/%vendors}
     </div>
   </section>
+
+
+
   <section id="venue" class="clearfix">
     {/<div class="map-box">
       <div id="map">
@@ -94,19 +110,22 @@
 </div>
 </div>
 </section>
-<section id="vendors">
+<section id="about">
   <div class="container">
-    <h3>Spring 2015 Vendors</h3>
-    <p>30+ games! Tasty grab-and-play food! Beer and other tasty beverages!</p>
-
-    <p>To be announced April 15!</p>
-
-    <h4>Tournament Arcade</h4>
-    {%arcade}
-
-    {/%vendors}
+    <div class="row">
+      <div class="col-md-9">
+        <h3>About</h3>
+        <div class="inliner">
+          <p>Bit Bazaar is a <strong>video game craft fair and marketplace, featuring a local multiplayer arcade tournament</strong>! Its held twice a year in the spring and winter in Toronto.</p>
+          <p class="lead">Buy one-of-a-kind, limited-edition and handmade/DIY items—pins, zines, boxed video games, card decks, art prints, comics, t-shirts, game soundtracks on vinyl, mixtapes, papercraft and toys—direct from your favorite independent game makers!</p>
+          <p><b>…And come hungry!</b> Food vendors will be on site serving up tasty food and beverages of the soft and hard variety!</p>
+          <p><a href="https://bentomiso.com/bitbazaar">Past events &amp; more info</a></p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
 <section id="panelscapes">
   <div class="container">
     <div class="row">
