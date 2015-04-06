@@ -3,6 +3,6 @@
 
 <ul class="list-unstyled confirmed">
   {begin cat_vendors | merge with @ex_org}
-    <li><h4 class="{depot.application_type}">{my.product} <small class="">{my.name}</small></h4></li>
+    <li><p class="{depot.application_type}">{my.product} <small class="">{my.name}</small></p></li>
   {end cat_vendors}
 </ul>

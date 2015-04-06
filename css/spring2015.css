@@ -6626,6 +6626,9 @@ body.bit-bazaar .content {
 #vendors p small {
   color: #2417ff;
 }
+#vendors .confirmed li {
+  display: inline;
+}
 #panelscapes {
   background: #ffffff;
   background-image: url(../images/spring-2015/promo_panelscapes2.gif);
