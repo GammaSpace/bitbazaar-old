@@ -37,7 +37,7 @@
         <td><a href="{@SITE.path}/admin/{#event}/{_id}" class="btn btn-warning">Edit</a></td>
         <td style="width:120px;">
 
-          <form class="form-horizontal check-out" id="check-out-form_{_id}" method="post" accept-charset="utf-8" enctype="multipart/form-data" style="display:{my.invite | is like :yes | not | then :block else :none}">
+          <form class="form-horizontal check-out" id="check-out-form_{_id}" method="post" accept-charset="utf-8" enctype="multipart/form-data" style="display:{depot.invite | is like :yes | not | then :block else :none}">
             <input type="hidden" id="app_id" name="app_id" value="{_id}">
             <input type="hidden" name="invite_date" value="{time represent as :c}">
 
@@ -51,7 +51,7 @@
             </textarea>
           </form>
 
-          <form class="form-horizontal check-in" id="check-in-form_{_id}" method="post" accept-charset="utf-8" enctype="multipart/form-data" style="display:{my.invite | is like :yes | then :block else :none}">
+          <form class="form-horizontal check-in" id="check-in-form_{_id}" method="post" accept-charset="utf-8" enctype="multipart/form-data" style="display:{depot.invite | is like :yes | then :block else :none}">
 
             <input type="hidden" id="app_id" name="app_id" value="{_id}">
 
@@ -63,7 +63,7 @@
             </textarea>
           </form>
         </td>
-        <td>{my.invite_date | time represent as "M d, Y g:ia"}</td>
+        <td>{depot.invite_date | time represent as "M d, Y g:ia"}</td>
 
       </tr>
     {end game_info}
@@ -74,10 +74,9 @@
 
 
   {begin all | foreach with @categories}
-    {value}
     <div class="col-md-4">
 
-      {@ex_org | extract "{key | is in this.my.application_type}" | collection sort by {* (:my.name :asc)} | > :cat_vendors}
+      {@ex_org | extract "{key | is in this.my.application_type}" | collection sort by {* (:my.name :asc)} | > :cat_vendors | ""}
       <h3>{key} <small>{@cat_vendors | collection count}</small></h3>
       <ul class="list-unstyled">
         {begin cat_vendors | merge with @cat_vendors}
