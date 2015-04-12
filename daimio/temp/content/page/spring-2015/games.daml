@@ -6,3 +6,4 @@
     <li><p class="{depot.application_type}">{my.product} <small class="">{my.name}</small></p></li>
   {end cat_vendors}
 </ul>
+<p class="text-center">More TBA!</p>
