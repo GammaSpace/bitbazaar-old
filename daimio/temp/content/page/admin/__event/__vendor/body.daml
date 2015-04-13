@@ -1,128 +1,136 @@
-{begin admin | if {:admin | is in @MY.keychain}}
+{begin notadmin}
   <div class="container">
-  <div class="page-header">
-    <a href="{@SITE.path}/admin/{#event}" class="pull-right">Exhibitor List</a>
-    <h2>Vendor Profile</h2>
+    <div class="alert alert-danger">
+      You are not an admin.
+    </div>
   </div>
-  {%global/notices}
-  {#vendor | stuff find by_ids | > :vendor | ""}
-  {begin vendor | merge with @vendor}
-    <form class="form-vertical" method="post" accept-charset="utf-8" id="game-exhibitor">
-      <div class="clearfix">
-        <div class="pull-right">
-          {begin approved | if {my.invite | is like :yes}}
-            <p style="color:#22c274">  <span class="glyphicon glyphicon-check" style="color: #22c274"></span> Selected</p>
-          {end approved}
-        </div>
-      </div>
-      {begin admin | if {:admin | is in @MY.keychain}}
-        <div class="form-group" id="application-type">
-          <label class="form-label" for="type">Category</label>
-          <div class="radio">
-            <label class="">
-              <input type="radio" name="depot[application_type]" id="type-food" value="food" {or ({my.application_type | is like :food} {my.application_type | not}) | then :checked}> Food &amp; Beverage
-            </label>
-          </div>
-          <div class="radio">
-            <label class="">
-              <input type="radio" name="depot[application_type]" id="type-games" value="games_marketplace" {or ({my.application_type | is like :games_marketplace} {my.application_type | not}) | then :checked}> Games - Marketplace
-            </label>
-          </div>
-          <div class="radio">
-            <label class="">
-              <input type="radio" name="depot[application_type]" id="type-games-arcade" value="games_arcade" {my.application_type | is like :games_arcade | then :checked}> Games - Tournament Arcade
-            </label>
-          </div>
-          <div class="radio">
-            <label class="radio">
-              <input type="radio" name="depot[application_type]" id="type-comics" value="comics" {my.application_type | is like :comics | then :checked}> Comics
-            </label>
+{end notadmin}
+
+{begin admin | if {:admin | is in @MY.keychain} else $notadmin}
+  <div class="container">
+    <div class="page-header">
+      <a href="{@SITE.path}/admin/{#event}" class="pull-right">Exhibitor List</a>
+      <h2>Vendor Profile</h2>
+    </div>
+    {%global/notices}
+    {#vendor | stuff find by_ids | > :vendor | ""}
+    {begin vendor | merge with @vendor}
+      <form class="form-vertical" method="post" accept-charset="utf-8" id="game-exhibitor">
+        <div class="clearfix">
+          <div class="pull-right">
+            {begin approved | if {my.invite | is like :yes}}
+              <p style="color:#22c274">  <span class="glyphicon glyphicon-check" style="color: #22c274"></span> Selected</p>
+            {end approved}
           </div>
         </div>
-        <div class="form-group">
-          <label class="form-label" for="name">Order</label>
-          <input type="text" value="{my.order}" name="exhibitor[order]" class="form-control input-lg" id="order">
-        </div>
-      {end admin}
-      <div class="row">
-        <div class="col-md-6">
-          <fieldset>
-            <legend>Public Profile</legend>
-            <p><em>This may appear on the site and printed materials.</em></p>
-            <div class="form-group">
-              <label class="form-label" for="name">Your Name</label>
-              <input type="text" value="{my.name}" name="exhibitor[name]" class="form-control input-lg" id="name">
-              <p class="help-block">or Group/Organization/Company/Collective Name</p>
+        {begin admin | if {:admin | is in @MY.keychain}}
+          <div class="form-group" id="application-type">
+            <label class="form-label" for="type">Category</label>
+            <div class="radio">
+              <label class="">
+                <input type="radio" name="depot[application_type]" id="type-food" value="food" {or ({my.application_type | is like :food} {my.application_type | not}) | then :checked}> Food &amp; Beverage
+              </label>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="product">Product</label>
-              <input type="text" value="{my.product}" name="exhibitor[product]" class="form-control required" id="product">
-              <p class="help-block">The title of your game, project, or comic</p>
+            <div class="radio">
+              <label class="">
+                <input type="radio" name="depot[application_type]" id="type-games" value="games_marketplace" {or ({my.application_type | is like :games_marketplace} {my.application_type | not}) | then :checked}> Games - Marketplace
+              </label>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="public_description">Public description</label>
-              <textarea type="text" name="exhibitor[public_description]" class="form-control" rows="4" id="public_description">{my.public_description}</textarea>
+            <div class="radio">
+              <label class="">
+                <input type="radio" name="depot[application_type]" id="type-games-arcade" value="games_arcade" {my.application_type | is like :games_arcade | then :checked}> Games - Tournament Arcade
+              </label>
             </div>
-          </fieldset>
-        </div>
-        <div class="col-md-6">
-          <fieldset>
-            <legend>More Info</legend>
-            <p><em>This is mostly for us, but may be used in promotional materials.</em></p>
-            <div class="form-group">
-              <label class="form-label" for="description">Short description</label>
-              <textarea type="text" name="exhibitor[description]" class="form-control" rows="4" id="shortdescription">{my.description}</textarea>
+            <div class="radio">
+              <label class="radio">
+                <input type="radio" name="depot[application_type]" id="type-comics" value="comics" {my.application_type | is like :comics | then :checked}> Comics
+              </label>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="link">Link</label>
-              <div class="input-group">
-                <span class="input-group-addon">http://</span>
-                <input type="text" class="form-control" name="exhibitor[link]" value="{my.link}">
-              </div>
-            </div>
-            {begin gameplay | if my.gameplay}
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="name">Order</label>
+            <input type="text" value="{my.order}" name="exhibitor[order]" class="form-control input-lg" id="order">
+          </div>
+        {end admin}
+        <div class="row">
+          <div class="col-md-6">
+            <fieldset>
+              <legend>Public Profile</legend>
+              <p><em>This may appear on the site and printed materials.</em></p>
               <div class="form-group">
-                <label class="form-label" for="link">Gameplay</label>
+                <label class="form-label" for="name">Your Name</label>
+                <input type="text" value="{my.name}" name="exhibitor[name]" class="form-control input-lg" id="name">
+                <p class="help-block">or Group/Organization/Company/Collective Name</p>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="product">Product</label>
+                <input type="text" value="{my.product}" name="exhibitor[product]" class="form-control required" id="product">
+                <p class="help-block">The title of your game, project, or comic</p>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="public_description">Public description</label>
+                <textarea type="text" name="exhibitor[public_description]" class="form-control" rows="4" id="public_description">{my.public_description}</textarea>
+              </div>
+            </fieldset>
+          </div>
+          <div class="col-md-6">
+            <fieldset>
+              <legend>More Info</legend>
+              <p><em>This is mostly for us, but may be used in promotional materials.</em></p>
+              <div class="form-group">
+                <label class="form-label" for="description">Short description</label>
+                <textarea type="text" name="exhibitor[description]" class="form-control" rows="4" id="shortdescription">{my.description}</textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="link">Link</label>
                 <div class="input-group">
                   <span class="input-group-addon">http://</span>
-                  <input type="text" class="form-control" name="exhibitor[gameplay]" value="{my.gameplay}">
+                  <input type="text" class="form-control" name="exhibitor[link]" value="{my.link}">
                 </div>
               </div>
-            {end gameplay}
-            {begin merch | if my.merch}
-              <div class="form-group">
-                <label class="form-label" for="merch">Merch/Items for Sale</label>
-                <textarea type="text" name="exhibitor[merch]" class="form-control" rows="4" id="merch">{my.merch}</textarea>
-              </div>
-            {end merch}
-          </fieldset>
+              {begin gameplay | if my.gameplay}
+                <div class="form-group">
+                  <label class="form-label" for="link">Gameplay</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">http://</span>
+                    <input type="text" class="form-control" name="exhibitor[gameplay]" value="{my.gameplay}">
+                  </div>
+                </div>
+              {end gameplay}
+              {begin merch | if my.merch}
+                <div class="form-group">
+                  <label class="form-label" for="merch">Merch/Items for Sale</label>
+                  <textarea type="text" name="exhibitor[merch]" class="form-control" rows="4" id="merch">{my.merch}</textarea>
+                </div>
+              {end merch}
+            </fieldset>
+          </div>
         </div>
-      </div>
-      <p class="text-center"><button type="submit" class="btn btn-lg btn-success">Save</button></p>
-      <input type="hidden" name="vendor" value="{#vendor}">
-      <textarea name="commands" style="display:none">
-        {begin verbatim | process escape}
-          {#vendor | > :ex_id}
-          {begin added | if @ex_id}
-            {begin set | foreach with #exhibitor}
-              {permit superdo command "
+        <p class="text-center"><button type="submit" class="btn btn-lg btn-success">Save</button></p>
+        <input type="hidden" name="vendor" value="{#vendor}">
+        <textarea name="commands" style="display:none">
+          {begin verbatim | process escape}
+            {#vendor | > :ex_id}
+            {begin added | if @ex_id}
+              {begin set | foreach with #exhibitor}
+                {permit superdo command "
                 {my set for @ex_id in :stuff path key value value}
               "}
             {end set}
             {begin set | foreach with #depot}
               {permit superdo command "
-                {my set for @ex_id in :stuff path key value value}
-              "}
-            {end set}
-            {notice set value {* (
-              :message "<strong>Success!</strong>  Your changes have been saved"
-              :type :success
-            )}}
-          {end added}
-        {end verbatim}
-      </textarea>
-    </div>
-  </form>
-  {end vendor}
+              {my set for @ex_id in :stuff path key value value}
+            "}
+          {end set}
+          {notice set value {* (
+            :message "<strong>Success!</strong>  Your changes have been saved"
+            :type :success
+          )}}
+        {end added}
+      {end verbatim}
+    </textarea>
   </div>
+</form>
+{end vendor}
+</div>
 {end admin}
