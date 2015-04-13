@@ -79,23 +79,19 @@
   </tbody>
   <tfoot></tfoot>
 </table>
-<div class="row">
-
-
+<div class="row"> 
   {begin all | foreach with @categories}
-    <div class="col-md-4">
-
-      {@ex_org | extract "{key | is in this.my.application_type}" | collection sort by {* (:my.name :asc)} | > :cat_vendors | ""}
-      <h3>{key} <small>{@cat_vendors | collection count}</small></h3>
-      <ul class="list-unstyled">
-        {begin cat_vendors | merge with @cat_vendors}
-
-          <li><p class="lead"><strong>{my.name}</strong> <small>{my.product}</small></p></li>
-
-        {end cat_vendors}
-
-      </ul>
-    </div>
+    {@ex_org | extract "{key | is in this.my.application_type}" | collection sort by {* (:my.name :asc)} | > :cat_vendors | ""}
+    {begin cat_vendors | if {@cat_vendors | collection count | is like 0 | not}}
+      <div class="col-md-4">
+        <h3>{key} <small>{@cat_vendors | collection count}</small></h3>
+        <ul class="list-unstyled">
+          {begin cat_vendors | merge with @cat_vendors}
+            <li><p class="lead"><strong>{my.name}</strong> <small>{my.product}</small></p></li>
+          {end cat_vendors}
+        </ul>
+      </div>
+    {end cat_vendors}
   {end all}
 </div>
 {end admin}
