@@ -1,6 +1,11 @@
 {/stuff find by_type :bbapplication options {* (:depot.event #event)} | > :exhibitors}
-{stuff find by_type :bbapplication | > :exhibitors}
+
 
 {@exhibitors | extract "{this.depot.invite | is like :yes}" | > :ex_org}
+
+{ifelse (
+  {@MY.current_hat | is like :comics} "{stuff find by_type :bbapplication options {* (:my.application_type :comics)} | > :exhibitors}"
+  :default "{stuff find by_type :bbapplication | > :exhibitors}"
+)}
 
 {%global/snippets/exhibitor_categories}
