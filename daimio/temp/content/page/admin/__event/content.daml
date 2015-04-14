@@ -1,7 +1,11 @@
 {begin notadmin}
   <div class="container">
     <div class="alert alert-danger">
-      You are not an admin.
+      <p>
+        <b>Sorry,</b> You are not logged in as an admin. <a href="#log-in" data-toggle="modal" class="">Log in now</a>
+      </p>
+
+
     </div>
   </div>
 {end notadmin}
