@@ -79,10 +79,10 @@
   </tbody>
   <tfoot></tfoot>
 </table>
-<div class="row"> 
+<div class="row">
   {begin all | foreach with @categories}
     {@ex_org | extract "{key | is in this.my.application_type}" | collection sort by {* (:my.name :asc)} | > :cat_vendors | ""}
-    {begin cat_vendors | if {@cat_vendors | collection count | is like 0 | not}}
+    {begin cate_vendors | if {@cat_vendors | collection count | is like 0 | not}}
       <div class="col-md-4">
         <h3>{key} <small>{@cat_vendors | collection count}</small></h3>
         <ul class="list-unstyled">
@@ -91,7 +91,7 @@
           {end cat_vendors}
         </ul>
       </div>
-    {end cat_vendors}
+    {end cate_vendors}
   {end all}
 </div>
 {end admin}
