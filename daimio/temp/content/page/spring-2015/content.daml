@@ -62,7 +62,8 @@
         {%arcade}
         <p class="text-center">Registration opens soon!</p>
         <h4>Food</h4>
-        <p>Tasty grab-and-play food! Beer and other tasty beverages!</p>
+        {%food}
+
         <h4>Comics + Zines</h4>
         {%comics}
         <p>Plus a special exhibition of cartoonists and comic art with a strong political and social justice bent&#8212;selected by Ad Astra Comix!</p>
