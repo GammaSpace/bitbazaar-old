@@ -10,26 +10,9 @@
     <h2>Apply to exhibit at Bit Bazaar 5 <small>Saturday, May 9, 2015</small></h2>
 
     <div class="row">
-      <div class="col-md-4"><p class="lead">Hey, <b>Toronto food and beverage producers!</b> Be part of our 5<sup>th</sup> fair, a unique celebration of the art and craft of independent games, comics and good food!</p></div>
-      <div class="col-md-4"><p class="lead"><b>Food vendor applications are open from April 3-10.</b> Selected vendors will be contacted by April 13. <small> Games and comics exhibitor applications are now closed.</small></p></div>
-      <div class="col-md-4">
-        <div id="partners">
-          <p class="text-center">Presented by:</p>
-          <div class="row">
-            <div class="col-xs-6">
-              <div class="wrapper">
-                <div class="partner">
-                  <a href="{@SITE.path}"><img src="{@SITE.path}/images/miso_bw.png" alt="" class="img-responsive"> </a></div>
-                </div>
-              </div>
-              <div class="col-xs-6">
-                <div class="wrapper">
-                  <div class="partner"><a href="http://attractmo.de"><img src="{@SITE.path}/images/spring-2015/partner-logos/attract_mode_logo.png" alt="" class="img-responsive"> </a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      {/<div class="col-md-4"><p class="lead">Hey, <b>Toronto food and beverage producers!</b> Be part of our 5<sup>th</sup> fair, a unique celebration of the art and craft of independent games, comics and good food!</p></div>
+      <div class="col-md-4"><p class="lead"><b>Food vendor applications are open from April 3-10.</b> Selected vendors will be contacted by April 13. <small> Games and comics exhibitor applications are now closed.</small></p></div>}
+      
       </div>
 
 

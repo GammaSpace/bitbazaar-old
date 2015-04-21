@@ -5,15 +5,14 @@
 		</div>
 	</div>
 	<div class="container content">
-		<div class="row">
-			<div class="col-md-5 content">
-				{%application_form}
-			</div>
-			<div class="col-md-7 content">
-				{%information}
-			</div>
+
+
+				<p class="lead" style="margin-top: 20px;">All applications are now closed. <a href="http://bentomiso.us4.list-manage1.com/subscribe?u=49ad21dfb57525faa7161ad5f&id=eebca69b55">Join our mailing list</a> to hear first when they open for our next event in a couple months!</p>
+				{/%application_form}
+				{/%information}
+
 		</div>
-	</div>
+
 	<section id="footer">
 		<div class="container">
 			<div class="row">
@@ -24,8 +23,25 @@
 					<p>Check out the Bit Bazaar <a href="http://www.flickr.com/groups/bitbazaar/">photo pool on Flickr</a>, mrghosty's <a href="https://www.youtube.com/watch?v=atdBruXI9wU" target="_blank">Bit Bazaar Exhibitors&#8217; Workshop (Fall 2013)</a>, and the <a href="https://bentomiso.com/blog/bit-bazaar-wrap">2013 Bit Bazaar Winter Market Wrap-Up</a>.</p>
 					<p class="lead">Questions? Contact event director <a href="mailto:hello@thebitbazaar.com">Jennie Faber</a>.</p>
 				</div>
-				<div class="col-md-6">
-					{%page/bitbazaar/assets/past_coverage}
+				<div class="col-md-3 col-md-offset-3">
+
+		        <div id="partners">
+		          <p class="text-center">Presented by:</p>
+		          <div class="row">
+		            <div class="col-xs-6">
+		              <div class="wrapper">
+		                <div class="partner">
+		                  <a href="{@SITE.path}"><img src="{@SITE.path}/images/miso_bw.png" alt="" class="img-responsive"> </a></div>
+		                </div>
+		              </div>
+		              <div class="col-xs-6">
+		                <div class="wrapper">
+		                  <div class="partner"><a href="http://attractmo.de"><img src="{@SITE.path}/images/spring-2015/partner-logos/attract_mode_logo.png" alt="" class="img-responsive"> </a></div>
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+
 				</div>
 			</div>
 		</div>
