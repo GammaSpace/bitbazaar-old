@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <img src="{@SITE.path}/images/spring-2015/bblogo.png" class="img-responsive" id="bbwm-logo">
+        <img src="{@SITE.path}/images/spring-2015/panelscapes/panelscapes.png" class="img-responsive" id="bbwm-logo">
         <div class="center-block text-center" id="socmed">
           <a href="https://twitter.com/TheBitBazaar"><img src="{@SITE.path}/images/socmed/Twitter_logo_white.png" alt="Twitter" height="20"/></a>
           <a href="https://www.facebook.com/events/354675598056821/"><img src="{@SITE.path}/images/socmed/FB-f-Logo__white_100.png" alt="Facebook" height="20"/></a>
@@ -52,61 +52,82 @@
 <section id="works">
   <div class="container-fluid">
     <div class="row">
+
       <div class="col-md-6">
 
-        <img src="" class="img-responsive">
-
-        <img src="" class="img-responsive">
-
-        <img src="" class="img-responsive">
-
+        <img src="{@SITE.path}/images/spring-2015/panelscapes/13991208329_8cfa2d2959_z.jpeg" class="img-responsive imagebox">
 
       </div>
+      <div class="col-md-6 work">
+
+        <div class="">
+
+          <h2>Work #1</h2>
+          <h3>Michael DeForge</h3>
+          <h4>Programming and design: Kyle Dwyer</h4>
+          <h4>3D modeling: Kimberly Koronya</h4>
+          <h4>Music: Jim Guthrie</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-md-6">
+        <img src="{@SITE.path}/images/spring-2015/panelscapes/13991208329_8cfa2d2959_z.jpeg" class="img-responsive imagebox">
 
+      </div>
+      <div class="col-md-6 work">
+        <div class="">
+          <h2>Work #2</h2>
+          <h3>Hellen Jo</h3>
+          <h4>Programming and design: Kyle Dwyer</h4>
+          <h4>3D modeling: Kimberly Koronya</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="{@SITE.path}/images/spring-2015/panelscapes/13991208329_8cfa2d2959_z.jpeg" class="img-responsive imagebox">
 
-      <h2>Work #1</h2>
-      <h3>Artist</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+      </div>
+      <div class="col-md-6 work">
+        <div class="">
+          <h2>Work #3</h2>
+          <h3>Jon Pham</h3>
+          <h4>Programming and design: Kyle Dwyer; modeling: Kimberly Koronya</h4>
 
-      <h2>Work #2</h2>
-      <h3>Artist</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        </div>
 
-      <h2>Work #3</h2>
-      <h3>Artist</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
 
 
       </div>
     </div>
   </div>
+</div>
 </section>
-  <section id="venue" class="clearfix">
-    {/<div class="map-box">
-      <div id="map">
-      <iframe width='100%' frameBorder='0' src='https://a.tiles.mapbox.com/v3/jenniebox.hn3a9o54/attribution.html?secure'></iframe>
+<section id="venue" class="clearfix">
+  {/<div class="map-box">
+    <div id="map">
+    <iframe width='100%' frameBorder='0' src='https://a.tiles.mapbox.com/v3/jenniebox.hn3a9o54/attribution.html?secure'></iframe>
+  </div>
+</div>}
+<div class="container">
+  <div class="row">
+    <div class="col-md-7 col-md-offset-5">
+      <h3>The Venue: Bento Miso</h3>
+      {/<h4>Bento Miso <small><span class="glyphicon glyphicon-map-marker" style="color: #f1df48"></span></small></h4>}
+      <p>The venue is a coworking space for independent game designers and developers located at <a href="http://goo.gl/maps/jTmW8">862 Richmond Street West</a>, in Toronto's Queen West neighborhood. We're just south of the gates of Trinity-Bellwoods Park, near Strachan and Richmond.</p>
     </div>
-  </div>}
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7 col-md-offset-5">
-        <h3>The Venue: Bento Miso</h3>
-        {/<h4>Bento Miso <small><span class="glyphicon glyphicon-map-marker" style="color: #f1df48"></span></small></h4>}
-        <p>The venue is a coworking space for independent game designers and developers located at <a href="http://goo.gl/maps/jTmW8">862 Richmond Street West</a>, in Toronto's Queen West neighborhood. We're just south of the gates of Trinity-Bellwoods Park, near Strachan and Richmond.</p>
-      </div>
-    </div>
-    {/<div class="col-md-4">
-      <h4>Public Transit <small><span class="glyphicon glyphicon-map-marker" style="color: #000"></span></small></h4>
-      <p>Take the 501 Queen or 504 King streetcar to Strachan. We're one block south of Queen and two north of King on Richmond.</p>
-    </div>
-    <div class="col-md-4">
-    <h4>Parking <small><span class="glyphicon glyphicon-map-marker" style="color: #46ce8f"></span></small></h4>
-    <p>There are paid <a href="http://parking.greenp.com/find-parking/?a=862+Richmond+Street+West&x=0&y=0" target="_blank">Green P parking lots</a> at Walnut/Richmond (2-minute walk), Queen/Ossington and King/Tecumseth (10-minute walk). They range from $2 to $3.50/hour. Street parking is $1.50 to $2.25/hour.</p>
-  </div>}
+  </div>
+  {/<div class="col-md-4">
+    <h4>Public Transit <small><span class="glyphicon glyphicon-map-marker" style="color: #000"></span></small></h4>
+    <p>Take the 501 Queen or 504 King streetcar to Strachan. We're one block south of Queen and two north of King on Richmond.</p>
+  </div>
+  <div class="col-md-4">
+  <h4>Parking <small><span class="glyphicon glyphicon-map-marker" style="color: #46ce8f"></span></small></h4>
+  <p>There are paid <a href="http://parking.greenp.com/find-parking/?a=862+Richmond+Street+West&x=0&y=0" target="_blank">Green P parking lots</a> at Walnut/Richmond (2-minute walk), Queen/Ossington and King/Tecumseth (10-minute walk). They range from $2 to $3.50/hour. Street parking is $1.50 to $2.25/hour.</p>
+</div>}
 </div>
 </div>
 </section>
@@ -119,8 +140,8 @@
           <p>Bit Bazaar is a <strong>video game craft fair and marketplace, featuring a local multiplayer arcade tournament</strong>! Check out the lineups for our <a href="https://bentomiso.com/bit-bazaar-spring-fair-2013">Spring 2013</a>, <a href="https://bentomiso.com/bit-bazaar-winter-market-2013">Winter 2013</a>, <a href="https://bentomiso.com/bit-bazaar-spring-fair-2014">Spring 2014</a> and <a href="https://bentomiso.com/bit-bazaar-winter-market-2014">Winter 2014</a> events.</p>
           <p class="lead">Buy one-of-a-kind, limited-edition and handmade/DIY items—pins, zines, boxed video games, card decks, art prints, comics, t-shirts, game soundtracks on vinyl, mixtapes, papercraft and toys—direct from your favorite independent game makers!</p>
           <p><b>…And come hungry</b>–food vendors will be on site serving up tasty snacks and beverages of the soft and hard variety!</p>
-{/          <p><a href="https://bentomiso.com/bitbazaar">Past events &amp; more info</a></p>
-}        </div>
+          {/          <p><a href="https://bentomiso.com/bitbazaar">Past events &amp; more info</a></p>
+        }        </div>
       </div>
     </div>
   </div>

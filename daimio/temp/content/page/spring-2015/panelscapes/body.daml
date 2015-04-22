@@ -1,4 +1,4 @@
-<body id="bit-bazaar-spring-fair-2015" class="bit-bazaar" data-spy="scroll" data-target="#primary-nav-2" data-offset="50">
+<body id="bit-bazaar-spring-fair-2015" class="panelscapes" data-spy="scroll" data-target="#primary-nav-2" data-offset="50">
   {/%nav}
   {%content}
   <section id="about-footer">
