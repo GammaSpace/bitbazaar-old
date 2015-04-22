@@ -10,11 +10,10 @@
         </div>
       </div>
       <div class="col-md-8">
-        <p class="tagline">A unique celebration of the art & craft of independent games, comics and good food.</p>
+        <h1>PanelScapes</h1>
 
 
-        <p class="lead">Bit Bazaar #5 &bull; Saturday, May 9 &bull; 1-9 p.m. &bull; <span class="smallcaps">Free</span></p>
-        <p class="lead small">PanelScapes Opening Party &bull; Thursday, May 7 &bull; 7 p.m.</p>
+        <p class="lead small">Opening Party &bull; Thursday, May 7 &bull; 7 p.m. &bull; free</p>
 
         <div class="row clearfix" id="partners">
           <div class="col-md-6">
@@ -49,24 +48,39 @@
   </div>
 </section>
 
-<section id="vendors">
-  <div class="container">
-    <h3>Spring 2015 Exhibitors</h3>
+
+<section id="works">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-6">
-        <h4>Tournament Arcade</h4>
-        {%arcade}
-        <p class="text-center">Registration opens soon!</p>
-        <h4>Food</h4>
-        {%food}
 
-        <h4>Comics + Zines</h4>
-        {%comics}
-        <p>Plus a special exhibition of cartoonists and comic art with a strong political and social justice bent&#8212;selected by Ad Astra Comix!</p>
+        <img src="" class="img-responsive">
+
+        <img src="" class="img-responsive">
+
+        <img src="" class="img-responsive">
+
+
       </div>
-      <div class="col-md-6" id="coming">
-        <h4>Games</h4>
-        {%games}
+      <div class="col-md-6">
+
+
+      <h2>Work #1</h2>
+      <h3>Artist</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+      <h2>Work #2</h2>
+      <h3>Artist</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+      <h2>Work #3</h2>
+      <h3>Artist</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+
       </div>
     </div>
   </div>
