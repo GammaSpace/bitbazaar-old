@@ -16,6 +16,8 @@
         <p class="lead">Bit Bazaar #5 &bull; Saturday, May 9 &bull; 1-9 p.m. &bull; <span class="smallcaps">Free</span></p>
         <p class="lead small">PanelScapes Opening Party &bull; Thursday, May 7 &bull; 7 p.m.</p>
 
+        <p class="lead small clearfix">Location: <a href="http://goo.gl/maps/jTmW8"> Richmond St. W., Toronto</a></p>
+
         <div class="row clearfix" id="partners">
           <div class="col-md-6">
             <p class="partners"><em>Presented by:</em></p>
@@ -57,45 +59,48 @@
         <h4>Tournament Arcade</h4>
         {%arcade}
         <p class="text-center">Registration opens soon!</p>
-        <h4>Food</h4>
-        {%food}
-
         <h4>Comics + Zines</h4>
         {%comics}
-        <p>Plus a special exhibition of cartoonists and comic art with a strong political and social justice bent&#8212;selected by Ad Astra Comix!</p>
+        <p><small>Plus a special exhibition of cartoonists and comic art with a strong political and social justice bent&#8212;selected by Ad Astra Comix!</small></p>
       </div>
       <div class="col-md-6" id="coming">
         <h4>Games</h4>
         {%games}
       </div>
     </div>
+
+    <h4>Food</h4>
+    {%food}
+
   </div>
 </section>
-  <section id="venue" class="clearfix">
-    {/<div class="map-box">
-      <div id="map">
-      <iframe width='100%' frameBorder='0' src='https://a.tiles.mapbox.com/v3/jenniebox.hn3a9o54/attribution.html?secure'></iframe>
-    </div>
-  </div>}
+
+<section id="venue" class="clearfix">
   <div class="container">
     <div class="row">
-      <div class="col-md-7 col-md-offset-5">
-        <h3>The Venue: Bento Miso</h3>
-        {/<h4>Bento Miso <small><span class="glyphicon glyphicon-map-marker" style="color: #f1df48"></span></small></h4>}
-        <p>The venue is a coworking space for independent game designers and developers located at <a href="http://goo.gl/maps/jTmW8">862 Richmond Street West</a>, in Toronto's Queen West neighborhood. We're just south of the gates of Trinity-Bellwoods Park, near Strachan and Richmond.</p>
+      <div class="col-md-6">
+        <h3>The Venue</h3>
+        <h4>Bento Miso <small><span class="glyphicon glyphicon-map-marker" style="color: #000"></span></small></h4>
+        <p class="lead">A coworking space for video game artists and developers located at <a href="http://goo.gl/maps/jTmW8">862 Richmond Street West</a>, in Toronto's Queen West neighborhood. We're just south of the gates of Trinity-Bellwoods Park, near the intersection of <span class="nowrap">Strachan Ave.</span> and <span class="nowrap">Richmond St. W.</span></p>
+      </div>
+      <div class="col-md-6">
+        <h4>Public Transit <small><span class="glyphicon glyphicon-map-marker" style="color: #e74b52"></span></small></h4>
+        <p><strong>Subway</strong>
+          From Ossington Station, take the 63 bus to King and Strachan; from Osgoode Station take the 501 Queen streetcar to Strachan.</p>
+        <p><strong>Streetcar</strong>
+          Take the 501 Queen or 504 King streetcar to Strachan. We're one block south of Queen and two north of King on Richmond.</p>
+
+        <h4>Parking <small><span class="glyphicon glyphicon-map-marker" style="color: #46ce8f"></span></small></h4>
+        <p>There are paid <a href="http://parking.greenp.com/find-parking/?a=862+Richmond+Street+West&x=0&y=0" target="_blank">Green P parking lots</a> at Walnut/Richmond (2-minute walk), Queen/Ossington and King/Tecumseth (10-minute walk). They range from $2 to $3.50/hour. Street parking is $1.50 to $2.25/hour.</p>
       </div>
     </div>
-    {/<div class="col-md-4">
-      <h4>Public Transit <small><span class="glyphicon glyphicon-map-marker" style="color: #000"></span></small></h4>
-      <p>Take the 501 Queen or 504 King streetcar to Strachan. We're one block south of Queen and two north of King on Richmond.</p>
-    </div>
-    <div class="col-md-4">
-    <h4>Parking <small><span class="glyphicon glyphicon-map-marker" style="color: #46ce8f"></span></small></h4>
-    <p>There are paid <a href="http://parking.greenp.com/find-parking/?a=862+Richmond+Street+West&x=0&y=0" target="_blank">Green P parking lots</a> at Walnut/Richmond (2-minute walk), Queen/Ossington and King/Tecumseth (10-minute walk). They range from $2 to $3.50/hour. Street parking is $1.50 to $2.25/hour.</p>
-  </div>}
-</div>
-</div>
+  </div>
 </section>
+<div class="map-box">
+  <div id="map">
+    <iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/jenniebox.m1083544/attribution.html?access_token=pk.eyJ1IjoiamVubmllYm94IiwiYSI6IlEzYkV1bGsifQ.0twdzE_LcndSHJBnCxd0og'></iframe>      </div>
+</div>
+
 <section id="about">
   <div class="container">
     <div class="row">

@@ -6538,6 +6538,9 @@ button.close {
 html {
   height: 100%;
 }
+.nowrap {
+  white-space: nowrap;
+}
 @media (min-width: 500px) {
   body {
     padding: 1em;
@@ -6718,7 +6721,6 @@ body#bit-bazaar-spring-fair-2015 {
 }
 body#bit-bazaar-spring-fair-2015 section#venue {
   background: #0d00e3;
-  background-image: url(../images/spring-2015/14174630001_a382e2dd6e_k.gif);
   background-position: left 20%;
   background-repeat: no-repeat;
 }
@@ -6733,6 +6735,19 @@ body#bit-bazaar-spring-fair-2015 section#venue h3 small,
 body#bit-bazaar-spring-fair-2015 section#venue h4 small,
 body#bit-bazaar-spring-fair-2015 section#venue p small {
   color: #ffffff;
+}
+body#bit-bazaar-spring-fair-2015 section#venue h4 {
+  font-size: 28px;
+  background: #fff;
+  color: #0d00e3;
+  padding: 5px 10px;
+}
+body#bit-bazaar-spring-fair-2015 section#venue p {
+  font-size: 18px;
+  line-height: 1.5em;
+}
+body#bit-bazaar-spring-fair-2015 section#venue p.lead {
+  font-size: 24px;
 }
 body#bit-bazaar-spring-fair-2015 section#venue iframe {
   height: 300px;

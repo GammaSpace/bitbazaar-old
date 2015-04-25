@@ -3,6 +3,10 @@
 
 <ul class="list-unstyled confirmed" id="food">
   {begin cat_vendors | merge with @ex_org}
-    <li><p class="{depot.application_type}">{my.name} <small class="">{my.product}</small></p></li>
+    <li>
+      <p class="{depot.application_type}">{my.name}</p>
+      <p class="product">{my.product}</small>
+      <p class="desc">{my.public_description}</small>
+      </li>
   {end cat_vendors}
 </ul>

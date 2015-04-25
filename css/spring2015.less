@@ -20,7 +20,9 @@
 html {
 	height: 100%;
 }
-
+.nowrap {
+  white-space: nowrap;
+}
 @media (min-width: 500px) {
   body {
     padding: 1em;
@@ -178,10 +180,21 @@ body {
 
     section#venue {
       .mixin(#fff,@secondary);
-      background-image: url(../images/spring-2015/14174630001_a382e2dd6e_k.gif);
       background-position: left 20%;
       background-repeat: no-repeat;
-
+      h4 {
+        font-size: 28px;
+        background: #fff;
+        color: @secondary;
+        padding: 5px 10px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5em;
+        &.lead {
+          font-size: 24px;
+        }
+      }
       iframe {
         height: 300px;
       }
@@ -192,9 +205,10 @@ body {
       background-image: url(../images/spring-2015/promo_booth.gif);
       background-position: right 20%;
       background-repeat: no-repeat;
+
       p {
         background: #fff;
-        
+
         a, a:hover {
           color: @secondary;
           text-decoration: underline;
