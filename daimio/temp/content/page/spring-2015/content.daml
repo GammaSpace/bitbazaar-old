@@ -58,11 +58,11 @@
       <div class="col-md-6">
         <h4>Tournament Arcade</h4>
         {%arcade}
+        <p class="text-center">Registration opens soon!</p>
 
             <h4>Food</h4>
             {%food}
 
-        <p class="text-center">Registration opens soon!</p>
         <h4>Comics + Zines</h4>
         {%comics}
         <p><small>Plus a special exhibition of cartoonists and comic art with a strong political and social justice bent&#8212;selected by Ad Astra Comix!</small></p>
