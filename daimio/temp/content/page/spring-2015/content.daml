@@ -66,13 +66,21 @@
 
         <h3>Comics + Zines</h3>
         {%comics}
-        <div id="food-vendors">
-          <h3>Food</h3>
-          {%food}
-        </div>
+
       </div>
 
     </div>
+    <div class="row">
+      <div class="col-md-8 div col-md-offset-2">
+
+    <div id="food-vendors">
+      <h3>Food</h3>
+      {%food}
+    </div>
+
+      </div>
+    </div>
+
   </div>
 </section>
 
