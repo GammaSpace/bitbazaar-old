@@ -1,14 +1,14 @@
 {lens get_confirmed_exhibitors | extract "{this.depot.invite | is like :yes}" | extract "{:games_marketplace | is in this.my.application_type}" | collection sort by {* (:depot.order :ASC)} | > :ex_org | ""}
 {/@exhibitors | extract "{this.depot.invite | is like :yes}" | collection sort by {* (:depot.order :ASC)} | > :ex_org | ""}
 
-<div class="list-unstyled confirmed">
   {begin cat_vendors | merge with @ex_org}
+<div class="confirmed row">
     <div class="col-md-6">
       <p class="{depot.application_type} pull-right" style="text-align:right">{my.product}</p>
     </div>
     <div class="col-md-6">
       <small class="">{my.name}</small>
       </div>
-  {end cat_vendors}
 </div>
+  {end cat_vendors}
 <p class="text-center">More TBA!</p>
