@@ -1,14 +1,14 @@
 {lens get_confirmed_exhibitors | extract "{this.depot.invite | is like :yes}" | extract "{this.my.application_type | is like :food}" | > :ex_org | ""}
-  {begin cat_vendors | merge with @ex_org}
-    <div class="row">
-      <div class="col-md-4">
-        <h4 class="pull-right">{my.name}</h4>
-        </div>
-      <div class="col-md-8">
-        <p>
-          <strong>{my.product}</strong>
-        </p>
-           {my.public_description | string textile}
-      </div>
+{begin cat_vendors | merge with @ex_org}
+  <div class="confirmed row">
+    <div class="col-md-4">
+      <p class="{depot.application_type} pull-right org" style="text-align:right">{my.name}</p>
     </div>
-  {end cat_vendors}
+    <div class="col-md-8">
+      <p class="name">
+        <strong>{my.product}</strong>
+      </p>
+      {my.public_description | string textile}
+    </div>
+  </div>
+{end cat_vendors}
