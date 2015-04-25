@@ -82,13 +82,13 @@
 
         <h3>Comics + Zines</h3>
         {%comics}
-        <p><small>Plus a special exhibition of cartoonists and comic art with a strong political and social justice bent&#8212;selected by Ad Astra Comix!</small></p>
+        <p class="text-center"><small>Plus a special Ad Astra Comix showcase of cartoonists and comic art with a political and social justice bent!</small></p>
+        <div id="food-vendors">
+          <h3>Food</h3>
+          {%food}
+        </div>
       </div>
 
-    </div>
-    <div id="food-vendors">
-      <h3>Food</h3>
-      {%food}
     </div>
   </div>
 </section>
