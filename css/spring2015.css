@@ -6828,23 +6828,27 @@ body#bit-bazaar-spring-fair-2015 #header {
 }
 body#bit-bazaar-spring-fair-2015 #header h1,
 body#bit-bazaar-spring-fair-2015 #header h2,
-body#bit-bazaar-spring-fair-2015 #header p {
+body#bit-bazaar-spring-fair-2015 #header p,
+body#bit-bazaar-spring-fair-2015 #header a {
   font-family: "kepler-std", serif;
 }
 body#bit-bazaar-spring-fair-2015 #header a.btn {
   text-decoration: none;
 }
-body#bit-bazaar-spring-fair-2015 #header p {
+body#bit-bazaar-spring-fair-2015 #header p,
+body#bit-bazaar-spring-fair-2015 #header a {
   color: #f9f8fa;
   font-size: 32px;
   text-shadow: 1px 1px 0px #937ea8;
 }
-body#bit-bazaar-spring-fair-2015 #header p.tagline {
+body#bit-bazaar-spring-fair-2015 #header p.tagline,
+body#bit-bazaar-spring-fair-2015 #header a.tagline {
   line-height: 1.1em;
   font-size: 56px;
   color: #fff;
 }
-body#bit-bazaar-spring-fair-2015 #header p.lead {
+body#bit-bazaar-spring-fair-2015 #header p.lead,
+body#bit-bazaar-spring-fair-2015 #header a.lead {
   background-color: #dff954;
   color: #0d00e3;
   padding: 4px 9px;
@@ -6853,12 +6857,15 @@ body#bit-bazaar-spring-fair-2015 #header p.lead {
   float: left;
   margin-bottom: 1em;
 }
-body#bit-bazaar-spring-fair-2015 #header p.lead.small {
+body#bit-bazaar-spring-fair-2015 #header p.lead.small,
+body#bit-bazaar-spring-fair-2015 #header a.lead.small {
   padding: 2px 4px;
   font-size: 22px;
 }
 body#bit-bazaar-spring-fair-2015 #header p.cta,
-body#bit-bazaar-spring-fair-2015 #header p.partners {
+body#bit-bazaar-spring-fair-2015 #header a.cta,
+body#bit-bazaar-spring-fair-2015 #header p.partners,
+body#bit-bazaar-spring-fair-2015 #header a.partners {
   font-family: "proxima-nova", sans-serif;
   font-size: 24px;
   line-height: 1.2em;
@@ -7085,6 +7092,9 @@ body .navbar-default .navbar-link:hover {
     color: #ffffff;
     background-color: #000000;
   }
+}
+#partners {
+  clear: both;
 }
 #partners .wrapper {
   display: table;

@@ -16,7 +16,7 @@
         <p class="lead">Bit Bazaar #5 &bull; Saturday, May 9 &bull; 1-9 p.m. &bull; <span class="smallcaps">Free</span></p>
         <p class="lead small">PanelScapes Opening Party &bull; Thursday, May 7 &bull; 7 p.m.</p>
 
-        <p class="lead small clearfix">Location: <a href="http://goo.gl/maps/jTmW8"> Richmond St. W., Toronto</a></p>
+        <p class="lead small clearfix address">862 Richmond St. W., Toronto</p>
 
         <div class="row clearfix" id="partners">
           <div class="col-md-6">
@@ -58,6 +58,10 @@
       <div class="col-md-6">
         <h4>Tournament Arcade</h4>
         {%arcade}
+
+            <h4>Food</h4>
+            {%food}
+
         <p class="text-center">Registration opens soon!</p>
         <h4>Comics + Zines</h4>
         {%comics}
@@ -68,9 +72,6 @@
         {%games}
       </div>
     </div>
-
-    <h4>Food</h4>
-    {%food}
 
   </div>
 </section>
