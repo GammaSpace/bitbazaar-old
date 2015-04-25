@@ -67,10 +67,15 @@
   </div>
 </section>
 <section id="vendors">
-  <div class="container">
+  <div class="container" id="coming">
     {/<h3>Spring 2015 Exhibitors</h3>}
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-7">
+        <h3>Games</h3>
+        {%games}
+      </div>
+      
+      <div class="col-md-5">
         <h3>Tournament Arcade</h3>
         {%arcade}
         <p class="text-center">Registration opens soon!</p>
@@ -79,10 +84,7 @@
         {%comics}
         <p><small>Plus a special exhibition of cartoonists and comic art with a strong political and social justice bent&#8212;selected by Ad Astra Comix!</small></p>
       </div>
-      <div class="col-md-6" id="coming">
-        <h3>Games</h3>
-        {%games}
-      </div>
+
     </div>
     <div id="food-vendors">
       <h3>Food</h3>

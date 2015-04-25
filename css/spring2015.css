@@ -6938,10 +6938,11 @@ body#bit-bazaar-spring-fair-2015 section#vendors h4 {
   text-align: center;
 }
 body#bit-bazaar-spring-fair-2015 section#vendors h3 {
-  margin-top: 30px;
-  font-size: 32px;
+  margin: 30px 0 20px 0;
+  font-size: 42px;
   font-weight: 900;
   text-transform: uppercase;
+  text-shadow: 1px 1px 1px #ff00ff, -1px -1px 2px #00ffff;
 }
 body#bit-bazaar-spring-fair-2015 section#vendors #food-vendors h4 {
   font-family: "kepler-std", serif;
@@ -6963,8 +6964,20 @@ body#bit-bazaar-spring-fair-2015 section#vendors #food-vendors p strong {
   font-weight: 100;
   color: #2417ff;
 }
-body#bit-bazaar-spring-fair-2015 section#vendors #coming p {
+body#bit-bazaar-spring-fair-2015 section#vendors #coming .confirmed p {
+  line-height: 30px;
   font-size: 24px;
+}
+body#bit-bazaar-spring-fair-2015 section#vendors #coming .confirmed p.org {
+  font-family: "kepler-std", serif;
+  margin: 0 0 10px 0;
+  font-weight: 100;
+  color: #2417ff;
+  text-shadow: 1px 1px 1px #e3f825;
+  font-style: italic;
+}
+body#bit-bazaar-spring-fair-2015 section#vendors #coming .confirmed p.name {
+  font-size: 18px;
 }
 body#bit-bazaar-spring-fair-2015 section#vendors h2,
 body#bit-bazaar-spring-fair-2015 section#vendors h3,

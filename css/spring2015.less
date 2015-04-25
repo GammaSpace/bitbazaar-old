@@ -393,11 +393,13 @@ body {
           .text-center();
         }
         h3 {
-          margin-top: 30px;
-          font-size: 32px;
+          margin: 30px 0 20px 0;
+          font-size: 42px;
           font-weight: 900;
           text-transform: uppercase;
+          text-shadow: 1px 1px 1px magenta, -1px -1px 2px cyan;
         }
+
         #food-vendors {
           h4 {
             font-family: @kepler-std;
@@ -422,9 +424,22 @@ body {
           }
         }
         #coming {
-          p {
-            font-size: 24px;
-
+          .confirmed {
+            p {
+              line-height: 30px;
+              font-size: 24px;
+              &.org {
+                font-family: @kepler-std;
+                margin: 0 0 10px 0;
+                font-weight: 100;
+                color: lighten(@secondary,10%);
+                text-shadow: 1px 1px 1px #e3f825;
+                font-style: italic;
+              }
+              &.name {
+                font-size: 18px;
+              }
+            }
           }
         }
         .mixin(@secondary,#fff);
