@@ -5,10 +5,8 @@
       <p class="{depot.application_type} pull-right org" style="text-align:right">{my.name}</p>
     </div>
     <div class="col-md-8">
-      <p class="name">
-        <strong>{my.product}</strong>
-      </p>
-      {my.public_description | string textile}
+      <p class="name"> {my.product}</p>
+      {/ my.public_description | string textile}
     </div>
   </div>
 {end cat_vendors}
