@@ -53,26 +53,26 @@
 
 <section id="vendors">
   <div class="container">
-    <h3>Spring 2015 Exhibitors</h3>
+    {/<h3>Spring 2015 Exhibitors</h3>}
     <div class="row">
       <div class="col-md-6">
-        <h4>Tournament Arcade</h4>
+        <h3>Tournament Arcade</h3>
         {%arcade}
         <p class="text-center">Registration opens soon!</p>
 
-            <h4>Food</h4>
-            {%food}
-
-        <h4>Comics + Zines</h4>
+        <h3>Comics + Zines</h3>
         {%comics}
         <p><small>Plus a special exhibition of cartoonists and comic art with a strong political and social justice bent&#8212;selected by Ad Astra Comix!</small></p>
       </div>
       <div class="col-md-6" id="coming">
-        <h4>Games</h4>
+        <h3>Games</h3>
         {%games}
       </div>
     </div>
-
+    <div id="food-vendors">
+      <h3>Food</h3>
+      {%food}
+    </div>
   </div>
 </section>
 

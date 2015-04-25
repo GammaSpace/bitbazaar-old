@@ -84,74 +84,7 @@ body {
   .mixin(#7d5f2f;#eeeeee);
 
 }
-#vendors {
-  h2,h3,h4 {
-    .text-center();
-  }
-  h4 {
-    font-weight: 900;
-    text-transform: uppercase;
-  }
 
-  #coming {
-    p {
-      font-size: 24px;
-
-    }
-  }
-  .mixin(@secondary,#fff);
-  /* background-image: url(../images/spring-2015/promo_food2.gif); */
-  background-position: right 20%;
-  min-height: 300px;
-  background-repeat: no-repeat;
-  ul.confirmed {
-    .center-block();
-    .text-center();
-    li {
-
-      display: inline;
-
-      h3 {
-        display: inline;
-        font-size: 22px;
-        letter-spacing: 1px;
-        font-style: normal;
-        font-weight: 100;
-         small {
-           display:block;
-          letter-spacing: 1px;
-          color: #b4867d;
-          padding-bottom: 20px;
-        }
-
-       /* Small devices (tablets, 768px and up) */
-       @media (min-width: @screen-sm-min) {
-          white-space: nowrap;
-          font-size: 32px;
-          small {
-            display: inline;
-            text-align: right;
-            padding-right: 20px;
-            padding-bottom: 0;
-
-          }
-        }
-
-       /* Medium devices (desktops, 992px and up) */
-       @media (min-width: @screen-md-min) {  }
-
-       /* Large devices (large desktops, 1200px and up) */
-       @media (min-width: @screen-lg-min) {  }
-
-      /*
-        &.food { .food() }
-        &.game { .game() }
-       */
-
-      }
-   }
-  }
-  }
 
 #panelscapes {
   .mixin(@secondary,#fff);
@@ -419,10 +352,7 @@ body {
       }
       &#vendors, &#music {
         padding-bottom: 60px;
-        h4 {
-          margin-top: 30px;
-          font-size: 32px;
-        }
+
         #exhibitor-lists {
           > div {
             padding-top: 60px;
@@ -458,7 +388,97 @@ body {
           }
         }
       }
+      &#vendors {
+        h2,h3,h4 {
+          .text-center();
+        }
+        h3 {
+          margin-top: 30px;
+          font-size: 32px;
+          font-weight: 900;
+          text-transform: uppercase;
+        }
+        #food-vendors {
+          h4 {
+            font-family: @kepler-std;
+            font-size: 24px;
+            margin: 0 0 10px 0;
+            font-weight: 900;
+            color: @secondary;
+            line-height: normal;
 
+          }
+          p {
+            font-size: 18px;
+            line-height: normal;
+            strong {
+              font-family: @kepler-std;
+              font-size: 24px;
+              margin: 0 0 10px 0;
+              font-weight: 100;
+              color: lighten(@secondary,10%)
+            }
+          }
+        }
+        #coming {
+          p {
+            font-size: 24px;
+
+          }
+        }
+        .mixin(@secondary,#fff);
+        /* background-image: url(../images/spring-2015/promo_food2.gif); */
+        background-position: right 20%;
+        min-height: 300px;
+        background-repeat: no-repeat;
+        ul.confirmed {
+          .center-block();
+          .text-center();
+          li {
+
+            display: inline;
+
+            h3 {
+              display: inline;
+              font-size: 22px;
+              letter-spacing: 1px;
+              font-style: normal;
+              font-weight: 100;
+              small {
+                display:block;
+                letter-spacing: 1px;
+                color: #b4867d;
+                padding-bottom: 20px;
+              }
+
+              /* Small devices (tablets, 768px and up) */
+              @media (min-width: @screen-sm-min) {
+                white-space: nowrap;
+                font-size: 32px;
+                small {
+                  display: inline;
+                  text-align: right;
+                  padding-right: 20px;
+                  padding-bottom: 0;
+
+                }
+              }
+
+              /* Medium devices (desktops, 992px and up) */
+              @media (min-width: @screen-md-min) {  }
+
+              /* Large devices (large desktops, 1200px and up) */
+              @media (min-width: @screen-lg-min) {  }
+
+              /*
+              &.food { .food() }
+              &.game { .game() }
+              */
+
+            }
+          }
+        }
+      }
     }
     h3 {
       .mid-headline;
