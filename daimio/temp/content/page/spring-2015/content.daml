@@ -66,20 +66,14 @@
 
         <h3>Comics + Zines</h3>
         {%comics}
-
       </div>
-
     </div>
-    <div class="row">
-      <div class="col-md-10 div col-md-offset-1">
 
     <div id="food-vendors">
       <h3>Food</h3>
       {%food}
     </div>
 
-      </div>
-    </div>
 
   </div>
 </section>
