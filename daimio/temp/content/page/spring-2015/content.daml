@@ -50,25 +50,10 @@
     </div>
   </div>
 </section>
-<section id="about">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-9">
-        <h3>About</h3>
-        <div class="">
-          <p>Bit Bazaar is a <strong>video game market + food fest + zine fair</strong>! </p>
-          <p class="lead">Buy one-of-a-kind, limited-edition and handmade/DIY items—pins, zines, boxed video games, card decks, art prints, comics, t-shirts, game soundtracks on vinyl, mixtapes, papercraft and toys—direct from 30+ independent game makers!</p>
-          <p><b>Come hungry</b>! Food vendors will be on site serving up tacos, street food, vegan treats, specialty chocolates, craft beer,  lemonade and more!</p>
-          <p>Check out the lineups for our <a href="https://bentomiso.com/bit-bazaar-spring-fair-2013">Spring 2013</a>, <a href="https://bentomiso.com/bit-bazaar-winter-market-2013">Winter 2013</a>, <a href="https://bentomiso.com/bit-bazaar-spring-fair-2014">Spring 2014</a> and <a href="https://bentomiso.com/bit-bazaar-winter-market-2014">Winter 2014</a> events.</p>
-          {/          <p><a href="https://bentomiso.com/bitbazaar">Past events &amp; more info</a></p>
-}        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 <section id="vendors">
   <div class="container" id="coming">
-    {/<h3>Spring 2015 Exhibitors</h3>}
+    <h3 class="main">Spring 2015 Exhibitors</h3>
     <div class="row">
       <div class="col-md-6">
         <h3>Games</h3>
@@ -91,11 +76,27 @@
   </div>
 </section>
 
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <h3 class="main">About</h3>
+        <div class="">
+          <p>Bit Bazaar is a <strong>video game market + food fest + zine fair</strong>! </p>
+          <p class="lead">Buy one-of-a-kind, limited-edition and handmade/DIY items—pins, zines, boxed video games, card decks, art prints, comics, t-shirts, game soundtracks on vinyl, mixtapes, papercraft and toys—direct from 30+ independent game makers!</p>
+          <p><strong>Come hungry</strong>! Food vendors will be serving up tacos, street food, vegan treats, specialty chocolates, craft beer, lemonade and more! Most items cost $5-8.</p>
+          <p>Check out the lineups for our <a href="https://bentomiso.com/bit-bazaar-spring-fair-2013">Spring 2013</a>, <a href="https://bentomiso.com/bit-bazaar-winter-market-2013">Winter 2013</a>, <a href="https://bentomiso.com/bit-bazaar-spring-fair-2014">Spring 2014</a> and <a href="https://bentomiso.com/bit-bazaar-winter-market-2014">Winter 2014</a> events.</p>
+          {/          <p><a href="https://bentomiso.com/bitbazaar">Past events &amp; more info</a></p>
+}        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="venue" class="clearfix">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h3>The Venue</h3>
+        <h3 class="main">The Venue</h3>
         <h4>Bento Miso <small><span class="glyphicon glyphicon-map-marker" style="color: #000"></span></small></h4>
         <p class="lead">A coworking space for video game artists and developers located at <a href="http://goo.gl/maps/jTmW8">862 Richmond Street West</a>, in Toronto's Queen West neighborhood. We're just south of the gates of Trinity-Bellwoods Park, near the intersection of <span class="nowrap">Strachan Ave.</span> and <span class="nowrap">Richmond St. W.</span></p>
       </div>
@@ -114,7 +115,8 @@
 </section>
 <div class="map-box">
   <div id="map">
-    <iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/jenniebox.m1083544/attribution.html?access_token=pk.eyJ1IjoiamVubmllYm94IiwiYSI6IlEzYkV1bGsifQ.0twdzE_LcndSHJBnCxd0og'></iframe>      </div>
+    <iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/jenniebox.m1083544/attribution.html?access_token=pk.eyJ1IjoiamVubmllYm94IiwiYSI6IlEzYkV1bGsifQ.0twdzE_LcndSHJBnCxd0og'></iframe>
+  </div>
 </div>
 
 

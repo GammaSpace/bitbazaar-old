@@ -1060,7 +1060,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "proxima-nova", sans-serif;
+  font-family: "inconsolata", sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -1159,7 +1159,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "larabiefont", monospace;
+  font-family: "kepler-std", serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -5792,7 +5792,7 @@ button.close {
   z-index: 1070;
   display: block;
   visibility: visible;
-  font-family: "proxima-nova", sans-serif;
+  font-family: "inconsolata", sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -5899,7 +5899,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "proxima-nova", sans-serif;
+  font-family: "inconsolata", sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.428571429;
@@ -6698,17 +6698,20 @@ body#bit-bazaar-spring-fair-2015 section#about h4 small,
 body#bit-bazaar-spring-fair-2015 section#about p small {
   color: #2417ff;
 }
+body#bit-bazaar-spring-fair-2015 section#about h3 {
+  text-shadow: 1px 1px 1px #ff00ff, -1px -1px 2px #00ffff;
+}
 body#bit-bazaar-spring-fair-2015 section#about p {
   background: #fff;
+}
+body#bit-bazaar-spring-fair-2015 section#about p strong {
+  background-color: #dff954;
+  font-weight: normal;
 }
 body#bit-bazaar-spring-fair-2015 section#about p a,
 body#bit-bazaar-spring-fair-2015 section#about p a:hover {
   color: #0d00e3;
   text-decoration: underline;
-}
-body#bit-bazaar-spring-fair-2015 section#about strong {
-  color: #0d00e3;
-  font-weight: 900;
 }
 body#bit-bazaar-spring-fair-2015 section#about-footer p,
 body#bit-bazaar-spring-fair-2015 section#about-footer a {
@@ -6866,6 +6869,20 @@ body#bit-bazaar-spring-fair-2015 section h3 {
     line-height: normal;
   }
 }
+body#bit-bazaar-spring-fair-2015 section h3 {
+  margin: 30px 0 20px 0;
+  font-size: 42px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #e3f825;
+  font-style: italic;
+}
+body#bit-bazaar-spring-fair-2015 section h3.main {
+  font-size: 62px;
+  margin-top: 0;
+  font-style: normal;
+  text-shadow: 1px 1px 1px #ff00ff, -1px -1px 2px #00ffff;
+}
 body#bit-bazaar-spring-fair-2015 section p {
   font-size: 24px;
   line-height: 1.5em;
@@ -6937,13 +6954,6 @@ body#bit-bazaar-spring-fair-2015 section#vendors h3,
 body#bit-bazaar-spring-fair-2015 section#vendors h4 {
   text-align: center;
 }
-body#bit-bazaar-spring-fair-2015 section#vendors h3 {
-  margin: 30px 0 20px 0;
-  font-size: 42px;
-  font-weight: 900;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 1px #ff00ff, -1px -1px 2px #00ffff;
-}
 body#bit-bazaar-spring-fair-2015 section#vendors #food-vendors h4 {
   font-family: "kepler-std", serif;
   font-size: 24px;
@@ -6951,7 +6961,7 @@ body#bit-bazaar-spring-fair-2015 section#vendors #food-vendors h4 {
   font-weight: 900;
   color: #0d00e3;
   line-height: normal;
-  text-align: right;
+  text-align: left;
 }
 body#bit-bazaar-spring-fair-2015 section#vendors #food-vendors p {
   font-size: 18px;
@@ -6964,20 +6974,28 @@ body#bit-bazaar-spring-fair-2015 section#vendors #food-vendors p strong {
   font-weight: 100;
   color: #2417ff;
 }
+body#bit-bazaar-spring-fair-2015 section#vendors #coming .confirmed {
+  padding: 10px;
+}
 body#bit-bazaar-spring-fair-2015 section#vendors #coming .confirmed p {
   line-height: 30px;
   font-size: 24px;
 }
 body#bit-bazaar-spring-fair-2015 section#vendors #coming .confirmed p.org {
   font-family: "kepler-std", serif;
-  margin: 0 0 10px 0;
+  margin: 0;
   font-weight: 100;
   color: #2417ff;
   text-shadow: 1px 1px 1px #e3f825;
   font-style: italic;
+  float: right !important;
+  text-align: right;
 }
 body#bit-bazaar-spring-fair-2015 section#vendors #coming .confirmed p.name {
   font-size: 18px;
+  margin: 0;
+  border-bottom: solid 1px #e3f825;
+  /* border-bottom: solid 1px; */
 }
 body#bit-bazaar-spring-fair-2015 section#vendors h2,
 body#bit-bazaar-spring-fair-2015 section#vendors h3,

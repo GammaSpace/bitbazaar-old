@@ -4,7 +4,7 @@
 {begin cat_vendors | merge with @ex_org}
   <div class="confirmed row">
     <div class="col-md-6">
-      <p class="{depot.application_type} pull-right org" style="text-align:right">{my.product}</p>
+      <p class="{depot.application_type} org">{my.product}</p>
     </div>
     <div class="col-md-6">
       <p class="name">{my.name}</p>

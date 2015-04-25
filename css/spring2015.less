@@ -4,12 +4,15 @@
 @larabiefont: "larabiefont",monospace;
 @kepler-std: "kepler-std",serif;
 @proxima-nova: "proxima-nova",sans-serif;
+@inconsolata: "inconsolata",sans-serif;
 
-@font-family-base: @proxima-nova;
-@headings-font-family: @larabiefont;
+@font-family-base: @inconsolata;
+@headings-font-family: @kepler-std;
 
 @primary: #C6BBD1;
 @secondary: #0D00E3;
+@highlight: lighten(#d6f723,10%);
+
 .tk-aktiv-grotesk-std {
     font-family: @tk-aktiv-grotesk-std;
     font-size-adjust:0.508;
@@ -138,18 +141,23 @@ body {
       background-image: url(../images/spring-2015/promo_booth.gif);
       background-position: right 20%;
       background-repeat: no-repeat;
+  h3 {
+    text-shadow: 1px 1px 1px magenta, -1px -1px 2px cyan;
 
+  }
       p {
         background: #fff;
-
+        strong {
+          background-color: @highlight;
+          font-weight: normal;
+        }
         a, a:hover {
           color: @secondary;
           text-decoration: underline;
         }
       }
-      strong {
-        color: @secondary;
-        font-weight: 900;
+      strong,b {
+
       }
     }
     section#about-footer {
@@ -326,11 +334,30 @@ body {
         line-height: 1em;
         padding: 0;
         margin: 0;
+
         @media (min-width: @screen-sm-min) {
           line-height: normal;
         }
 
       }
+
+      h3 {
+        margin: 30px 0 20px 0;
+        font-size: 42px;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 1px #e3f825;
+
+        font-style: italic;
+        &.main {
+          font-size: 62px;
+          margin-top: 0;
+          font-style: normal;
+          text-shadow: 1px 1px 1px magenta, -1px -1px 2px cyan;
+        }
+      }
+
+
       p {
         font-size: 24px;
         line-height: 1.5em;
@@ -392,13 +419,7 @@ body {
         h2,h3,h4 {
           .text-center();
         }
-        h3 {
-          margin: 30px 0 20px 0;
-          font-size: 42px;
-          font-weight: 900;
-          text-transform: uppercase;
-          text-shadow: 1px 1px 1px magenta, -1px -1px 2px cyan;
-        }
+
 
         #food-vendors {
           h4 {
@@ -408,7 +429,7 @@ body {
             font-weight: 900;
             color: @secondary;
             line-height: normal;
-            text-align: right;
+            text-align: left;
 
           }
           p {
@@ -425,19 +446,26 @@ body {
         }
         #coming {
           .confirmed {
+            padding: 10px;
             p {
               line-height: 30px;
               font-size: 24px;
               &.org {
                 font-family: @kepler-std;
-                margin: 0 0 10px 0;
+                margin: 0;
                 font-weight: 100;
                 color: lighten(@secondary,10%);
                 text-shadow: 1px 1px 1px #e3f825;
                 font-style: italic;
+                .pull-right();
+                text-align: right;
               }
               &.name {
                 font-size: 18px;
+                margin: 0;
+                border-bottom: solid 1px #e3f825;
+
+                /* border-bottom: solid 1px; */
               }
             }
           }
