@@ -49,7 +49,7 @@
           </div>
           <div class="form-group">
             <label class="form-label" for="name">Order</label>
-            <input type="text" value="{depot.order}" name="depot[order]" class="form-control input-lg" id="order">
+            <input type="text" value="{depot.order}" name="order" class="form-control input-lg" id="order">
           </div>
         {end admin}
         <div class="row">
@@ -121,7 +121,8 @@
               {permit superdo command "
               {my set for @ex_id in :stuff path key value value}
             "}
-          {end set}
+            {end set}
+            {exec depot_set for @ex_id in :stuff path :order value #order}
           {notice set value {* (
             :message "<strong>Success!</strong>  Your changes have been saved"
             :type :success
@@ -133,4 +134,3 @@
 </form>
 {end vendor}
 </div>
-{end admin}
