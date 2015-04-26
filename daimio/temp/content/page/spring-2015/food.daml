@@ -1,4 +1,9 @@
-{lens get_confirmed_exhibitors | extract "{this.depot.invite | is like :yes}" | extract "{this.my.application_type | is like :food}" | > :ex_org | ""}
+{lens get_confirmed_exhibitors
+  | extract "{this.depot.invite | is like :yes}"
+  | extract "{this.my.application_type | is like :food}"
+  | collection sort by {* (:my.order :ASC)}
+  | > :ex_org | ""}
+
 {begin cat_vendors | merge with @ex_org}
   <div class="confirmed row">
     <div class="col-md-3">
