@@ -10,31 +10,35 @@
 
 
     $('.sortable').sortable().bind('sortupdate', function(e, ui) {
+      $('.update').html('Changed order. You\'ll need to save.')
 
+      return false;
+      /*
 
-      var dataIDList = $('ul.sortable li')
-      var realArray = $.makeArray( dataIDList )
+      This event is triggered when the user stopped sorting and the DOM position has changed.
 
-      $.map( realArray, function( val, i ) {
-        var new_val = $(val).data("item-id")
-        var command = "{exec depot_set for :" + new_val + " in :stuff path :order value " + i + "}"
-        jDaimio.process(command);
+      ui.item contains the current dragged element.
+      ui.item.index() contains the new index of the dragged element
+      ui.oldindex contains the old index of the dragged element
+      ui.startparent contains the element that the dragged item comes from
+      ui.endparent contains the element that the dragged item was added to
 
+      */
+    });
+
+    $('body').on('click','button',function(e) {
+      e.preventDefault();
+        var itemList = $('ul.sortable li')
+        var itemArray = $.makeArray( itemList )
+        var map = itemArray.map(function(val,i) {
+          var new_val = $(val).data("item-id")
+          var command = "{exec depot_set for :" + new_val + " in :stuff path :order value " + i + "}"
+          jDaimio.process(command)
+        });
+        $.when.apply(null, map).done(function() {
+           $(".update").html("<p>Saved!</p>");
+       });
       });
-
-    return false;
-    /*
-
-    This event is triggered when the user stopped sorting and the DOM position has changed.
-
-    ui.item contains the current dragged element.
-    ui.item.index() contains the new index of the dragged element
-    ui.oldindex contains the old index of the dragged element
-    ui.startparent contains the element that the dragged item comes from
-    ui.endparent contains the element that the dragged item was added to
-
-    */
-});
 
 
     $('.table-data').dataTable( {

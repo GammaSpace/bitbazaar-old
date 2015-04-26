@@ -2,8 +2,15 @@
   <a href="{@SITE.path}/admin/{#event}" class="pull-right">Exhibitor List</a>
   <h2>Bit Bazaar {#event} <small>Sort Exhibitor List</small></h2>
 </div>
-Update:
+
 <div class="update"></div>
+
+<button type="submit" class="btn btn-primary">Save</button>
+<hr>
+
+
+
+
 <div class="row">
   <div class="col-md-4">
     <ul class="list-group sortable">
