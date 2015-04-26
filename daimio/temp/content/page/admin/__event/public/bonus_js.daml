@@ -18,9 +18,7 @@
       $.map( realArray, function( val, i ) {
         var new_val = $(val).data("item-id")
         var command = "{exec depot_set for :" + new_val + " in :stuff path :order value " + i + "}"
-        jDaimio.process(command, function(response) {
-          $('.update').html(response)
-        });
+        jDaimio.process(command);
 
       });
 
