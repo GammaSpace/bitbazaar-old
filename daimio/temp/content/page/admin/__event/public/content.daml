@@ -10,7 +10,7 @@ Update:
       {begin memberlist | merge with @ex_org}
         <li class="list-group-item" data-item-id="{_id}">
           {my.name} <b>{my.product}</b>
-          <span class="pull-right">{depot.order} {my.order}</span>
+          <span class="pull-right">{depot.order}</span>
         </li>
       {end memberlist}
     </ul>

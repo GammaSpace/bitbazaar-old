@@ -55,8 +55,8 @@ jDaimio.process = function(commands, vars, callback) {
   } else {
     jQuery.extend(post_data, vars);
   }
-  
-  $.post(src + "/../../hermes.php", 
+
+  $.post(src + "/../../hermes.php",
     post_data,
     function(response) {
       jDaimio.logStuff(response);
@@ -74,7 +74,7 @@ jQuery.fn.daimioLoad = function(commands, vars) {
   jQuery.extend(post_data, vars);
   var $this = this;
 
-  $.post(src + "/../../hermes.php", 
+  $.post(src + "/../../hermes.php",
     post_data,
     function(response) {
       jDaimio.logStuff(response);
@@ -93,7 +93,7 @@ jQuery.fn.daimioSubmit = function(callback) {
   var $this = this;
   var post_data = $this.serialize();
 
-  $.post(src + "/../../hermes.php", 
+  $.post(src + "/../../hermes.php",
     post_data,
     function(response) {
       jDaimio.logStuff(response);
@@ -119,4 +119,3 @@ jDaimio.logStuff = function(response) {
     console.log('error', response.errors);
   }
 }
-
