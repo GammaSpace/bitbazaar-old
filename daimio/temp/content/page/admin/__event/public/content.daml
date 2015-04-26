@@ -1,0 +1,19 @@
+<div class="container"><div class="page-header">
+  <a href="{@SITE.path}/admin/{#event}" class="pull-right">Exhibitor List</a>
+  <h2>Bit Bazaar {#event} <small>Sort Exhibitor List</small></h2>
+</div>
+Update:
+<div class="update"></div>
+<div class="row">
+  <div class="col-md-4">
+    <ul class="list-group sortable">
+      {begin memberlist | merge with @ex_org}
+        <li class="list-group-item" data-item-id="{_id}">
+          {my.name} <b>{my.product}</b>
+          <span class="pull-right">{depot.order} {my.order}</span>
+        </li>
+      {end memberlist}
+    </ul>
+
+  </div>
+</div>

@@ -49,6 +49,3 @@
 	<div class="center-block text-center">
 		{%global/snippets/footer_info}
 	</div>
-	{%global/metrics | process escape}
-	{%global/login_modal}
-</body>

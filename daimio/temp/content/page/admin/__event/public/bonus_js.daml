@@ -1,0 +1,53 @@
+<script type="text/javascript" charset="utf-8" language="javascript" src="{@SITE.path}/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf-8" language="javascript" src="{@SITE.path}/js/dataTables.bootstrap.js"></script>
+<script type="text/javascript" charset="utf-8" language="javascript" src="{@SITE.path}/js/html.sortable.min.js"></script>
+
+<script src="{@SITE.path}/js/jDaimio.js"></script>
+
+{begin js | process escape}
+  <script>
+  $(document).ready(function(){
+
+
+    $('.sortable').sortable().bind('sortupdate', function(e, ui) {
+
+
+      var dataIDList = $('ul.sortable li')
+      var realArray = $.makeArray( dataIDList )
+
+      $.map( realArray, function( val, i ) {
+        var new_val = $(val).data("item-id")
+        var command = "{exec depot_set for :" + new_val + " in :stuff path :order value " + i + "}"
+        jDaimio.process(command, function(response) {
+          $('.update').html(response)
+        });
+
+      });
+
+    return false;
+    /*
+
+    This event is triggered when the user stopped sorting and the DOM position has changed.
+
+    ui.item contains the current dragged element.
+    ui.item.index() contains the new index of the dragged element
+    ui.oldindex contains the old index of the dragged element
+    ui.startparent contains the element that the dragged item comes from
+    ui.endparent contains the element that the dragged item was added to
+
+    */
+});
+
+
+    $('.table-data').dataTable( {
+      "order": [[ 1, "desc" ]]
+    } );
+    $.extend( $.fn.dataTableExt.oStdClasses, {
+      "sWrapper": "dataTables_wrapper form-inline",
+    });
+    $('input,select','.dataTables_filter,.dataTables_length').addClass('form-control');
+    $('.dataTables_filter').addClass('pull-right');
+  });
+
+</script>
+{end js}

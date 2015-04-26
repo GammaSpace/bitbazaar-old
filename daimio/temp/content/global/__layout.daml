@@ -30,8 +30,11 @@
 </head>
 
   {%body}
+
   <script src="{@SITE.path}/js/jquery.min.js"></script>
   <script src="{@SITE.path}/js/bootstrap.min.js"></script>
+
+
   {%bonus_js}
   {%login_modal}
   {%global/snippets/analytics}
@@ -42,4 +45,5 @@
   <!-- End of Inbox Widget script -->
 
   {end js}
+  </body>
 </html>
