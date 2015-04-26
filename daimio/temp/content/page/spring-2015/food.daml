@@ -4,7 +4,7 @@
     <div class="col-md-3">
       <p class="{depot.application_type} org">
         <a href="{"http://" | is in my.link | then "{my.link}" else "http://{my.link}"}">{my.name}</a>
-        </p>
+      </p>
     </div>
     <div class="col-md-9">
       <p class="name"> {my.product}</p>
