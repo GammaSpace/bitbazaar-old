@@ -4,7 +4,10 @@
 {begin cat_vendors | merge with @ex_org}
   <div class="confirmed row">
     <div class="col-md-6">
-      <p class="{depot.application_type} org">{my.product}</p>
+      <p class="{depot.application_type} org">
+      <a href="{"http://" | is in my.link | then "{my.link}" else "http://{my.link}"}">{my.product}</a>
+      </p>
+
     </div>
     <div class="col-md-6">
       <p class="name">{my.name}</p>

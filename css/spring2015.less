@@ -450,6 +450,18 @@ body {
             p {
               line-height: 30px;
               font-size: 24px;
+              a {
+                text-decoration: none;
+                border-bottom: none;
+                color: inherit;
+                &:hover {
+                  border-bottom: none;
+                  color: saturate(@secondary,20%);
+                  background: @highlight;
+                }
+
+              }
+
               &.org {
                 font-family: @kepler-std;
                 margin: 0;
