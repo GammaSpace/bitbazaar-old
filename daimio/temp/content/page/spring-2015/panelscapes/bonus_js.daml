@@ -3,7 +3,9 @@
 {begin js | process escape}
 <script>
 $(document).ready(function(){
-  $('.artist').matchHeight({
+
+
+  $('.artist,.partner').matchHeight({
     byRow: true,
     property: 'height',
     target: null,

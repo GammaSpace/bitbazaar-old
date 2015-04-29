@@ -6541,29 +6541,6 @@ html {
 .nowrap {
   white-space: nowrap;
 }
-@media (min-width: 500px) {
-  body {
-    padding: 1em;
-  }
-  h1 {
-    font-size: 3.2em;
-  }
-  .logo {
-    padding: 2em 25%;
-  }
-  .bs-docs-section {
-    margin-bottom: 1em;
-  }
-  .location h1:first-child {
-    padding-right: .5em;
-  }
-  .location h1 {
-    display: inline;
-  }
-  #cfp button[type="submit"] {
-    width: initial;
-  }
-}
 .inliner:before,
 .inliner:after {
   content: " ";
@@ -6584,7 +6561,8 @@ html {
   height: 100%;
 }
 body {
-  margin: 0;
+  margin: 0px;
+  margin-top: 60px;
   height: 100%;
   background-color: #dfdbe4;
   background: #b9acc7;
@@ -6609,30 +6587,6 @@ body.bit-bazaar .content {
 #music h4 small,
 #music p small {
   color: #a27b3d;
-}
-#panelscapes {
-  background: #ffffff;
-  background-image: url(../images/spring-2015/promo_panelscapes2.gif);
-  background-position: right 20%;
-  background-position: cover;
-  min-height: 200px;
-  background-repeat: no-repeat;
-}
-#panelscapes h2,
-#panelscapes h3,
-#panelscapes h4,
-#panelscapes p {
-  color: #0d00e3;
-}
-#panelscapes h2 small,
-#panelscapes h3 small,
-#panelscapes h4 small,
-#panelscapes p small {
-  color: #2417ff;
-}
-#panelscapes p {
-  background: #c6bbd1;
-  display: inline;
 }
 body a {
   color: #000;
@@ -6713,10 +6667,21 @@ body#bit-bazaar-spring-fair-2015 section#about p a:hover {
   color: #0d00e3;
   text-decoration: underline;
 }
+body#bit-bazaar-spring-fair-2015 section#about-footer {
+  padding: 30px 0 30px;
+  text-align: left;
+  color: #c6bbd1;
+}
 body#bit-bazaar-spring-fair-2015 section#about-footer p,
 body#bit-bazaar-spring-fair-2015 section#about-footer a {
-  color: #7c77d2;
-  border-bottom: none;
+  color: #dff954;
+  font-size: 14px;
+}
+body#bit-bazaar-spring-fair-2015 section#about-footer a {
+  border-bottom-color: #dff954;
+}
+body#bit-bazaar-spring-fair-2015 section#about-footer #copyright {
+  text-align: left !important;
 }
 body#bit-bazaar-spring-fair-2015 .wrapper {
   display: table;
@@ -6749,13 +6714,18 @@ body#bit-bazaar-spring-fair-2015 h2 {
   letter-spacing: 2px;
 }
 body#bit-bazaar-spring-fair-2015 #header {
-  padding: 2em;
+  padding: 4em 1em 1em 1em;
   background-image: url(../images/spring-2015/header.png);
   position: relative;
   top: 0;
   left: 0;
   z-index: 0;
   background-size: cover;
+}
+@media (min-width: 992px) {
+  body#bit-bazaar-spring-fair-2015 #header {
+    padding: 2em;
+  }
 }
 body#bit-bazaar-spring-fair-2015 #header h1,
 body#bit-bazaar-spring-fair-2015 #header h2,
@@ -6766,38 +6736,44 @@ body#bit-bazaar-spring-fair-2015 #header a {
 body#bit-bazaar-spring-fair-2015 #header a.btn {
   text-decoration: none;
 }
-body#bit-bazaar-spring-fair-2015 #header p,
-body#bit-bazaar-spring-fair-2015 #header a {
+body#bit-bazaar-spring-fair-2015 #header p {
   color: #f9f8fa;
   font-size: 32px;
   text-shadow: 1px 1px 0px #937ea8;
 }
-body#bit-bazaar-spring-fair-2015 #header p.tagline,
-body#bit-bazaar-spring-fair-2015 #header a.tagline {
-  line-height: 1.1em;
-  font-size: 56px;
+body#bit-bazaar-spring-fair-2015 #header p.tagline {
+  line-height: normal;
   color: #fff;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  body#bit-bazaar-spring-fair-2015 #header p.tagline {
+    line-height: 1.1em;
+    font-size: 36px;
+  }
 }
 body#bit-bazaar-spring-fair-2015 #header p.lead,
-body#bit-bazaar-spring-fair-2015 #header a.lead {
+body#bit-bazaar-spring-fair-2015 #header p.lead p a {
   background-color: #dff954;
   color: #0d00e3;
   padding: 4px 9px;
   text-shadow: none;
-  display: inline;
-  float: left;
+  text-align: center;
   margin-bottom: 1em;
 }
 body#bit-bazaar-spring-fair-2015 #header p.lead.small,
-body#bit-bazaar-spring-fair-2015 #header a.lead.small {
+body#bit-bazaar-spring-fair-2015 #header p.lead p a.small {
   padding: 2px 4px;
   font-size: 22px;
 }
+body#bit-bazaar-spring-fair-2015 #header p.lead.small a,
+body#bit-bazaar-spring-fair-2015 #header p.lead p a.small a {
+  color: inherit;
+  border-bottom: none;
+  text-decoration: underline;
+}
 body#bit-bazaar-spring-fair-2015 #header p.cta,
-body#bit-bazaar-spring-fair-2015 #header a.cta,
-body#bit-bazaar-spring-fair-2015 #header p.partners,
-body#bit-bazaar-spring-fair-2015 #header a.partners {
-  font-family: "proxima-nova", sans-serif;
+body#bit-bazaar-spring-fair-2015 #header p.partners {
   font-size: 24px;
   line-height: 1.2em;
 }
@@ -6878,10 +6854,14 @@ body#bit-bazaar-spring-fair-2015 section h3 {
   font-style: italic;
 }
 body#bit-bazaar-spring-fair-2015 section h3.main {
-  font-size: 62px;
   margin-top: 0;
   font-style: normal;
   text-shadow: 1px 1px 1px #ff00ff, -1px -1px 2px #00ffff;
+}
+@media (min-width: 992px) {
+  body#bit-bazaar-spring-fair-2015 section h3.main {
+    font-size: 62px;
+  }
 }
 body#bit-bazaar-spring-fair-2015 section p {
   font-size: 24px;
@@ -6899,6 +6879,99 @@ body#bit-bazaar-spring-fair-2015 section p.links a {
   text-decoration: none;
   border-bottom: solid 2px #fff;
   color: #fff;
+}
+body#bit-bazaar-spring-fair-2015 section#panelscapes {
+  background: #ffffff;
+  background-image: url(../images/spring-2015/panelscapes/bg-halftone.jpg);
+  padding: 0 0 20px 0;
+}
+body#bit-bazaar-spring-fair-2015 section#panelscapes h2,
+body#bit-bazaar-spring-fair-2015 section#panelscapes h3,
+body#bit-bazaar-spring-fair-2015 section#panelscapes h4,
+body#bit-bazaar-spring-fair-2015 section#panelscapes p {
+  color: #0d00e3;
+}
+body#bit-bazaar-spring-fair-2015 section#panelscapes h2 small,
+body#bit-bazaar-spring-fair-2015 section#panelscapes h3 small,
+body#bit-bazaar-spring-fair-2015 section#panelscapes h4 small,
+body#bit-bazaar-spring-fair-2015 section#panelscapes p small {
+  color: #2417ff;
+}
+body#bit-bazaar-spring-fair-2015 section#panelscapes header {
+  background: #ffffff url(../images/spring-2015/panelscapes/panelscapes_logo.png) no-repeat top center;
+  background-position: 50% 50%;
+  height: 200px;
+  border-top: solid 2px magenta;
+  border-bottom: solid 2px magenta;
+  margin-bottom: 20px;
+}
+body#bit-bazaar-spring-fair-2015 section#panelscapes h3.main {
+  color: magenta;
+  font-size: 30px;
+}
+body#bit-bazaar-spring-fair-2015 section#panelscapes p {
+  font-size: 18px;
+  text-align: center;
+  color: magenta;
+}
+body#bit-bazaar-spring-fair-2015 section#panelscapes p strong {
+  font-family: "kepler-std", serif;
+  background: #dff954;
+}
+body#bit-bazaar-spring-fair-2015 section#panelscapes a {
+  color: magenta;
+  text-decoration: underline;
+  border-bottom: none;
+}
+body#bit-bazaar-spring-fair-2015 section#panelscapes .btn-3d {
+  border-bottom: none;
+  z-index: 200;
+  color: #fff;
+  display: inline-block;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  outline: none;
+  position: relative;
+}
+body#bit-bazaar-spring-fair-2015 section#panelscapes .btn-3d span {
+  position: relative;
+  display: inline-block;
+  padding: .7rem 1.2rem .6rem;
+  background: #ff00ff;
+  transition: -webkit-transform 0.3s;
+  transition: transform .3s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+body#bit-bazaar-spring-fair-2015 section#panelscapes .btn-3d span,
+body#bit-bazaar-spring-fair-2015 section#panelscapes .btn-3d span:before {
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+}
+body#bit-bazaar-spring-fair-2015 section#panelscapes .btn-3d span:before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #990099;
+  content: attr(data-hover);
+  transition: background .3s;
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  padding-top: .6375rem;
+  text-align: center;
+}
+body#bit-bazaar-spring-fair-2015 section#panelscapes .btn-3d:hover span,
+body#bit-bazaar-spring-fair-2015 section#panelscapes .btn-3d:focus span {
+  -webkit-transform: rotateX(90deg) translateY(-18px);
+  transform: rotateX(90deg) translateY(-18px);
+  background-color: #ff00ff;
+  color: #ffffff;
+}
+body#bit-bazaar-spring-fair-2015 section#panelscapes .btn-3d:hover span:before,
+body#bit-bazaar-spring-fair-2015 section#panelscapes .btn-3d:focus span:before {
+  background-color: #ff00ff;
 }
 body#bit-bazaar-spring-fair-2015 section#vendors,
 body#bit-bazaar-spring-fair-2015 section#music {
@@ -6998,8 +7071,12 @@ body#bit-bazaar-spring-fair-2015 section#vendors #coming .confirmed p.org {
   color: #2417ff;
   text-shadow: 1px 1px 1px #e3f825;
   font-style: italic;
-  float: right !important;
-  text-align: right;
+}
+@media (min-width: 992px) {
+  body#bit-bazaar-spring-fair-2015 section#vendors #coming .confirmed p.org {
+    float: right !important;
+    text-align: right;
+  }
 }
 body#bit-bazaar-spring-fair-2015 section#vendors #coming .confirmed p.name {
   font-size: 18px;
@@ -7067,21 +7144,21 @@ body#bit-bazaar-spring-fair-2015 h3 {
   font-weight: 100;
 }
 body .navbar-default {
-  background-color: #ffffff;
+  background-color: #1725dd;
   border: none;
 }
 body .navbar-default .navbar-brand {
-  color: #000000;
+  color: #dff954;
 }
 body .navbar-default .navbar-brand:hover,
 body .navbar-default .navbar-brand:focus {
   color: #ffffff;
 }
 body .navbar-default .navbar-text {
-  color: #000000;
+  color: #dff954;
 }
 body .navbar-default .navbar-nav > li > a {
-  color: #000000;
+  color: #dff954;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-style: italic;
@@ -7100,45 +7177,45 @@ body .navbar-default .navbar-nav > li > a {
 body .navbar-default .navbar-nav > li > a:hover,
 body .navbar-default .navbar-nav > li > a:focus {
   text-decoration: underline;
-  color: #fff;
-  background: #000;
+  color: #dff954;
+  background: #121daf;
 }
 body .navbar-default .navbar-nav > .active > a,
 body .navbar-default .navbar-nav > .active > a:hover,
 body .navbar-default .navbar-nav > .active > a:focus {
   text-decoration: underline;
-  color: #fff;
-  background-color: #000;
+  color: #dff954;
+  background-color: #121daf;
 }
 body .navbar-default .navbar-nav > .open > a,
 body .navbar-default .navbar-nav > .open > a:hover,
 body .navbar-default .navbar-nav > .open > a:focus {
   color: #ffffff;
-  background-color: #000000;
+  background-color: #121daf;
 }
 body .navbar-default .navbar-toggle {
-  border-color: #000000;
+  border-color: #121daf;
 }
 body .navbar-default .navbar-toggle:hover,
 body .navbar-default .navbar-toggle:focus {
-  background-color: #000000;
+  background-color: #121daf;
 }
 body .navbar-default .navbar-toggle .icon-bar {
-  background-color: #000000;
+  background-color: #dff954;
 }
 body .navbar-default .navbar-collapse,
 body .navbar-default .navbar-form {
-  border-color: #000000;
+  border-color: #dff954;
 }
 body .navbar-default .navbar-link {
-  color: #000000;
+  color: #dff954;
 }
 body .navbar-default .navbar-link:hover {
   color: #ffffff;
 }
 @media (max-width: 767px) {
   body .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #000000;
+    color: #dff954;
   }
   body .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   body .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -7148,7 +7225,7 @@ body .navbar-default .navbar-link:hover {
   body .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   body .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #ffffff;
-    background-color: #000000;
+    background-color: #121daf;
   }
 }
 #partners {

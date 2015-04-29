@@ -6530,46 +6530,97 @@ button.close {
   }
 }
 body {
-  background: #faf8f8;
-  color: magenta;
-  padding-right: 15px;
-  /* background: url(../images/spring-2015/panelscapes/plus_tile.png) */
+  background: #ffe5ff;
+  color: #ff00ff;
+  background-image: url(../images/spring-2015/panelscapes/bg-halftone.jpg);
 }
-.lead {
+.content {
+  padding-right: 15px;
+}
+html {
+  height: 100%;
+}
+header {
+  background: #ffffff url(../images/spring-2015/panelscapes/panelscapes_logo.png) no-repeat top center;
+  height: 428px;
+  margin-right: -15px;
+}
+.lede {
+  margin: 30px 0;
+}
+.lede * {
+  text-align: center;
+}
+.lede * .lead {
   font-size: 28px;
 }
 #about-footer {
-  padding-top: 60px;
+  padding: 30px 0 30px;
   text-align: left;
-  color: #000;
+  color: #ff00ff;
 }
 #about-footer p,
 #about-footer a {
-  color: #000;
+  color: #ff00ff;
 }
 #about-footer #copyright {
   text-align: left !important;
 }
-.ps-item {
-  border-top: solid 1px #ff93f0;
-  border-left: solid 1px #ff93f0;
-  border-right: solid 1px #ff93f0;
+#presented-by {
+  background: #ff00ff;
+  padding: 60px 0;
+  margin-top: 30px;
+}
+#presented-by h3 {
+  color: #fff;
+  float: right !important;
+  text-align: right;
+}
+.artists {
   background: #fff;
+  padding: 1em;
+  border: solid 1px #ff00ff;
 }
-.ps-item.first {
-  border-bottom: none;
-  border-top: solid 1px #ff93f0;
+@media (min-width: 768px) {
+  .artists {
+    border: none;
+  }
 }
-.ps-item.last {
-  border-top: solid 1px #ff93f0;
-  border-bottom: solid 1px #ff93f0;
+.ps-item {
+  margin-bottom: 4em;
 }
-.ps-item img.comic-panel {
-  width: 100%;
-  padding: 3em;
+@media (min-width: 768px) {
+  .ps-item {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .artists {
+    background: none;
+    padding: 0;
+  }
+  .ps-item {
+    border-top: solid 1px #ff00ff;
+    border-left: solid 1px #ff00ff;
+    border-right: solid 1px #ff00ff;
+    background: #fff;
+  }
+  .ps-item.first {
+    border-bottom: none;
+    border-top: solid 1px #ff00ff;
+  }
+  .ps-item.last {
+    border-top: solid 1px #ff00ff;
+    border-bottom: solid 1px #ff00ff;
+  }
+  .ps-item img.comic-panel {
+    width: 100%;
+    padding: 3em;
+  }
 }
 h1 {
-  font-size: 78px ;
+  font-size: 46px;
+  font-weight: 100 !important;
 }
 h1,
 h2 {
@@ -6586,7 +6637,7 @@ h3 {
   letter-spacing: 2px;
   font-weight: 100;
   font-size: 22px;
-  margin-top: 3px;
+  margin-top: 6px;
   margin-bottom: 12px;
 }
 h4 {
@@ -6602,63 +6653,30 @@ p {
   font-size: 16px;
   line-height: 1.7em;
 }
-.row.artist#pham * {
-  color: #339cf4;
+.row.artist h2 {
+  padding: 4px 15px;
+  margin-left: -15px;
 }
 .row.artist#deforge * {
-  color: #ed7932;
+  color: #ff9453;
+}
+.row.artist#deforge h2 {
+  color: #ffffff;
+  background-color: #ff9453;
+}
+.row.artist#pham * {
+  color: #2837ff;
+}
+.row.artist#pham h2 {
+  color: #ffffff;
+  background-color: #2837ff;
 }
 .row.artist#jo * {
   color: #000000;
 }
-.tk-aktiv-grotesk-std {
-  font-family: "aktiv-grotesk-std", sans-serif;
-  font-size-adjust: 0.508;
-  font-weight: normal;
-  font-style: normal;
-}
-html {
-  height: 100%;
-}
-@media (min-width: 500px) {
-  h1 {
-    font-size: 3.2em;
-  }
-  .logo {
-    padding: 2em 25%;
-  }
-  .bs-docs-section {
-    margin-bottom: 1em;
-  }
-  .location h1:first-child {
-    padding-right: .5em;
-  }
-  .location h1 {
-    display: inline;
-  }
-  #cfp button[type="submit"] {
-    width: initial;
-  }
-}
-#music {
-  background: #eeeeee;
-}
-#music h2,
-#music h3,
-#music h4,
-#music p {
-  color: #7d5f2f;
-}
-#music h2 small,
-#music h3 small,
-#music h4 small,
-#music p small {
-  color: #a27b3d;
-}
-#logo {
-  margin: 0 auto;
-  float: none;
-  text-align: center;
+.row.artist#jo h2 {
+  color: #ffffff;
+  background-color: #000000;
 }
 .wrapper {
   display: table;
@@ -6671,9 +6689,18 @@ html {
   vertical-align: middle;
   position: relative;
 }
-.inner img {
+.inner img,
+.inner h3 {
   margin: 0 auto;
   text-align: center;
   float: none;
   display: block;
+}
+.inner img.logo {
+  margin-bottom: 2em;
+}
+@media (min-width: 768px) {
+  .inner img.logo {
+    margin-bottom: 0;
+  }
 }

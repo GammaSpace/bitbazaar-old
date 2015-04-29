@@ -1,12 +1,12 @@
 <body id="bit-bazaar-spring-fair-2015" class="bit-bazaar" data-spy="scroll" data-target="#primary-nav-2" data-offset="50">
-  {/%nav}
+  {%nav}
   {%content}
+
   <section id="about-footer">
     <div class="container">
-      <div class="footer clearfix" id="about-footer">
+
         {%global/snippets/footer_info}
         <p>Applications to exhibit are now closed, but you can <a href="http://eepurl.com/HwS5T">join our mailing list</a> to find out when they open for our next event!</p>
-      </div>
+  
     </div>
   </section>
-  
