@@ -1,6 +1,13 @@
 <body id="bit-bazaar-spring-fair-2015" class="panelscapes" data-spy="scroll" data-target="#primary-nav-2" data-offset="50">
   {/%nav}
-  {%content}
+  <div class="container-fluid">
+
+    {%content}
+
+
+  </div>
+
+
   <section id="about-footer">
     <div class="container">
       <div class="footer clearfix" id="about-footer">

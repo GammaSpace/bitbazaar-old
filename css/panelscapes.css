@@ -1060,7 +1060,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "proxima-nova", sans-serif;
+  font-family: "aktiv-grotesk-std", sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -1159,7 +1159,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "larabiefont", monospace;
+  font-family: "raleway", sans-serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -5792,7 +5792,7 @@ button.close {
   z-index: 1070;
   display: block;
   visibility: visible;
-  font-family: "proxima-nova", sans-serif;
+  font-family: "aktiv-grotesk-std", sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -5899,7 +5899,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "proxima-nova", sans-serif;
+  font-family: "aktiv-grotesk-std", sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.428571429;
@@ -6529,6 +6529,88 @@ button.close {
     display: none !important;
   }
 }
+body {
+  background: #faf8f8;
+  color: magenta;
+  padding-right: 15px;
+  /* background: url(../images/spring-2015/panelscapes/plus_tile.png) */
+}
+.lead {
+  font-size: 28px;
+}
+#about-footer {
+  padding-top: 60px;
+  text-align: left;
+  color: #000;
+}
+#about-footer p,
+#about-footer a {
+  color: #000;
+}
+#about-footer #copyright {
+  text-align: left !important;
+}
+.ps-item {
+  border-top: solid 1px #ff93f0;
+  border-left: solid 1px #ff93f0;
+  border-right: solid 1px #ff93f0;
+  background: #fff;
+}
+.ps-item.first {
+  border-bottom: none;
+  border-top: solid 1px #ff93f0;
+}
+.ps-item.last {
+  border-top: solid 1px #ff93f0;
+  border-bottom: solid 1px #ff93f0;
+}
+.ps-item img.comic-panel {
+  width: 100%;
+  padding: 3em;
+}
+h1 {
+  font-size: 78px ;
+}
+h1,
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-style: italic;
+  font-weight: 100;
+}
+h2 {
+  margin-bottom: 0;
+}
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 100;
+  font-size: 22px;
+  margin-top: 3px;
+  margin-bottom: 12px;
+}
+h4 {
+  font-family: "aktiv-grotesk-std", sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+}
+h4 span {
+  font-weight: 100;
+}
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7em;
+}
+.row.artist#pham * {
+  color: #339cf4;
+}
+.row.artist#deforge * {
+  color: #ed7932;
+}
+.row.artist#jo * {
+  color: #000000;
+}
 .tk-aktiv-grotesk-std {
   font-family: "aktiv-grotesk-std", sans-serif;
   font-size-adjust: 0.508;
@@ -6539,9 +6621,6 @@ html {
   height: 100%;
 }
 @media (min-width: 500px) {
-  body {
-    padding: 1em;
-  }
   h1 {
     font-size: 3.2em;
   }
@@ -6561,36 +6640,6 @@ html {
     width: initial;
   }
 }
-.inliner:before,
-.inliner:after {
-  content: " ";
-  display: table;
-}
-.inliner:after {
-  clear: both;
-}
-.inliner:before,
-.inliner:after {
-  content: " ";
-  display: table;
-}
-.inliner:after {
-  clear: both;
-}
-html {
-  height: 100%;
-}
-body {
-  margin: 0;
-  height: 100%;
-  background: #000922;
-}
-body.bit-bazaar .modal-backdrop {
-  background-color: rgba(68, 68, 68, 0.4);
-}
-body.bit-bazaar .content {
-  margin: 0;
-}
 #music {
   background: #eeeeee;
 }
@@ -6606,142 +6655,23 @@ body.bit-bazaar .content {
 #music p small {
   color: #a27b3d;
 }
-#works {
-  background: #000000;
+#logo {
+  margin: 0 auto;
+  float: none;
+  text-align: center;
 }
-#works h2,
-#works h3,
-#works h4,
-#works p {
-  color: #60fff3;
-}
-#works h2 small,
-#works h3 small,
-#works h4 small,
-#works p small {
-  color: #93fff7;
-}
-#works p {
-  font-size: 20px;
-}
-#works .work {
-  border-left: solid 1px #60fff3;
-  padding-left: 10px;
-  padding-bottom: 80px;
-}
-#works .work h2 {
-  margin-top: 0;
-}
-body {
-  background: #000;
-}
-body a {
-  color: #000;
-  text-decoration: underline;
-}
-body a:hover {
-  color: #00784e;
-}
-body .imagebox {
-  width: 100%;
-}
-body .navbar-default {
-  background-color: #ffffff;
-  border: none;
-}
-body .navbar-default .navbar-brand {
-  color: #000000;
-}
-body .navbar-default .navbar-brand:hover,
-body .navbar-default .navbar-brand:focus {
-  color: #ffffff;
-}
-body .navbar-default .navbar-text {
-  color: #000000;
-}
-body .navbar-default .navbar-nav > li > a {
-  color: #000000;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-style: italic;
-  font-weight: 100;
-}
-@media (min-width: 768px) {
-  body .navbar-default .navbar-nav > li > a {
-    font-size: 12px;
-  }
-}
-@media (min-width: 992px) {
-  body .navbar-default .navbar-nav > li > a {
-    font-size: 18px;
-  }
-}
-body .navbar-default .navbar-nav > li > a:hover,
-body .navbar-default .navbar-nav > li > a:focus {
-  text-decoration: underline;
-  color: #fff;
-  background: #000;
-}
-body .navbar-default .navbar-nav > .active > a,
-body .navbar-default .navbar-nav > .active > a:hover,
-body .navbar-default .navbar-nav > .active > a:focus {
-  text-decoration: underline;
-  color: #fff;
-  background-color: #000;
-}
-body .navbar-default .navbar-nav > .open > a,
-body .navbar-default .navbar-nav > .open > a:hover,
-body .navbar-default .navbar-nav > .open > a:focus {
-  color: #ffffff;
-  background-color: #000000;
-}
-body .navbar-default .navbar-toggle {
-  border-color: #000000;
-}
-body .navbar-default .navbar-toggle:hover,
-body .navbar-default .navbar-toggle:focus {
-  background-color: #000000;
-}
-body .navbar-default .navbar-toggle .icon-bar {
-  background-color: #000000;
-}
-body .navbar-default .navbar-collapse,
-body .navbar-default .navbar-form {
-  border-color: #000000;
-}
-body .navbar-default .navbar-link {
-  color: #000000;
-}
-body .navbar-default .navbar-link:hover {
-  color: #ffffff;
-}
-@media (max-width: 767px) {
-  body .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #000000;
-  }
-  body .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-  body .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #ffffff;
-  }
-  body .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
-  body .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
-  body .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #ffffff;
-    background-color: #000000;
-  }
-}
-#partners .wrapper {
+.wrapper {
   display: table;
   width: 100%;
   height: 100%;
   margin: auto;
 }
-#partners .partner {
+.inner {
   display: table-cell;
   vertical-align: middle;
   position: relative;
 }
-#partners .partner img {
+.inner img {
   margin: 0 auto;
   text-align: center;
   float: none;
