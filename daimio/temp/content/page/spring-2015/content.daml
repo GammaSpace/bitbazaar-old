@@ -65,7 +65,7 @@
 
 
     <p>
-      <a href="" class="btn-3d"> <span data-hover="Check It Out">Check It Out</span></a>
+      <a href="{@SITE.path}/spring-2015/panelscapes" class="btn-3d"> <span data-hover="Check It Out">Check It Out</span></a>
     </p>
 
     </div>
