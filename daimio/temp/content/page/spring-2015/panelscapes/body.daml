@@ -28,21 +28,21 @@
         <div class="col-md-2">
           <div class="wrapper">
             <div class="inner partner">
-              <a href="http://bentomiso.com">
-                <img src="{@SITE.path}/images/spring-2015/partner-logos/miso_logo_white_small.png" alt="Bento Miso" class="img-responsive logo" style="padding: 0 20px;">
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="wrapper">
-            <div class="inner partner">
               <a href="http://attractmo.de">
                 <img src="{@SITE.path}/images/spring-2015/partner-logos/attract_mode_white.png" alt="Attract Mode" class="img-responsive logo" style="padding: 0 20px;">
               </a>
             </div>
           </div>
 
+        </div>
+        <div class="col-md-2">
+          <div class="wrapper">
+            <div class="inner partner">
+              <a href="http://bentomiso.com">
+                <img src="{@SITE.path}/images/spring-2015/partner-logos/miso_logo_white_small.png" alt="Bento Miso" class="img-responsive logo" style="padding: 0 20px;">
+              </a>
+            </div>
+          </div>
         </div>
         <div class="col-md-3 hidden-xs">
           <div class="wrapper">
