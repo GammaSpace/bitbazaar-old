@@ -58,15 +58,9 @@
 
     <p class="lead">Explore worlds at the intersection of comics and virtual reality.<br>New original works by <strong>Hellen Jo</strong>, <strong>Michael DeForge</strong> and <strong>John Pham</strong>.</p>
 
+    <p> May 7, 2015–May 12, 2015 &bull; Opening party: Thursday, May 7 @ 7 p.m. </p>
 
-    <p> May 7, 2015–May 12, 2015 &bull;
-      Opening party: Thursday, May 7 @ 7 p.m.
-      </p>
-
-
-    <p>
-      <a href="{@SITE.path}/spring-2015/panelscapes" class="btn-3d"> <span data-hover="Check It Out">Check It Out</span></a>
-    </p>
+    <p> <a href="{@SITE.path}/spring-2015/panelscapes" class="btn-3d"> <span data-hover="Check It Out">Check It Out</span></a> </p>
 
     </div>
 
