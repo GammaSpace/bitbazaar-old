@@ -6704,3 +6704,53 @@ p {
     margin-bottom: 0;
   }
 }
+.btn-3d {
+  border-bottom: none;
+  z-index: 200;
+  color: #fff;
+  display: inline-block;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  outline: none;
+  position: relative;
+}
+.btn-3d span {
+  position: relative;
+  display: inline-block;
+  padding: .7rem 1.2rem .6rem;
+  background: #ff00ff;
+  transition: -webkit-transform 0.3s;
+  transition: transform .3s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.btn-3d span,
+.btn-3d span:before {
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+}
+.btn-3d span:before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #990099;
+  content: attr(data-hover);
+  transition: background .3s;
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  padding-top: .6375rem;
+  text-align: center;
+}
+.btn-3d:hover span,
+.btn-3d:focus span {
+  -webkit-transform: rotateX(90deg) translateY(-18px);
+  transform: rotateX(90deg) translateY(-18px);
+  background-color: #ff00ff;
+  color: #ffffff;
+}
+.btn-3d:hover span:before,
+.btn-3d:focus span:before {
+  background-color: #ff00ff;
+}
