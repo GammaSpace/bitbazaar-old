@@ -1,9 +1,9 @@
 {* (
 	:page { * (
 		:masthead_copy "Bit Bazaar"
-		:title "Bit Bazaar: A unique celebration of the art and craft of indie games in the tradition of zine fairs."
+		:title "Bit Bazaar: A unique celebration of the art and craft of videogames in the tradition of zine fairs."
 		:description "A unique zine-fair-meets-arcade, presented by Bento Miso"
-		:keywords "bit bazaar, indie games, zine fair, toronto indie games"
+		:keywords "bit bazaar, videogames, zine fair, toronto videogames"
 		:typekit :bly6qri
 		:css_path "{@SITE.path}/css/spring2015.css?{time represent}"
 	)}
