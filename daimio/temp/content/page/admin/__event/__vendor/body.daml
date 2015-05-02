@@ -18,7 +18,7 @@
 
 
       <div class="form-group">
-        <label class="form-label" for="table"></label>
+
         <div class="input-group">
           <label class="form-label" for="type">Table Size</label>
           <div class="radio">
@@ -143,6 +143,7 @@
             "}
             {end set}
             {exec depot_set for @ex_id in :stuff path :order value #order}
+            {exec depot_set for @ex_id in :stuff path :table_size value #table_size}
           {notice set value {* (
             :message "<strong>Success!</strong>  Your changes have been saved"
             :type :success
