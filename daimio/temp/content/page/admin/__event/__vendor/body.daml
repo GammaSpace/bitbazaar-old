@@ -142,6 +142,7 @@
               {my set for @ex_id in :stuff path key value value}
             "}
             {end set}
+            {log #table_size}
           {notice set value {* (
             :message "<strong>Success!</strong>  Your changes have been saved"
             :type :success
