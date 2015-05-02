@@ -27,6 +27,7 @@
       <th>Product</th>
       <th>Email</th>
       <th>Order</th>
+      <th>Table Size</th>
       <th>Edit</th>
 
       <th>In?</th>
@@ -47,6 +48,7 @@
 
         </td>
         <td>{my.order}</td>
+        <td>{my.table_size}</td>
         <td><a href="{@SITE.path}/admin/{#event}/{_id}" class="btn btn-warning">Edit</a></td>
         <td style="width:120px;">
 
