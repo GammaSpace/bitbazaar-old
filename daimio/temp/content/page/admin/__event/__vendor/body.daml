@@ -23,12 +23,12 @@
           <label class="form-label" for="type">Table Size</label>
           <div class="radio">
             <label class="">
-              <input type="radio" name="exhibitor[table_size]" id="type-full" value="full" {my.table_size | is like :full | then :checked}> Full
+              <input type="radio" name="depot[table_size]" id="type-full" value="full" {my.table_size | is like :full | then :checked}> Full
             </label>
           </div>
           <div class="radio">
             <label class="">
-              <input type="radio" name="exhibitor[table_size]" id="type-half" value="half" {my.table_size | is like :half | not | then :checked}> Half
+              <input type="radio" name="depot[table_size]" id="type-half" value="half" {my.table_size | is like :half | not | then :checked}> Half
             </label>
           </div>
         </div>
