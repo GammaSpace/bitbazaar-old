@@ -15,6 +15,26 @@
     {%global/notices}
     {#vendor | stuff find by_ids | > :vendor | ""}
     {begin vendor | merge with @vendor}
+
+
+      <div class="form-group">
+        <label class="form-label" for="table"></label>
+        <div class="input-group">
+          <label class="form-label" for="type">Table Size</label>
+          <div class="radio">
+            <label class="">
+              <input type="radio" name="depot[table_size]" id="type-full" value="full" {my.table_size | is like :full | then :checked}> Full
+            </label>
+          </div>
+          <div class="radio">
+            <label class="">
+              <input type="radio" name="depot[table_size]" id="type-half" value="half" {my.table_size | is like :half | not | then :checked}> Half
+            </label>
+          </div>
+        </div>
+      </div>
+
+
       <form class="form-vertical" method="post" accept-charset="utf-8" id="game-exhibitor">
         <div class="clearfix">
           <div class="pull-right">
