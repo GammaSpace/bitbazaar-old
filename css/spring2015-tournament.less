@@ -1,0 +1,209 @@
+@import "bootstrap.less";
+@tk-aktiv-grotesk-std:  "aktiv-grotesk-std",sans-serif;
+@raleway: "raleway",sans-serif;
+@font-family-base: @tk-aktiv-grotesk-std;
+@headings-font-family: @raleway;
+@primary: #444;
+@secondary: red;
+body {
+  background: #fff;
+  /* background: lighten(@primary,45%); */
+  color: @primary;
+  /* background-image: url(../images/spring-2015/panelscapes/bg-halftone.jpg) */
+}
+.content {
+  padding-right: 15px;
+}
+html {
+  height: 100%;
+}
+header {
+  height: 428px;
+  margin-right: -15px;
+}
+.lede {
+  * { .lead { font-size: 28px; } .text-center(); }
+  margin: 30px 0;
+}
+#about-footer {
+  padding: 30px 0 30px;
+  text-align: left;
+  color: @primary;
+  p,a {
+    color: @primary;
+  }
+  #copyright {
+    text-align: left !important;
+  }
+}
+#presented-by {
+  background: @primary;
+  padding: 60px 0;
+  margin-top: 30px;
+  h3 {
+    color: #fff;
+    .pull-right();
+    text-align: right;
+  }
+}
+@style: solid 1px @primary;
+.games {
+  padding: 1em;
+  border: @style;
+  @media (min-width: @screen-sm-min) {
+    border: none;
+  }
+  p {
+    &.org {
+      a {
+      font-size: 36px;
+        margin: 0;
+        font-weight: 100;
+        color: lighten(@secondary,10%);
+        text-shadow: 1px 1px 1px #e3f825;
+        font-style: italic;
+      }
+      @media (min-width: @screen-md-min) {
+        .pull-right();
+        text-align: right;
+      }
+    }
+  }
+}
+.ps-item {
+  margin-bottom: 4em;
+  @media (min-width: @screen-sm-min) {
+    margin-bottom: 0;
+  }
+}
+h1 {
+  font-size: 46px;
+  font-weight: 100 !important;
+}
+h1,h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-style: italic;
+  font-weight: 100;
+}
+h2 {
+  margin-bottom: 0;
+}
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 100;
+  font-size: 22px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+h4 {
+  font-family: @font-family-base;
+  font-weight: 900;
+  font-size: 14px;
+  span {
+    font-weight: 100;
+  }
+}
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7em;
+}
+.mixin(@color; @background) {
+    color: @color;
+    background-color: @background;
+}
+.row {
+  &.artist {
+    h2 {
+      padding: 4px 15px;
+      margin-left: -15px;
+    }
+    &#deforge {
+      * { color: #ff9453 }
+      h2 { .mixin(#fff;#ff9453); }
+    }
+    &#pham {
+      * { color: #2837ff; }
+      h2 { .mixin(#fff;#2837ff); }
+    }
+    &#jo {
+      * { color: #000 }
+      h2 { .mixin(#fff;#000); }
+    }
+  }
+}
+.wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.inner {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  img, h3 {
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+    display: block;
+  }
+  img.logo {
+    margin-bottom: 2em;
+  }
+  @media (min-width: @screen-sm-min) {
+    img.logo {
+      margin-bottom: 0;
+    }
+  }
+}
+@button-color: magenta;
+.btn-3d {
+  border-bottom: none;
+  z-index: 200;
+  color: #fff;
+  display: inline-block;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  outline: none;
+  position: relative;
+  span {
+    position: relative;
+    display: inline-block;
+    padding: .7rem 1.2rem .6rem;
+    background: @button-color;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d
+  }
+  span,span:before {
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0
+  }
+  span:before {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: darken(@button-color,20%);
+    content: attr(data-hover);
+    transition: background .3s;
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    padding-top: .6375rem;
+    text-align: center
+  }
+}
+.btn-3d:hover span,.btn-3d:focus span {
+-webkit-transform: rotateX(90deg)translateY(-18px);
+transform: rotateX(90deg)translateY(-18px);
+background-color: @button-color;
+color: #fff
+}
+.btn-3d:hover span:before,.btn-3d:focus span:before {
+  background-color: @button-color;
+}

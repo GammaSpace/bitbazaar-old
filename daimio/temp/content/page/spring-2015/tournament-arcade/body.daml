@@ -1,15 +1,12 @@
 <body id="bit-bazaar-spring-fair-2015" class="tournament" data-spy="scroll" data-target="#primary-nav-2" data-offset="50">
   <div class="content">
     <header>
-
     </header>
     {/%nav}
     <div class="container-fluid">
       {%content}
     </div>
-
   </div> {// end content}
-
   <section id="presented-by">
     <div class="container">
       <div class="row clearfix" id="partners">
@@ -45,12 +42,9 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
-
-
   <div class="footer clearfix" id="about-footer">
     <div class="container">
       {%global/snippets/footer_info}

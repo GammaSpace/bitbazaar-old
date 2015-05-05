@@ -11,7 +11,7 @@
   <form id="" class="form-horizontal" method="post" accept-charset="utf-8" enctype="multipart/form-data">
     <div class="form-group">
       <label for="" class="form-label">Name</label>
-      <input type="text" name="my[name]" value="{#name}" class="form-control">
+      <input type="text" name="my[name]" value="" class="form-control">
     </div>
     <input type="hidden" name="password" value="{time represent as :U}" class="form-control">
     <button type="submit" class="btn btn-primary" id="authorize-account">Register</button>
@@ -23,7 +23,7 @@
           {myself authenticate username @username password #password days 90 | > :good_new_login}
           {begin loggedin | if @good_new_login}
             {begin ham | foreach with #my}
-              {my set for @good_new_login in :profiles path key value value}
+              {my set for @good_user in :profiles path key value value}
             {end ham}
           {end loggedin}
         {end registered}
@@ -46,9 +46,31 @@
     </div>
     <div class="row">
       <div class="col-md-6 col-md-offset-6">
-        {comment find by_thing (:stuff _id) by_user @MY.id}
+        {stuff find by_thing (:stuff _id) by_user @MY.id}
         <h3>Register</h3>
+
+
+
+
+
         <form method="post" id="" name="" class="form-vertical" novalidate accept-charset="UTF-8" enctype="multipart/form-data">
+
+          <div class="form-group" id="application-type">
+            <label class="form-label" for="type">Type</label>
+            <div class="radio">
+              <label class="">
+                <input type="radio" name="depot[application_type]" id="type-games" value="team" {or ({@registration.#1.my.type | is like :team} {@registration.#1.my.type | not}) | then :checked}> Team
+              </label>
+            </div>
+            <div class="radio">
+              <label class="">
+                <input type="radio" name="depot[application_type]" id="type-games-arcade" value="solo" {@registration.#1.my.type | is like :solo | then :checked}> Solo
+              </label>
+            </div>
+
+          </div>
+
+
           <div class="form-group">
             <label for="" class="form-label">Team Mates <small>optional</small></label>
             <input type="text" class="form-control" name="registration[group]">
@@ -59,14 +81,33 @@
           <button type="submit" class="btn btn-default">Submit</button>
           <textarea name="commands" style="display:none">
             {begin verbatim | process escape}
-              {begin solo}
-                {comment add thing (:stuff #game) value #registration}
-              {end solo}
-              {begin group | if #group | else #solo}
-                {comment add thing (:stuff #game) value #registration group #group}
-              {end group}
+
+              {begin editing}
+                {#application_id | > :ex_id}
+              {end editing}
+
+              {begin new}
+                {stuff add type :registration | > :ex_id}
+                {exec send_member_email subject {"Bit Bazaar Exhibitor Application Received"} body {%template/email/applicant_notification | process consume}}
+                {exec admin_send_email subject {"Bit Bazaar SP 2015 Exhibitor Application Received"} body {%template/email/admin_notification | process consume}}
+              {end new}
+
+              {ifelse (
+                {#application_id} $editing
+                :default $new
+              )}
+
+              {begin added | if @ex_id}
+                {begin depotize | foreach with #depot}
+                  {my set for @ex_id in :stuff path key value value}
+                {end depotize}
+                {page redirect to :spring-2015/application}
+              {end added}
             {end verbatim}
           </textarea>
+
+
+
         </form>
       </div>
     </div>
