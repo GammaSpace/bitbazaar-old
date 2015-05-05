@@ -1,0 +1,74 @@
+{/<img src="{@SITE.path}/images/spring-2015/panelscapes/panelscapes_logo.png" class="img-responsive" id="logo">
+}
+<div class="lede">
+  <h1>Compete with and against your friends in an indie game tournament arcade!</h1>
+  <p class="lead">May 9, 2015 // 1-9 p.m.</p>
+</div>
+{begin loggedin}
+  <p>You are logged in as {@MY.username}</p>
+{end loggedin}
+{begin check | if {@MY.id | not} else $loggedin}
+  <form id="" class="form-horizontal" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="" class="form-label">Name</label>
+      <input type="text" name="my[name]" value="{#name}" class="form-control">
+    </div>
+    <input type="hidden" name="password" value="{time represent as :U}" class="form-control">
+    <button type="submit" class="btn btn-primary" id="authorize-account">Register</button>
+    <textarea name="commands" style="display:none">
+      {begin verbatim | process escape}
+        {#my.name | string url_encode | > :username}
+        {member register username @username password #password | > :good_user}
+        {begin registered | if @good_user}
+          {myself authenticate username @username password #password days 90 | > :good_new_login}
+          {begin loggedin | if @good_new_login}
+            {begin ham | foreach with #my}
+              {my set for @good_new_login in :profiles path key value value}
+            {end ham}
+          {end loggedin}
+        {end registered}
+      {end verbatim}
+    </textarea>
+  </form>
+{end check}
+<p>{profile find by_ids @MY.id | __.my | > :p}</p>
+<div class="games">
+  {begin cat_vendors | merge with @games}
+    <div class="confirmed row">
+      <div class="col-md-6">
+        <p class="{depot.application_type} org pull-right" >
+          <a href="{"http://" | is in my.link | then "{my.link}" else "http://{my.link}"}">{my.product}</a>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <p class="name">{my.name}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-6">
+        {comment find by_thing (:stuff _id) by_user @MY.id}
+        <h3>Register</h3>
+        <form method="post" id="" name="" class="form-vertical" novalidate accept-charset="UTF-8" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="" class="form-label">Team Mates <small>optional</small></label>
+            <input type="text" class="form-control" name="registration[group]">
+            <p class="help-block">Separate team mate names with a comma.</p>
+          </div>
+          <input type="text" name="name" value="{@p.#1.name}" class="form-control">
+          <input type="hidden" name="game" value="{_id}" class="form-control">
+          <button type="submit" class="btn btn-default">Submit</button>
+          <textarea name="commands" style="display:none">
+            {begin verbatim | process escape}
+              {begin solo}
+                {comment add thing (:stuff #game) value #registration}
+              {end solo}
+              {begin group | if #group | else #solo}
+                {comment add thing (:stuff #game) value #registration group #group}
+              {end group}
+            {end verbatim}
+          </textarea>
+        </form>
+      </div>
+    </div>
+  {end cat_vendors}
+</div>

@@ -1,0 +1,58 @@
+<body id="bit-bazaar-spring-fair-2015" class="tournament" data-spy="scroll" data-target="#primary-nav-2" data-offset="50">
+  <div class="content">
+    <header>
+
+    </header>
+    {/%nav}
+    <div class="container-fluid">
+      {%content}
+    </div>
+
+  </div> {// end content}
+
+  <section id="presented-by">
+    <div class="container">
+      <div class="row clearfix" id="partners">
+        <div class="col-md-3 hidden-xs">
+          <div class="wrapper">
+            <div class="inner partner">
+              <h3>Presented by:</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="wrapper">
+            <div class="inner partner">
+              <a href="http://bentomiso.com">
+                <img src="{@SITE.path}/images/spring-2015/partner-logos/miso_logo_white_small.png" alt="Bento Miso" class="img-responsive logo" style="padding: 0 20px;">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 hidden-xs">
+          <div class="wrapper">
+            <div class="inner partner">
+              <h3>Part of:</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="wrapper">
+            <div class="inner partner">
+              <a href="http://thebitbazaar.com/spring-2015">
+                <img src="{@SITE.path}/images/bit_bazaar_white.png" alt="Bit Bazaar" class="img-responsive">
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <div class="footer clearfix" id="about-footer">
+    <div class="container">
+      {%global/snippets/footer_info}
+    </div>
+  </div>
