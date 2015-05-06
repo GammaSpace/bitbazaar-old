@@ -1,4 +1,5 @@
-<div class="container"><div class="page-header">
+<div class="container">
+  <div class="page-header">
     <a href="{@SITE.path}/admin/{#event}" class="pull-right">Exhibitor List</a>
     <h2>Bit Bazaar {#event} <small>Selected Exhibitors</small></h2>
   </div>
@@ -13,7 +14,7 @@
         <th>Last Name</th>
         <th>Developer/Group Name</th>
         <th>Product</th>
-        <th>Web site</th>
+        <th>Table Size</th>
         <th>Type</th>
       </tr>
     </thead>
@@ -28,7 +29,16 @@
           <td>{@profile.my.lastname}</td>
           <td>{my.name}</td>
           <td>{my.product}</td>
-          <td>{my.link}</td>
+          <td>
+            {ifelse (
+              {my.table_size | is like "0.5"} "Half (~ 3')"
+              {my.table_size | is like "1"} "Full (~ 6')"
+              {my.table_size | is like "2"} "2 × full (~ 6')"
+              {my.table_size | is like "3"} "3 × full (~ 6')"
+              {my.table_size | is like "4"} "4 × full (~ 6')"
+              :default "{my.table_size}"
+            )}
+          </td>
           <td>{my.application_type}</td>
         </tr>
       {end memberlist}
@@ -36,4 +46,4 @@
     </tbody>
     <tfoot></tfoot>
   </table>
-  </div>
+</div>
