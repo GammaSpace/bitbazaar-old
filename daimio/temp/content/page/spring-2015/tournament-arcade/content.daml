@@ -3,7 +3,7 @@
   <div class="center-block">
     <a href="{@SITE.path}"><img class="logo text-center" style="width: 100px; margin: 20px 0" src="{@SITE.path}/images/bit_bazaar_logo_290x334.png"></a>
   </div>
-  <p class="lead">May 9, 2015 // 1-9 p.m. @ Bento Miso (<a href="http://goo.gl/maps/jTmW8">Richmond St W</a>)</p>
+  <p class="lead">May 9, 2015 // 1-9 p.m. @ Bento Miso (862 Richmond St W, Toronto)</p>
 </div>
 {begin loggedin}
   <div class="text-center" id="user">
