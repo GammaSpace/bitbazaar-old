@@ -64,6 +64,7 @@ class Stuff
     $stuff['type'] = $type;
     $stuff['valid'] = false;
     $stuff['user'] = $GLOBALS['X']['USER']['id'];
+    $stuff['cron'] = date('Y-m-d H:i:s');
 
     $id = MongoLib::insert('stuff', $stuff);
 
