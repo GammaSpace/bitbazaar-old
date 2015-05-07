@@ -6756,3 +6756,6 @@ p {
 .btn-3d:focus span:before {
   background-color: #ff00ff;
 }
+#user {
+  margin-bottom: 30px;
+}

@@ -3,6 +3,7 @@
   <p class="lead">May 9, 2015 // 1-9 p.m.</p>
 </div>
 {begin loggedin}
+  <div class="text-center" id="user">
   <p>You are logged in as <strong>{@name}</strong></p>
     <form method="post" accept-charset="utf-8" enctype="multipart/form-data">
     <button type="submit" class="btn btn-xs btn-default">Log out</button>
@@ -14,6 +15,7 @@
       {end verbatim}
     </textarea>
   </form>
+</div>
 {end loggedin}
 {begin check | if {@MY.id | not} else $loggedin}
 
