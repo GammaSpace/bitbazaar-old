@@ -6566,6 +6566,9 @@ header {
 #about-footer #copyright {
   text-align: left !important;
 }
+.alert {
+  margin: 20px 0;
+}
 #presented-by {
   background: #444444;
   padding: 60px 0;
