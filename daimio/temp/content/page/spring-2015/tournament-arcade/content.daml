@@ -1,7 +1,7 @@
 <div class="lede">
   <h1>Compete <strong>with</strong> &amp; <strong>against</strong> your friends in Bit Bazaar's first-ever Tournament Arcade!</h1>
   <div class="center-block">
-    <img class="logo text-center" style="width: 100px; margin: 20px 0" src="{@SITE.path}/images/bit_bazaar_logo_290x334.png">
+    <a href="{@SITE.path}"><img class="logo text-center" style="width: 100px; margin: 20px 0" src="{@SITE.path}/images/bit_bazaar_logo_290x334.png"></a>
   </div>
   <p class="lead">May 9, 2015 // 1-9 p.m.</p>
 </div>
