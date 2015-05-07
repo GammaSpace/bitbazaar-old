@@ -7,11 +7,10 @@
 {end loggedin}
 {begin check | if {@MY.id | not} else $loggedin}
 
-
-  <form id="" class="form-vertical" method="post" accept-charset="utf-8" enctype="multipart/form-data">
-    <div class="form-group">
-      <label for="" class="form-label">Name</label>
-      <input type="text" name="my[name]" value="" class="form-control">
+<p class="lead text-center">To reserve a slot in the Tournament Arcade, first register by entering your name:</p>
+  <form id="" class="form-inline" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+    <div class="form-group col-md-offset-4">
+      <input type="text" name="my[name]" value="" class="form-control input-lg" placeholder="Your Name">
     </div>
     <input type="hidden" name="password" value="{time represent as :U}" class="form-control">
     <button type="submit" class="btn btn-primary" id="authorize-account">Register</button>
@@ -41,9 +40,9 @@
   {begin cat_vendors | merge with @games}
     <div class="confirmed row">
       <div class="col-md-6">
-        <p class="{depot.application_type} org pull-right" >
+        <h3 class="{depot.application_type}">
           <a href="{"http://" | is in my.link | then "{my.link}" else "http://{my.link}"}">{my.product}</a>
-        </p>
+        </h3>
 
         <p class="name">{my.name}</p>
         <p class="timeslot">{depot.timeslot}</p>
@@ -51,6 +50,9 @@
 
       </div>
       <div class="col-md-6">
+        {begin registration_form | if @MY.id}
+
+
         {begin registered}
           <div class='alert alert-success'>You are registered for this game.</div>
         {end registered}
@@ -94,7 +96,7 @@
             </textarea>
           </form>
         {end notregistered}
-
+      {end registration_form}
         {_id | is in @my_reg.depot.game | then $registered else $notregistered}
 
         {stuff find by_type :tournament options {* (:depot.game {_id | string sanitize})} | collection rekey by :depot.group | > :registrations | ""}
@@ -115,3 +117,15 @@
     {0 | > :count | ""}
   {end cat_vendors}
 </div>
+
+
+<form method="post" accept-charset="utf-8" enctype="multipart/form-data">
+  <button type="submit" class="btn">Log out</button>
+  <textarea name="commands" style="display:none">
+    {begin verbatim | process escape}
+      {begin success | if {myself logout}}
+        {notice set value "You have been logged out!"}
+      {end success}
+    {end verbatim}
+  </textarea>
+</form>
