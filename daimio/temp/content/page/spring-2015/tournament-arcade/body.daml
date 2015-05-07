@@ -3,9 +3,12 @@
     <header>
     </header>
     {/%nav}
-    <div class="container-fluid">
+    <div class="container">
       {%content}
     </div>
+
+
+    
   </div> {// end content}
   <section id="presented-by">
     <div class="container">
