@@ -6584,6 +6584,17 @@ header {
     border: none;
   }
 }
+.games p {
+  margin: 0;
+}
+.games p.name {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.games p.timeslot {
+  font-size: 22px;
+  font-weight: 900;
+}
 .games p.org a {
   font-size: 36px;
   margin: 0;
