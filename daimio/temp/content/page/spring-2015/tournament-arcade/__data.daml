@@ -1,1 +1,6 @@
 {lens get_confirmed_exhibitors | extract "{this.depot.invite | is like :yes}" | extract "{:games_arcade | is in this.my.application_type}" | collection sort by {* (:depot.timeslot :ASC)} | > :games}
+{profile find by_ids @MY.id | > :p}
+{ifelse (
+  {@p.my.name} "{@p.#1.my.name}"
+  {@p.my.firstname} "{@p.#1.my.firstname} {@p.#1.my.lastname}"
+) | > :name}

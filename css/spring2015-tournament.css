@@ -6577,7 +6577,6 @@ header {
   text-align: right;
 }
 .games {
-  padding: 1em;
   border: solid 1px #444444;
 }
 @media (min-width: 768px) {
