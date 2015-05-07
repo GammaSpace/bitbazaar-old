@@ -6587,6 +6587,9 @@ header {
 .games p {
   margin: 0;
 }
+.games p.help-block {
+  line-height: normal;
+}
 .games p.name {
   text-transform: uppercase;
   letter-spacing: 1px;
