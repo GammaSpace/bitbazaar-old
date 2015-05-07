@@ -43,9 +43,11 @@
       <div class="col-md-6">
         <p class="{depot.application_type} org pull-right" >
           <a href="{"http://" | is in my.link | then "{my.link}" else "http://{my.link}"}">{my.product}</a>
-          <br>
-          {my.name}
         </p>
+
+        <p class="name">{my.name}</p>
+        <p class="timeslot">{depot.timeslot}</p>
+        <p class="info">{depot.tournamentinfo}</p>
 
       </div>
       <div class="col-md-6">
@@ -56,17 +58,17 @@
         {begin notregistered}
           <p>Register as <strong>{@p.#1.name}</strong></p>
 
-          <form method="post" id="" name="" class="form-vertical" novalidate accept-charset="UTF-8" enctype="multipart/form-data">
+          <form method="post" id="" name="" class="form-inline" novalidate accept-charset="UTF-8" enctype="multipart/form-data">
 
             <div class="form-group">
-              <label for="" class="form-label">Team Mates <small>optional</small></label>
+              <label for="" class="form-label">Team Mates <small>optional</small> </label>
               <input type="text" class="form-control" name="registration[group]">
+            <button type="submit" class="btn btn-default">Register</button>
               <p class="help-block">Separate team mates' names with a comma.</p>
             </div>
             <input type="hidden" name="name" value="{@p.#1.name}" class="form-control">
             <input type="hidden" name="game" value="{_id}" class="form-control">
 
-            <button type="submit" class="btn btn-default">Register</button>
             <textarea name="commands" style="display:none">
               {begin verbatim | process escape}
 
@@ -92,6 +94,7 @@
             </textarea>
           </form>
         {end notregistered}
+
         {_id | is in @my_reg.depot.game | then $registered else $notregistered}
 
         {stuff find by_type :tournament options {* (:depot.game {_id | string sanitize})} | collection rekey by :depot.group | > :registrations | ""}
