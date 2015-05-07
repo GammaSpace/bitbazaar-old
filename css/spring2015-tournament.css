@@ -6579,9 +6579,6 @@ header {
   float: right !important;
   text-align: right;
 }
-.games {
-  border: solid 1px #444444;
-}
 @media (min-width: 768px) {
   .games {
     border: none;
