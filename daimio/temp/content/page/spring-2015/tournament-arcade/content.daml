@@ -34,9 +34,18 @@
     <button type="submit" class="btn btn-primary" id="authorize-account">Register</button>
     <textarea name="commands" style="display:none">
       {begin verbatim | process escape}
-        {#my.name | string url_encode | > :username}
+
+
+        {({time represent as "U"} {#my.name | string url_encode}) | string join with "-" | > :username}
+
+
+
         {member register username @username password #password | > :good_user}
-        {begin registered | if @good_user}
+
+        {begin baduser}
+          {notice set value {* (:message "There was a problem signing you in. Please try again." :type :danger)}}
+        {end baduser}
+        {begin registered | if @good_user else $baduser}
           {myself authenticate username @username password #password days 90 | > :good_new_login}
           {begin loggedin | if @good_new_login}
             {begin ham | foreach with #my}
