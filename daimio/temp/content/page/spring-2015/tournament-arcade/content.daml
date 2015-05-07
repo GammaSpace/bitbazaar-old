@@ -63,9 +63,7 @@
         <ol class="list-unstyled">
           {begin registrations | foreach with @registrations}
             {@count | +: 1 | > :count | ""}
-            <li><strong>{key | not | then "Solo" else "Team {@count}"}</strong>
-              {value.depot.registrant | foreach string "{value}" glue ", "}
-            </li>
+            <li>{value.depot.registrant | foreach string "{value}" glue ", "}</li>
           {end registrations}
         </ol>
 
