@@ -5,6 +5,10 @@
   | > :ex_org | ""}
 {/@exhibitors | extract "{this.depot.invite | is like :yes}" | collection sort by {* (:depot.order :ASC)} | > :ex_org | ""}
 
+<p class="name"><b>Ad Astra Comics' The Panel is Political Showcase, featuring work by:</b> Graphic History Collective, Tings Chak, Sam Wallman, Jason Eaglespeaker, Trina Robbins, Howard Zinn, Gord Hill, Seth Tobocman and more</p>
+
+
+
 {begin cat_vendors | merge with @ex_org}
   <div class="confirmed row">
     <div class="col-md-6">
