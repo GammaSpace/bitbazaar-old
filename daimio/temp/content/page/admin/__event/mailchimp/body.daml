@@ -15,6 +15,7 @@
         <th>Developer/Group Name</th>
         <th>Product</th>
         <th>Table Size</th>
+        <th>Timeslot</th>
         <th>Type</th>
       </tr>
     </thead>
@@ -39,6 +40,7 @@
               :default "{my.table_size}"
             )}
           </td>
+          <td>{depot.timeslot}</td>
           <td>{my.application_type}</td>
         </tr>
       {end memberlist}
