@@ -6,7 +6,16 @@
     <div class="container">
 
         {%global/snippets/footer_info}
-        <p>Applications to exhibit are now closed, but you can <a href="http://eepurl.com/HwS5T">join our mailing list</a> to find out when they open for our next event!</p>
-  
+        <p><a href="http://eepurl.com/HwS5T">Join our mailing list</a> to find out when they open for our next event!</p>
+
     </div>
   </section>
+
+    <h3 class="main">About</h3>
+    <div class="">
+      <p>Bit Bazaar is a <strong>video game market + food fest + zine fair</strong>! </p>
+      <p class="lead">Buy one-of-a-kind, limited-edition and handmade/DIY items—pins, zines, boxed video games, card decks, art prints, comics, t-shirts, game soundtracks on vinyl, mixtapes, papercraft and toys—direct from 30+ independent game makers!</p>
+      <p><strong>Come hungry</strong>! Food vendors will be serving up tacos, street food, vegan treats, specialty chocolates, craft beer, lemonade and more! Most items cost $5-8.</p>
+      <p>Check out the lineups for our <a href="https://bentomiso.com/bit-bazaar-spring-fair-2013">Spring 2013</a>, <a href="https://bentomiso.com/bit-bazaar-winter-market-2013">Winter 2013</a>, <a href="https://bentomiso.com/bit-bazaar-spring-fair-2014">Spring 2014</a> and <a href="https://bentomiso.com/bit-bazaar-winter-market-2014">Winter 2014</a> events.</p>
+      {/          <p><a href="https://bentomiso.com/bitbazaar">Past events &amp; more info</a></p>
+  }        </div>

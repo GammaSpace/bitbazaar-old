@@ -7047,6 +7047,10 @@ body#bit-bazaar-spring-fair-2015 section#vendors #food-vendors p strong {
   font-weight: 100;
   color: #2417ff;
 }
+body#bit-bazaar-spring-fair-2015 section#vendors #coming b {
+  background-color: #dff954;
+  font-weight: normal;
+}
 body#bit-bazaar-spring-fair-2015 section#vendors #coming .confirmed {
   padding: 10px;
 }
