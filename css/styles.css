@@ -6530,18 +6530,19 @@ button.close {
   }
 }
 body {
-  color: #1427e9;
+  margin: 1em auto;
+  color: #cbabe1;
 }
 body section#header {
   padding: 20px 0;
   /*   background-color: #CBC0D3; */
 }
 body section#header h1 {
-  color: #1427e9;
+  color: #bd94d9;
   font-weight: 900;
 }
 body section#header p {
-  color: #1427e9;
+  color: #cbabe1;
 }
 body section#header img {
   width: 100px;
@@ -6554,5 +6555,64 @@ body #mc_embed_signup label {
   text-align: right;
 }
 body #mc_embed_signup .asterisk {
-  color: #E62E25;
+  color: #b485d4;
+}
+#exhibitor-lists li {
+  list-style: none;
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+#exhibitor-lists li:after {
+  content: " ● ";
+}
+.btn-summer-2015 {
+  color: #ffffff;
+  background-color: #cbabe1;
+  border-color: #c29cdc;
+}
+.btn-summer-2015:hover,
+.btn-summer-2015:focus,
+.btn-summer-2015.focus,
+.btn-summer-2015:active,
+.btn-summer-2015.active,
+.open > .dropdown-toggle.btn-summer-2015 {
+  color: #ffffff;
+  background-color: #b485d4;
+  border-color: #a66fcc;
+}
+.btn-summer-2015:active,
+.btn-summer-2015.active,
+.open > .dropdown-toggle.btn-summer-2015 {
+  background-image: none;
+}
+.btn-summer-2015.disabled,
+.btn-summer-2015[disabled],
+fieldset[disabled] .btn-summer-2015,
+.btn-summer-2015.disabled:hover,
+.btn-summer-2015[disabled]:hover,
+fieldset[disabled] .btn-summer-2015:hover,
+.btn-summer-2015.disabled:focus,
+.btn-summer-2015[disabled]:focus,
+fieldset[disabled] .btn-summer-2015:focus,
+.btn-summer-2015.disabled.focus,
+.btn-summer-2015[disabled].focus,
+fieldset[disabled] .btn-summer-2015.focus,
+.btn-summer-2015.disabled:active,
+.btn-summer-2015[disabled]:active,
+fieldset[disabled] .btn-summer-2015:active,
+.btn-summer-2015.disabled.active,
+.btn-summer-2015[disabled].active,
+fieldset[disabled] .btn-summer-2015.active {
+  background-color: #cbabe1;
+  border-color: #c29cdc;
+}
+.btn-summer-2015 .badge {
+  color: #cbabe1;
+  background-color: #ffffff;
+}
+.btn-summer-2015:active,
+.btn-summer-2015.active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
