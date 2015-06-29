@@ -1,0 +1,167 @@
+<div class="lede">
+
+  <div class="center-block">
+    <a href="{@SITE.path}"><img class="logo text-center" style="width: 100px; margin: 20px 0" src="{@SITE.path}/images/bit_bazaar_logo_290x334.png"></a>
+  </div>
+  <p class="lead">May 9, 2015 // 1-9 p.m. @ Bento Miso (862 Richmond St W, Toronto)</p>
+</div>
+{begin loggedin}
+  <div class="text-center" id="user">
+    <p>You are logged in as <strong>{@name}</strong></p>
+    <form method="post" accept-charset="utf-8" enctype="multipart/form-data">
+      <button type="submit" class="btn btn-xs btn-default">Log out</button>
+      <textarea name="commands" style="display:none">
+        {begin verbatim | process escape}
+          {begin success | if {myself logout}}
+            {notice set value "You have been logged out!"}
+          {end success}
+        {end verbatim}
+      </textarea>
+    </form>
+  {%global/notices}
+  </div>
+
+
+{end loggedin}
+{begin check | if {@MY.id | not} else $loggedin}
+
+  <form id="" class="form-inline" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+    <div class="form-group col-md-offset-4">
+      <input type="text" name="my[name]" value="" class="form-control input-lg" placeholder="Your Name">
+    </div>
+    <input type="hidden" name="password" value="{time represent as :U}" class="form-control">
+    <button type="submit" class="btn btn-primary" id="authorize-account">Register</button>
+    <textarea name="commands" style="display:none">
+      {begin verbatim | process escape}
+
+
+        {({time represent as "U"} {#my.name | string url_encode}) | string join with "-" | > :username}
+
+
+
+        {member register username @username password #password | > :good_user}
+
+        {begin baduser}
+          {notice set value {* (:message "There was a problem signing you in. Please try again." :type :danger)}}
+        {end baduser}
+        {begin registered | if @good_user else $baduser}
+          {myself authenticate username @username password #password days 90 | > :good_new_login}
+          {begin loggedin | if @good_new_login}
+            {begin ham | foreach with #my}
+              {my set for @good_user in :profiles path key value value}
+            {end ham}
+          {end loggedin}
+        {end registered}
+      {end verbatim}
+    </textarea>
+  </form>
+{end check}
+
+
+
+
+{stuff find by_type :tournament | extract "{this.user | is like @MY.id}" | > :my_reg | ""}
+
+<div class="games">
+  {begin cat_vendors | merge with @games}
+    <div class="confirmed row">
+      <div class="col-md-6">
+        <h3 class="{depot.application_type}">
+          <a href="{"http://" | is in my.link | then "{my.link}" else "http://{my.link}"}">{my.product}</a>
+        </h3>
+
+        <p class="name">{my.name}</p>
+        <p class="timeslot">{depot.timeslot}</p>
+        <p class="info">{depot.tournamentinfo}</p>
+
+
+        {stuff find by_type :tournament options {* (:depot.game {_id | string sanitize})} | collection rekey by :depot.group | > :registrations | ""}
+        <ol class="list-unstyled">
+          {begin registrations | foreach with @registrations}
+            {@count | +: 1 | > :count | ""}
+            <li>{value.depot.registrant | foreach string "{value}" glue ", "}</li>
+          {end registrations}
+        </ol>
+
+
+      </div>
+      <div class="col-md-6">
+        {begin registration_form | if @MY.id}
+
+
+          {begin registered}
+            <div class='alert alert-success'>You are signed up for this game. Please arrive at the beginning of the time slot or your spot may be forfeited. </div>
+          {end registered}
+
+          {begin notregistered}
+
+
+            <form method="post" id="" name="" class="form-horizontal" novalidate accept-charset="UTF-8" enctype="multipart/form-data">
+
+
+              <div class="form-group">
+                <label class="form-label col-md-4"><span class="pull-right">Register yourself</span></label>
+                <div class="col-md-8">
+                  <strong>{@name}</strong>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label col-md-4"><small class="pull-right">+ friends</small></label>
+                <div class="col-md-8">
+                  <input type="text" class="form-control" name="registration[group]">
+                  <p class="help-block"><small>Bringing pals to play with or compete against? Add 'em here. Separate names with a comma.</small></p>
+<hr>
+                  <button type="submit" class="btn btn-default">Sign Up</button>
+
+                </div>
+              </div>
+
+
+
+
+              <input type="hidden" name="name" value="{@name}" class="form-control">
+              <input type="hidden" name="game" value="{_id}" class="form-control">
+              <input type="hidden" name="message" value="<strong>Success!</strong> You are now signed up for {my.product}" class="form-control">
+
+              <textarea name="commands" style="display:none">
+                {begin verbatim | process escape}
+
+                  {begin solo}
+                    {begin success | if {stuff add type :tournament | > :my_registration}}
+
+                    {exec depot_set in :stuff for @my_registration path :game value #game}
+                    {exec depot_set in :stuff for @my_registration path :registrant value #name}
+                    {notice set value {* (:message #message :type :success)}}
+
+                  {end success}
+                  {end solo}
+
+                  {begin group | if #registration.group | else $solo}
+                    {({time represent as "U"} @MY.username) | string join with "-" | > :group_name}
+                    {#registration.group | string split on ", " | > :group}
+                    {begin register_group | foreach with @group}
+                      {stuff add type :tournament | > :registration}
+                      {exec depot_set in :stuff for @registration path :game value #game}
+                      {exec depot_set in :stuff for @registration path :registrant value value}
+                      {exec depot_set in :stuff for @registration path :group value @group_name}
+                    {end register_group}
+                    {$solo}
+                    {exec depot_set in :stuff for @my_registration path :group value @group_name}
+                  {end group}
+                {end verbatim}
+              </textarea>
+            </form>
+          {end notregistered}
+        {end registration_form}
+
+        {_id | is in @my_reg.depot.game | then $registered else $notregistered}
+
+
+
+      </div>
+    </div>
+
+    <hr>
+    {0 | > :count | ""}
+  {end cat_vendors}
+</div>

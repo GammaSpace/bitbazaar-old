@@ -1,0 +1,79 @@
+{%page/summer-2015/header}
+<body id="bit-bazaar-winter-market-2014" class="bit-bazaar inner-page" data-spy="scroll" data-target="#primary-nav-2" data-offset="50">
+  {%page/summer-2015/nav}
+
+  <section id="info">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="text-center">
+
+            <p class="lead"><b>Turn that frown upside down! :D</b></p>
+            <p class="lead">We've devised a way to get super-cool Bit Bazaar goodies to all our friends outside Toronto, using the power of <b>Snail Mail</b>.</p>
+            <h2>Bit Bazaar Mail Order</h2>
+            {%global/notices}
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+
+          <h3>How Does it Work?</h3>
+
+          <p>Purchase your Mail Order package before May 8.</p>
+          <p>Your <b>personal shopper</b> will sneak in to Bit Bazaar before the crowds to stuff a package with mystery goodies just for you.</p>
+          <p>We'll mail it off to you the right after Bit Bazaar!</p>
+          <p>Check out the <a href="https://bentomiso.com/blog/bit-bazaar-goods-preview">Winter Market preview</a> and <a href="https://bentomiso.com/blog/bit-bazaar-wrap">Winter Market recap</a> for an idea of the kinds of rad things game exhibitors sell!</p>
+          <h3>Notes</h3>
+          <p>Prices <b>include shipping</b> within Canada and the U.S. Ordering from another country? <a href="mailto:info@bentomiso.com">Drop us a line</a> first - we might be able to make it happen!</p>
+
+          <p><b>Exact contents of your package will be a surprise.</b> Eyeing something specific? Send us an email with details after purchasing your pack and we'll do our best to track it down for you! <small>No food, sorry. Pot pies don't ship well.</small></p>
+
+          <p><small>We're unable to accept returns.</small></p>
+
+        </div>
+
+        <div class="col-sm-6">
+          {begin bymail_item | merge with @bymail_items}
+            <h3>{name}{/ <small>{available | proc | collection count} left</small>}</h3>
+            <div class="row">
+              <div class="col-xs-8">
+                <p>{desc}</p>
+              </div>
+              <div class="col-xs-4">
+                <p class="text-error">Sorry, all sold out!</p>
+
+
+                {/{begin available | if {available | proc | collection count | is like :0 | not} | else $soldout}
+                  <p class="lead" style="margin-bottom:0;"><strong>{price | *: ".01" | math format places 0 symbol "$"}</strong> <small>CAD</small></p>
+                  <div class="center-block">
+                  {%buy_form}
+                </div>
+              {end available}         }
+            </div>
+          </div>
+        {end bymail_item}
+      </div>
+    </div>
+
+  </section>
+  {/%global/js}
+
+
+  <div class="container">
+    <div class="footer clearfix">
+      <p class="pull-left" id="copyright">&copy; 2013-{time represent as :Y} <a href="{@SITE.path}">Bento Miso Collaborative Workspace</a></p>
+
+      <p class="pull-right">
+        <a class="psst" href="{@SITE.path}/bit-bazaar-winter-market-2014">Back to Bit Bazaar</a>
+      </p>
+    </div>
+  </div>
+
+
+
+  {%global/metrics | process escape}
+  {%page/summer-2015/bonus_js}
+</body>
+</html>

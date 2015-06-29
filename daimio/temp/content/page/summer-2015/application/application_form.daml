@@ -1,0 +1,141 @@
+{begin step2}
+<p class='alert alert-success lead'><b>Thanks!</b> We've received your information.</p>
+	{begin application | merge with (@appsu2015.#1.my)}
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Name: <b>{name}</b>
+				<small class="pull-right"><a href="{@SITE.path}/spring-2015/application?editing=true">Edit</a></small>
+			</div>
+			<div class="panel-body">
+        <p><b>Title</b></p>
+        <p>{product}</p>
+        <p><b>Description</b></p>
+				{description | string textile}
+        <p><b>Web site</b> {link}</p>
+        {begin gameplay | if gameplay}
+				<p><b>Video or download</b> {gameplay}</p>
+
+        {end gameplay}
+				{begin goods | if merch}
+				<p><b>Merchandise</b></p>
+					{merch | string textile}
+				{end goods}
+				<p><b>Submitted</b> {submitted | time represent as "M d, Y g:ia"}</p>
+				<p><b>Application</b> #{@appsu2015.#1._id}</p>
+{/				<p><b>Fee Paid</b> {paid | then "<span class='text-success'>Yes</span>" else "<span class='text-danger'>No</span>"}</p>
+				{begin paid | if {paid | not}}
+					{%payment}
+				{end paid}
+}			</div>
+			</div>
+
+		{end application}
+
+	{end step2}
+
+	{begin step1}
+
+		<h2>{#editing | is like :true | then "Editing Application <small class='pull-right'><a href='{@SITE.path}/spring-2015/application'>Cancel editing</a></small>" else "Apply"}</h2>
+		{begin create_account | if {@MY.id | not}}
+
+
+			<form class="form-horizontal" method="post" accept-charset="utf-8" id="create-account">
+				<fieldset>
+					<legend>Create a Bit Bazaar account <span class="pull-right text-muted">Or <a href="#log-in" data-toggle="modal" class="">log in</a></span></legend>
+
+
+					<div class="form-group">
+						<label class="control-label required col-md-4" for="username">Username</label>
+						<div class="col-md-8">
+							<input type="text" class="form-control" id="username" name="username" value="{#username}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label required col-md-4" for="password">Password</label>
+						<div class="col-md-8">
+							<input type="password" class="form-control" id="password" name="password">
+						</div>
+					</div>
+				</fieldset>
+				<hr>
+				<fieldset>
+
+					<div class="form-group">
+						<label class="control-label required col-md-4" for="firstname">First name</label>
+						<div class="col-md-8">
+							<input type="text" class="form-control" id="firstname" name="my[firstname]" value="{#firstname}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label required col-md-4" for="lastname">Last name</label>
+						<div class="col-md-8">
+							<input type="text" class="form-control" id="lastname" name="my[lastname]" value="{#lastname}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-md-4 required" for="lastname">E-mail</label>
+						<div class="col-md-8">
+							<input type="text" class="form-control" id="email" name="my[email]" value="{#email}">
+							<hr />
+							<button type="submit" class="btn btn-default">Register</button>
+						</div>
+
+
+					</div>
+				</fieldset>
+				<input type="hidden" name="registered" value="{time represent}">
+				<textarea name="commands" style="display:none">
+					{begin verbatim | process escape}
+
+						{and (#my.email #my.firstname #my.lastname) | > :good_data}
+
+						{begin kosher | if @good_data}
+							{member register username #username password #password | > :good_user}
+						{end kosher}
+						{begin success | if @good_user}
+							{myself authenticate username #username password #password | > :good_login}
+							{begin loggeduserin | if @good_login}
+								{/ Basic profile stuff}
+
+								{begin my_set | foreach with #my}
+									{my set for @user_id in :profiles path key value value}
+								{end my_set}
+
+								{my set for @user_id in :profiles path :activity.registered value #registered}
+								{my set for @user_id in :profiles path :signup.intent value :bit-bazaar-spring-2015}
+
+								{begin set_email | if {exec set_email to #my.email}}
+									{exec send_member_email subject {"[Bit Bazaar] Account Created"} body {%template/email/account_created | process consume}}
+								{end set_email}
+
+							{end loggeduserin}
+						{end success}
+						{begin derp}
+							<strong>Oops!</strong> Please fill out the required fields.
+						{end derp}
+						{begin whoops}
+							<strong>Whoops!</strong> Your username and password must each be at least <strong>4 characters long</strong>, and usernames must be <strong>unique</strong>.
+						{end whoops}
+						{ifelse (
+							{@good_data | not} "{notice set value {* ( :message $derp :type :error)}}"
+							{@good_user | not} "{notice set value {* ( :message $whoops :type :error)}}"
+						)}
+					{end verbatim}
+				</textarea>
+			</form>
+		{end create_account}
+
+		{begin has_account | if @MY.id}
+
+
+  {content get_value handle {"page/summer-2015/application/assets/form/{:all | else #type}"}}
+
+
+		{end has_account}
+	{end step1}
+
+	{ifelse (
+		{and (@appsu2015 {#editing | is like :true})} "{$step1}"
+		{@appsu2015} "{$step2}"
+		:default  "{$step1}"
+	)}

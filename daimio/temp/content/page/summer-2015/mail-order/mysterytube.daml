@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-6">
+    <h3>{name} <small>{@bbpl3slots | collection count} left</small></h3>      
+    <p>{desc}</p>
+  </div>
+  <div class="col-md-6">              
+    {begin soldout}
+      <p class="text-error">Sorry, all sold out!</p>
+    {end soldout}
+    {begin available | if @bbpl3slots | else $soldout}
+      <p class="lead" style="margin-bottom:0;"><strong>{price | *: ".01" | math format places 0 symbol "$"}</strong></p>
+      <div class="center-block">
+        {%page/summer-2015/buy/buy_form}
+      </div>                  
+    </div>
+  </div>
+  

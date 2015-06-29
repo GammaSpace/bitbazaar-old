@@ -1,0 +1,16 @@
+<script src="{@SITE.path}/js/jquery.matchHeight-min.js"></script>
+
+{begin js | process escape}
+<script>
+$(document).ready(function(){
+
+
+  $('.artist,.partner').matchHeight({
+    byRow: true,
+    property: 'height',
+    target: null,
+    remove: false
+  });
+});
+</script>
+{end js}

@@ -1,0 +1,1 @@
+{content get_value handle {"page/summer-2015/application/assets/{:all | else #type}"}}

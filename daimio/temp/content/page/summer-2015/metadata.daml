@@ -1,0 +1,10 @@
+{* (
+	:page { * (
+		:masthead_copy "Bit Bazaar"
+		:title "Bit Bazaar: A unique celebration of the art and craft of videogames in the tradition of zine fairs."
+		:description "A unique zine-fair-meets-arcade, presented by Bento Miso"
+		:keywords "bit bazaar, videogames, zine fair, toronto videogames"
+		:typekit :bly6qri
+		:css_path "{@SITE.path}/css/summer2015.css"
+	)}
+	) | foreach string "{array union values (value @metadata.{key}) | > {"metadata.{key}"}}" }
