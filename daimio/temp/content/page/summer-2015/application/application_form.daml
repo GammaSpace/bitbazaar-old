@@ -4,7 +4,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				Name: <b>{name}</b>
-				<small class="pull-right"><a href="{@SITE.path}/spring-2015/application?editing=true">Edit</a></small>
+				<small class="pull-right"><a href="{@SITE.path}/summer-2015/application?editing=true">Edit</a></small>
 			</div>
 			<div class="panel-body">
         <p><b>Title</b></p>
