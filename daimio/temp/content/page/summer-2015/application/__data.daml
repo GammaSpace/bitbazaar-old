@@ -1,5 +1,5 @@
 {%global/__data}
-  {stuff find by_type :bbapplication options {* (:i_can :edit)} | > :bbapplication}
+  {stuff find by_type :appsu2015 options {* (:i_can :edit)} | > :appsu2015}
 {begin info | if @MY.id}
   {profile find by_ids @MY.id | __.#1 | > :profile}
   {member find by_ids @MY.id | __.#1 | > :member}
