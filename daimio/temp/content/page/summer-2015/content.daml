@@ -93,7 +93,7 @@
         <h3 class="main">About</h3>
         <div class="">
           <p>Bit Bazaar is a <strong>videogame arts &amp; crafts market + zine fair</strong>! </p>
-          <p class="lead"><b>Play minty-fresh games from Ontario developers!</b> Buy one-of-a-kind, limited-edition and handmade/DIY items—pins, zines, boxed video games, card decks, art prints, comics, t-shirts, game soundtracks on vinyl, mixtapes, papercraft and toys—direct from 20+ independent game makers!</p>
+          <p class="lead"><b>Play minty-fresh games!</b> Buy one-of-a-kind, limited-edition and handmade/DIY items—pins, zines, boxed video games, card decks, art prints, comics, t-shirts, game soundtracks on vinyl, mixtapes, papercraft and toys—direct from 20+ independent game makers!</p>
           <p>Check out the lineups for our <a href="https://bentomiso.com/bit-bazaar-spring-fair-2013">Spring 2013</a>, <a href="https://bentomiso.com/bit-bazaar-winter-market-2013">Winter 2013</a>, <a href="https://bentomiso.com/bit-bazaar-spring-fair-2014">Spring 2014</a>, <a href="https://bentomiso.com/bit-bazaar-winter-market-2014">Winter 2014</a> and
             <a href="{@SITE.path}/spring-2015">Spring 2015</a>
             events.</p>
