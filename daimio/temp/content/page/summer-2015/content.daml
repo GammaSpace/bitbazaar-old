@@ -1,54 +1,66 @@
 <section id="header">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4 col-sm-offset-4">
-        <img src="{@SITE.path}/images/summer-2015/logo.png" class="img-responsive" id="bbwm-logo">
-        <div class="center-block text-center" id="socmed">
-          <a href="https://twitter.com/TheBitBazaar"><img src="{@SITE.path}/images/socmed/Twitter_logo_white.png" alt="Twitter" height="20"/></a>
-          <a href="https://www.facebook.com/events/354675598056821/"><img src="{@SITE.path}/images/socmed/FB-f-Logo__white_100.png" alt="Facebook" height="20"/></a>
-          <a href="https://www.flickr.com/groups/bitbazaar/"><img src="{@SITE.path}/images/socmed/flickr.png"  alt="Flickr"></a>
-        </div>
-</div>
-</div>
-<div class="row">
-  <div class="col-sm-6 col-sm-offset-3">
-        <p class="tagline">A Toronto festival of videogames + comics + good food</p>
-        <p class="lead">Sunday, July 12 &bull; 11:30am-7pm &bull; <span class="smallcaps">Free</span></p>
+  <div class="wrapper">
+    <div class="cell">
 
-
-        <p class="lead small clearfix address">862 Richmond St. W., Toronto</p>
-
-        <div class="clearfix" id="partners">
-
-          <div class="row">
-            <div class="col-xs-6">
-
-              <div class="wrapper">
-                <div class="partner">
-                  <a href="http://bentomiso.com">
-                    <img src="{@SITE.path}/images/spring-2015/partner-logos/miso_logo_white_small.png" alt="Bento Miso" class="img-responsive" style="padding: 0 20px;">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-6">
-              <div class="wrapper">
-                <div class="partner">
-
-                </div>
-              </div>
-
-            </div>
-          </div>
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <img src="{@SITE.path}/images/summer-2015/logo.png" class="img-responsive text-center center-block" id="logo">
 
         </div>
       </div>
 
 
+
+      <div class="lead small clearfix address">
+
+        <div class="clearfix" id="partners">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <div class="wrapper">
+                <div class="partner">
+                  <p> Sunday, July 12 &bull; 11:30am-7pm &bull; <span class="smallcaps">Free</span> </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-2 hidden-xs">
+              <div class="wrapper">
+                <div class="partner">
+                  <a href="http://bentomiso.com">
+                    <img src="{@SITE.path}/images/summer-2015/partner-logos/miso_logo_white_small.png" alt="Bento Miso" class="img-responsive" style="padding: 0 20px;">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-2 hidden-xs">
+              <div class="wrapper">
+                <div class="partner">
+                  <a href="http://harbourfrontcentre.com">
+                    <img src="{@SITE.path}/images/summer-2015/partner-logos/harbourfront-centre.png" class="img-responsive center-block text-center ">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-2 hidden-xs">
+              <div class="wrapper">
+                <div class="partner">
+                  <img src="{@SITE.path}/images/summer-2015/partner-logos/on_c_z.png" alt="Bento Miso" class="img-responsive" style="padding: 0 20px;">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-</section>
 
+
+</div>
+
+
+
+
+</section>
 
 
 <section id="vendors">
@@ -80,39 +92,81 @@
       <div class="col-md-9">
         <h3 class="main">About</h3>
         <div class="">
-          <p>Bit Bazaar is a <strong>video game market + food fest + zine fair</strong>! </p>
-          <p class="lead">Buy one-of-a-kind, limited-edition and handmade/DIY items—pins, zines, boxed video games, card decks, art prints, comics, t-shirts, game soundtracks on vinyl, mixtapes, papercraft and toys—direct from 30+ independent game makers!</p>
-          <p><strong>Come hungry</strong>! Food vendors will be serving up tacos, street food, vegan treats, specialty chocolates, craft beer, lemonade and more! Most items cost $5-8.</p>
-          <p>Check out the lineups for our <a href="https://bentomiso.com/bit-bazaar-spring-fair-2013">Spring 2013</a>, <a href="https://bentomiso.com/bit-bazaar-winter-market-2013">Winter 2013</a>, <a href="https://bentomiso.com/bit-bazaar-spring-fair-2014">Spring 2014</a> and <a href="https://bentomiso.com/bit-bazaar-winter-market-2014">Winter 2014</a> events.</p>
-          {/          <p><a href="https://bentomiso.com/bitbazaar">Past events &amp; more info</a></p>
-}        </div>
+          <p>Bit Bazaar is a <strong>videogame arts &amp; crafts market + zine fair</strong>! </p>
+          <p class="lead"><b>Play minty-fresh games from Ontario developers!</b> Buy one-of-a-kind, limited-edition and handmade/DIY items—pins, zines, boxed video games, card decks, art prints, comics, t-shirts, game soundtracks on vinyl, mixtapes, papercraft and toys—direct from 20+ independent game makers!</p>
+          <p>Check out the lineups for our <a href="https://bentomiso.com/bit-bazaar-spring-fair-2013">Spring 2013</a>, <a href="https://bentomiso.com/bit-bazaar-winter-market-2013">Winter 2013</a>, <a href="https://bentomiso.com/bit-bazaar-spring-fair-2014">Spring 2014</a>, <a href="https://bentomiso.com/bit-bazaar-winter-market-2014">Winter 2014</a> and
+            <a href="{@SITE.path}/spring-2015">Spring 2015</a>
+            events.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section id="venue" class="clearfix">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h3 class="main">The Venue</h3>
-        <h4>Bento Miso <small><span class="glyphicon glyphicon-map-marker" style="color: #000"></span></small></h4>
-        <p class="lead">A coworking space for video game artists and developers located at <a href="http://goo.gl/maps/jTmW8">862 Richmond Street West</a>, in Toronto's Queen West neighborhood. We're just south of the gates of Trinity-Bellwoods Park, near the intersection of <span class="nowrap">Strachan Ave.</span> and <span class="nowrap">Richmond St. W.</span></p>
-      </div>
-      <div class="col-md-6">
-        <h4>Public Transit <small><span class="glyphicon glyphicon-map-marker" style="color: #e74b52"></span></small></h4>
-        <p><strong>Subway</strong>
-          From Ossington Station, take the 63 bus to King and Strachan; from Osgoode Station take the 501 Queen streetcar to Strachan.</p>
-        <p><strong>Streetcar</strong>
-          Take the 501 Queen or 504 King streetcar to Strachan. We're one block south of Queen and two north of King on Richmond.</p>
+  </section>
+  <section id="venue" class="clearfix">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="main">The Venue</h3>
+          <h4>Harbourfront Centre <small><span class="glyphicon glyphicon-map-marker" style="color: #000"></span></small></h4>
+          <p class="lead">A 10-acre site downtown Toronto and nestled along the shores of Lake Ontario. <span class="nowrap">Lower Simcoe St.</span> and <span class="nowrap">Queens Quay St. W.</span></p>
+        </div>
+        <div class="col-md-6">
+          <h4>Public Transit <small><span class="glyphicon glyphicon-map-marker" style="color: #e74b52"></span></small></h4>
+          <p><strong>TTC</strong>
+            The 509 Harbourfront streetcars run East-West from Union to Exhibition making a stop at the ferry docks.</p>
 
-        <h4>Parking <small><span class="glyphicon glyphicon-map-marker" style="color: #46ce8f"></span></small></h4>
-        <p>There are paid <a href="http://parking.greenp.com/find-parking/?a=862+Richmond+Street+West&x=0&y=0" target="_blank">Green P parking lots</a> at Walnut/Richmond (2-minute walk), Queen/Ossington and King/Tecumseth (10-minute walk). They range from $2 to $3.50/hour. Street parking is $1.50 to $2.25/hour.</p>
+            <h4>Other options</h4>
+            <p>Harbourfront Centre provides information about <a href="http://www.harbourfrontcentre.com/gettinghere/">getting to the venue via bike, car, boat and more</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="map-box">
+      <div id="map">
+        <iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/jenniebox.mjn5lo2n/attribution.html?access_token=pk.eyJ1IjoiamVubmllYm94IiwiYSI6IlEzYkV1bGsifQ.0twdzE_LcndSHJBnCxd0og'></iframe>
       </div>
     </div>
-  </div>
-</section>
-<div class="map-box">
-  <div id="map">
-    <iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/jenniebox.m1083544/attribution.html?access_token=pk.eyJ1IjoiamVubmllYm94IiwiYSI6IlEzYkV1bGsifQ.0twdzE_LcndSHJBnCxd0og'></iframe>
-  </div>
-</div>
+
+    <section class="visible-xs">
+      <div class="container">
+
+
+
+        <div class="lead small clearfix address">
+
+          <div class="clearfix" id="partners">
+            <div class="row">
+
+
+              <div class="col-xs-6">
+                <div class="wrapper">
+                  <div class="partner">
+                    <a href="http://harbourfrontcentre.com">
+                      <img src="{@SITE.path}/images/summer-2015/partner-logos/harbourfront-centre.png" class="img-responsive center-block text-center ">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="wrapper">
+                  <div class="partner">
+                    <img src="{@SITE.path}/images/summer-2015/partner-logos/on_c_z.png" alt="Bento Miso" class="img-responsive" style="padding: 0 20px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4 col-xs-offset-4">
+                <div class="wrapper">
+                  <div class="partner">
+                    <a href="http://bentomiso.com">
+                      <img src="{@SITE.path}/images/summer-2015/partner-logos/miso_logo_white_small.png" alt="Bento Miso" class="img-responsive" style="padding: 0 20px;">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

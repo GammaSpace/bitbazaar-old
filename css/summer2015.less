@@ -1,21 +1,14 @@
 @import "bootstrap.less";
-@tk-aktiv-grotesk-std:  "aktiv-grotesk-std",sans-serif;
-@kepler-std: "kepler-std",serif;
-@inconsolata: "inconsolata",sans-serif;
+@dagny: "ff-dagny-web-pro",sans-serif;
+@tablet: "tablet-gothic",sans-serif;
 
-@font-family-base: @inconsolata;
-@headings-font-family: @kepler-std;
+@font-family-base: @dagny;
+@headings-font-family: @tablet;
 
-@primary: red;
-@secondary: orange;
+@primary: #abfae2;
+@secondary: #000;
 @highlight: lighten(#d6f723,10%);
 
-.tk-aktiv-grotesk-std {
-    font-family: @tk-aktiv-grotesk-std;
-    font-size-adjust:0.508;
-    font-weight:normal;
-    font-style:normal;
-}
 
 html {
 	height: 100%;
@@ -43,7 +36,7 @@ body {
 
   height: 100%;
   background-color: desaturate(lighten(@primary,10%),5%);
-  background: #b9acc7;
+  background: #000;
 
   &.bit-bazaar {
     .modal-backdrop {
@@ -95,6 +88,12 @@ body {
         background: #fff;
         color: @secondary;
         padding: 5px 10px;
+
+        font-style: italic;
+        font-weight: 600;
+        text-transform: uppercase;
+
+
       }
       p {
         font-size: 18px;
@@ -110,13 +109,13 @@ body {
 
     section#about {
       .mixin(@secondary;#fff);
-      background-image: url(../images/spring-2015/promo_booth.gif);
+      background-image: url(../images/summer-2015/17524702471_b09358e7c5_k.png);
       background-position: right 20%;
       background-repeat: no-repeat;
-  h3 {
-    text-shadow: 1px 1px 1px magenta, -1px -1px 2px cyan;
+		  h3 {
+		    text-shadow: 1px 1px 1px @primary;
 
-  }
+		  }
       p {
         background: #fff;
         strong {
@@ -164,8 +163,9 @@ body {
     }
     .cell {
       display: table-cell;
-      vertical-align: middle;
+      vertical-align: top;
       position: relative;
+
 
     }
     .footer {
@@ -184,51 +184,69 @@ body {
     }
     h2 {
       .mid-headline;
-
+      font-style: italic;
       font-size: 42px;
       text-transform: uppercase;
       letter-spacing: 2px;
 
     }
     #header {
-      padding: 4em 1em 1em 1em;
+      height: 100%;
+      min-height: 700px;
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: 0;
 
-      @media (min-width: @screen-md-min) { padding: 2em }
+      img#logo {
+        margin-top: 50px;
+      }
+
+
+      @media (min-width: @screen-md-min) {}
 
 
       h1,h2,p,a {
-        font-family: @kepler-std;
       }
-      background-image: url(../images/summer-2015/banner_bg.gif);
-      background-size: cover;
+      background-image: url(../images/summer-2015/17521441632_9ccdb3da47_k.png);
+
+      background-position: center center;
+      @media (min-width: @screen-sm-min) {  }
+      @media (min-width: @screen-md-min) {
+        background-size: cover;
+      }
+      @media (min-width: @screen-lg-min) {  }
 
       a.btn {
         text-decoration: none;
       }
 
-      p {
-        color: lighten(@primary,20%);
-        font-size: 32px;
-        text-shadow: 1px 1px 0px darken(@primary,20%);
-        &.tagline {
-          line-height: normal;
-          color: #fff;
-          text-align: center;
-          @media (min-width: @screen-sm-min) {  }
-          @media (min-width: @screen-md-min) {line-height: 1.1em;
-            font-size: 36px; }
-            @media (min-width: @screen-lg-min) {  }
-          }
-          &.lead, &.lead p a {
 
-          background-color: lighten(#d6f723,10%);
-          color: @secondary;
-          padding: 4px 9px;
+      div {
+
+        &.lead {
+
+          background-color: #000;
+          color: #fff;
+          padding: 14px 9px;
           text-shadow: none;
           text-align: center;
-          margin-bottom: 1em;
+          margin: 0;
+          position: absolute;
+          bottom: 50px;
+          z-index: 1;
+          width: 100%;
+          left: 0;
+          p {
+            margin-bottom: 0;
+          }
+          img {
+          padding: 20px 0;
+          @media (min-width: @screen-sm-min) { padding: 0 }
+
+          }
+
           &.small {
-            padding: 2px 4px;
             font-size: 22px;
             a {
               color: inherit;
@@ -237,6 +255,23 @@ body {
             }
           }
         }
+      }
+
+
+      p {
+        color: #fff;
+        font-size: 32px;
+        &.tagline {
+          line-height: normal;
+          color: #fff;
+          text-align: center;
+          background-color: fadeout(#abfae2,10%);
+          @media (min-width: @screen-sm-min) {  }
+          @media (min-width: @screen-md-min) {line-height: 1.1em;
+            font-size: 36px; }
+            @media (min-width: @screen-lg-min) {  }
+          }
+
         &.cta, &.partners {
           font-size: 24px;
           line-height: 1.2em;
@@ -330,6 +365,10 @@ body {
       padding-top: 20px;
       padding-bottom: 20px;
       margin-bottom: 1em;
+      &#header {
+        padding:0;
+        margin-bottom: 0;
+      }
       h3 {
         line-height: 1em;
         padding: 0;
@@ -342,11 +381,11 @@ body {
       }
 
       h3 {
-        margin: 30px 0 20px 0;
+        margin: 50px 0 20px 0;
         font-size: 42px;
         font-weight: 900;
         text-transform: uppercase;
-        text-shadow: 1px 1px 1px #e3f825;
+        text-shadow: 1px 1px 1px @primary;
 
         font-style: italic;
         &.main {
@@ -357,7 +396,7 @@ body {
 
           margin-top: 0;
           font-style: normal;
-          text-shadow: 1px 1px 1px magenta, -1px -1px 2px cyan;
+          text-shadow: 1px 1px 1px @primary;
         }
       }
 
@@ -404,7 +443,6 @@ body {
         p {
           font-size: 18px;
           strong {
-            font-family: @kepler-std;
             background: @highlight;
           }
           text-align: center;
@@ -518,7 +556,6 @@ body {
 
         #food-vendors {
           h4 {
-            font-family: @kepler-std;
             font-size: 24px;
             margin: 0 0 10px 0;
             font-weight: 900;
@@ -531,7 +568,6 @@ body {
             font-size: 18px;
             line-height: normal;
             strong {
-              font-family: @kepler-std;
               font-size: 24px;
               margin: 0 0 10px 0;
               font-weight: 100;
@@ -562,7 +598,6 @@ body {
               }
 
               &.org {
-                font-family: @kepler-std;
                 margin: 0;
                 font-weight: 100;
                 color: lighten(@secondary,10%);
@@ -647,9 +682,9 @@ body {
   }
 
 
-  @bgDefault: #1725dd;
+  @bgDefault: #000;
   //#fff;
-  @colDefault: @highlight;
+  @colDefault: #fff;
 
   @bgHighlight: darken(@bgDefault,10%);
 
@@ -673,6 +708,8 @@ body {
       > li {
         > a {
           color: @colDefault;
+					font-family: @tablet;
+					text-decoration: none;
 
           @media (min-width: @screen-sm-min) {
             font-size: 12px;
