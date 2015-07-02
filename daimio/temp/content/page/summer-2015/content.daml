@@ -19,6 +19,7 @@
               <div class="wrapper">
                 <div class="partner">
                   <p> Sunday, July 12 &bull; 11:30am-7pm &bull; <span class="smallcaps">Free</span> </p>
+                  <small>At Ontario's Celebration Zone at Harbourfront Centre.</small>
                 </div>
               </div>
             </div>
@@ -31,15 +32,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-2 hidden-xs">
-              <div class="wrapper">
-                <div class="partner">
-                  <a href="http://harbourfrontcentre.com">
-                    <img src="{@SITE.path}/images/summer-2015/partner-logos/harbourfront-centre.png" class="img-responsive center-block text-center ">
-                  </a>
-                </div>
-              </div>
-            </div>
+
             <div class="col-sm-2 hidden-xs">
               <div class="wrapper">
                 <div class="partner">
@@ -47,6 +40,9 @@
                 </div>
               </div>
             </div>
+
+
+
           </div>
         </div>
       </div>
@@ -107,15 +103,25 @@
       <div class="row">
         <div class="col-md-6">
           <h3 class="main">The Venue</h3>
-          <h4>Harbourfront Centre <small><span class="glyphicon glyphicon-map-marker" style="color: #000"></span></small></h4>
-          <p class="lead">A 10-acre site downtown Toronto and nestled along the shores of Lake Ontario. <span class="nowrap">Lower Simcoe St.</span> and <span class="nowrap">Queens Quay St. W.</span></p>
+          <h4>Ontario's Celebration Zone <small><span class="glyphicon glyphicon-map-marker" style="color: #000"></span></small></h4>
+          <p class="lead">
+
+
+            Ontario’s Celebration Zone at Toronto’s Harbourfront Centre will showcase 38 days of the Best of Ontario, July 10 to August 16, 2015, 10 a.m. to 10 p.m.</p>
+            <p>Lots to do and see for FREE &#8212; nightly concerts, live entertainment all day every day including music, theatre, dance, book readings, art installations, comedy and community showcases, great culinary features including Ontario craft beer and wine, high-quality kids programming, “try a sport” opportunities, hands-on interactive digital media demos, and an amazing zipline, rock climbing wall and Adrenaline Jump. Epic is ON at Ontario’s Celebration Zone!</p>
+
+<p>Visit <a href="http://www.ontariotravel.net">www.ontariotravel.net</a> for full program details</p>
+<p>Follow OCZ on Twitter: <a href="http://twitter.com/EpicIsON">@EpicIsON</a></p>
+
         </div>
         <div class="col-md-6">
+          <h4>How to Get to OCZ</h4>
+          <p>OCZ is at Harbourfront Centre, located at <span class="nowrap">Lower Simcoe St.</span> and <span class="nowrap">Queens Quay St. W.</span></p>
           <h4>Public Transit <small><span class="glyphicon glyphicon-map-marker" style="color: #e74b52"></span></small></h4>
           <p><strong>TTC</strong>
             The 509 Harbourfront streetcars run East-West from Union to Exhibition making a stop at the ferry docks.</p>
 
-            <h4>Other options</h4>
+            <h4>Other Options</h4>
             <p>Harbourfront Centre provides information about <a href="http://www.harbourfrontcentre.com/gettinghere/">getting to the venue via bike, car, boat and more</a>.</p>
           </div>
         </div>
