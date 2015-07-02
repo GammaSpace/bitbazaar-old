@@ -1,12 +1,15 @@
 {/stuff find by_type :bbapplication options {* (:depot.event #event)} | > :exhibitors}
 
-
+{* (
+  :spring2015 :bbapplication
+  :summer2015 :appsu2015)
+| > :stuff}
 {@exhibitors | extract "{this.depot.invite | is like :yes}" | > :ex_org}
 
 {ifelse (
-  {@MY.current_hat | is like :comics} "{stuff find by_type :bbapplication options {* (:my.application_type :comics)} | > :exhibitors}"
-  {@MY.current_hat | is like :games_arcade} "{stuff find by_type :bbapplication options {* (:my.application_type :games_arcade)} | > :exhibitors}"
-  :default "{stuff find by_type :bbapplication | > :exhibitors}"
+  {@MY.current_hat | is like :comics} "{stuff find by_type :bbsu15 options {* (:my.application_type :comics)} | > :exhibitors}"
+  {@MY.current_hat | is like :games_arcade} "{stuff find by_type :bbsu15 options {* (:my.application_type :games_arcade)} | > :exhibitors}"
+  :default "{stuff find by_type :bbsu15 | > :exhibitors}"
 )}
 
 {%global/snippets/exhibitor_categories}
