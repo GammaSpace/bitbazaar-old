@@ -138,22 +138,10 @@
 
 
         <div class="lead small clearfix address">
-
           <div class="clearfix" id="partners">
             <div class="row">
 
-
-
               <div class="col-xs-6">
-                <div class="wrapper">
-                  <div class="partner">
-                    <img src="{@SITE.path}/images/summer-2015/partner-logos/on_c_z.png" alt="Bento Miso" class="img-responsive" style="padding: 0 20px;">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-4 col-xs-offset-4">
                 <div class="wrapper">
                   <div class="partner">
                     <a href="http://bentomiso.com">
@@ -162,14 +150,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div class="col-xs-6">
-              <div class="wrapper">
-                <div class="partner">
-                  <a href="http://harbourfrontcentre.com">
-                    <img src="{@SITE.path}/images/summer-2015/partner-logos/harbourfront-centre.png" class="img-responsive center-block text-center ">
-                  </a>
+              <div class="col-xs-6">
+                <div class="wrapper">
+                  <div class="partner">
+                    <img src="{@SITE.path}/images/summer-2015/partner-logos/on_c_z.png" alt="Bento Miso" class="img-responsive" style="padding: 0 20px;">
+                  </div>
                 </div>
               </div>
             </div>
