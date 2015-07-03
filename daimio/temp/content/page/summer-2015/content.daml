@@ -23,7 +23,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-2 hidden-sm">
+            <div class="col-sm-2 hidden-xs hidden-sm">
               <div class="wrapper">
                 <div class="partner">
                   <a href="http://bentomiso.com">
@@ -33,7 +33,7 @@
               </div>
             </div>
 
-            <div class="col-sm-2 hidden-sm">
+            <div class="col-sm-2 hidden-xs hidden-sm">
               <div class="wrapper">
                 <div class="partner">
                   <img src="{@SITE.path}/images/summer-2015/partner-logos/on_c_z.png" alt="Bento Miso" class="img-responsive" style="padding: 0 20px;">
