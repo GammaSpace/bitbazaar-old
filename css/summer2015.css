@@ -6746,6 +6746,10 @@ body#bit-bazaar-summer-2015 #header div.lead {
   left: 0;
 }
 body#bit-bazaar-summer-2015 #header div.lead p {
+  font-family: "tablet-gothic", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-style: italic;
   margin-bottom: 0;
 }
 body#bit-bazaar-summer-2015 #header div.lead img {
