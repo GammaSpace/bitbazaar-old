@@ -89,7 +89,7 @@
           </div>
           <div class="form-group">
             <label class="form-label" for="name">Order</label>
-            <input type="text" value="{depot.order}" name="depot[order]" class="form-control input-lg" id="order">
+            <input type="text" value="{depot.order}" name="order" class="form-control input-lg" id="order">
           </div>
         {end admin}
         <div class="row">
@@ -161,6 +161,9 @@
               {permit superdo command "
               {my set for @ex_id in :stuff path key value value}
             "}
+            {end set}
+
+              {permit superdo command "{depot set for @ex_id in :stuff path :order value #order}"}
             {end set}
             {log #table_size}
           {notice set value {* (
