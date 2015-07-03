@@ -26,6 +26,11 @@
           <label class="form-label" for="type">Table Size</label>
           <div class="radio">
             <label class="">
+              <input type="radio" name="exhibitor[table_size]" id="type-third" value="0.33" {my.table_size | is like "0.33" | then :checked}> Third
+            </label>
+          </div>
+          <div class="radio">
+            <label class="">
               <input type="radio" name="exhibitor[table_size]" id="type-half" value="0.5" {my.table_size | is like "0.5" | then :checked}> Half
             </label>
           </div>
