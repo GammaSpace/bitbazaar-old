@@ -7081,8 +7081,9 @@ body#bit-bazaar-summer-2015 section#vendors #coming .confirmed p a:hover {
 body#bit-bazaar-summer-2015 section#vendors #coming .confirmed p.org {
   margin: 0;
   font-weight: 300;
-  color: #1a1a1a;
-  text-shadow: 1px 1px 1px #e3f825;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #abfae2;
   font-style: italic;
   font-family: "tablet-gothic", sans-serif;
 }
@@ -7095,7 +7096,7 @@ body#bit-bazaar-summer-2015 section#vendors #coming .confirmed p.org {
 body#bit-bazaar-summer-2015 section#vendors #coming .confirmed p.name {
   font-size: 18px;
   margin: 0;
-  border-bottom: solid 1px #e3f825;
+  border-bottom: solid 1px #abfae2;
   /* border-bottom: solid 1px; */
 }
 body#bit-bazaar-summer-2015 section#vendors h2,
