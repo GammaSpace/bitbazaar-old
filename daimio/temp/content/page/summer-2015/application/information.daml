@@ -1,1 +1,11 @@
+<h2>Important Info</h2>
+
+<ul>
+<li>You will need to bring your own table covering</li>
+<li>Load in and set up starts 90 minutes before opening (at <b>10 a.m.</b>) and you must be 100% ready to go no later than 11 a.m.</li>
+<li>It is a covered outdoor venue. Dress accordingly and bring your own water bottle.</li>
+<li>We will provide 24” or 27” monitors for games exhibitors. We may be able to loan controllers but you'll need to pick them up ahead of time from Bento.</li>
+<li>You must ensure your table is staffed through the entire event, until 7 p.m.</li>
+</ul>
+
 {content get_value handle {"page/summer-2015/application/assets/{:all | else #type}"}}
