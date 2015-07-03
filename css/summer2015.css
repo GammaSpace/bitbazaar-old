@@ -6656,7 +6656,7 @@ body#bit-bazaar-summer-2015 section#about p {
   background: #fff;
 }
 body#bit-bazaar-summer-2015 section#about p strong {
-  background-color: #dff954;
+  background-color: #abfae2;
   font-weight: normal;
 }
 body#bit-bazaar-summer-2015 section#about p a,
@@ -6671,11 +6671,11 @@ body#bit-bazaar-summer-2015 section#about-footer {
 }
 body#bit-bazaar-summer-2015 section#about-footer p,
 body#bit-bazaar-summer-2015 section#about-footer a {
-  color: #dff954;
+  color: #abfae2;
   font-size: 14px;
 }
 body#bit-bazaar-summer-2015 section#about-footer a {
-  border-bottom-color: #dff954;
+  border-bottom-color: #abfae2;
 }
 body#bit-bazaar-summer-2015 section#about-footer #copyright {
   text-align: left !important;
@@ -6928,7 +6928,7 @@ body#bit-bazaar-summer-2015 section#panelscapes p {
   color: magenta;
 }
 body#bit-bazaar-summer-2015 section#panelscapes p strong {
-  background: #dff954;
+  background: #abfae2;
 }
 body#bit-bazaar-summer-2015 section#panelscapes a {
   color: magenta;
@@ -7058,7 +7058,7 @@ body#bit-bazaar-summer-2015 section#vendors #food-vendors p strong {
   color: #1a1a1a;
 }
 body#bit-bazaar-summer-2015 section#vendors #coming b {
-  background-color: #dff954;
+  background-color: #abfae2;
   font-weight: normal;
 }
 body#bit-bazaar-summer-2015 section#vendors #coming .confirmed {
@@ -7076,7 +7076,7 @@ body#bit-bazaar-summer-2015 section#vendors #coming .confirmed p a {
 body#bit-bazaar-summer-2015 section#vendors #coming .confirmed p a:hover {
   border-bottom: none;
   color: #000000;
-  background: #dff954;
+  background: #abfae2;
 }
 body#bit-bazaar-summer-2015 section#vendors #coming .confirmed p.org {
   margin: 0;
