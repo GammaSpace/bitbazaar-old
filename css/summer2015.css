@@ -7080,10 +7080,11 @@ body#bit-bazaar-summer-2015 section#vendors #coming .confirmed p a:hover {
 }
 body#bit-bazaar-summer-2015 section#vendors #coming .confirmed p.org {
   margin: 0;
-  font-weight: 100;
+  font-weight: 300;
   color: #1a1a1a;
   text-shadow: 1px 1px 1px #e3f825;
   font-style: italic;
+  font-family: "tablet-gothic", sans-serif;
 }
 @media (min-width: 992px) {
   body#bit-bazaar-summer-2015 section#vendors #coming .confirmed p.org {
