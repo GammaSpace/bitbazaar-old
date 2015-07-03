@@ -4,7 +4,7 @@
 
 
 {ifelse (
-  {#event | is like :summer2015} "{lens get_confirmed_exhibitors type :bbapplication | extract "{this.depot.invite | is like :yes}" | > :ex_org}"
-  {#event | is like :spring2015} "{lens get_confirmed_exhibitors type :appsu2015 | extract "{this.depot.invite | is like :yes}" | > :ex_org}"
+  {#event | is like :summer2015} "{lens get_confirmed_exhibitors type :appsu2015 | extract "{this.depot.invite | is like :yes}" | > :ex_org}"
+  {#event | is like :spring2015} "{lens get_confirmed_exhibitors type :bbapplication | extract "{this.depot.invite | is like :yes}" | > :ex_org}"
   :default "ham"
 )}
