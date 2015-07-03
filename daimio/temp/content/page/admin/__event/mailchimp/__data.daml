@@ -1,3 +1,7 @@
 {permit superdo command "{profile find}" | > :profiles}
 {permit superdo command "{member find by_status :paid}" | > :members}
-{lens get_confirmed_exhibitors | extract "{this.depot.invite | is like :yes}" | > :ex_org}
+{ifelse (
+  {#event | is like :spring2015} "{lens get_confirmed_exhibitors type :bbapplication | extract "{this.depot.invite | is like :yes}" | > :ex_org}"
+  {#event | is like :summer2015} "{lens get_confirmed_exhibitors type :appsu15 | extract "{this.depot.invite | is like :yes}" | > :ex_org}"
+  :default "ham"
+)}
