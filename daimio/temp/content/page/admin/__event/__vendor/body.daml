@@ -163,8 +163,7 @@
             "}
             {end set}
 
-              {permit superdo command "{depot set for @ex_id in :stuff path :order value #order}"}
-            {end set}
+              {exec depot_set for @ex_id in :stuff path :order value #order}
             {log #table_size}
           {notice set value {* (
             :message "<strong>Success!</strong>  Your changes have been saved"
