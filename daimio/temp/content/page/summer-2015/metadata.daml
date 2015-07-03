@@ -5,6 +5,7 @@
 		:description "A unique zine-fair-meets-arcade, presented by Bento Miso"
 		:keywords "bit bazaar, videogames, zine fair, toronto videogames"
 		:typekit :sgy5zys
+		:type :appsu2015
 		:css_path "{@SITE.path}/css/summer2015.css"
 	)}
 	) | foreach string "{array union values (value @metadata.{key}) | > {"metadata.{key}"}}" }

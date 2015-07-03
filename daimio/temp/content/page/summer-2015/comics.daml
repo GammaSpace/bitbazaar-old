@@ -7,6 +7,7 @@
 
 
 
+
 {begin cat_vendors | merge with @ex_org}
   <div class="confirmed row">
     <div class="col-md-6">
