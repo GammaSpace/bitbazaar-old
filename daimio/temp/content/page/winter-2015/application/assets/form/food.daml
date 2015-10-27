@@ -1,0 +1,78 @@
+<p>Hi, {@profile.my.firstname}! {/You are logged in with your account <b>{@MY.username}</b>. The email we have on file for you is <b>{@member.my.email}</b>.}</p>
+
+{begin editing | if {#editing | is like :true}}
+  <div class="alert alert-info">All applications will be reviewed after April 10, so you can edit your submission as much as you wish until then.</div>
+{end editing}
+
+
+<form class="form-vertical" method="post" accept-charset="utf-8" id="game-exhibitor">
+  <fieldset>
+
+
+    <div class="form-group">
+      <label class="form-label" for="developer">Company Name</label>
+      <input type="text" value="{ifelse ({@appsu2015.#1.my.name} {@appsu2015.#1.my.name} {@profile.my.professional.company} "{@profile.my.professional.company}" {@POST} "{@POST.developer}" {@profile.my.firstname} "{@profile.my.firstname} {@profile.my.lastname}" :default "")}" name="depot[name]" class="form-control" id="developer">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="gamename">Product</label>
+
+      <input type="text" value="{ifelse ({@appsu2015.#1.my.product} {@appsu2015.#1.my.product} {@POST} "{@POST.gamename}" :default "")}" name="depot[product]" class="form-control required" id="gamename">
+      <p class="help-block">The title of your product or menu. If more than one, please list the primary one here and add others in the <b>short description</b> field below.</p>
+    </div>
+
+
+
+    <div class="form-group">
+      <label class="form-label" for="shortdescription">Short description</label>
+      <textarea type="text" name="depot[description]" class="form-control" rows="4" id="shortdescription">{@appsu2015.#1.my.description | then "{@appsu2015.#1.my.description}" else ""}</textarea>
+    </div>
+    <hr />
+    <div class="form-group">
+      <label class="form-label" for="link">Web site</label>
+      <div class="input-group">
+        <span class="input-group-addon">http://</span>
+        <input type="text" class="form-control" name="depot[link]" value="{@appsu2015.#1.my.link | then "{@appsu2015.#1.my.link}" else ""}">
+      </div>
+    </div>
+
+    <hr />
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <p class="help-block">All exhibitors are expected to comply with our <a href="https://bentomiso.zendesk.com/hc/en-us/articles/201812303-Code-of-Conduct" target="_blank">Code of Coduct</a>.</p>
+  </fieldset>
+
+  <input type="hidden" name="application_id" value="{@appsu2015.#1._id | else ""}">
+  <input type="hidden" name="registered" value="{time represent as "M d, Y"}">
+  <input type="hidden" name="firstname" value="{@profile.my.firstname}">
+  <input type="hidden" name="lastname" value="{@profile.my.lastname}">
+  <input type="hidden" name="email" value="{@member.my.email}">
+  <input type="hidden" name="depot[submitted]" value="{time represent as :c}">
+
+  <textarea name="commands" style="display:none">
+    {begin verbatim | process escape}
+
+      {begin editing}
+        {#application_id | > :ex_id}
+      {end editing}
+
+      {begin new}
+        {stuff add type :appsu2015 | > :ex_id}
+        {exec send_member_email subject {"Bit Bazaar Exhibitor Application Received"} body {%template/email/applicant_notification_food | process consume}}
+        {exec admin_send_email subject {"Bit Bazaar SP 2015 Exhibitor Application Received"} body {%template/email/admin_notification | process consume}}
+      {end new}
+
+      {ifelse (
+        {#application_id} $editing
+        :default $new
+      )}
+
+      {begin added | if @ex_id}
+        {begin depotize | foreach with #depot}
+          {my set for @ex_id in :stuff path key value value}
+        {end depotize}
+        {page redirect to :spring-2015/application}
+      {end added}
+    {end verbatim}
+  </textarea>
+
+</form>

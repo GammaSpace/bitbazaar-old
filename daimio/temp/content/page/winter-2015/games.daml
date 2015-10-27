@@ -1,0 +1,20 @@
+{lens get_confirmed_exhibitors type :appsu2015
+  | extract "{this.depot.invite | is like :yes}"
+  | extract "{:games_marketplace | is in this.my.application_type}"
+  | collection sort by {* (:depot.order :ASC)}
+  | > :ex_org | ""}
+
+
+{begin cat_vendors | merge with @ex_org}
+  <div class="confirmed row">
+    <div class="col-md-6">
+      <p class="{depot.application_type} org">
+        <a href="{"http://" | is in my.link | then "{my.link}" else "http://{my.link}"}">{my.product}</a>
+      </p>
+
+    </div>
+    <div class="col-md-6">
+      <p class="name">{my.name}</p>
+    </div>
+  </div>
+{end cat_vendors}

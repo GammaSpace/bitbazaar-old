@@ -1,0 +1,119 @@
+<p>Hi, {@profile.my.firstname}! {/You are logged in with your account <b>{@MY.username}</b>. The email we have on file for you is <b>{@member.my.email}</b>.}</p>
+
+{begin editing | if {#editing | is like :true}}
+  <div class="alert alert-info">All applications will be reviewed after July 1, so you can edit your submission as much as you wish until then.</div>
+{end editing}
+
+
+<form class="form-vertical" method="post" accept-charset="utf-8" id="game-exhibitor">
+  <fieldset>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label class="form-label" for="developer">Name</label>
+
+          <input type="text" value="{ifelse ({@appsu2015.#1.my.name} {@appsu2015.#1.my.name} {@profile.my.professional.company} "{@profile.my.professional.company}" {@POST} "{@POST.developer}" {@profile.my.firstname} "{@profile.my.firstname} {@profile.my.lastname}" :default "")}" name="depot[name]" class="form-control" id="developer">
+          <p class="help-block">If exhibiting as a collective, studio, or other group, use that name here.</p>
+
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group" id="application-type">
+          <label class="form-label" for="type">Category</label>
+          <div class="radio">
+            <label class="">
+
+
+
+
+              <input type="radio" name="depot[application_type]" id="type-games" value="games_marketplace" {or ({@appsu2015.#1.my.application_type | is like :games_marketplace} {@appsu2015.#1.my.application_type | not}) | then :checked}> Games
+            </label>
+          </div>
+
+          <div class="radio">
+
+            <label class="radio">
+              <input type="radio" name="depot[application_type]" id="type-comics" value="comics" {@appsu2015.#1.my.application_type | is like :comics | then :checked}> Comics and/or Zines
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="gamename">Title</label>
+
+      <input type="text" value="{ifelse ({@appsu2015.#1.my.product} {@appsu2015.#1.my.product} {@POST} "{@POST.gamename}" :default "")}" name="depot[product]" class="form-control required" id="gamename">
+      <p class="help-block">The title of the game or comic you're showing. If showing more than one, please list the primary one here and add others in the <b>short description</b> field below.</p>
+    </div>
+
+
+
+    <div class="form-group">
+      <label class="form-label" for="shortdescription">Short description</label>
+      <textarea type="text" name="depot[description]" class="form-control" rows="4" id="shortdescription">{@appsu2015.#1.my.description | then "{@appsu2015.#1.my.description}" else ""}</textarea>
+    </div>
+    <hr />
+    <div class="form-group">
+      <label class="form-label" for="link">Web site</label>
+      <div class="input-group">
+        <span class="input-group-addon">http://</span>
+        <input type="text" class="form-control" name="depot[link]" value="{@appsu2015.#1.my.link | then "{@appsu2015.#1.my.link}" else ""}">
+      </div>
+    </div>
+
+    <div class="form-group" id="gameplay">
+      <label class="form-label" for="link">Link to gameplay video or download</label>
+      <div class="input-group">
+        <span class="input-group-addon">http://</span>
+        <input type="text" class="form-control" name="depot[gameplay]" value="{@appsu2015.#1.my.gameplay | then "{@appsu2015.#1.my.gameplay}" else ""}">
+      </div>
+    </div>
+
+
+    <div class="form-group" id="merch">
+      <label class="form-label" for="merch">Merchandise</label>
+      <textarea type="text" value="{@POST.merch}" name="depot[merch]" class="form-control" rows="6" id="merch">{@appsu2015.#1.my.merch | then "{@appsu2015.#1.my.merch}" else ""}</textarea>
+      <p class="help-block">Please describe what you plan to have for sale and in what format (e.g., download code, prints, boxed editions).</p>
+    </div>
+    <hr />
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <p class="help-block">All exhibitors are expected to comply with our <a href="https://bentomiso.zendesk.com/hc/en-us/articles/201812303-Code-of-Conduct" target="_blank">Code of Coduct</a>.</p>
+  </fieldset>
+
+  <input type="hidden" name="application_id" value="{@appsu2015.#1._id | else ""}">
+  <input type="hidden" name="registered" value="{time represent as "M d, Y"}">
+  <input type="hidden" name="firstname" value="{@profile.my.firstname}">
+  <input type="hidden" name="lastname" value="{@profile.my.lastname}">
+  <input type="hidden" name="email" value="{@member.my.email}">
+  <input type="hidden" name="depot[submitted]" value="{time represent as :c}">
+
+  <textarea name="commands" style="display:none">
+    {begin verbatim | process escape}
+
+      {begin editing}
+        {#application_id | > :ex_id}
+      {end editing}
+
+      {begin new}
+        {stuff add type :appsu2015 | > :ex_id}
+        {exec send_member_email subject {"Bit Bazaar Exhibitor Application Received"} body {%template/email/applicant_notification | process consume}}
+        {exec admin_send_email subject {"Bit Bazaar SU 2015 Exhibitor Application Received"} body {%template/email/admin_notification | process consume}}
+      {end new}
+
+      {ifelse (
+        {#application_id} $editing
+        :default $new
+      )}
+
+      {begin added | if @ex_id}
+        {begin depotize | foreach with #depot}
+          {my set for @ex_id in :stuff path key value value}
+        {end depotize}
+        {page redirect to :summer-2015/application}
+      {end added}
+    {end verbatim}
+  </textarea>
+
+</form>

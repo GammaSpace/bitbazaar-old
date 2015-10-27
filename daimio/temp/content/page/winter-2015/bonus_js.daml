@@ -1,0 +1,9 @@
+<script src="{@SITE.path}/js/jquery.matchHeight-min.js"></script>
+
+{begin js | process escape}
+<script>
+$(document).ready(function(){
+  $('.partner').matchHeight();
+});
+</script>
+{end js}

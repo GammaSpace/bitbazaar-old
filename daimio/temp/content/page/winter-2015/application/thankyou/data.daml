@@ -1,0 +1,2 @@
+{> :title.main value "Home"}
+{> :title.subtitle value "Ham sandwich"}

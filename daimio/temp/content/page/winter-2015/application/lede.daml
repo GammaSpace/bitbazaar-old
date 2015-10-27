@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-sm-2">
+
+    <div class="center-block">
+      <a href="{@SITE.path}/spring-2015"><img src="{@SITE.path}/images/bit_bazaar_logo_290x334.png" alt="" class="img-responsive logo"></a>
+
+    </div>
+  </div>
+  <div class="col-sm-10">
+    <h2>Apply to exhibit at Bit Bazaar 6 <small>Sunday, July 12, 2015</small></h2>
+    <p><b>Bit Bazaar #6 takes place Sunday, July 12 from 11:30 a.m.-7 p.m. at Ontario's Celebration Zone at Toronto's Harbourfront Centre during the Pan Am Games.</b></p>
+
+    <div class="row">
+      {/<div class="col-md-4"><p class="lead">Hey, <b>Toronto food and beverage producers!</b> Be part of our 5<sup>th</sup> fair, a unique celebration of the art and craft of independent games, comics and good food!</p></div>
+      <div class="col-md-4"><p class="lead"><b>Food vendor applications are open from April 3-10.</b> Selected vendors will be contacted by April 13. <small> Games and comics exhibitor applications are now closed.</small></p></div>}
+
+      </div>
+
+
+
+
+      {/<div class="alert alert-warning">
+        <b>Game and comics</b> applications are now closed. Selected vendors will be notified April 10.<br>
+        <b>Food vendor</b> applications are open through April 3. Selected vendors will be notified by April 10.
+      </div>}
+    </div>
+    <div class="col-sm-2 hidden-sm hidden-xs hidden-sm">
+
+    </div>
+  </div>
+</div>
+{/<p class="text-center"><a href="{@SITE.path}/spring-2015">&larr; Home</a></p>}

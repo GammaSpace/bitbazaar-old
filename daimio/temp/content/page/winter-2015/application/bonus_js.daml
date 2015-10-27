@@ -1,0 +1,27 @@
+<script src="{@SITE.path}/js/jquery.matchHeight-min.js"></script>
+
+{begin js | process escape}
+<script>
+$(document).ready(function(){
+  $('.partner').matchHeight();
+
+  $("input[name='depot[application_type]']").change(function() {
+    if ($("#type-games-arcade").is(':checked')) {
+      $("#merch").hide()
+    }
+    else {
+      $("#merch").show()
+    }
+    if ($("#type-comics").is(':checked')) {
+      $("#gameplay").hide()
+    }
+    else {
+      $("#gameplay").show()
+    }
+  });
+});
+</script>
+
+
+
+{end js}

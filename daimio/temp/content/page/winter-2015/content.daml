@@ -1,0 +1,137 @@
+<section id="header">
+  <div class="wrapper">
+    <div class="cell">
+
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+          <img src="{@SITE.path}/images/summer-2015/logo.png" class="img-responsive text-center center-block" id="logo">
+
+        </div>
+      </div>
+
+
+
+      <div class="lead small clearfix address">
+
+        <div class="clearfix" id="partners">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="wrapper">
+                <div class="partner">
+                  <h3>Bit Bazaar AF</h3>
+                  <p> Friday, December 4 &bull; 8pm-midnight<br><span class="smallcaps">Free</span></p>
+                  <small>Bento Miso Collaborative Workspace</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div class="wrapper">
+                <div class="partner">
+                  <h3>Bit Bazaar XL</h3>
+                  <p> Saturday, December 5 &bull; 9am-7pm &amp; Sunday, December 6 &bull; 9am-3pm</p>
+                  <small>Maple Leaf Gardens at Mattamy Athletic Centre</small>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="splitscreen">
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-6" id='bbaf'>AF</div>
+      <div class="col-md-6" id='bbxl'>
+
+        <section class="venue clearfix">
+
+
+          <h3 class="main">The Venue</h3>
+          <h4>Mattamy Atheltic Centre<small><span class="glyphicon glyphicon-map-marker" style="color: #000"></span></small></h4>
+          <p class="lead">FanFest, a new addition to annual Canadian Videogame Awards celebrations, has invited Bit Bazaar exhibitors to show their games and wares right alongside the big studios this winter!</p>
+
+          <p>Visit <a href="http://www.cvawards.ca">cvawards.ca</a> for full event details</p>
+
+          <h4>How to Get to Here</h4>
+
+          <p>Bit Bazaar is at Mattamy Athletic Centre at the Gardens, located at <a href="https://goo.gl/maps/bK1u4KqZmvM2">50 Carlton Street</a> within historic Maple Leaf Gardens.</p>
+
+
+          <p><strong>TTC</strong>
+            Mattamy Centre is easily accessible via public transit. From the Yonge-University subway line, get off at College Street and head east on Carlton Street about one block. Or take the 506 streetcar to Carlton St @ Church St stop.</p>
+            <p><strong>Parking</strong> There are several paid public parking lots surrounding venue. No on-site parking is available. </p>
+
+            <p> <a href="http://www.mattamyathleticcentre.ca/arena-info/accessibility">Accessibility information</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    </div>
+  </div>
+</div>
+
+
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <h3 class="main">About</h3>
+        <div class="">
+          <p>Bit Bazaar is a <strong>videogame arts &amp; crafts market + zine fair</strong>! </p>
+          <p class="lead"><b>Play minty-fresh games!</b> Buy one-of-a-kind, limited-edition and handmade/DIY items—pins, zines, boxed video games, card decks, art prints, comics, t-shirts, game soundtracks on vinyl, mixtapes, papercraft and toys—direct from 20+ independent game makers!</p>
+          <p>Check out the lineups for our <a href="https://bentomiso.com/bit-bazaar-spring-fair-2013">Spring 2013</a>, <a href="https://bentomiso.com/bit-bazaar-winter-market-2013">Winter 2013</a>, <a href="https://bentomiso.com/bit-bazaar-spring-fair-2014">Spring 2014</a>, <a href="https://bentomiso.com/bit-bazaar-winter-market-2014">Winter 2014</a>,
+            <a href="{@SITE.path}/spring-2015">Spring 2015</a> and <a href="{@SITE.path}/summer-2015">Summer 2015</a>
+            events.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <div class="map-box">
+      <div id="map">
+        <iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/jenniebox.mjn5lo2n/attribution.html?access_token=pk.eyJ1IjoiamVubmllYm94IiwiYSI6IlEzYkV1bGsifQ.0twdzE_LcndSHJBnCxd0og'></iframe>
+      </div>
+    </div>
+
+    <section class="visible-xs">
+      <div class="container">
+
+
+
+        <div class="lead small clearfix address">
+          <div class="clearfix" id="partners">
+            <div class="row">
+
+              <div class="col-xs-6">
+                <div class="wrapper">
+                  <div class="partner">
+                    <a href="http://bentomiso.com">
+                      <img src="{@SITE.path}/images/summer-2015/partner-logos/miso_logo_white_small.png" alt="Bento Miso" class="img-responsive" style="padding: 0 20px;">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="wrapper">
+                  <div class="partner">
+                    <img src="{@SITE.path}/images/summer-2015/partner-logos/on_c_z.png" alt="Bento Miso" class="img-responsive" style="padding: 0 20px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

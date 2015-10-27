@@ -1,0 +1,12 @@
+<body id="bit-bazaar-winter-2015" class="bit-bazaar" data-spy="scroll" data-target="#primary-nav-2" data-offset="50">
+  {%nav}
+  {%content}
+
+  <section id="about-footer">
+    <div class="container">
+
+      {%global/snippets/footer_info}
+      <p><a href="http://eepurl.com/HwS5T">Join our mailing list</a> to find out when they open for our next event!</p>
+
+    </div>
+  </section>

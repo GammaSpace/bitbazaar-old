@@ -1,0 +1,80 @@
+<p>Hi, {@profile.my.firstname} {@profile.my.lastname}! You are logged in with your account <b>{@MY.username}</b>. The email we have on file for you is <b>{@member.depot.email}</b>.</p>
+<form class="form-vertical" method="post" accept-charset="utf-8" id="game-exhibitor">
+  <fieldset>
+
+    <div class="form-group">
+      <label class="form-label" for="developer">Company Name</label>
+      <input type="text" value="{ifelse ({@profile.my.professional.company} "{@profile.my.professional.company}" {@POST} "{@POST.developer}" {@profile.my.firstname} "{@profile.my.firstname} {@profile.my.lastname}" :default "")}" name="name" class="form-control" id="developer">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="gamename">Names of Product(s)</label>
+
+      <input type="text" value="{ifelse ({@POST} "{@POST.gamename}" :default "")}" name="product" class="form-control required" id="gamename">
+    </div>
+
+
+
+    <div class="form-group">
+      <label class="form-label" for="shortdescription">Description</label>
+      <textarea type="text" value="{@POST.shortdescription}" name="shortdescription" class="form-control" rows="4" id="shortdescription"></textarea>
+            <p class="help-block">More details about what you're selling and prep/table space needs. Please describe how your foods are packaged and/or served. <em>Note: Hot foods can be heated on site (bring your own toaster oven) but must be prepared in your own kitchen.</em></p>
+    </div>
+
+
+    <hr />
+    <div class="form-group">
+      <label class="form-label" for="link">Web site</label>
+
+      <div class="input-group">
+        <span class="input-group-addon">http://</span>
+        <input type="text" class="form-control" name="link">
+
+
+      </div>
+      <hr>
+      <button type="submit" class="btn btn-default">Submit &rarr;</button>
+      <p class="help-block">All exhibitors are expected to comply with our <a href="https://bentomiso.zendesk.com/hc/en-us/articles/201812303-Code-of-Conduct">Code of Coduct</a>.</p>
+    </div>
+
+
+
+
+  </fieldset>
+
+  <input type="hidden" name="registered" value="{time represent as "M d, Y"}">
+  <input type="hidden" value="{@profile.my.firstname}" name="firstname">
+  <input type="hidden" value="{@profile.my.lastname}" name="lastname">
+  <input type="hidden" value="{@member.depot.email}" name="email">
+  <input type="hidden" name="submitted" value="{time represent as :c}">
+  <input type="hidden" name="type" value="food">
+
+  <textarea name="commands" style="display:none">
+    {begin verbatim | process escape}
+
+      {/ Application stuff}
+      {stuff add type :appsu2015 | > :ex_id}
+      {begin added | if @ex_id}
+        {exec depot_set for @ex_id in :stuff path :application_type value #type}
+        {exec depot_set for @ex_id in :stuff path :name value #name}
+        {exec depot_set for @ex_id in :stuff path :product value #product}
+        {exec depot_set for @ex_id in :stuff path :link value #link}
+        {exec depot_set for @ex_id in :stuff path :merch value #merch}
+        {exec depot_set for @ex_id in :stuff path :description value #shortdescription}
+        {exec depot_set for @ex_id in :stuff path :submitted value #submitted}
+
+        {/ Send email}
+        {exec send_member_email
+          subject {"[Bit Bazaar Winter 2014] Food Vendor Application Received"}
+          body {%template/email/bitbazaar/applicant_notification | process consume}
+        }
+
+        {exec admin_send_email
+          subject {"[Bit Bazaar Winter 2014] Food Vendor Application Received"}
+          body {%template/email/bitbazaar/admin_notification | process consume}
+        }
+      {end added}
+    {end verbatim}
+  </textarea>
+</div>
+</form>
