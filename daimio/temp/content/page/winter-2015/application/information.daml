@@ -1,11 +1,21 @@
 <h2>Important Info</h2>
 
+<h3>Game &amp; Comics Exhibitors</h3>
+
 <ul>
-<li>You will need to bring your own table covering</li>
-<li>Load in and set up starts 90 minutes before opening (at <b>10 a.m.</b>) and you must be 100% ready to go no later than 11 a.m.</li>
-<li>It is a covered outdoor venue. Dress accordingly and bring your own water bottle.</li>
-<li>We will provide 24” or 27” monitors for games exhibitors. We may be able to loan controllers but you'll need to pick them up ahead of time from Bento.</li>
-<li>You must ensure your table is staffed through the entire event, until 7 p.m.</li>
+  <li>You will need to bring your own table covering</li>
+  <li>Load in timing will be shared with selected exhibitors. Plan on setting up either the evening before or very early on Saturday.</li>
+  <li>You must ensure your table is staffed through the entire event, until 7 p.m.</li>
+</ul>
+
+<h3>Food Vendors</h3>
+
+<p>No fee to apply; however, selected vendors will be subject to a nominal fee to cover the cost of kitchen and storage use at Mattamy Centre (we'll let you know as soon as we know what the amount is!).</p>
+<ul>
+  <li>A <b>commercial kitchen</b> with deep fryers is available on site</li>
+  <li>Storage is available on site</li>
+  <li>On-site concessions will avoid overlapping food items, so be sure to provide us with an accurate menu</li>
+  <li>5,000 expected attendance</li>
 </ul>
 
 {content get_value handle {"page/summer-2015/application/assets/{:all | else #type}"}}

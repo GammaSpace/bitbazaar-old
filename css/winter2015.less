@@ -7,6 +7,8 @@
 
 @primary: #abfae2;
 @secondary: #000;
+@bbaf-primary: #fff;
+@bbxl-primary: #000;
 @highlight: #abfae2;
 
 
@@ -344,12 +346,12 @@ body {
 
 
 				@media (min-width: @screen-md-min) {
-					background-image: url(../images/winter-2015/bg-splitscreen.png);
+
 					background-position: 50% 50%;
 					background-repeat: repeat-y;
 				}
 
-				
+
 
 				.venue {
 					h4 {
@@ -372,11 +374,27 @@ body {
 				}
 
 				#bbxl {
+					background: @bbxl-primary;
 					.venue {
-			      .mixin(#fff,transparent);
+			      .mixin(@bbaf-primary,@bbxl-primary);
 						h4 {
-						background: #fff;
-						color: @secondary;
+						background: @bbaf-primary;
+						color: @bbxl-primary;
+
+						}
+			    }
+				}
+				#bbaf {
+					background: @bbaf-primary;
+					.venue {
+			      .mixin(@bbxl-primary,transparent);
+						a,a:hover {
+							color: @bbxl-primary;
+							border-bottom-color: @bbxl-primary
+						}
+						h4 {
+						background: @bbxl-primary;
+						color: @bbaf-primary;
 
 						}
 			    }

@@ -1,5 +1,5 @@
-<form method="post" accept-charset="utf-8" enctype="multipart/form-data" id="" class="pay-now form-vertical" action="{@SITE.path}/bit-bazaar-winter-market-2014/application">  
-	{%global/notices}      
+<form method="post" accept-charset="utf-8" enctype="multipart/form-data" id="" class="pay-now form-vertical" action="{@SITE.path}/bit-bazaar-winter-market-2014/application">
+	{%global/notices}
 	<script
 	src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 	data-key="{stryper get_public_key test 0}"
@@ -15,9 +15,9 @@
 	<input type="hidden" name="firstname" value="{@profile.my.firstname}">
 	<input type="hidden" name="lastname" value="{@profile.my.lastname}">
 	<input type="hidden" name="item" value="Bit Bazaar Application Fee">
-	<input type="hidden" name="stripe_price" value="1000">		
-	<input type="hidden" name="email" value="{@member.depot.email}">           
-	<input type="hidden" name="application_id" value="{@appsu2015.#1._id}">        
+	<input type="hidden" name="stripe_price" value="1000">
+	<input type="hidden" name="email" value="{@member.depot.email}">
+	<input type="hidden" name="application_id" value="{@appsu2015.#1._id}">
 	<input type="hidden" name="amount" value="">
 	<input type="hidden" name="pretty_total" value="$10.00">
 
@@ -34,35 +34,32 @@
 
 				{exec depot_set for #application_id in :stuff path :paid value :true}
 
-				{notice set value {* (:message "Success! Thanks for submitting payment." :type :success)}}      
+				{notice set value {* (:message "Success! Thanks for submitting payment." :type :success)}}
 				{/ payment was successful }
 
 			{end paid}
 
-      
+
 		{end verbatim}
 	</textarea>
 </form>
 
 <div class="help-block">Don't have a credit card? <a href="mailto:info@bentomiso.com?subject=Payment options for Bit Bazaar application {@appsu2015.#1._id}">Contact us</a> for other payment options.<br>Reference application <b>#{@appsu2015.#1._id}</b></div>
-
-
 <p class="">&#8212; or &#8212;</p>
 
 <form method="post" novalidate accept-charset="UTF-8" enctype="multipart/form-data">
 
-      <button type="submit" class="btn btn-default" data-loading-text="Submitting..." onclick="$(this).button('loading')">
-        Submit application without payment
-      </button>
-          <p class="help-block">We won't see this information during the selection process.</p>
+	<button type="submit" class="btn btn-default" data-loading-text="Submitting..." onclick="$(this).button('loading')">
+		Submit application without payment
+	</button>
+	<p class="help-block">We won't see this information during the selection process.</p>
 
 
-  <input type="hidden" name="application_id" value="{@appsu2015.#1._id}">        
-  
-  <textarea name="commands" style="display:none">
-    {begin verbatim | process escape}
-      {exec depot_set for #application_id in :stuff path :paid value :true}
-    {end verbatim}
-  </textarea>
+	<input type="hidden" name="application_id" value="{@appsu2015.#1._id}">
+
+	<textarea name="commands" style="display:none">
+		{begin verbatim | process escape}
+			{exec depot_set for #application_id in :stuff path :paid value :true}
+		{end verbatim}
+	</textarea>
 </form>
-  
