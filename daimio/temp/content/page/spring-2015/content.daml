@@ -8,10 +8,10 @@
           <a href="https://www.facebook.com/events/354675598056821/"><img src="{@SITE.path}/images/socmed/FB-f-Logo__white_100.png" alt="Facebook" height="20"/></a>
           <a href="https://www.flickr.com/groups/bitbazaar/"><img src="{@SITE.path}/images/socmed/flickr.png"  alt="Flickr"></a>
         </div>
-</div>
-</div>
-<div class="row">
-  <div class="col-sm-6 col-sm-offset-3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
         <p class="tagline">A Toronto festival of videogames + comics + good food</p>
         <p class="lead">Saturday, May 9 &bull; 1-9 p.m. &bull; <span class="smallcaps">Free</span></p>
 
@@ -62,7 +62,7 @@
 
     <p> <a href="{@SITE.path}/spring-2015/panelscapes" class="btn-3d"> <span data-hover="Check It Out">Check It Out</span></a> </p>
 
-    </div>
+  </div>
 
 </section>
 
@@ -104,8 +104,8 @@
           <p class="lead">Buy one-of-a-kind, limited-edition and handmade/DIY items—pins, zines, boxed video games, card decks, art prints, comics, t-shirts, game soundtracks on vinyl, mixtapes, papercraft and toys—direct from 30+ independent game makers!</p>
           <p><strong>Come hungry</strong>! Food vendors will be serving up tacos, street food, vegan treats, specialty chocolates, craft beer, lemonade and more! Most items cost $5-8.</p>
           <p>Check out the lineups for our <a href="https://bentomiso.com/bit-bazaar-spring-fair-2013">Spring 2013</a>, <a href="https://bentomiso.com/bit-bazaar-winter-market-2013">Winter 2013</a>, <a href="https://bentomiso.com/bit-bazaar-spring-fair-2014">Spring 2014</a> and <a href="https://bentomiso.com/bit-bazaar-winter-market-2014">Winter 2014</a> events.</p>
-          {/          <p><a href="https://bentomiso.com/bitbazaar">Past events &amp; more info</a></p>
-}        </div>
+          {/          <p><a href="https://bentomiso.com/bitbazaar">Past events &amp; more info</a></p> }
+        </div>
       </div>
     </div>
   </div>
@@ -122,17 +122,17 @@
         <h4>Public Transit <small><span class="glyphicon glyphicon-map-marker" style="color: #e74b52"></span></small></h4>
         <p><strong>Subway</strong>
           From Ossington Station, take the 63 bus to King and Strachan; from Osgoode Station take the 501 Queen streetcar to Strachan.</p>
-        <p><strong>Streetcar</strong>
-          Take the 501 Queen or 504 King streetcar to Strachan. We're one block south of Queen and two north of King on Richmond.</p>
+          <p><strong>Streetcar</strong>
+            Take the 501 Queen or 504 King streetcar to Strachan. We're one block south of Queen and two north of King on Richmond.</p>
 
-        <h4>Parking <small><span class="glyphicon glyphicon-map-marker" style="color: #46ce8f"></span></small></h4>
-        <p>There are paid <a href="http://parking.greenp.com/find-parking/?a=862+Richmond+Street+West&x=0&y=0" target="_blank">Green P parking lots</a> at Walnut/Richmond (2-minute walk), Queen/Ossington and King/Tecumseth (10-minute walk). They range from $2 to $3.50/hour. Street parking is $1.50 to $2.25/hour.</p>
+            <h4>Parking <small><span class="glyphicon glyphicon-map-marker" style="color: #46ce8f"></span></small></h4>
+            <p>There are paid <a href="http://parking.greenp.com/find-parking/?a=862+Richmond+Street+West&x=0&y=0" target="_blank">Green P parking lots</a> at Walnut/Richmond (2-minute walk), Queen/Ossington and King/Tecumseth (10-minute walk). They range from $2 to $3.50/hour. Street parking is $1.50 to $2.25/hour.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="map-box">
+      <div id="map">
+        <iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/jenniebox.m1083544/attribution.html?access_token=pk.eyJ1IjoiamVubmllYm94IiwiYSI6IlEzYkV1bGsifQ.0twdzE_LcndSHJBnCxd0og'></iframe>
       </div>
     </div>
-  </div>
-</section>
-<div class="map-box">
-  <div id="map">
-    <iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/jenniebox.m1083544/attribution.html?access_token=pk.eyJ1IjoiamVubmllYm94IiwiYSI6IlEzYkV1bGsifQ.0twdzE_LcndSHJBnCxd0og'></iframe>
-  </div>
-</div>

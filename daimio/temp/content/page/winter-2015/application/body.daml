@@ -6,7 +6,12 @@
 	</div>
 	<div class="container content">
 
-		<p class="lead" style="margin-top: 20px;"><b>Applications closed on July 1.</b></p>
+		{/<p class="lead" style="margin-top: 20px;"><b>Applications closed on July 1.</b></p>}
+
+		{content get_value handle {"page/winter-2015/application/assets/{:all | else #type}"}}
+
+
+
 		<div class="row">
 			<div class="col-md-6">{%application_form}</div>
 			<div class="col-md-6">{%information}</div>
@@ -18,9 +23,6 @@
 			<div class="row">
 				<div class="col-md-6">
 
-
-						<b>Pan Am Games: Ontario Celebration Zone</b><br>
-						<p>Ontario's Celebration Zone at Toronto's Harbourfront Centre will be open to visitors for the duration of the Games. Visitors will be able to experience programming featuring Ontario artists, interactive exhibits and culinary demonstrations.</p>
 
 
 
@@ -44,16 +46,16 @@
 								</div>
 								{/<div class="col-xs-6">
 									<div class="wrapper">
-										<div class="partner"></div>
-									</div>
-								</div>}
-							</div>
+									<div class="partner"></div>
+								</div>
+							</div>}
 						</div>
-
 					</div>
+
 				</div>
 			</div>
-		</section>
-		<div class="center-block text-center">
-			{%global/snippets/footer_info}
 		</div>
+	</section>
+	<div class="center-block text-center">
+		{%global/snippets/footer_info}
+	</div>

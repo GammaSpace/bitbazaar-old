@@ -1,81 +1,23 @@
 <div class="info">
-
   <h2>What we&#8217;re looking for</h2>
-  <h3>Games.</h3> <p class="lead">Video games, board games, card games, tabletop games, game dev collectives, game-like rad things.</p>
-
   <div class="row">
     <div class="col-md-4">
-
-
-      <h4>Marketplace</h4>
-      <p>A complete version or playable demo of your game(s) plus one-of-a-kind, handmade/DIY items.</p>
-      <p><em>We are especially interested in games being released during 2015, and welcome all creators however small or weird your work is!</em></p>
-
-
+      <section id="info-games">
+        <h3>Games.</h3> <p class="lead">Video games, board games, card games, tabletop games, game dev collectives, game-like rad things.</p>
+      </section>
     </div>
-    <div class="col-md-5">
+    <div class="col-md-4">
+      <section id="info-comics">
+        <h3>Comics + zines.</h3> <p class="lead">Self-published books and comics, webcomics, small press, collectives, original art work, fanart</p>
 
-
-      <ul class="list-inline list-unstyled">
-        <li>zines</li>
-        <li>printed player manuals</li>
-        <li>patches</li>
-        <li>plush goods</li>
-        <li>screenprints/art prints</li>
-        <li>buttons</li>
-        <li>papercraft</li>
-        <li>collectible cards</li>
-        <li>t-shirts</li>
-        <li>boxed special editions</li>
-        <li>stationery</li>
-        <li>toys/figures</li>
-        <li>soundtrack on tape or vinyl</li>
-        <li>jewelry</li>
-        <li>custom controllers/hardware</li>
-        <li>physical/card games</li>
-        <li>mixtapes</li>
-      </ul>
+      </section>
     </div>
-    <div class="col-md-3 hidden-xs">
-
-      <img src="{@SITE.path}/images/spring-2015/mrgs_booth.jpg" class="img-responsive"><br>
-      <img src="{@SITE.path}/images/spring-2015/14178054315_3dbfbbdbfe_m.jpg" class="img-responsive">
-
+    <div class="col-md-4">
+      <section id="info-food">
+        <h3>Food + Beverages.</h3>
+        <p class="lead">Hot or cold eat-on-the-spot handheld treats and/or packaged, prepared take-home foods and drinks.</p>
+        </section>
+      </div>
     </div>
+    {/  <p><b>Need ideas?</b> Watch this video with Skot Deeming (aka mrghosty) - <a href="https://www.youtube.com/watch?v=atdBruXI9wU" target="_blank">Bit Bazaar Exhibitors&#8217; Workshop (Fall 2013)</a> - and check out <a href="https://bentomiso.com/blog/bit-bazaar-goods-preview" target="_blank">some goods from the 2013 Winter Market</a>.</p>}
   </div>
-  <hr>
-
-
-
-<h3>Comics + zines.</h3> <p class="lead">Self-published books and comics, webcomics, small press, collectives, original art work, fanart</p>
-<div class="row">
-  <div class="col-md-4">
-    <p>We are especially interested in comics and zines by black and indigenous artists of colour and women/trans/queer artists.</p>
-
-  </div>
-  <div class="col-md-5">
-    <ul class="list-inline list-unstyled">
-      <li>books</li>
-      <li>collections</li>
-      <li>printed editions of webcomics</li>
-      <li>zines</li>
-      <li>posters, prints and mini-prints</li>
-      <li>sketches</li>
-      <li>graphic novels</li>
-      <li>t-shirts</li>
-      <li>subscriptions</li>
-      <li>pins</li>
-      <li>stickers</li>
-      <li>postcards</li>
-      <li>greeting cards</li>
-      <li>buttons</li>
-    </ul>
-  </div>
-  <div class="col-md-3 hidden-xs">
-    <img src="{@SITE.path}/images/spring-2015/13991563497_caf617a61b_k.jpg" class="img-responsive">
-  </div>
-</div>
-<p><em>There are no application or table fees.</em></p>
-
-{/  <p><b>Need ideas?</b> Watch this video with Skot Deeming (aka mrghosty) - <a href="https://www.youtube.com/watch?v=atdBruXI9wU" target="_blank">Bit Bazaar Exhibitors&#8217; Workshop (Fall 2013)</a> - and check out <a href="https://bentomiso.com/blog/bit-bazaar-goods-preview" target="_blank">some goods from the 2013 Winter Market</a>.</p>}
-</div>
