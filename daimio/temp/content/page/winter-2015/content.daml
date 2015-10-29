@@ -12,38 +12,17 @@
   </div>
 </section>
 <section id="splitscreen">
-  <div class="lead small clearfix address">
-    <div class="clearfix" id="partners">
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <div class="wrapper">
-            <div class="partner">
-              <h3>Bit Bazaar AF</h3>
-              <p> Friday, December 4 &bull; 8pm-midnight<br><span class="smallcaps">Free</span></p>
-              <small>Bento Miso Collaborative Workspace</small>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-6">
-          <div class="wrapper">
-            <div class="partner">
-              <h3>Bit Bazaar XL</h3>
-              <p> Saturday, December 5 &bull; 9am-7pm &amp; Sunday, December 6 &bull; 9am-3pm</p>
-              <small>Maple Leaf Gardens at Mattamy Athletic Centre</small>
-            </div>
-          </div>
-        </div>
 
-      </div>
-    </div>
-  </div>
   <div class="container-fluid">
 
     <div class="row">
       <div class="col-md-6" id='bbaf'>
         <section class="venue clearfix">
-
-          <p class="lead">BBAF takes the digital-meets-physical fun of Bit Bazaar's market vibe and turns it inside out. Try bleeding-edge VR tech and wild immersive experiences, and take home digital artifacts.</p>
+          <div class="partner">
+            <h3>Bit Bazaar AF</h3>
+            <p> Friday, December 4 &bull; 8pm-midnight<br><span class="smallcaps">Free</span></p>
+          </div>
+          <p class="lead">BBAF takes the digital-meets-physical fun of Bit Bazaar's market vibe and turns it inside out. Try bleeding-edge VR tech and wild immersive experiences, and take home truly one-of-a-kind digital artifacts.</p>
           <h3 class="main">The Venue</h3>
           <h4>Bento Miso Collaborative Workspace</h4>
           <p class="lead">A coworking space for video game artists and developers located at <a href="http://goo.gl/maps/jTmW8">862 Richmond Street West</a>, in Toronto's Queen West neighborhood. We're just south of the gates of Trinity-Bellwoods Park, near the intersection of <span class="nowrap">Strachan Ave.</span> and <span class="nowrap">Richmond St. W.</span></p>
@@ -62,7 +41,10 @@
             <div class="col-md-6" id='bbxl'>
 
               <section class="venue clearfix">
-
+                <div class="partner">
+                  <h3>Bit Bazaar XL</h3>
+                  <p> Saturday, December 5 &bull; 9am-7pm &amp; Sunday, December 6 &bull; 9am-3pm</p>
+                </div>
                 <p class="lead">40+ Canadian indie developers show off their games alongside the big studios on a national stage, as part of the FanFest event during the annual <a href="http://www.cvawards.ca">Canadian Videogame Awards</a>!</p>
                 <h3 class="main">The Venue</h3>
                 <h4>Mattamy Atheltic Centre<small><span class="glyphicon glyphicon-map-marker" style="color: #000"></span></small></h4>
@@ -92,7 +74,7 @@
           <div class="col-md-9">
             <h3 class="main">About</h3>
             <div class="">
-              <p>Bit Bazaar is a <strong>videogame arts &amp; crafts market + zine fair</strong>! </p>
+              <p>Bit Bazaar is a <strong>videogame arts &amp; crafts market + zine fair</strong> that happens quite a few times a year here in Toronto! </p>
               <p class="lead"><b>Play minty-fresh games!</b> Buy one-of-a-kind, limited-edition and handmade/DIY items—pins, zines, boxed video games, card decks, art prints, comics, t-shirts, game soundtracks on vinyl, mixtapes, papercraft and toys—direct from 20+ independent game makers!</p>
               <p>Check out the lineups for our <a href="https://bentomiso.com/bit-bazaar-spring-fair-2013">Spring 2013</a>, <a href="https://bentomiso.com/bit-bazaar-winter-market-2013">Winter 2013</a>, <a href="https://bentomiso.com/bit-bazaar-spring-fair-2014">Spring 2014</a>, <a href="https://bentomiso.com/bit-bazaar-winter-market-2014">Winter 2014</a>,
                 <a href="{@SITE.path}/spring-2015">Spring 2015</a> and <a href="{@SITE.path}/summer-2015">Summer 2015</a>
