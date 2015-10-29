@@ -1,6 +1,6 @@
 {begin step2}
 <p class='alert alert-success lead'><b>Thanks!</b> We've received your information.</p>
-	{begin application | merge with (@appsu2015.#1.my)}
+	{begin application | merge with (@bbxl2015.#1.my)}
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				Name: <b>{name}</b>
@@ -21,7 +21,7 @@
 					{merch | string textile}
 				{end goods}
 				<p><b>Submitted</b> {submitted | time represent as "M d, Y g:ia"}</p>
-				<p><b>Application</b> #{@appsu2015.#1._id}</p>
+				<p><b>Application</b> #{@bbxl2015.#1._id}</p>
 {/				<p><b>Fee Paid</b> {paid | then "<span class='text-success'>Yes</span>" else "<span class='text-danger'>No</span>"}</p>
 				{begin paid | if {paid | not}}
 					{%payment}
@@ -135,7 +135,7 @@
 	{end step1}
 
 	{ifelse (
-		{and (@appsu2015 {#editing | is like :true})} "{$step1}"
-		{@appsu2015} "{$step2}"
+		{and (@bbxl2015 {#editing | is like :true})} "{$step1}"
+		{@bbxl2015} "{$step2}"
 		:default  "{$step1}"
 	)}

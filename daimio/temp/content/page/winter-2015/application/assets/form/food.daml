@@ -11,13 +11,13 @@
 
     <div class="form-group">
       <label class="form-label" for="developer">Company Name</label>
-      <input type="text" value="{ifelse ({@appsu2015.#1.my.name} {@appsu2015.#1.my.name} {@profile.my.professional.company} "{@profile.my.professional.company}" {@POST} "{@POST.developer}" {@profile.my.firstname} "{@profile.my.firstname} {@profile.my.lastname}" :default "")}" name="depot[name]" class="form-control" id="developer">
+      <input type="text" value="{ifelse ({@bbxl2015.#1.my.name} {@bbxl2015.#1.my.name} {@profile.my.professional.company} "{@profile.my.professional.company}" {@POST} "{@POST.developer}" {@profile.my.firstname} "{@profile.my.firstname} {@profile.my.lastname}" :default "")}" name="depot[name]" class="form-control" id="developer">
     </div>
 
     <div class="form-group">
       <label class="form-label" for="gamename">Product</label>
 
-      <input type="text" value="{ifelse ({@appsu2015.#1.my.product} {@appsu2015.#1.my.product} {@POST} "{@POST.gamename}" :default "")}" name="depot[product]" class="form-control required" id="gamename">
+      <input type="text" value="{ifelse ({@bbxl2015.#1.my.product} {@bbxl2015.#1.my.product} {@POST} "{@POST.gamename}" :default "")}" name="depot[product]" class="form-control required" id="gamename">
       <p class="help-block">The title of your product or menu. If more than one, please list the primary one here and add others in the <b>short description</b> field below.</p>
     </div>
 
@@ -25,14 +25,14 @@
 
     <div class="form-group">
       <label class="form-label" for="shortdescription">Short description</label>
-      <textarea type="text" name="depot[description]" class="form-control" rows="4" id="shortdescription">{@appsu2015.#1.my.description | then "{@appsu2015.#1.my.description}" else ""}</textarea>
+      <textarea type="text" name="depot[description]" class="form-control" rows="4" id="shortdescription">{@bbxl2015.#1.my.description | then "{@bbxl2015.#1.my.description}" else ""}</textarea>
     </div>
     <hr />
     <div class="form-group">
       <label class="form-label" for="link">Web site</label>
       <div class="input-group">
         <span class="input-group-addon">http://</span>
-        <input type="text" class="form-control" name="depot[link]" value="{@appsu2015.#1.my.link | then "{@appsu2015.#1.my.link}" else ""}">
+        <input type="text" class="form-control" name="depot[link]" value="{@bbxl2015.#1.my.link | then "{@bbxl2015.#1.my.link}" else ""}">
       </div>
     </div>
 
@@ -41,7 +41,7 @@
     <p class="help-block">All exhibitors are expected to comply with our <a href="https://bentomiso.zendesk.com/hc/en-us/articles/201812303-Code-of-Conduct" target="_blank">Code of Coduct</a>.</p>
   </fieldset>
 
-  <input type="hidden" name="application_id" value="{@appsu2015.#1._id | else ""}">
+  <input type="hidden" name="application_id" value="{@bbxl2015.#1._id | else ""}">
   <input type="hidden" name="registered" value="{time represent as "M d, Y"}">
   <input type="hidden" name="firstname" value="{@profile.my.firstname}">
   <input type="hidden" name="lastname" value="{@profile.my.lastname}">
@@ -56,7 +56,7 @@
       {end editing}
 
       {begin new}
-        {stuff add type :appsu2015 | > :ex_id}
+        {stuff add type :bbxl2015 | > :ex_id}
         {exec send_member_email subject {"Bit Bazaar Exhibitor Application Received"} body {%template/email/applicant_notification_food | process consume}}
         {exec admin_send_email subject {"Bit Bazaar SP 2015 Exhibitor Application Received"} body {%template/email/admin_notification | process consume}}
       {end new}

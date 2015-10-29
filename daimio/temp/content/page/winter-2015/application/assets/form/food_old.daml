@@ -53,7 +53,7 @@
     {begin verbatim | process escape}
 
       {/ Application stuff}
-      {stuff add type :appsu2015 | > :ex_id}
+      {stuff add type :bbxl2015 | > :ex_id}
       {begin added | if @ex_id}
         {exec depot_set for @ex_id in :stuff path :application_type value #type}
         {exec depot_set for @ex_id in :stuff path :name value #name}

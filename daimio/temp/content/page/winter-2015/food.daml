@@ -1,4 +1,4 @@
-{lens get_confirmed_exhibitors type :appsu2015
+{lens get_confirmed_exhibitors type :bbxl2015
   | extract "{this.depot.invite | is like :yes}"
   | extract "{this.my.application_type | is like :food}"
   | collection sort by {* (:my.order :ASC)}
