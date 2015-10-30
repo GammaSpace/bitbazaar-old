@@ -118,8 +118,8 @@
 							<strong>Whoops!</strong> Your username and password must each be at least <strong>4 characters long</strong>, and usernames must be <strong>unique</strong>.
 						{end whoops}
 						{ifelse (
-							{@good_data | not} "{notice set value {* ( :message $derp :type :error)}}"
-							{@good_user | not} "{notice set value {* ( :message $whoops :type :error)}}"
+							{@good_data | not} "{notice set value {* ( :message $derp :type :danger)}}"
+							{@good_user | not} "{notice set value {* ( :message $whoops :type :danger)}}"
 						)}
 					{end verbatim}
 				</textarea>
