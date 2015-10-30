@@ -18,6 +18,12 @@ $(document).ready(function(){
     else {
       $("#gameplay").show()
     }
+    if ($("#type-food").is(':checked')) {
+      $("#gameplay").hide()
+    }
+    else {
+      $("#gameplay").show()
+    }
   });
 });
 </script>

@@ -40,7 +40,7 @@
           <div class="radio">
 
             <label class="radio">
-              <input type="radio" name="depot[application_type]" id="type-food" value="food" {@bbxl2015.#1.my.application_type | is like :comics | then :checked}> Comics and/or Zines
+              <input type="radio" name="depot[application_type]" id="type-food" value="food" {@bbxl2015.#1.my.application_type | is like :comics | then :checked}> Food and/or Beverages
             </label>
           </div>
         </div>
@@ -51,7 +51,7 @@
       <label class="form-label" for="gamename">Title</label>
 
       <input type="text" value="{ifelse ({@bbxl2015.#1.my.product} {@bbxl2015.#1.my.product} {@POST} "{@POST.gamename}" :default "")}" name="depot[product]" class="form-control required" id="gamename">
-      <p class="help-block">The title of the game or comic you're showing. If showing more than one, please list the primary one here and add others in the <b>short description</b> field below.</p>
+      <p class="help-block">The title of your game, comic or food/beverage product. If showing more than one, please list the primary one here and add others in the <b>short description</b> field below.</p>
     </div>
 
 
@@ -79,7 +79,7 @@
 
 
     <div class="form-group" id="merch">
-      <label class="form-label" for="merch">Merchandise</label>
+      <label class="form-label" for="merch">Merchandise or Menu</label>
       <textarea type="text" value="{@POST.merch}" name="depot[merch]" class="form-control" rows="6" id="merch">{@bbxl2015.#1.my.merch | then "{@bbxl2015.#1.my.merch}" else ""}</textarea>
       <p class="help-block">Please describe what you plan to have for sale and in what format (e.g., download code, prints, boxed editions).</p>
     </div>
@@ -105,7 +105,7 @@
       {begin new}
         {stuff add type :bbxl2015 | > :ex_id}
         {exec send_member_email subject {"Bit Bazaar Exhibitor Application Received"} body {%template/email/applicant_notification | process consume}}
-        {exec admin_send_email subject {"Bit Bazaar SU 2015 Exhibitor Application Received"} body {%template/email/admin_notification | process consume}}
+        {exec admin_send_email subject {"Bit Bazaar XL 2015 Exhibitor Application Received"} body {%template/email/admin_notification | process consume}}
       {end new}
 
       {ifelse (
