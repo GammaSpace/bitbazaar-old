@@ -10,15 +10,15 @@
         <p><b>Title</b></p>
         <p>{product}</p>
         <p><b>Description</b></p>
-				{description | string textile}
+				{description}
         <p><b>Web site</b> {link}</p>
         {begin gameplay | if gameplay}
 				<p><b>Video or download</b> {gameplay}</p>
 
         {end gameplay}
 				{begin goods | if merch}
-				<p><b>Merchandise</b></p>
-					{merch | string textile}
+				<p><b>Items for Sale or Menu</b></p>
+					{merch}
 				{end goods}
 				<p><b>Submitted</b> {submitted | time represent as "M d, Y g:ia"}</p>
 				<p><b>Application</b> #{@bbxl2015.#1._id}</p>
