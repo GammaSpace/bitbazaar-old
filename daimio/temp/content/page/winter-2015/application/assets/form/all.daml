@@ -37,7 +37,7 @@
           <div class="radio">
 
             <label class="radio">
-              <input type="radio" name="depot[application_type]" id="type-food" value="food" {@bbxl2015.#1.my.application_type | is like :comics | then :checked}> Food and/or Beverages
+              <input type="radio" name="depot[application_type]" id="type-food" value="food" {@bbxl2015.#1.my.application_type | is like :food | then :checked}> Food and/or Beverages
             </label>
           </div>
         </div>
