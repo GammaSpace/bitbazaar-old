@@ -8,14 +8,9 @@
   $(document).ready(function(){
     $('.partner').matchHeight();
     cheks();
-
-
-
-
     $("input[name='depot[application_type]']").change(function() {
       cheks();
     });
-
   });
 
   function cheks() {

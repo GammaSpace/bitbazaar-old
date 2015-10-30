@@ -24,7 +24,7 @@
           <div class="radio">
             <label class="">
 
-              <input type="radio" name="depot[application_type]" id="type-games" value="games_marketplace" {or ({@bbxl2015.#1.my.application_type | is like :games_marketplace} {@bbxl2015.#1.my.application_type | not}) | then :checked}> Games
+              <input type="radio" name="depot[application_type]" id="type-games" value="games" {or ({@bbxl2015.#1.my.application_type | is like :games} {@bbxl2015.#1.my.application_type | not}) | then :checked}> Games
             </label>
           </div>
 
@@ -101,8 +101,27 @@
 
       {begin new}
         {stuff add type :bbxl2015 | > :ex_id}
-        {exec send_member_email subject {"Bit Bazaar Exhibitor Application Received"} body {%template/email/applicant_notification | process consume}}
-        {exec admin_send_email subject {"Bit Bazaar XL 2015 Exhibitor Application Received"} body {%template/email/admin_notification | process consume}}
+
+        {exec mandrill_send_with_template
+          subject "Bit Bazaar XL Application Received"
+          merge {* (
+            :EVENT "Bit Bazaar XL"
+            :CLOSEDATE "November 3"
+            :NOTIFICATIONDATE "November 5"
+            :TYPE #depot.application_type
+            :GAMEPLAY #depot.gameplay
+            :FNAME #firstname
+            :LNAME #lastname
+            :NAME #depot.name
+            :PRODUCT #depot.product
+            :WEBSITE #depot.link
+            :DESCRIPTION #depot.description
+            :MERCH #depot.merch
+            :DATE {#depot.submitted | time represent as "M d, Y"}
+          )}
+          to_email @POST.stripeEmail
+          template :day-pass-confirmation
+        }
       {end new}
 
       {ifelse (
