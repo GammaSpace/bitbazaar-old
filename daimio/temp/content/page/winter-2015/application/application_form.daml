@@ -4,7 +4,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				Name: <b>{name}</b>
-				<small class="pull-right"><a href="{@SITE.path}/summer-2015/application?editing=true">Edit</a></small>
+				<small class="pull-right"><a href="{@SITE.path}/winter-2015/application?editing=true">Edit</a></small>
 			</div>
 			<div class="panel-body">
         <p><b>Title</b></p>
@@ -35,7 +35,7 @@
 
 	{begin step1}
 
-		<h2>{#editing | is like :true | then "Editing Application <small class='pull-right'><a href='{@SITE.path}/summer-2015/application'>Cancel editing</a></small>" else "Apply"}</h2>
+		<h2>{#editing | is like :true | then "Editing Application <small class='pull-right'><a href='{@SITE.path}/winter-2015/application'>Cancel editing</a></small>" else "Apply"}</h2>
 		{begin create_account | if {@MY.id | not}}
 
 
@@ -102,7 +102,7 @@
 								{end my_set}
 
 								{my set for @user_id in :profiles path :activity.registered value #registered}
-								{my set for @user_id in :profiles path :signup.intent value :bit-bazaar-spring-2015}
+								{my set for @user_id in :profiles path :signup.intent value :bit-bazaar-winter-2015}
 
 								{begin set_email | if {exec set_email to #my.email}}
 									{exec send_member_email subject {"[Bit Bazaar] Account Created"} body {%template/email/account_created | process consume}}
@@ -128,7 +128,7 @@
 		{begin has_account | if @MY.id}
 
 
-  {content get_value handle {"page/summer-2015/application/assets/form/{:all | else #type}"}}
+  {content get_value handle {"page/winter-2015/application/assets/form/{:all | else #type}"}}
 
 
 		{end has_account}
