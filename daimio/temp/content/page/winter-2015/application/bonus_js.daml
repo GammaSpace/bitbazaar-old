@@ -42,11 +42,11 @@
     else {
       $('label#merch-label').text('Items for Sale')
     }
+  }
 
 
 
+  </script>
 
-    </script>
 
-
-  {end js}
+{end js}
