@@ -6,7 +6,7 @@ $(document).ready(function(){
   $('.partner').matchHeight();
 
   $("input[name='depot[application_type]']").change(function() {
-    if ($("#type-games-arcade").is(':checked')) {
+    if ($("#type-games").is(':checked')) {
       $("#merch").hide()
     }
     else {
