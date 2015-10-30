@@ -1,0 +1,3 @@
+{begin nullblock | process consume | @return}
+  {email send_template subject subject merge merge to_email to_email from_email "do-not-reply@thebitbazaar.com" template template}
+{end nullblock}
