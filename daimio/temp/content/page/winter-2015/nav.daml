@@ -12,14 +12,14 @@
     <div class="collapse navbar-collapse" id="primary-nav-2">
       <ul class="nav navbar-nav">
         {begin all | foreach with @bbsp14_categories}
-          <li><a href="{@SITE.path}/summer-2015#{key}">{value.name}</a></li>
+          <li><a href="{@SITE.path}/winter-2015#{key}">{value.name}</a></li>
         {end all}
       </ul>
 
       <ul class="nav navbar-nav">
-        <li><a href="{@SITE.path}/summer-2015#vendors">Exhibitors</a></li>
-        <li><a href="{@SITE.path}/summer-2015#venue">Location</a></li>
-        <li><a href="{@SITE.path}/summer-2015#about">About</a></li>
+        <li><a href="{@SITE.path}/winter-2015#vendors">Exhibitors</a></li>
+        <li><a href="{@SITE.path}/winter-2015#venue">Location</a></li>
+        <li><a href="{@SITE.path}/winter-2015#about">About</a></li>
       </ul>
 
 

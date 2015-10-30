@@ -117,7 +117,7 @@
         {begin depotize | foreach with #depot}
           {my set for @ex_id in :stuff path key value value}
         {end depotize}
-        {page redirect to :summer-2015/application}
+        {page redirect to :winter-2015/application}
       {end added}
     {end verbatim}
   </textarea>
