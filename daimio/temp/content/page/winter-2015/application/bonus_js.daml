@@ -2,13 +2,13 @@
 
 {begin js | process escape}
   <script>
+  var merchhelp = "Please describe what you plan to have for sale and in what format (e.g., download code, prints, boxed editions)."
+  var menuhelp = "Please provide as much detail about your menu as possible, and any special equipment or storage needs."
 
   $(document).ready(function(){
     $('.partner').matchHeight();
     cheks();
 
-    var merchhelp = "Please describe what you plan to have for sale and in what format (e.g., download code, prints, boxed editions)."
-    var menuhelp = "Please provide as much detail about your menu as possible, and any special equipment or storage needs."
 
 
 
