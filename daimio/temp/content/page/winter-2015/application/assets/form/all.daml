@@ -1,4 +1,4 @@
-<p>Hi, {@profile.my.firstname}! {/You are logged in with your account <b>{@MY.username}</b>. The email we have on file for you is <b>{@member.my.email}</b>.}</p>
+<p>Hi, {@profile.my.firstname}! You are logged in with your account <b>{@MY.username}</b>. The email we have on file for you is <b>{@member.my.email}</b>.</p>
 
 {begin editing | if {#editing | is like :true}}
   <div class="alert alert-info">All applications will be reviewed after November 3, so you can edit your submission as much as you wish until then.</div>
