@@ -2,37 +2,51 @@
 
 {begin js | process escape}
   <script>
+
   $(document).ready(function(){
     $('.partner').matchHeight();
+    cheks();
+
     var merchhelp = "Please describe what you plan to have for sale and in what format (e.g., download code, prints, boxed editions)."
     var menuhelp = "Please provide as much detail about your menu as possible, and any special equipment or storage needs."
+
+
+
     $("input[name='depot[application_type]']").change(function() {
-      if ($("#type-games").is(':checked')) {
-        $("#gameplay").show()
-        $('label#merch-label').text('Items for Sale')
-        $('#merch .help-block').text(merchhelp)
-      }
-      else {
-        $("#gameplay").hide()
-      }
-      if ($("#type-comics").is(':checked')) {
-        $("#gameplay").hide()
-      }
-      else {
-        $('label#merch-label').text('Items for Sale')
-        $('#merch .help-block').text(merchhelp)
-      }
-      if ($("#type-food").is(':checked')) {
-        $("#gameplay").hide()
-        $('label#merch-label').text('Menu')
-        $('#merch .help-block').text(menuhelp)
-      }
-      else {
-        $('label#merch-label').text('Items for Sale')
-      }
+      cheks();
     });
+
   });
-  </script>
+
+  function cheks() {
+    if ($("#type-games").is(':checked')) {
+      $("#gameplay").show()
+      $('label#merch-label').text('Items for Sale')
+      $('#merch .help-block').text(merchhelp)
+    }
+    else {
+      $("#gameplay").hide()
+    }
+    if ($("#type-comics").is(':checked')) {
+      $("#gameplay").hide()
+    }
+    else {
+      $('label#merch-label').text('Items for Sale')
+      $('#merch .help-block').text(merchhelp)
+    }
+    if ($("#type-food").is(':checked')) {
+      $("#gameplay").hide()
+      $('label#merch-label').text('Menu')
+      $('#merch .help-block').text(menuhelp)
+    }
+    else {
+      $('label#merch-label').text('Items for Sale')
+    }
 
 
-{end js}
+
+
+    </script>
+
+
+  {end js}
