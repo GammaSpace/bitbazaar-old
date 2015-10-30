@@ -119,8 +119,8 @@
             :MERCH #depot.merch
             :DATE {#depot.submitted | time represent as "M d, Y"}
           )}
-          to_email @POST.stripeEmail
-          template :day-pass-confirmation
+          to_email #email
+          template :bb-notification
         }
       {end new}
 
