@@ -24,9 +24,6 @@
           <div class="radio">
             <label class="">
 
-
-
-
               <input type="radio" name="depot[application_type]" id="type-games" value="games_marketplace" {or ({@bbxl2015.#1.my.application_type | is like :games_marketplace} {@bbxl2015.#1.my.application_type | not}) | then :checked}> Games
             </label>
           </div>
