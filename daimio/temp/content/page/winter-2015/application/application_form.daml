@@ -1,3 +1,4 @@
+{%global/notices}
 {begin step2}
 <p class='alert alert-success lead'><b>Thanks!</b> We've received your information.</p>
 	{begin application | merge with (@bbxl2015.#1.my)}
