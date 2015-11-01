@@ -35,7 +35,7 @@
 	{end step2}
 
 	{begin step1}
-
+<p><em>There is no fee to apply or exhibit.</em></p>
 		<h2>{#editing | is like :true | then "Editing Application <small class='pull-right'><a href='{@SITE.path}/winter-2015/application'>Cancel editing</a></small>" else "Apply"}</h2>
 		{begin create_account | if {@MY.id | not}}
 
