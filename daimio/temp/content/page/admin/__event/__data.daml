@@ -3,6 +3,7 @@
 {* (
   :spring2015 :bbapplication
   :summer2015 :appsu2015)
+  :winter2015 :bbxl2015)
 | > :stuff}
 {@exhibitors | extract "{this.depot.invite | is like :yes}" | > :ex_org}
 
