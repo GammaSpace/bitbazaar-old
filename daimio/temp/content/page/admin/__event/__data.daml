@@ -10,7 +10,7 @@
 {ifelse (
   {@MY.current_hat | is like :comics} "{stuff find by_type @stuff.{#event} options {* (:my.application_type :comics)} | > :exhibitors}"
   {@MY.current_hat | is like :games_arcade} "{stuff find by_type @stuff.{#event} options {* (:my.application_type :games_arcade)} | > :exhibitors}"
-  :default "{stuff find by_type @stuff.{#event}} | > :exhibitors}"
+  :default "{stuff find by_type @stuff.{#event} | > :exhibitors}"
 )}
 
 {%global/snippets/exhibitor_categories}
