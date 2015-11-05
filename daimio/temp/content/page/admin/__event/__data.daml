@@ -14,4 +14,3 @@
 )}
 
 {%global/snippets/exhibitor_categories}
-{stuff find by_type @stuff.{@event}}
