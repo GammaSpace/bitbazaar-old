@@ -1,4 +1,14 @@
-{permit superdo command "{profile find}" | > :profiles}
-{permit superdo command "{member find}" | > :members}
 
-{stuff find by_type :appsu2015 | prune "{this.depot.invite | is like :yes}" | > :ex_org}
+{* (
+  :spring2015 :bbapplication
+  :summer2015 :appsu2015
+  :winter2015 :bbxl2015)
+| > :stuff}
+
+
+{permit superdo command "{profile find}" | > :profiles}
+{permit superdo command "{member find by_status :paid}" | > :members}
+
+
+
+{stuff find by_type @stuff.{#event} | prune "{this.depot.invite | is like :yes}" | > :ex_org}
