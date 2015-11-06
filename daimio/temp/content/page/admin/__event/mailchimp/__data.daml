@@ -1,4 +1,4 @@
 {permit superdo command "{profile find}" | > :profiles}
 {permit superdo command "{member find by_status :paid}" | > :members}
 
-{%admin/__event/__data}
+{%page/admin/__event/__data}

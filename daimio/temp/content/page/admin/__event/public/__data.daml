@@ -7,4 +7,4 @@
   | collection sort by {* (:depot.order :ASC)}
   | > :ex_org}
 
-  {%admin/__event/__data}
+{%page/admin/__event/__data}
