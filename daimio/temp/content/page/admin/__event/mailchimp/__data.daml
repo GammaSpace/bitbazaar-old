@@ -1,7 +1,3 @@
-{permit superdo command "{profile find}" | > :profiles}
-{permit superdo command "{member find by_status :paid}" | > :members}
-
-{/stuff find by_type :bbapplication options {* (:depot.event #event)} | > :exhibitors}
 
 {* (
   :spring2015 :bbapplication
@@ -9,8 +5,11 @@
   :winter2015 :bbxl2015)
 | > :stuff}
 
-{@exhibitors | extract "{this.depot.invite | is like :yes}" | > :ex_org}
 
-{stuff find by_type @stuff.{#event} | > :exhibitors}
+{permit superdo command "{profile find}" | > :profiles}
+{permit superdo command "{member find by_status :paid}" | > :members}
 
-{%global/snippets/exhibitor_categories}
+
+{lens get_confirmed_exhibitors type @stuff.{#event}
+  | collection sort by {* (:depot.order :ASC)}
+  | > :ex_org}
