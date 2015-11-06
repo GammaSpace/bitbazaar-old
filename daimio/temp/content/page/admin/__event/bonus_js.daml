@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs/dt-1.10.9/datatables.min.css"/>
 <script type="text/javascript" charset="utf-8" language="javascript" src="{@SITE.path}/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" charset="utf-8" language="javascript" src="{@SITE.path}/js/dataTables.bootstrap.js"></script>
 <script type="text/javascript" charset="utf-8" language="javascript" src="{@SITE.path}/js/jquery.sortable.min.js"></script>
