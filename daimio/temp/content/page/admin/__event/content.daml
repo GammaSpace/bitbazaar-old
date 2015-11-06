@@ -40,7 +40,11 @@
       <tr>
         <td>{my.application_type}</td>
         <td><a href="{@SITE.path}/admin/{#event}/{_id}">{my.name}</a></td>
-        <td>{my.product}</td>
+        <td>
+
+          <a href="{my.link}">{my.product}</a><br>{my.description}
+
+        </td>
         <td>
           {pcache.edit | collection extract expression "{:user | is in this}" | string transform old "/user:/" new "" | > :member_id | ""}
           <a href="mailto:{@member_id | member find by_ids | __.#1.my.email}">{@member_id | member find by_ids | __.#1.my.email}</a><br>{profile find by_ids @member_id | merge string "{my.firstname} {my.lastname}"}

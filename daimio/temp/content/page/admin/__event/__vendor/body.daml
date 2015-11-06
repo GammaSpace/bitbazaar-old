@@ -73,7 +73,12 @@
             </div>
             <div class="radio">
               <label class="">
-                <input type="radio" name="depot[application_type]" id="type-games" value="games_marketplace" {or ({my.application_type | is like :games_marketplace} {my.application_type | not}) | then :checked}> Games - Marketplace
+                <input type="radio" name="depot[application_type]" id="type-games" value="games" {my.application_type | is like :games | then "checked"}> Games
+              </label>
+            </div>
+            <div class="radio">
+              <label class="">
+                <input type="radio" name="depot[application_type]" id="type-mkt" value="games_marketplace" {or ({my.application_type | is like :games_marketplace} {my.application_type | not}) | then :checked}> Games - Marketplace
               </label>
             </div>
             <div class="radio">
