@@ -1,4 +1,16 @@
 {permit superdo command "{profile find}" | > :profiles}
 {permit superdo command "{member find by_status :paid}" | > :members}
 
-{%page/admin/__event/__data}
+{/stuff find by_type :bbapplication options {* (:depot.event #event)} | > :exhibitors}
+
+{* (
+  :spring2015 :bbapplication
+  :summer2015 :appsu2015
+  :winter2015 :bbxl2015)
+| > :stuff}
+
+{@exhibitors | extract "{this.depot.invite | is like :yes}" | > :ex_org}
+
+{stuff find by_type @stuff.{#event} | > :exhibitors}
+
+{%global/snippets/exhibitor_categories}
