@@ -1,2 +1,2 @@
-{page redirect to @SITE.path}
-{/%global/__layout}
+{/page redirect to @SITE.path}
+{%global/__layout}
