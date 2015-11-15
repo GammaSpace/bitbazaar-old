@@ -14,7 +14,7 @@
     </div>
     <div class="col-md-6">
       <p class="name"> {my.product}</p>
-      <p>{my.merch}</p>
+      {my.merch | string textile}
       {/ my.public_description | string textile}
     </div>
   </div>
