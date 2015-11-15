@@ -1,6 +1,6 @@
 {lens get_confirmed_exhibitors type :bbxl2015
   | extract "{this.depot.invite | is like :yes}"
-  | extract "{:games_marketplace | is in this.my.application_type}"
+  | extract "{:games | is in this.my.application_type}"
   | collection sort by {* (:depot.order :ASC)}
   | > :ex_org | ""}
 
