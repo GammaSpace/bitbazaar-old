@@ -7,13 +7,14 @@
 
 {begin cat_vendors | merge with @ex_org}
   <div class="confirmed row">
-    <div class="col-md-3">
+    <div class="col-md-6">
       <p class="{depot.application_type} org">
         <a href="{"http://" | is in my.link | then "{my.link}" else "http://{my.link}"}">{my.name}</a>
       </p>
     </div>
-    <div class="col-md-9">
+    <div class="col-md-6">
       <p class="name"> {my.product}</p>
+      <p>{my.merch}</p>
       {/ my.public_description | string textile}
     </div>
   </div>
