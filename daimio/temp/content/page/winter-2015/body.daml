@@ -6,7 +6,7 @@
     <div class="container">
 
       {%global/snippets/footer_info}
-      <p><a href="http://eepurl.com/HwS5T">Join our mailing list</a> to find out when they open for our next event!</p>
+      <p><a href="http://eepurl.com/HwS5T">Join our mailing list</a> to find out when applications open for our next event!</p>
 
     </div>
   </section>
