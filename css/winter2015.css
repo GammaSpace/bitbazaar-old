@@ -6964,7 +6964,12 @@ body#bit-bazaar-winter-2015 #header div.lead.small a {
 }
 body#bit-bazaar-winter-2015 #header p {
   color: #fff;
-  font-size: 32px;
+  font-size: 22px;
+}
+@media (min-width: 992px) {
+  body#bit-bazaar-winter-2015 #header p {
+    font-size: 32px;
+  }
 }
 body#bit-bazaar-winter-2015 #header p.tagline {
   line-height: normal;
