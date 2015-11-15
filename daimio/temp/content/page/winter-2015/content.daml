@@ -96,7 +96,7 @@
       </div>
       <div class="row">
           <h3>Food + Drinks</h3>
-          {%comics}
+          {%food}
         </div>
     </div>
   </section>
