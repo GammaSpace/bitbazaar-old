@@ -3236,26 +3236,26 @@ fieldset[disabled] .btn-success.active {
 }
 .btn-info {
   color: #ffffff;
-  background-color: #5bc0de;
-  border-color: #46b8da;
+  background-color: #d7263d;
+  border-color: #c12237;
 }
 .btn-info:focus,
 .btn-info.focus {
   color: #ffffff;
-  background-color: #31b0d5;
-  border-color: #1b6d85;
+  background-color: #ac1e31;
+  border-color: #550f18;
 }
 .btn-info:hover {
   color: #ffffff;
-  background-color: #31b0d5;
-  border-color: #269abc;
+  background-color: #ac1e31;
+  border-color: #8d1928;
 }
 .btn-info:active,
 .btn-info.active,
 .open > .dropdown-toggle.btn-info {
   color: #ffffff;
-  background-color: #31b0d5;
-  border-color: #269abc;
+  background-color: #ac1e31;
+  border-color: #8d1928;
 }
 .btn-info:active:hover,
 .btn-info.active:hover,
@@ -3267,8 +3267,8 @@ fieldset[disabled] .btn-success.active {
 .btn-info.active.focus,
 .open > .dropdown-toggle.btn-info.focus {
   color: #ffffff;
-  background-color: #269abc;
-  border-color: #1b6d85;
+  background-color: #8d1928;
+  border-color: #550f18;
 }
 .btn-info:active,
 .btn-info.active,
@@ -3293,11 +3293,11 @@ fieldset[disabled] .btn-info:active,
 .btn-info.disabled.active,
 .btn-info[disabled].active,
 fieldset[disabled] .btn-info.active {
-  background-color: #5bc0de;
-  border-color: #46b8da;
+  background-color: #d7263d;
+  border-color: #c12237;
 }
 .btn-info .badge {
-  color: #5bc0de;
+  color: #d7263d;
   background-color: #ffffff;
 }
 .btn-warning {
@@ -6787,8 +6787,7 @@ html {
 body {
   margin: 0px;
   margin-top: 50px;
-  height: 100%;
-  background-color: #dcfcf2;
+  background-color: #db5566;
   background: #000;
 }
 body.bit-bazaar .modal-backdrop {
@@ -6827,7 +6826,7 @@ body#bit-bazaar-winter-2015 {
 }
 body#bit-bazaar-winter-2015 section#about {
   background: #ffffff;
-  background-image: url(../images/summer-2015/17524702471_b09358e7c5_k.png);
+  background-image: url(../images/winter-2015/about-bg.gif);
   background-position: right 20%;
   background-repeat: no-repeat;
 }
@@ -6844,13 +6843,14 @@ body#bit-bazaar-winter-2015 section#about p small {
   color: #1a1a1a;
 }
 body#bit-bazaar-winter-2015 section#about h3 {
-  text-shadow: 1px 1px 1px #abfae2;
+  text-shadow: 1px 1px 1px #d7263d;
 }
 body#bit-bazaar-winter-2015 section#about p {
   background: #fff;
 }
 body#bit-bazaar-winter-2015 section#about p strong {
-  background-color: #abfae2;
+  background-color: #d7263d;
+  color: #fff;
   font-weight: normal;
 }
 body#bit-bazaar-winter-2015 section#about p a,
@@ -6861,15 +6861,15 @@ body#bit-bazaar-winter-2015 section#about p a:hover {
 body#bit-bazaar-winter-2015 section#about-footer {
   padding: 30px 0 30px;
   text-align: left;
-  color: #abfae2;
+  color: #d7263d;
 }
 body#bit-bazaar-winter-2015 section#about-footer p,
 body#bit-bazaar-winter-2015 section#about-footer a {
-  color: #abfae2;
+  color: #e46676;
   font-size: 14px;
 }
 body#bit-bazaar-winter-2015 section#about-footer a {
-  border-bottom-color: #abfae2;
+  border-bottom-color: #e46676;
 }
 body#bit-bazaar-winter-2015 section#about-footer #copyright {
   text-align: left !important;
@@ -6927,17 +6927,20 @@ body#bit-bazaar-winter-2015 #header a.btn {
   text-decoration: none;
 }
 body#bit-bazaar-winter-2015 #header div.lead {
-  background-color: #000;
+  margin-top: 40px;
   color: #fff;
-  padding: 14px 9px;
   text-shadow: none;
   text-align: center;
-  margin: 0;
-  position: absolute;
-  bottom: 50px;
-  z-index: 1;
-  width: 100%;
-  left: 0;
+}
+body#bit-bazaar-winter-2015 #header div.lead .tickets a {
+  text-decoration: none !important;
+  font-weight: 900;
+}
+body#bit-bazaar-winter-2015 #header div.lead .tickets p {
+  color: #fff;
+  font-weight: normal;
+  font-size: 14px;
+  font-style: normal;
 }
 body#bit-bazaar-winter-2015 #header div.lead p {
   font-family: "tablet-gothic", sans-serif;
@@ -6948,11 +6951,24 @@ body#bit-bazaar-winter-2015 #header div.lead p {
 }
 body#bit-bazaar-winter-2015 #header div.lead img {
   padding: 20px 0;
+  margin: 0 auto;
+  float: none;
 }
 @media (min-width: 768px) {
   body#bit-bazaar-winter-2015 #header div.lead img {
     padding: 0;
   }
+}
+body#bit-bazaar-winter-2015 #header div.lead img.miso {
+  text-align: right;
+  float: right;
+}
+body#bit-bazaar-winter-2015 #header div.lead img.cva {
+  text-align: left;
+  float: left;
+}
+body#bit-bazaar-winter-2015 #header div.lead #logos {
+  margin: 30px auto;
 }
 body#bit-bazaar-winter-2015 #header div.lead.small {
   font-size: 22px;
@@ -6964,7 +6980,7 @@ body#bit-bazaar-winter-2015 #header div.lead.small a {
 }
 body#bit-bazaar-winter-2015 #header p {
   color: #fff;
-  font-size: 22px;
+  font-size: 18px;
 }
 @media (min-width: 992px) {
   body#bit-bazaar-winter-2015 #header p {
@@ -7169,13 +7185,13 @@ body#bit-bazaar-winter-2015 section h3 {
   font-size: 42px;
   font-weight: 900;
   text-transform: uppercase;
-  text-shadow: 1px 1px 1px #abfae2;
+  text-shadow: 1px 1px 1px #d7263d;
   font-style: italic;
 }
 body#bit-bazaar-winter-2015 section h3.main {
   margin-top: 0;
   font-style: normal;
-  text-shadow: 1px 1px 1px #abfae2;
+  text-shadow: 1px 1px 1px #d7263d;
 }
 @media (min-width: 992px) {
   body#bit-bazaar-winter-2015 section h3.main {
@@ -7201,6 +7217,7 @@ body#bit-bazaar-winter-2015 section p.links a {
 }
 body#bit-bazaar-winter-2015 section#panelscapes {
   background: #ffffff;
+  background: #fbe8ea;
   background-image: url(../images/spring-2015/panelscapes/bg-halftone.jpg);
   padding: 0 0 20px 0;
 }
@@ -7240,56 +7257,6 @@ body#bit-bazaar-winter-2015 section#panelscapes a {
   color: magenta;
   text-decoration: underline;
   border-bottom: none;
-}
-body#bit-bazaar-winter-2015 section#panelscapes .btn-3d {
-  border-bottom: none;
-  z-index: 200;
-  color: #fff;
-  display: inline-block;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  outline: none;
-  position: relative;
-}
-body#bit-bazaar-winter-2015 section#panelscapes .btn-3d span {
-  position: relative;
-  display: inline-block;
-  padding: .7rem 1.2rem .6rem;
-  background: #ff00ff;
-  transition: -webkit-transform 0.3s;
-  transition: transform .3s;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-body#bit-bazaar-winter-2015 section#panelscapes .btn-3d span,
-body#bit-bazaar-winter-2015 section#panelscapes .btn-3d span:before {
-  -webkit-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-}
-body#bit-bazaar-winter-2015 section#panelscapes .btn-3d span:before {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #990099;
-  content: attr(data-hover);
-  transition: background .3s;
-  -webkit-transform: rotateX(-90deg);
-  transform: rotateX(-90deg);
-  padding-top: .6375rem;
-  text-align: center;
-}
-body#bit-bazaar-winter-2015 section#panelscapes .btn-3d:hover span,
-body#bit-bazaar-winter-2015 section#panelscapes .btn-3d:focus span {
-  -webkit-transform: rotateX(90deg) translateY(-18px);
-  transform: rotateX(90deg) translateY(-18px);
-  background-color: #ff00ff;
-  color: #ffffff;
-}
-body#bit-bazaar-winter-2015 section#panelscapes .btn-3d:hover span:before,
-body#bit-bazaar-winter-2015 section#panelscapes .btn-3d:focus span:before {
-  background-color: #ff00ff;
 }
 body#bit-bazaar-winter-2015 section#vendors,
 body#bit-bazaar-winter-2015 section#music {
@@ -7345,6 +7312,13 @@ body#bit-bazaar-winter-2015 section#vendors h3,
 body#bit-bazaar-winter-2015 section#vendors h4 {
   text-align: center;
 }
+body#bit-bazaar-winter-2015 section#vendors p.lead.lineup {
+  margin: 0;
+}
+body#bit-bazaar-winter-2015 section#vendors p.lead.lineup a {
+  color: inherit;
+  border-bottom: solid 1px #000;
+}
 body#bit-bazaar-winter-2015 section#vendors #food-vendors h4 {
   font-size: 24px;
   margin: 0 0 10px 0;
@@ -7361,7 +7335,7 @@ body#bit-bazaar-winter-2015 section#vendors #food-vendors p strong {
   font-size: 24px;
   margin: 0 0 10px 0;
   font-weight: 100;
-  color: #1a1a1a;
+  color: #e05063;
 }
 body#bit-bazaar-winter-2015 section#vendors #coming b {
   background-color: #abfae2;
@@ -7436,9 +7410,9 @@ body#bit-bazaar-winter-2015 section#vendors ul.confirmed li h3 {
   /* Medium devices (desktops, 992px and up) */
   /* Large devices (large desktops, 1200px and up) */
   /*
-              &.food { .food() }
-              &.game { .game() }
-              */
+									&.food { .food() }
+									&.game { .game() }
+									*/
 }
 body#bit-bazaar-winter-2015 section#vendors ul.confirmed li h3 small {
   display: block;
