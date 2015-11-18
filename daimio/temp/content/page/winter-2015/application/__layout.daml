@@ -1,1 +1,1 @@
-{@MY.id | is like :93 then "{%global/__layout}" else "{page redirect to @SITE.path}"}
+{@MY.id | is like :93 | then "{%global/__layout}" else "{page redirect to @SITE.path}"}
