@@ -48,7 +48,7 @@
           <label class="form-label" for="loadin">Load-in/Setup Time Slot</label>
           <div class="radio">
             <label class="">
-              <input type="radio" name="depot[loadin]" id="loadin-a" value="A" {or ({@bbxl2015.#1.my.loadin | is like :A} {@bbxl2015.#1.my.loadin | not}) | then :checked}> <b>A:</b> Friday, December 4, 4:00-6:30 p.m.
+              <input type="radio" name="depot[loadin]" id="loadin-a" value="A" {@bbxl2015.#1.my.loadin | is like :A | then :checked}> <b>A:</b> Friday, December 4, 4:00-6:30 p.m.
             </label>
           </div>
           <div class="radio">
@@ -105,8 +105,13 @@
           {begin added | if @ex_id}
             {begin depotize | foreach with #depot}
               {my set for @ex_id in :stuff path key value value}
-            {end depotize}
-            {page redirect to :winter-2015/application}
+              {end depotize}
+              {notice set value {* (
+              :message "<strong>Success!</strong>  Info saved."
+              :type :success
+              )}}
+
+            {page redirect to "{winter-2015/application/{#application_id}}"}
           {end added}
         {end verbatim}
       </textarea>
