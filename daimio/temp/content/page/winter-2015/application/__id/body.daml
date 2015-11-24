@@ -27,7 +27,7 @@
 			{begin logged_in | if @MY.id}
 
 {begin no_application | if {@bbxl2015 | not}}
-  <p class="text text-danger">Sorry {@profile.#1.my.firstname}, you don't have access to that application. Double check the ID in your email.</p>
+  <p class="text text-danger">Sorry {@profile.my.firstname}, you don't have access to that application. Double check the ID in your email.</p>
 {end no_application}
         {begin exhibitor | merge with @bbxl2015}
 
