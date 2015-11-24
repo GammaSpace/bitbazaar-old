@@ -1,4 +1,4 @@
-{/%global/__data}
+{%global/__data}
 {stuff find by_ids (#id) options {* (:i_can :edit)} | > :bbxl2015}
 
 {begin info | if @MY.id}
