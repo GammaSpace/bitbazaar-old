@@ -111,8 +111,8 @@
               :type :success
               )}}
 
-            
-            {page redirect to {"winter-2015/application/{#application_id}"}}
+
+            {page redirect to {"winter-2015/application/{#application_id}?editing=true"}}
 
           {end added}
         {end verbatim}
