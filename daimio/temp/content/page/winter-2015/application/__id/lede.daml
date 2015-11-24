@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-sm-2">
+
+    <div class="center-block">
+      <a href="{@SITE.path}/spring-2015"><img src="{@SITE.path}/images/bit_bazaar_logo_290x334.png" alt="" class="img-responsive logo"></a>
+
+    </div>
+  </div>
+  <div class="col-sm-10">
+    <h2>Info for #{@bbxl2015.#1._id}</h2>
+
+  </div>
+
+
+</div>

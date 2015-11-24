@@ -1,1 +1,8 @@
-{stuff find by_ids (#id) | > :exhibitor}
+{/%global/__data}
+{stuff find by_ids (#id) | > :bbxl2015}
+
+{/stuff find by_type :bbxl2015 options {* (:i_can :edit)} | > :bbxl2015}
+{begin info | if @MY.id}
+  {profile find by_ids @MY.id | __.#1 | > :profile}
+  {member find by_ids @MY.id | __.#1 | > :member}
+{end info}

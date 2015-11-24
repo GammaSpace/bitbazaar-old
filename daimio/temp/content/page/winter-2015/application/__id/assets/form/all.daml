@@ -1,0 +1,119 @@
+<p>Hi, {@profile.my.firstname}! You are logged in with your account <b>{@MY.username}</b>. The email we have on file for you is <b>{@member.my.email}</b>.</p>
+<form class="form-vertical" method="post" accept-charset="utf-8" id="game-exhibitor">
+  <fieldset>
+    <div class="row">
+      <div class="col-md-6">
+        <label for="">Tablers</label>
+        <p>Please provide the names of the individuals who will be present at Bit Bazaar – we will provide this information to the Canadian Videogame Awards and you'll pick up your passes under these names. More than 2 people? <a href="mailto:hello@thebitbazaar.com">Contact us!</a></p>
+        <div class="row">
+          <div class="col-md-6">
+          <h4>Tabler 1</h4>
+
+            <div class="form-group">
+              <label class="form-label" for="tabler1">First Name</label>
+              <input type="text" value="{ifelse (
+                {@bbxl2015.#1.my.tabler1.firstname} "{@bbxl2015.#1.my.tabler1.firstname}"
+                {@POST} "{@POST.#1.my.tabler1.firstname}"
+                {@profile.my.firstname} "{@profile.my.firstname}"
+              :default "")}" name="depot[tabler1][firstname]" class="form-control" id="tabler1">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="developer">Last Name</label>
+              <input type="text" value="{ifelse (
+                {@bbxl2015.#1.my.tabler1.lastname} "{@bbxl2015.#1.my.tabler1.lastname}"
+                {@POST} "{@POST.#1.my.tabler1.lastname}"
+                {@profile.my.firstname} "{@profile.my.lastname}"
+              :default "")}" name="depot[tabler1][lastname]" class="form-control" id="tabler1">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h4>Tabler 2</h4>
+            <div class="form-group">
+              <label class="form-label" for="tabler2">First Name</label>
+              <input type="text" value="{ifelse (
+                {@bbxl2015.#1.my.tabler2.firstname} "{@bbxl2015.#1.my.tabler2.firstname}"
+                {@POST} "{@POST.#1.my.tabler2.firstname}"
+              :default "")}" name="depot[tabler2][firstname]" class="form-control" id="tabler2">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="developer">Last Name</label>
+              <input type="text" value="{ifelse (
+                {@bbxl2015.#1.my.tabler2.lastname} "{@bbxl2015.#1.my.tabler2.lastname}"
+                {@POST} "{@POST.#1.my.tabler2.lastname}"
+              :default "")}" name="depot[tabler2][lastname]" class="form-control" id="tabler2">
+            </div>
+          </div>
+        </div>
+        <div class="form-group" id="application-type">
+          <label class="form-label" for="loadin">Load-in/Setup Time Slot</label>
+          <div class="radio">
+            <label class="">
+              <input type="radio" name="depot[loadin]" id="loadin-a" value="A" {or ({@bbxl2015.#1.my.loadin | is like :A} {@bbxl2015.#1.my.loadin | not}) | then :checked}> <b>A:</b> Friday, December 4, 4:00-6:30 p.m.
+            </label>
+          </div>
+          <div class="radio">
+            <label class="">
+              <input type="radio" name="depot[loadin]" id="loadin-b" value="B" {@bbxl2015.#1.my.loadin | is like :B | then :checked}> <b>B:</b> Friday, December 4, 6:30-9:00 p.m.
+            </label>
+          </div>
+          <div class="radio">
+            <label class="">
+              <input type="radio" name="depot[loadin]" id="loadin-c" value="C" {@bbxl2015.#1.my.loadin | is like :C | then :checked}> <b>C:</b> Saturday, December 5, 7:00-8:30 a.m.
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label class="form-label" for="developer">Name</label>
+          <input type="text" value="{ifelse ({@bbxl2015.#1.my.name} {@bbxl2015.#1.my.name} {@profile.my.professional.company} "{@profile.my.professional.company}" {@POST} "{@POST.developer}" {@profile.my.firstname} "{@profile.my.firstname} {@profile.my.lastname}" :default "")}" name="depot[name]" class="form-control input-lg" id="developer">
+          <p class="help-block">If exhibiting as a collective, studio, or other group, use that name here.</p>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="product">Product Title</label>
+          <input type="text" value="{ifelse ({@bbxl2015.#1.my.product} {@bbxl2015.#1.my.product} {@POST} "{@POST.gamename}" :default "")}" name="depot[product]" class="form-control required" id="gamename">
+          <p class="help-block">The title of your game, comic or food/beverage product. If showing more than one, please list the primary one here and add others in the <b>short description</b> field below.</p>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="shortdescription">Description</label>
+          <textarea type="text" name="depot[description]" class="form-control" rows="4" id="shortdescription">{@bbxl2015.#1.my.description | then "{@bbxl2015.#1.my.description}" else ""}</textarea>
+        </div>
+        <hr />
+        <div class="form-group">
+          <label class="form-label" for="link">Web site</label>
+          <div class="input-group">
+            <span class="input-group-addon">http://</span>
+            <input type="text" class="form-control" name="depot[link]" value="{@bbxl2015.#1.my.link | then "{@bbxl2015.#1.my.link}" else ""}">
+          </div>
+        </div>
+      </fieldset>
+      <input type="hidden" name="application_id" value="{@bbxl2015.#1._id | else ""}">
+      <input type="hidden" name="registered" value="{time represent as "M d, Y"}">
+      <input type="hidden" name="firstname" value="{@profile.my.firstname}">
+      <input type="hidden" name="lastname" value="{@profile.my.lastname}">
+      <input type="hidden" name="email" value="{@member.my.email}">
+      <input type="hidden" name="depot[submitted]" value="{time represent as :c}">
+      <textarea name="commands" style="display:none">
+        {begin verbatim | process escape}
+          {begin editing}
+            {#application_id | > :ex_id}
+          {end editing}
+          {ifelse (
+            {#application_id} $editing
+            :default "New applications are not being accepted at this time."
+          )}
+          {begin added | if @ex_id}
+            {begin depotize | foreach with #depot}
+              {my set for @ex_id in :stuff path key value value}
+            {end depotize}
+            {page redirect to :winter-2015/application}
+          {end added}
+        {end verbatim}
+      </textarea>
+    </div>
+  </div>
+  <div class="center-block text-center">
+    <hr>
+    <button type="submit" class="btn btn-primary btn-lg">Save All</button>
+  </div>
+</form>
