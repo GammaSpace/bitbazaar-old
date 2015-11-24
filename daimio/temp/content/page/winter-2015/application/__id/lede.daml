@@ -9,7 +9,7 @@
   <div class="col-sm-10">
 
 
-  			{begin logged_in | if @MY.id}
+  			{begin logged_in | if {and (@MY.id @bbxl2015)}}
         <h2>Info for #{@bbxl2015.#1._id}</h2>
   			{end logged_in}
 
