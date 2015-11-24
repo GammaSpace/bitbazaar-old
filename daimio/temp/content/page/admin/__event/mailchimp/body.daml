@@ -16,6 +16,7 @@
         <th>Product</th>
         <th>Table Size</th>
         <th>Timeslot</th>
+        <th>Application ID</th>
         <th>Type</th>
       </tr>
     </thead>
@@ -40,7 +41,8 @@
               :default "{my.table_size}"
             )}
           </td>
-          <td>{depot.timeslot}</td>
+          <td>{my.loadin}</td>
+          <td>{_id}</td>
           <td>{my.application_type}</td>
         </tr>
       {end memberlist}
