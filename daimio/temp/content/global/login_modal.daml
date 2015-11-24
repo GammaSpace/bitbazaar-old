@@ -8,7 +8,7 @@
         </div>
         <div class="modal-body">
 
-          
+
           <div class="form-group">
             <div class="col-md-6 {@ERRORS.myself.authenticate | then "error"}">
               <input type="text" class="form-control" name="username" placeholder="Username">
@@ -39,7 +39,7 @@
 
           <textarea name="commands" style="display:none">
             {begin verbatim | process escape}
-            {begin success | if {myself authenticate username #username password #password days #days} else "{notice set value {* ( :message "<strong>oops!</strong> You mistyped your username or password! Please try again." :type :error)}}"}
+            {begin success | if {myself authenticate username #username password #password days #days} else "{notice set value {* ( :message "<strong>oops!</strong> Looks like you mistyped your username or password! Please try again. If you have forgotten your username or password, please email hello@thebitbazaar.com" :type :danger)}}"}
 
             {end success}
             {end verbatim}
