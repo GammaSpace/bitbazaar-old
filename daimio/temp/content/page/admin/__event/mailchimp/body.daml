@@ -14,8 +14,9 @@
         <th>Last Name</th>
         <th>Developer/Group Name</th>
         <th>Product</th>
-        <th>Table Size</th>
-        <th>Timeslot</th>
+{/        <th>Table Size</th>
+}        <th>Timeslot</th>
+        <th>Tablers</th>
         <th>Application ID</th>
         <th>Type</th>
       </tr>
@@ -29,9 +30,9 @@
           <td>{@member | member find by_ids | __.#1.my.email}</td>
           <td>{@profile.my.firstname}</td>
           <td>{@profile.my.lastname}</td>
-          <td>{my.name}</td>
+          <td><a href="{@SITE.path}/winter-2015/application/{_id}?editing=true">{my.name}</a></td>
           <td>{my.product}</td>
-          <td>
+          {/<td>
             {ifelse (
               {my.table_size | is like "0.5"} "Half (~ 3')"
               {my.table_size | is like "1"} "Full (~ 6')"
@@ -40,9 +41,10 @@
               {my.table_size | is like "4"} "4 × full (~ 6')"
               :default "{my.table_size}"
             )}
-          </td>
+          </td>}
           <td>{my.loadin}</td>
-          <td>{_id}</td>
+          <td>{my.tabler1 | then "<span class='glyphicon glyphicon-check'></span>" else ""}</td>
+          <td><a href="{@SITE.path}/winter-2015/application/{_id}?editing=true">{_id}</a></td>
           <td>{my.application_type}</td>
         </tr>
       {end memberlist}
