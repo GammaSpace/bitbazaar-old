@@ -1,7 +1,7 @@
 {* (
 	:page { * (
-		:masthead_copy "Apply for a table at Bit Bazaar"
-		:title "Apply for a table at Bit Bazaar"
+		:masthead_copy "Update your Bit Bazaar profile"
+		:title "Update your Bit Bazaar profile"
 		:description "A unique zine-fair-meets-arcade presented by Bento Miso"
 		:keywords "bit bazaar, videogames, zine fair, toronto videogames"
 		:css_path "{@SITE.path}/css/application.css"
