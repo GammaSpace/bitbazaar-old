@@ -1,0 +1,15 @@
+
+{* (
+  :spring2015 :bbapplication
+  :summer2015 :appsu2015
+  :winter2015 :bbxl2015)
+| > :stuff}
+
+
+{permit superdo command "{profile find}" | > :profiles}
+{permit superdo command "{member find by_status :paid}" | > :members}
+
+
+{lens get_confirmed_exhibitors type @stuff.{#event}
+  | collection sort by {* (:depot.order :ASC)}
+  | > :ex_org}

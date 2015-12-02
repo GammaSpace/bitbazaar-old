@@ -1,0 +1,19 @@
+<script type="text/javascript" charset="utf-8" language="javascript" src="{@SITE.path}/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf-8" language="javascript" src="{@SITE.path}/js/dataTables.bootstrap.js"></script>
+
+{begin js | process escape}
+  <script>
+  $(document).ready(function(){
+
+    $('.table-data').dataTable( {
+      "order": [[ 1, "desc" ]]
+    } );
+    $.extend( $.fn.dataTableExt.oStdClasses, {
+      "sWrapper": "dataTables_wrapper form-inline",
+    });
+    $('input,select','.dataTables_filter,.dataTables_length').addClass('form-control');
+    $('.dataTables_filter').addClass('pull-right');
+  });
+
+</script>
+{end js}
