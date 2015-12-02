@@ -9,6 +9,8 @@
     <thead>
       <tr>
         <th>Company</th>
+        <th>Primary Contact Name</th>
+        <th>Primary Contact Email</th>
         <th>Tablers</th>
       </tr>
     </thead>
@@ -18,6 +20,8 @@
         {stuff find by_ids _id | __.pcache.edit | collection extract expression "{:user | is in this}" | string transform old "/user:/" new "" | > :member | profile find by_ids | __.#1 | > :profile | ""}
         <tr>
           <td><a href="{@SITE.path}/winter-2015/application/{_id}?editing=true">{my.name}</a></td>
+          <td>{@member | member find by_ids | __.#1.my.email}</td>
+          <td>{@profile.my.firstname} {@profile.my.lastname}</td>
           <td>
           {ifelse (
             {my.tabler1} "{my.tabler1.firstname} {my.tabler1.lastname}<br> {my.tabler2.firstname} {my.tabler2.lastname}<br> {my.tablers}"
