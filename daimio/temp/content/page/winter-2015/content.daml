@@ -13,7 +13,7 @@
           <div class="col-md-8 col-md-offset-2">
             <div class="wrapper">
               <div class="partner">
-                <p> Sat, Dec 5 &bull; 9am-7pm &amp;<br>Sun, Dec 6 &bull; 9am-3pm</p>
+                <p> Sat, Dec 5 &bull; 9am-7pm &amp;<br>Sun, Dec 6 &bull; 10am-3pm</p>
                 <small>At the Mattamy Centre at the Gardens.</small>
               </div>
             </div>
@@ -40,11 +40,11 @@
           </div>
         </div>
 
-        <div class="partner tickets">
+        {/<div class="partner tickets">
           <a href="http://www.ticketmaster.ca/canadian-videogame-awards-fanfest-saturday-toronto-ontario-12-05-2015/event/10004F12AAE8B06F?artistid=2158632&majorcatid=10005&minorcatid=105&tm_link=artist_msg-0_10004F12AAE8B06F" class="btn btn-info btn-lg">Saturday FanFest Ticket <strike>$35</strike> $15</a>
           <a href="http://www.ticketmaster.ca/canadian-videogame-awards-fanfest-sunday-toronto-ontario-12-06-2015/event/10004F12AAF5B080?artistid=2158633&majorcatid=10005&minorcatid=105&tm_link=search_msg-0_10004F12AAF5B080" class="btn btn-info btn-lg">Sunday FanFest Ticket <strike>$35</strike> $15</a>
           <p><small>Use offer code BENTOMISO</small></p>
-        </div>
+        </div>}
 
       </div>
     </div>
