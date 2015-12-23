@@ -7313,7 +7313,11 @@ body#bit-bazaar-winter-2015 section#vendors h4 {
   text-align: center;
 }
 body#bit-bazaar-winter-2015 section#vendors p.lead.lineup {
-  margin: 0;
+  margin: 2em 0 0 0;
+  text-align: center;
+}
+body#bit-bazaar-winter-2015 section#vendors p.lead.lineup span.pre-current {
+  white-space: nowrap;
 }
 body#bit-bazaar-winter-2015 section#vendors p.lead.lineup a {
   color: inherit;

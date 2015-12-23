@@ -101,7 +101,7 @@
       <h3>Food + Drinks</h3>
       {%food}
     </div>
-    <p class="lead lineup">Check out the lineups for our <a href="https://bentomiso.com/bit-bazaar-spring-fair-2013">Spring 2013</a>, <a href="https://bentomiso.com/bit-bazaar-winter-market-2013">Winter 2013</a>, <a href="https://bentomiso.com/bit-bazaar-spring-fair-2014">Spring 2014</a>, <a href="https://bentomiso.com/bit-bazaar-winter-market-2014">Winter 2014</a>, <a href="{@SITE.path}/spring-2015">Spring 2015</a> and <a href="{@SITE.path}/winter-2015">Summer 2015</a> events.</p>
+    <p class="lead lineup">Check out the lineups for our <a href="https://bentomiso.com/bit-bazaar-spring-fair-2013">Spring 2013</a>, <a href="https://bentomiso.com/bit-bazaar-winter-market-2013">Winter 2013</a>, <a href="https://bentomiso.com/bit-bazaar-spring-fair-2014">Spring 2014</a>, <span class="pre-current"><a href="https://bentomiso.com/bit-bazaar-winter-market-2014">Winter 2014</a>, <a href="{@SITE.path}/spring-2015">Spring 2015</a> and <a href="{@SITE.path}/winter-2015">Summer 2015</a> events.</span></p>
   </div>
 
 </section>
